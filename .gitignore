@@ -1,0 +1,11 @@
+__pycache__/
+build**/
+*.pyc
+!GIDS_Setup/build/lib/BAM_Util
+.cache/
+fio/
+*.pt/
+*.nvme
+*.npy
+GIDS.egg-info/
+*.png

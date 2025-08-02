@@ -1,0 +1,4 @@
+[submodule "bam"]
+	path = bam
+	url = ssh://git@ssh.github.com:443/wiketool/bam-gids.git
+	branch = dev_cache
