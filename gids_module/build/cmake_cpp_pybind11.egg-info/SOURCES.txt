@@ -1,0 +1,7 @@
+setup.py
+/home/embed/Documents/gids/gids_module/build/BAM_Feature_Store/BAM_Feature_Store.so
+/home/embed/Documents/gids/gids_module/build/BAM_Feature_Store/__init__.py
+/home/embed/Documents/gids/gids_module/build/cmake_cpp_pybind11.egg-info/PKG-INFO
+/home/embed/Documents/gids/gids_module/build/cmake_cpp_pybind11.egg-info/SOURCES.txt
+/home/embed/Documents/gids/gids_module/build/cmake_cpp_pybind11.egg-info/dependency_links.txt
+/home/embed/Documents/gids/gids_module/build/cmake_cpp_pybind11.egg-info/top_level.txt

@@ -1,0 +1,1 @@
+-I/home/embed/anaconda3/envs/gids/include/python3.8 -I/home/embed/Documents/gids/gids_module/./include -I/home/embed/Documents/gids/gids_module/../bam/include -I/home/embed/Documents/gids/gids_module/../bam/include/freestanding/include

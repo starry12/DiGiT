@@ -1,0 +1,62 @@
+[
+  {
+    "directory": "/home/embed/Documents/GIDS/bam/build",
+    "command": "/usr/bin/c++ -D_CUDA -D__CUDA__ -Dlibnvm_EXPORTS -I/home/embed/Documents/GIDS/bam/build/include -I/home/embed/Documents/GIDS/bam/include -I/home/embed/Documents/GIDS/bam/include/freestanding/include -I/usr/local/cuda/include -I/home/embed/Documents/GIDS/bam/src  -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -std=gnu++11 -fPIC -pthread -o CMakeFiles/libnvm.dir/src/admin.cpp.o -c /home/embed/Documents/GIDS/bam/src/admin.cpp",
+    "file": "/home/embed/Documents/GIDS/bam/src/admin.cpp",
+    "output": "CMakeFiles/libnvm.dir/src/admin.cpp.o"
+  },
+  {
+    "directory": "/home/embed/Documents/GIDS/bam/build",
+    "command": "/usr/bin/c++ -D_CUDA -D__CUDA__ -Dlibnvm_EXPORTS -I/home/embed/Documents/GIDS/bam/build/include -I/home/embed/Documents/GIDS/bam/include -I/home/embed/Documents/GIDS/bam/include/freestanding/include -I/usr/local/cuda/include -I/home/embed/Documents/GIDS/bam/src  -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -std=gnu++11 -fPIC -pthread -o CMakeFiles/libnvm.dir/src/ctrl.cpp.o -c /home/embed/Documents/GIDS/bam/src/ctrl.cpp",
+    "file": "/home/embed/Documents/GIDS/bam/src/ctrl.cpp",
+    "output": "CMakeFiles/libnvm.dir/src/ctrl.cpp.o"
+  },
+  {
+    "directory": "/home/embed/Documents/GIDS/bam/build",
+    "command": "/usr/bin/c++ -D_CUDA -D__CUDA__ -Dlibnvm_EXPORTS -I/home/embed/Documents/GIDS/bam/build/include -I/home/embed/Documents/GIDS/bam/include -I/home/embed/Documents/GIDS/bam/include/freestanding/include -I/usr/local/cuda/include -I/home/embed/Documents/GIDS/bam/src  -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -std=gnu++11 -fPIC -pthread -o CMakeFiles/libnvm.dir/src/dma.cpp.o -c /home/embed/Documents/GIDS/bam/src/dma.cpp",
+    "file": "/home/embed/Documents/GIDS/bam/src/dma.cpp",
+    "output": "CMakeFiles/libnvm.dir/src/dma.cpp.o"
+  },
+  {
+    "directory": "/home/embed/Documents/GIDS/bam/build",
+    "command": "/usr/bin/c++ -D_CUDA -D__CUDA__ -Dlibnvm_EXPORTS -I/home/embed/Documents/GIDS/bam/build/include -I/home/embed/Documents/GIDS/bam/include -I/home/embed/Documents/GIDS/bam/include/freestanding/include -I/usr/local/cuda/include -I/home/embed/Documents/GIDS/bam/src  -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -std=gnu++11 -fPIC -pthread -o CMakeFiles/libnvm.dir/src/error.cpp.o -c /home/embed/Documents/GIDS/bam/src/error.cpp",
+    "file": "/home/embed/Documents/GIDS/bam/src/error.cpp",
+    "output": "CMakeFiles/libnvm.dir/src/error.cpp.o"
+  },
+  {
+    "directory": "/home/embed/Documents/GIDS/bam/build",
+    "command": "/usr/bin/c++ -D_CUDA -D__CUDA__ -Dlibnvm_EXPORTS -I/home/embed/Documents/GIDS/bam/build/include -I/home/embed/Documents/GIDS/bam/include -I/home/embed/Documents/GIDS/bam/include/freestanding/include -I/usr/local/cuda/include -I/home/embed/Documents/GIDS/bam/src  -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -std=gnu++11 -fPIC -pthread -o CMakeFiles/libnvm.dir/src/mutex.cpp.o -c /home/embed/Documents/GIDS/bam/src/mutex.cpp",
+    "file": "/home/embed/Documents/GIDS/bam/src/mutex.cpp",
+    "output": "CMakeFiles/libnvm.dir/src/mutex.cpp.o"
+  },
+  {
+    "directory": "/home/embed/Documents/GIDS/bam/build",
+    "command": "/usr/bin/c++ -D_CUDA -D__CUDA__ -Dlibnvm_EXPORTS -I/home/embed/Documents/GIDS/bam/build/include -I/home/embed/Documents/GIDS/bam/include -I/home/embed/Documents/GIDS/bam/include/freestanding/include -I/usr/local/cuda/include -I/home/embed/Documents/GIDS/bam/src  -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -std=gnu++11 -fPIC -pthread -o CMakeFiles/libnvm.dir/src/queue.cpp.o -c /home/embed/Documents/GIDS/bam/src/queue.cpp",
+    "file": "/home/embed/Documents/GIDS/bam/src/queue.cpp",
+    "output": "CMakeFiles/libnvm.dir/src/queue.cpp.o"
+  },
+  {
+    "directory": "/home/embed/Documents/GIDS/bam/build",
+    "command": "/usr/bin/c++ -D_CUDA -D__CUDA__ -Dlibnvm_EXPORTS -I/home/embed/Documents/GIDS/bam/build/include -I/home/embed/Documents/GIDS/bam/include -I/home/embed/Documents/GIDS/bam/include/freestanding/include -I/usr/local/cuda/include -I/home/embed/Documents/GIDS/bam/src  -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -std=gnu++11 -fPIC -pthread -o CMakeFiles/libnvm.dir/src/rpc.cpp.o -c /home/embed/Documents/GIDS/bam/src/rpc.cpp",
+    "file": "/home/embed/Documents/GIDS/bam/src/rpc.cpp",
+    "output": "CMakeFiles/libnvm.dir/src/rpc.cpp.o"
+  },
+  {
+    "directory": "/home/embed/Documents/GIDS/bam/build",
+    "command": "/usr/bin/c++ -D_CUDA -D__CUDA__ -Dlibnvm_EXPORTS -I/home/embed/Documents/GIDS/bam/build/include -I/home/embed/Documents/GIDS/bam/include -I/home/embed/Documents/GIDS/bam/include/freestanding/include -I/usr/local/cuda/include -I/home/embed/Documents/GIDS/bam/src  -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -std=gnu++11 -fPIC -pthread -o CMakeFiles/libnvm.dir/src/linux/device.cpp.o -c /home/embed/Documents/GIDS/bam/src/linux/device.cpp",
+    "file": "/home/embed/Documents/GIDS/bam/src/linux/device.cpp",
+    "output": "CMakeFiles/libnvm.dir/src/linux/device.cpp.o"
+  },
+  {
+    "directory": "/home/embed/Documents/GIDS/bam/build",
+    "command": "/usr/bin/c++ -D_CUDA -D__CUDA__ -Dlibnvm_EXPORTS -I/home/embed/Documents/GIDS/bam/build/include -I/home/embed/Documents/GIDS/bam/include -I/home/embed/Documents/GIDS/bam/include/freestanding/include -I/usr/local/cuda/include -I/home/embed/Documents/GIDS/bam/src  -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -Wall -Wextra -std=c++11 -std=gnu++11 -fPIC -pthread -o CMakeFiles/libnvm.dir/src/linux/dma.cpp.o -c /home/embed/Documents/GIDS/bam/src/linux/dma.cpp",
+    "file": "/home/embed/Documents/GIDS/bam/src/linux/dma.cpp",
+    "output": "CMakeFiles/libnvm.dir/src/linux/dma.cpp.o"
+  },
+{
+  "directory": "/home/embed/Documents/GIDS/gids_module/build",
+  "command": "/usr/local/cuda-12.3/bin/nvcc -forward-unknown-to-host-compiler -DBAM_Feature_Store_EXPORTS --options-file CMakeFiles/BAM_Feature_Store.dir/includes_CUDA.rsp -std=c++11 \"--generate-code=arch=compute_70,code=[compute_70,sm_70]\" -Xcompiler=-fPIC -std=c++11 -O3 --default-stream per-thread -gencode arch=compute_70,code=sm_70 -gencode arch=compute_80,code=sm_80 -x cu -c /home/embed/Documents/GIDS/gids_module/gids_nvme.cu -o CMakeFiles/BAM_Feature_Store.dir/gids_nvme.cu.o",
+  "file": "/home/embed/Documents/GIDS/gids_module/gids_nvme.cu",
+  "output": "CMakeFiles/BAM_Feature_Store.dir/gids_nvme.cu.o"
+}
+]
