@@ -1,20 +1,35 @@
-# DiGiT: Papers100M artifact evaluation
+# DiGiT
 
-This repository contains the selected **Papers100M (PA)** implementation for **GraphSAGE, GCN and GAT**, comparing **GIDS and DiGiT**. Each full comparison uses seed 0, 20 epochs, full validation and one final test. We report training time, accuracy and effective I/O. This is a reconstruction of the paper implementation; BFS is disabled.
+DiGiT is an out-of-core graph neural network training system built on GIDS. It combines GPU-side neighbor sampling, SSD-backed feature access and multilevel caching to train graphs whose features exceed GPU memory.
 
-The source tree contains one selected implementation per model. It excludes research Git history, intermediate implementations, training logs, checkpoints, compiled binaries and datasets. See [scope and claims](docs/CLAIMS.md) and [code organization](docs/CODE.md).
+This repository provides the DiGiT implementation, the GIDS comparison path, and experiment entry points for **GraphSAGE, GCN and GAT**. Measurements cover training time, accuracy and effective I/O. See the [code map](docs/CODE.md) for the implementation and [scope and claims](docs/CLAIMS.md) for the current evaluation coverage.
 
-## Quick check
+## Getting started
+
+| What you want to do | Start here |
+|---|---|
+| Run experiments on the provided AE server | [Reviewer guide](docs/REVIEWER.md) and the server commands below |
+| Create an environment from scratch on your own machine | [Environment setup](docs/ENVIRONMENT.md): prerequisites, locked dependencies and checks |
+| Compile DiGiT and its GIDS/BaM dependencies | [Native build guide](docs/NATIVE_BUILD.md) |
+| Connect the prepared graph, features and SSD data | [Data guide](docs/DATA.md) |
+
+## Set up from source
+
+Start with Linux x86_64, Git, Python 3 and Conda. The [environment guide](docs/ENVIRONMENT.md) lists the recorded software versions, installation prerequisites and expected check results. Use a new environment directory outside the source checkout:
 
 ```bash
+git clone https://github.com/starry12/DiGiT.git
+cd DiGiT
 bash run.sh verify
 bash run.sh matrix
-export DIGIT_PYTHON=/srv/digit-ae/env/bin/python  # on the provided server
+
+bash environment/create.sh "$HOME/digit-env"
+export DIGIT_PYTHON="$HOME/digit-env/bin/python"
 bash run.sh environment
 bash run.sh example --output results/cpu_example_01
 ```
 
-The CPU example runs three updates with each selected model and optimizer. It needs no dataset, GPU or raw SSD. Use a new output directory for each invocation. On another machine, follow [environment setup](docs/ENVIRONMENT.md).
+The CPU example runs three updates with each selected model and optimizer. It needs no dataset, GPU or raw SSD. Use a new output directory for each invocation. Next, follow the [native build guide](docs/NATIVE_BUILD.md) to compile the CUDA and storage components, then the [data guide](docs/DATA.md) to bind prepared inputs before native preflight and paired smoke. The environment installer covers Python dependencies; CUDA, the NVIDIA driver and the libnvm kernel module are separate host prerequisites.
 
 ## Reproduce on the provided server
 
@@ -30,6 +45,12 @@ digit-ae results PA sage --action smoke
 After smoke passes, start a full comparison with `digit-ae run PA sage` and read it with `digit-ae results PA sage --action run`. Substitute `gcn` or `gat` for the other models; run requests sequentially. Services survive SSH disconnects. [Reviewer instructions](docs/REVIEWER.md) explain progress, completion and result export.
 
 The service currently executes the preserved, accepted server release. This repository reorganizes that release into a concise source tree; its native rebuild and native acceptance are tracked separately. Source origins and adaptations are recorded in [the source map](provenance/source_map.json). The service is not silently upgraded when this repository changes.
+
+## Current evaluation scope
+
+The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each full comparison uses seed 0, 20 epochs, full validation and one final test. This is a reconstruction of the paper implementation; BFS is disabled.
+
+The source tree contains one selected implementation per model. It excludes research Git history, intermediate implementations, training logs, checkpoints, compiled binaries and datasets.
 
 ## Results and boundaries
 

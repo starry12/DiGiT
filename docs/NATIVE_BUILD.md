@@ -5,13 +5,21 @@ The prepared server is the currently validated native execution route. The conci
 Use the locked Python environment, CUDA toolkit and sm89-compatible hardware described in [ENVIRONMENT](ENVIRONMENT.md). Inspect the build plan first:
 
 ```bash
-export DIGIT_PYTHON=/absolute/path/to/env/bin/python
-export DIGIT_NVCC=/usr/local/cuda/bin/nvcc
-bash scripts/build_native.sh --output /absolute/path/to/new-native-artifact --dry-run
-bash scripts/build_native.sh --output /absolute/path/to/new-native-artifact
+export DIGIT_PYTHON="$HOME/digit-env/bin/python"
+export DIGIT_CMAKE="$HOME/digit-env/bin/cmake"
+export DIGIT_NVCC=/usr/local/cuda-12.4/bin/nvcc
+bash scripts/build_native.sh --output "$HOME/digit-native" --dry-run
+bash scripts/build_native.sh --output "$HOME/digit-native"
 ```
 
-The script copies into a new directory and builds libnvm user space, the SSD identity utility, the feature store with useful I/O counters, the bidirectional DiGiT sampler, and output annotation. It does not install a kernel module or access the SSD. The source directory is preserved. Build logs are under the new copy's `results/build/`. The new copy receives its own manifest.
+Adjust the environment and CUDA paths to your installation. The output directory must be new and outside the source checkout. The script copies into a new directory and builds libnvm user space, the SSD identity utility, the feature store with useful I/O counters, the bidirectional DiGiT sampler, and output annotation. It does not install a kernel module or access the SSD. The source directory is preserved. Build logs are under the new copy's `results/build/`. The new copy receives its own manifest.
+
+Switch to the built copy before binding data or launching native commands:
+
+```bash
+cd "$HOME/digit-native"
+bash run.sh verify
+```
 
 After administrator-managed host preparation and [read-only data binding](DATA.md), use a fresh output path for each step. These administrative native commands require the correct privileges and tmux; the reviewer account instead uses the fixed `digit-ae` service.
 
