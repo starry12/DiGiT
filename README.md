@@ -8,32 +8,14 @@ This repository provides the DiGiT implementation, the GIDS comparison path, and
 
 | What you want to do | Start here |
 |---|---|
-| Run experiments on the provided AE server | [Reviewer guide](docs/REVIEWER.md) and the server commands below |
+| Run experiments on the provided AE server | [Reviewer guide](docs/REVIEWER.md) and [AE server commands](#ae-environment-and-reproduction) |
 | Create an environment from scratch on your own machine | [Environment setup](docs/ENVIRONMENT.md): prerequisites, locked dependencies and checks |
 | Compile DiGiT and its GIDS/BaM dependencies | [Native build guide](docs/NATIVE_BUILD.md) |
 | Connect the prepared graph, features and SSD data | [Data guide](docs/DATA.md) |
 
-## Set up from source
+## AE environment and reproduction
 
-Start with Linux x86_64, Git, Python 3 and Conda. The [environment guide](docs/ENVIRONMENT.md) lists the recorded software versions, installation prerequisites and expected check results. Use a new environment directory outside the source checkout:
-
-```bash
-git clone https://github.com/starry12/DiGiT.git
-cd DiGiT
-bash run.sh verify
-bash run.sh matrix
-
-bash environment/create.sh "$HOME/digit-env"
-export DIGIT_PYTHON="$HOME/digit-env/bin/python"
-bash run.sh environment
-bash run.sh example --output results/cpu_example_01
-```
-
-The CPU example runs three updates with each selected model and optimizer. It needs no dataset, GPU or raw SSD. Use a new output directory for each invocation. Next, follow the [native build guide](docs/NATIVE_BUILD.md) to compile the CUDA and storage components, then the [data guide](docs/DATA.md) to bind prepared inputs before native preflight and paired smoke. The environment installer covers Python dependencies; CUDA, the NVIDIA driver and the libnvm kernel module are separate host prerequisites.
-
-## Reproduce on the provided server
-
-SSH access is provided privately through the AE channel. After login:
+The provided AE server includes the Python/CUDA environment, compiled native components and prepared data. SSH access is provided privately through the AE channel. After login, activate the prepared environment and start the short comparison:
 
 ```bash
 source /srv/digit-ae/activate.sh
@@ -63,6 +45,24 @@ The source tree contains one selected implementation per model. It excludes rese
 These selected measurements are [reference evidence](reference/results.json), not measurements of newly rebuilt binaries. Fresh reviewer GCN/GAT preflight and paired smoke have also passed, with error-free monitoring and normal service exit; see [smoke acceptance](reference/reviewer_smoke.json). These short checks do not replace full performance/accuracy evidence. One seed does not establish statistical accuracy equivalence or the paper's absolute accuracy. See [metric definitions](docs/RESULTS.md).
 
 The [validation receipt](provenance/validation.json) records 22 model/budget checks, eight entry/counter boundary checks, a three-model CPU example, exact environment checks, and source/configuration parity checks. Native compilation and execution of this refactored source are still pending.
+
+## Set up from source
+
+Start with Linux x86_64, Git, Python 3 and Conda. The [environment guide](docs/ENVIRONMENT.md) lists the recorded software versions, installation prerequisites and expected check results. Use a new environment directory outside the source checkout:
+
+```bash
+git clone https://github.com/starry12/DiGiT.git
+cd DiGiT
+bash run.sh verify
+bash run.sh matrix
+
+bash environment/create.sh "$HOME/digit-env"
+export DIGIT_PYTHON="$HOME/digit-env/bin/python"
+bash run.sh environment
+bash run.sh example --output results/cpu_example_01
+```
+
+The CPU example runs three updates with each selected model and optimizer. It needs no dataset, GPU or raw SSD. Use a new output directory for each invocation. Next, follow the [native build guide](docs/NATIVE_BUILD.md) to compile the CUDA and storage components, then the [data guide](docs/DATA.md) to bind prepared inputs before native preflight and paired smoke. The environment installer covers Python dependencies; CUDA, the NVIDIA driver and the libnvm kernel module are separate host prerequisites.
 
 ## Source layout
 
