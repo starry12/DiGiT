@@ -1,0 +1,110 @@
+{
+  "schema": "digit-pa-gat-native-v1",
+  "seed": 0,
+  "epochs": 20,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "batch_size": 1024,
+  "optimizer": {
+    "name": "Adam",
+    "kwargs": {
+      "lr": 0.01,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.001,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    }
+  },
+  "hidden": 128,
+  "classes": 172,
+  "layers": 3,
+  "dropout": 0.2,
+  "graph": {
+    "nodes": 111059956,
+    "edges": 3342431700,
+    "policy": "Preserve original nonself multiedges; bidirectional appends reversed edges without dedup; exactly one self loop per node in both arms.",
+    "arm": "bidirectional",
+    "csc_sha256": {
+      "indptr": "7d5e673666a047d439ffdbded926d637634f133fbc83d29af74bb7bac20b3b63",
+      "indices": "1276664d1cca1d5aa81924c39fb9f203f36519d1611753fc0b4df2cca7768c90",
+      "eids": "6bda924d3fb58aa9d40e97f8166ddfa2a6c20c24ad3201de1e21871deedd5ece"
+    }
+  },
+  "gpu_cache_bytes": 4294967296,
+  "cpu_cache_rows": 11105992,
+  "base_layout": "data/papers_g2_random_v2",
+  "data": "data/pa_sage_bidir_native_v1",
+  "validation_trace": "results/pa_sage_direction_20260921_v2/bidirectional/valid_trace",
+  "test_trace": "results/pa_sage_direction_20260921_v2/bidirectional/test_trace",
+  "metadata_mode": "gpu_i32_uva_eid64",
+  "bfs_enabled": false,
+  "layout_policy": "Retain frozen g2 groups, feature storage and CPU selection; append all reverse edges as raw neighbors. Verify exact expanded bidirectional multigraph.",
+  "model_policy": "Fresh seed-0 GAT and Adam per system; fixed before any validation/test; no SAGE checkpoint or SAGE optimizer-selection claim. Save epoch20 then test once.",
+  "measurement": "Identical useful I/O instrumentation in both arms; train/validation/test counted separately",
+  "smoke_epochs": 2,
+  "smoke_batches": 2,
+  "model": "gat",
+  "input_dim": 128,
+  "model_config": {
+    "in_feats": 128,
+    "h_feats": 128,
+    "num_classes": 172,
+    "num_layers": 3,
+    "dropout": 0.2,
+    "num_heads": 4
+  },
+  "model_semantics": {
+    "convolution": "dgl.nn.GATConv",
+    "num_heads": 4,
+    "hidden_per_head": 128,
+    "hidden_concatenated": 512,
+    "output_heads": 4,
+    "output_per_head": 172,
+    "output_reduction": "mean over heads",
+    "projection": "shared source/destination fc without bias; separate tuple projections",
+    "attention_normalization": "softmax over incoming sampled edges per destination and head; preserve multiedges",
+    "feat_drop": 0.0,
+    "attn_drop": 0.0,
+    "negative_slope": 0.2,
+    "residual": false,
+    "activation": null,
+    "bias": true,
+    "allow_zero_in_degree": false,
+    "hidden_order": "GATConv then flatten heads then ReLU then dropout",
+    "dtype": "float32",
+    "amp": false,
+    "tf32": false,
+    "loss": "unweighted mean cross entropy"
+  },
+  "model_parameter_count": 685072,
+  "parameter_provenance": {
+    "paper": "atc26-paper1508.pdf",
+    "paper_section": "5.1 page 8; 5.2.1 mean of 20 epochs",
+    "paper_sha256": "cd75c3a35b577d985a5258e8ad2871dcedeaffeeac8c0f03cd7f8bfec0d7caa5",
+    "paper_explicit": [
+      "hidden=128",
+      "layers=3",
+      "batch_size=1024",
+      "fanouts=[10,5,5]",
+      "epochs=20",
+      "GPU cache 4 GB and CPU cache 10 percent; implemented as 4 GiB and 11105992 rows"
+    ],
+    "reconstructed_from": "configs/papers/contract.json",
+    "optimizer_and_dropout": "GAT historical contract: Adam lr=0.01, weight_decay=0.001, dropout=0.2; not specified by paper and not accuracy-tuned here",
+    "graph": "Author-accepted bidirectional PA reconstruction; same graph and sampled evaluation traces as SAGE",
+    "attention": "Historical GAT has four heads and h_feats=128 per head, concatenated width 512, final four 172-wide heads averaged. Paper only states hidden=128, not number of heads or per-head interpretation; these are reconstruction choices, not recovered paper settings."
+  },
+  "data_preparation_protocol_sha256": "52adb154235ff4995d8d4d4793ebfac8000eb70bbc769cd262158645681eb471",
+  "preflight_output": "results/pa_gat_preflight_20260922_v1/check"
+}

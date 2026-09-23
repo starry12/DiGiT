@@ -1,0 +1,176 @@
+{
+  "passed": true,
+  "scope": "Fresh PA reviewer smoke on the preserved server release; not new-source native build acceptance or full performance/accuracy evidence",
+  "models": [
+    {
+      "model": "gcn",
+      "passed": true,
+      "native_acceptance": true,
+      "strict_resource_acceptance": true,
+      "scope": "Native smoke only. No full performance or final accuracy measurement.",
+      "package_sha256": "afdde9f30f93f35e69c6f376d87d4a4c8eb967c0a85c6b7638731b12421307c2",
+      "run_id": "selfservice_20260923_075209_pa-gcn_3cf6734648f8",
+      "workflow_seconds": 1608.2924959659576,
+      "preflight_seconds": 662.6333250999451,
+      "service": {
+        "Result": "success",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "unit": "digit-ae-pa-gcn-smoke.service"
+      },
+      "rows": [
+        {
+          "arm": "gids",
+          "updates": 4,
+          "validation_calls": 2,
+          "test_calls": 0,
+          "monitor": {
+            "monitor_pid": 3228196,
+            "worker_pid": 3228199,
+            "sample_count": 164,
+            "monitor_peak_rss_bytes": 11530240,
+            "observed_peak_device_used_bytes": 7436369920,
+            "strict_monitor_passed": true,
+            "qualification": "no_query_errors",
+            "timeout_count": 0,
+            "query_error_fraction": 0.0,
+            "max_sample_gap_seconds": 0.9954397678375244,
+            "review_policy": {
+              "allowed_error": "nvidia-smi TimeoutExpired after 5 seconds only",
+              "max_error_fraction": 0.005,
+              "max_consecutive_errors": 1,
+              "max_sample_gap_seconds": 15.0,
+              "max_endpoint_gap_seconds": 2.0
+            },
+            "limitation": "Sampled peak is a lower bound; missing samples cannot establish memory peaks during gaps. This review does not convert the original strict monitor failure into a pass."
+          },
+          "observed_peak_gpu_bytes": 7436369920,
+          "peak_host_rss_kib": 117611556
+        },
+        {
+          "arm": "digit_full",
+          "updates": 4,
+          "validation_calls": 2,
+          "test_calls": 0,
+          "monitor": {
+            "monitor_pid": 3231785,
+            "worker_pid": 3231788,
+            "sample_count": 1103,
+            "monitor_peak_rss_bytes": 11603968,
+            "observed_peak_device_used_bytes": 24280694784,
+            "strict_monitor_passed": true,
+            "qualification": "no_query_errors",
+            "timeout_count": 0,
+            "query_error_fraction": 0.0,
+            "max_sample_gap_seconds": 1.2848906517028809,
+            "review_policy": {
+              "allowed_error": "nvidia-smi TimeoutExpired after 5 seconds only",
+              "max_error_fraction": 0.005,
+              "max_consecutive_errors": 1,
+              "max_sample_gap_seconds": 15.0,
+              "max_endpoint_gap_seconds": 2.0
+            },
+            "limitation": "Sampled peak is a lower bound; missing samples cannot establish memory peaks during gaps. This review does not convert the original strict monitor failure into a pass."
+          },
+          "observed_peak_gpu_bytes": 24280694784,
+          "peak_host_rss_kib": 149162468
+        }
+      ],
+      "evidence_sha256": {
+        "status.json": "d6d0e9b21e66c70a088aaed52590e06575e457636f59bf506aaa78d8ea312b95",
+        "check/status.json": "bfe52114e4983d5016c469c9d872077b7893bc30e8626b12eb0f95935edc4bf0",
+        "experiment/status.json": "6b076d9dfdf54ecaa6dd8db9cfa4367a5602f3c04dfc92943ae6aa215d26e40e",
+        "experiment/smoke_summary.json": "a04c37bf29c1a0700df1d4c82793a951c8b604af4145195e8844eaef6c44bfab",
+        "experiment/smoke_digit_full_receipt.json": "65e92e81b54737efad8ef237eb76dc432a8e01b45a3bbafa1404f6e128a737a1",
+        "experiment/smoke_gids_receipt.json": "e5af979f94a267a5fddc05308a6c1e61f0fc89cb1424763e471d1ec89f125f23",
+        "experiment/smoke_digit_full_accepted.json": "9741dc9f2c5ee175a0a8524bed0f697673c87c183e69a14ffaa0c7fc466b5ca5",
+        "experiment/smoke_gids_accepted.json": "90c512760351d744a5ecc3b1894e3576bba4ae54473446dd3c07a715ee59d976"
+      }
+    },
+    {
+      "model": "gat",
+      "passed": true,
+      "native_acceptance": true,
+      "strict_resource_acceptance": true,
+      "scope": "Native smoke only. No full performance or final accuracy measurement.",
+      "package_sha256": "afdde9f30f93f35e69c6f376d87d4a4c8eb967c0a85c6b7638731b12421307c2",
+      "run_id": "selfservice_20260923_081907_pa-gat_a76efa6d8156",
+      "workflow_seconds": 1163.8191652297974,
+      "preflight_seconds": 307.4382920265198,
+      "service": {
+        "Result": "success",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "unit": "digit-ae-pa-gat-smoke.service"
+      },
+      "rows": [
+        {
+          "arm": "gids",
+          "updates": 4,
+          "validation_calls": 2,
+          "test_calls": 0,
+          "monitor": {
+            "monitor_pid": 3254605,
+            "worker_pid": 3254607,
+            "sample_count": 119,
+            "monitor_peak_rss_bytes": 11505664,
+            "observed_peak_device_used_bytes": 11687297024,
+            "strict_monitor_passed": true,
+            "qualification": "no_query_errors",
+            "timeout_count": 0,
+            "query_error_fraction": 0.0,
+            "max_sample_gap_seconds": 1.0867283344268799,
+            "review_policy": {
+              "allowed_error": "nvidia-smi TimeoutExpired after 5 seconds only",
+              "max_error_fraction": 0.005,
+              "max_consecutive_errors": 1,
+              "max_sample_gap_seconds": 15.0,
+              "max_endpoint_gap_seconds": 2.0
+            },
+            "limitation": "Sampled peak is a lower bound; missing samples cannot establish memory peaks during gaps. This review does not convert the original strict monitor failure into a pass."
+          },
+          "observed_peak_gpu_bytes": 11687297024,
+          "peak_host_rss_kib": 118502192
+        },
+        {
+          "arm": "digit_full",
+          "updates": 4,
+          "validation_calls": 2,
+          "test_calls": 0,
+          "monitor": {
+            "monitor_pid": 3255935,
+            "worker_pid": 3255943,
+            "sample_count": 1009,
+            "monitor_peak_rss_bytes": 11661312,
+            "observed_peak_device_used_bytes": 28542107648,
+            "strict_monitor_passed": true,
+            "qualification": "no_query_errors",
+            "timeout_count": 0,
+            "query_error_fraction": 0.0,
+            "max_sample_gap_seconds": 1.1924443244934082,
+            "review_policy": {
+              "allowed_error": "nvidia-smi TimeoutExpired after 5 seconds only",
+              "max_error_fraction": 0.005,
+              "max_consecutive_errors": 1,
+              "max_sample_gap_seconds": 15.0,
+              "max_endpoint_gap_seconds": 2.0
+            },
+            "limitation": "Sampled peak is a lower bound; missing samples cannot establish memory peaks during gaps. This review does not convert the original strict monitor failure into a pass."
+          },
+          "observed_peak_gpu_bytes": 28542107648,
+          "peak_host_rss_kib": 147587336
+        }
+      ],
+      "evidence_sha256": {
+        "status.json": "341439da844ff7d9ce95d917bf07700d677795ed9b9d4f0dd3d21765a5f186c7",
+        "check/status.json": "f10f58fb770a0c4d9ff6ceb942e51e310d815e0408bc9632cb0b4870c610fbbb",
+        "experiment/status.json": "437b1af9a8d474debd179098cfe942d5b11af43e9cfb649a80af7194ded5d2a6",
+        "experiment/smoke_summary.json": "3bee9839fd4894f06289c4b82590b20f6df677d535524ba7df87a1b6dfd39dc5",
+        "experiment/smoke_digit_full_receipt.json": "b50b614222d5fea2c97258b67f6281cfa0628125dc5f3b915d61b514579a88cb",
+        "experiment/smoke_gids_receipt.json": "105111885bcbc54ef48ef2a249133e3fe1c5ebc1184e74e30fefe79827f0e771",
+        "experiment/smoke_digit_full_accepted.json": "10e096541461cf2ca5336d11b3dcd0590cad83fed1797921733b6ae0ad6f01ef",
+        "experiment/smoke_gids_accepted.json": "d4aa4e50d8ed172fb76559bacb5908513ae6cb53143ae2963808426bae6f3470"
+      }
+    }
+  ]
+}

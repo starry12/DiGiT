@@ -1,0 +1,22 @@
+{
+  "component": "training/gat",
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "admission.py": "4e2da2c4535fcab592bbff25438cbc9c80e097dc2c0cb108d98dd72c77cd5a06",
+    "check.py": "8744e42247b772d898cbb26b10544e3d6d2c7844e64bc8d97a335d54c16e8c10",
+    "common.py": "13879f86feae6279ada20477a08c7652c0b2bfdd8e3e3e8c971c1aadbd13742c",
+    "controller.py": "f29eddff0798ff779f6d1f4f57e149eee8af4bea86ef9d5e067701abc09d860c",
+    "cuda_checks.py": "d4f043ffd116daae38d5f4282fd8fc9df568fe3a337efbd766531ab201e8aeb9",
+    "evaluation.py": "aafc8186c106d5818ac1008d1352adf2782aa039722a1f044f6d9cb6a8b3b462",
+    "inputs.py": "050a29cdbfce69f977c75c7e1d0b6eec82eb655dc5c4ae7b5bed711cbf976684",
+    "memory_checks.py": "1b61a19c3be175e0dce57a4390d6449bf3cbaad8483d764fbccfd242de988fe2",
+    "model.py": "91a392479c2af01daab8230a114015f53deddb4b19576435d68637719c68c254",
+    "protocol.json": "af37d21280df4142058a013472984fac7c81fc08a45a3d96dfbaf4cfd836e940",
+    "review.py": "a6e7663bb26245e198a94c851e1739063fb536d52d1245042b25b4cbdf536c2e",
+    "summarize.py": "3faf4f49abc6aec9609a186003d7384ab4567710b58ebc0b90ec47510392be1a",
+    "tests.py": "535654e865eae528677c05427aaa9fa4c42a6e7b738ba0bf1f97298dff9534f0",
+    "training_loop.py": "4ca4f1986423135c6702daf4f96c5c42b92445c9a139d9edda726232878f6b00",
+    "validation.py": "1360c3d5691c620d21c1faf08f87fb715cb1c41f81f68cc458d9fc7de7908b04",
+    "worker.py": "6adeb160cd43ab066a46b2c8171bf4b344dcd37a63cfbfd53d62f261f4847d46"
+  }
+}

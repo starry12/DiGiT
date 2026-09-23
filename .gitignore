@@ -1,0 +1,13 @@
+/results/
+/data/
+/deployment/
+/ssd_state/
+/build/
+/.native-build/
+__pycache__/
+*.pyc
+*.so
+*.o
+*.a
+/third_party/bam/build/
+/ae/native/identity/identify-module

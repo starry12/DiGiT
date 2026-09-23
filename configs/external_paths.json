@@ -1,0 +1,8 @@
+{
+  "papers_baseline": "deployment/external/papers_baseline",
+  "papers_csc": "deployment/external/papers_csc",
+  "papers_source": "deployment/external/papers_source",
+  "papers_splits": "deployment/external/papers_splits",
+  "papers_test_trace": "deployment/external/papers_test_trace",
+  "storage_root": "deployment/external/storage_root"
+}

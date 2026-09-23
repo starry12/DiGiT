@@ -1,0 +1,21 @@
+{
+  "component": "training/gcn",
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "admission.py": "1a5dfeb490f1312acf9b0e00d317dd682ba98b15c73f4d6c4cf6b9b7d9397468",
+    "check.py": "59d712d24040c10886727cd96db47ab19cddbb5f3b6afac529ab8aa0c7c040e6",
+    "common.py": "50d995e0455b6a372e91797c764af74b1ed4793bef8fa2d25e5a2930ccedd06a",
+    "controller.py": "4c367f08623c0ca642240464b75e5e7c7daf4387e47dd1a055f669b2a0338938",
+    "cuda_checks.py": "7fa2b06e1b44424a86b2cfb971495d926fe61d084baf6bc9e20a392d473959a4",
+    "evaluation.py": "f42a0f7c7c138fd6d1d6e2df83fa82f86a92abeb6c01214a444af491f26f8466",
+    "inputs.py": "d0d287f34019b8bfafb064919db137d66f9f785af0911186e513ebb8a1af48c9",
+    "model.py": "30274a23720aaae0f52d8c37ce91e07e4fedf99f66003195f048aeadc205beb7",
+    "protocol.json": "c1b63f28318897c326a584b1f2e5d553940acbee2fae20a3aaab73a2f368d402",
+    "review.py": "89d48dcc15602de229e89a0695b069137e9228ab41b9418e1c4a7ba76e4f03d0",
+    "summarize.py": "8a1f2e5e3b0b9b81e4b44a103c9b9a0c139d0616872ab82ae4df312975596674",
+    "tests.py": "086695e5f37e41d280748248c9187658016f248f6387dfe2720af1288e0f3cea",
+    "training_loop.py": "cbd1d67a9ee6787e577acf3ee55c042dc8eb5c28bd19ecdd4c10ece574b08204",
+    "validation.py": "a86dd3aa4dbc72de11bebc69165421a053c69f94987ca7ea63131a20020fe017",
+    "worker.py": "36aad48187c0e9ddfdd94736c1b35f6e29bd05fb3dc45691256b65d75376cb7c"
+  }
+}

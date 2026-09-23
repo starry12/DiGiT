@@ -1,0 +1,11 @@
+{
+  "papers_gids": {
+    "state": "${PROJECT_ROOT}/ssd_state/libnvm0.offset137438953472.json",
+    "state_sha256": "617288165b024cd90b176ece0f271294273c494e68039d77ec62a3e0fc297d36",
+    "offset": 137438953472,
+    "bytes": 56862699520,
+    "file_sha256": "f90698ca4a42e48ae4a2655c8e545e0d3ea0eb517473db43b721a70089557b6e",
+    "full_readback_passed": true,
+    "readback_evidence_sha256": "c6973d2d1eba22fbad455e63cfd465578f2da94ce7554640387977d2c67e1210"
+  }
+}

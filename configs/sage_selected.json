@@ -1,0 +1,110 @@
+{
+  "schema": "digit-pa-sage-selected-epoch20-test-v1",
+  "dataset": "ogbn-papers100M",
+  "model": "GraphSAGE",
+  "input_dim": 128,
+  "hidden": 128,
+  "classes": 172,
+  "layers": 3,
+  "dropout": 0.2,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "batch_size": 1024,
+  "seed": 0,
+  "checkpoint_epoch": 20,
+  "training_updates": 23580,
+  "optimizer": {
+    "name": "Adam",
+    "kwargs": {
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    }
+  },
+  "training_controls": {
+    "optimizer": "Adam",
+    "weight_decay_mode": "coupled L2 on every model parameter including bias",
+    "scheduler": null,
+    "gradient_clipping": null,
+    "early_stopping": false,
+    "amp": false,
+    "tf32": false,
+    "loss": "unweighted mean cross entropy"
+  },
+  "graph": {
+    "nodes": 111059956,
+    "edges": 3342431700,
+    "policy": "Preserve original nonself multiedges; bidirectional appends reversed edges without dedup; exactly one self loop per node in both arms.",
+    "arm": "bidirectional",
+    "csc_sha256": {
+      "indptr": "7d5e673666a047d439ffdbded926d637634f133fbc83d29af74bb7bac20b3b63",
+      "indices": "1276664d1cca1d5aa81924c39fb9f203f36519d1611753fc0b4df2cca7768c90",
+      "eids": "6bda924d3fb58aa9d40e97f8166ddfa2a6c20c24ad3201de1e21871deedd5ece"
+    }
+  },
+  "feature_path": "Original float32 NPY features, pinned host memory and UVA gather",
+  "bfs_enabled": false,
+  "source_only": true,
+  "raw_ssd_io": false,
+  "training_release_sha256": "78232545f843de9094db592b23f9bcc26966aeae5c0794ca78a747cd45c960c4",
+  "selected_case": "lower_lr_no_decay",
+  "selection_rule": {
+    "primary": "mean validation accuracy of epochs 16-20",
+    "tie_break": "epoch20 validation accuracy then case declaration order",
+    "secondary": [
+      "epoch20 validation accuracy",
+      "best validation accuracy and epoch",
+      "last5 population standard deviation",
+      "validation loss"
+    ],
+    "selection_limit": "Single seed exploratory reconstruction; no paper accuracy or statistical convergence claim"
+  },
+  "selection_metrics": {
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "last5_mean_validation": 0.6533477028699157,
+    "last5_std_validation": 0.0006597441107282526,
+    "epoch20_validation": 0.6543407975092803,
+    "best_validation": 0.6568794156388457,
+    "best_validation_epoch": 14,
+    "epoch20_validation_loss": 1.1275680557218697,
+    "epoch20_train_loss": 1.0628814697265625
+  },
+  "test_trace": "results/pa_sage_direction_20260921_v2/bidirectional/test_trace",
+  "test_trace_sha256": "aca2faa1c24012bd2f500593ab060478aa153c690d1b06831940c3e0571f6c2f",
+  "test_examples": 214338,
+  "test_batches": 210,
+  "checkpoint_file": "final_model_epoch20.pt",
+  "checkpoint_sha256": "30af8dd84b6fdd64ce36a8381acb186ed1440e8f99772dfaa2c93e3e4cb8597e",
+  "model_sha256": "be35b08cff3f47f3ab98ead2cdfcc103e8c145773522164839aecec2df2e1f88",
+  "reference_bindings": {
+    "results/pa_sage_optimizer_20260921_v1/status.json": "30d925dc0a3602b800c1c0384413fe7bd546dd763b5aa4f9e72a157c61db4090",
+    "results/pa_sage_optimizer_20260921_v1/summary.json": "f1a7c323f3a0c4b9b6d1b1f6ace5fd70fce165b6fb7f92b0a637b79f2f2a8d09",
+    "results/pa_sage_optimizer_20260921_v1/completion_review.json": "1abe9be7d7df85ff5a34065455a2ecb72145d27f3c1aa183b3fe284e2f98a2b5",
+    "candidates/pa_sage_optimizer_v1/manifest.json": "9c3544aa9fff55e848bd61ed27c875d2c977b430a3cd78383b722221b02face4",
+    "results/pa_sage_direction_20260921_v2/bidirectional/graph.json": "7acb5e04b93167dcf4a576e6efa33d85a01bc4d79da1b31d9fce96f587273176",
+    "results/pa_sage_direction_20260921_v2/bidirectional/test_trace/manifest.json": "aca2faa1c24012bd2f500593ab060478aa153c690d1b06831940c3e0571f6c2f",
+    "results/pa_sage_optimizer_20260921_v1/worker/lower_lr_no_decay/full/report.json": "2c29418bae15f1f5cd35d6f441cd3ac18f5aed6a0fdccbc4fc21b86e917ea171",
+    "results/pa_sage_optimizer_20260921_v1/worker/lower_lr_no_decay/full/final_model.pt": "30af8dd84b6fdd64ce36a8381acb186ed1440e8f99772dfaa2c93e3e4cb8597e",
+    "submission/manifest.json": "62e214fdec48c38710dcf62c2b6614b19446148d133ab4e1588bb61c84737097"
+  },
+  "host_admission_gib": 160,
+  "gpu_admission_gib": 4,
+  "max_test_invocations": 1,
+  "validation_evaluations": 0,
+  "optimizer_updates": 0,
+  "performance_claim": false
+}

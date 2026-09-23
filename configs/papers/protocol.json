@@ -1,0 +1,274 @@
+{
+  "dataset": {
+    "name": "ogbn-papers100M",
+    "source_root": "${PAPERS_SOURCE}",
+    "num_nodes": 111059956,
+    "normalized_num_edges": 1726745828,
+    "graph_policy": "remove_self_loops_then_append_one_per_node_v1",
+    "source_contract": {
+      "csc": {
+        "original_indices.npy": {
+          "bytes": 13813966752,
+          "sha256": "8c5b924833e76a1196cb1f959e48b45347b90f94135f893f57682d044f879fee"
+        },
+        "original_indptr.npy": {
+          "bytes": 888479784,
+          "sha256": "1ad91acca80ff5717a6ab39b3c3fc3672df4e95d503d7b42364bb1badc6f1f76"
+        }
+      },
+      "num_edges": 1726745828,
+      "num_nodes": 111059956,
+      "original_edges": {
+        "dtype": "<i8",
+        "file_bytes": 25850974080,
+        "fortran_order": true,
+        "mtime_ns": 1747906275000000000,
+        "offset": 128,
+        "path": "${PAPERS_SOURCE}/edge_index.npy",
+        "payload_bytes": 25850973952,
+        "sha256": "360c510601bae6c5924400bf9ff34e63758d1838a96a46177a313eca72abebd6",
+        "shape": [
+          1615685872,
+          2
+        ]
+      },
+      "policy": "remove_self_loops_then_append_one_per_node_v1",
+      "removed_self_edges": 0,
+      "schema": "digit-graph-source-v1"
+    },
+    "source_features": {
+      "dtype": "<f4",
+      "file_bytes": 56862697600,
+      "fortran_order": false,
+      "mtime_ns": 1747906260000000000,
+      "offset": 128,
+      "path": "${PAPERS_SOURCE}/node_feat.npy",
+      "payload_bytes": 56862697472,
+      "sha256": "2bbcaf02832de4cccdb95c5a2d7355ead2262c0384c0184bb02900ff741feaa9",
+      "shape": [
+        111059956,
+        128
+      ]
+    },
+    "label_identity": {
+      "path": "${PAPERS_SOURCE}/node_label.npy",
+      "sha256": "fef9266ec1026341f29f8e66b6f50fd92fdb420d258eeb9569246680cd3da233",
+      "inherited_from": "papers128d_memory_preflight_v2.json"
+    },
+    "splits": {
+      "train": {
+        "path": "${PAPERS_SPLITS}/train.csv.gz",
+        "sha256": "6e0da901d3c9b9c570d4266b130b500a93583c0452dc7f333b5ca259bc9d9ab4",
+        "count": 1207179,
+        "order": "file order; training permutations specified below"
+      },
+      "valid": {
+        "path": "${PAPERS_SPLITS}/valid.csv.gz",
+        "sha256": "cd25bc3e66c4472067716d5bb94c6ee7bfe76734209797dc969fe2c7914b7317",
+        "count": 125265,
+        "order": "file order; training permutations specified below"
+      },
+      "test": {
+        "path": "${PAPERS_SPLITS}/test.csv.gz",
+        "sha256": "a448a62ae5e0525ada2d000f95d5d2529e1c3ca419004c5a5a8c89215e591852",
+        "count": 214338,
+        "order": "file order; training permutations specified below"
+      }
+    },
+    "large_source_hashes": "inherited from accepted reports; full execution binding must reverify, not rescanned in protocol freeze"
+  },
+  "model": {
+    "type": "GraphSAGE",
+    "aggregator": "mean",
+    "layers": 3,
+    "input_dim": 128,
+    "hidden_dim": 128,
+    "classes": 172,
+    "dropout": 0.2,
+    "activation_order": "SAGEConv then dropout then ReLU except final layer",
+    "dtype": "float32",
+    "amp": false,
+    "tf32": false,
+    "loss": "CrossEntropyLoss mean",
+    "optimizer": {
+      "type": "Adam",
+      "lr": 0.01,
+      "weight_decay": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "amsgrad": false
+    },
+    "lr_schedule": null,
+    "gradient_clipping": null,
+    "initialization": "reset Python/NumPy/Torch/CUDA/DGL immediately before model creation; paired initial-state hashes equal; reset training RNG after setup; freeze dropout and sampling RNG states separately from evaluation"
+  },
+  "training": {
+    "fanouts_forward_layer_order": [
+      16,
+      5,
+      5
+    ],
+    "sampling_expansion_order": [
+      5,
+      5,
+      16
+    ],
+    "group_layer": "blocks[0], outermost input-feature layer only",
+    "batch_size": 1024,
+    "epochs": 20,
+    "steps_per_epoch": 1179,
+    "tail_batch_nodes": 907,
+    "updates_per_run": 23580,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "repeats_per_seed": 2,
+    "drop_last": false,
+    "early_stop": false,
+    "discarded_warmup_updates": 0,
+    "num_workers": 0,
+    "cpu_threads": 16,
+    "fresh_process_per_run": true,
+    "sampler_graph_metadata_cache_lifetime": "one graph/sampler/GIDS instance per 20-epoch run, including train/eval; rebuilding dataloader must retain sampler metadata and cache",
+    "epoch_rng": "Immediately before training, reset Python/NumPy/Torch/CUDA/DGL to the run seed, after model initialization and all setup; then persist training RNG across epochs. Epoch order uses a separate PCG64(SeedSequence([seed,epoch])); evaluation saves/restores all training RNG states. No requirement for group/raw trajectories to be equal.",
+    "paired_root_order": "Identical complete random permutation for both arms for each seed/epoch; sampler trajectories may differ.",
+    "numerical_reproducibility": {
+      "USE_DETERMINISTIC_ALG": "1",
+      "main_thread_rng": "Before any parallel DGL seed, temporarily set DGL threads=1 and dgl.seed(0); restore16 threads; then initialize model and training RNG with the run seed.",
+      "dgl_binary_sha256": "19d1814a09eaac363751c6fb3a0122a665904afff2ee551cb8ebdf5a6fa3ca26",
+      "scope": "Same setting for both arms, all seeds/repeats, and source references."
+    }
+  },
+  "gids": {
+    "sampler": "native DGL uniform NeighborSampler on normalized original graph, without replacement",
+    "feature_layout": "plain logical-ID order, 4 KiB storage/cache pages",
+    "gpu_policy": "legacy",
+    "cpu_cache": "RevPR page-adapted static cache; NOT original logical Top-K silently rounded",
+    "revpr": {
+      "graph": "reverse of normalized original graph, retain multiplicities",
+      "initial": "uniform 1/N",
+      "iterations": 20,
+      "damping": 0.85,
+      "dtype": "float64",
+      "formula": "p_next[v]=(1-d)/N+d*sum_(u->v in reversed graph)(p[u]/out_degree_reversed[u]); normalized self loops ensure no dangling nodes",
+      "reduction": "deterministic streaming reference; parallel implementation must validate numerical/rank agreement",
+      "page_score": "sum final scores of the 8 logical nodes in each complete page; tail-padded page excluded",
+      "ranking": "descending page score, tie ascending page ID",
+      "selection": "exactly cpu_cache_pages; expose all selected complete rows sorted by physical address"
+    },
+    "train_order": "PCG64(SeedSequence([seed,epoch])) permutation of official train IDs in original CSV order, epoch zero-based",
+    "full_components_enabled": [],
+    "baseline_label": "GIDS with explicit 4-KiB-page RevPR CPU-cache adaptation; same native extension and measurement path as Full"
+  },
+  "digit_full": {
+    "enabled_components": [
+      "graph_reorganization",
+      "group_sampling",
+      "frequency_cpu_cache",
+      "hot_exclusion",
+      "packed_hot_features",
+      "gpu_fifo",
+      "mixed_io"
+    ],
+    "group_size": 8,
+    "group_slot_bytes": 4096,
+    "replication_ratio": 0.2,
+    "replica_row_cap": 22211984,
+    "replica_groups_cap": 2776498,
+    "replica_budget_rule": "cap, not a forced minimum; record any unfillable budget, never add non-neighbors or hot members",
+    "primary_policy": "descending normalized owner degree then logical ID; exclude fixed hot logical nodes from group members; apply accepted primary unique-neighbor/covered-position rules",
+    "grouping_rng": "PCG64(0), deterministic owner/member ordering, resume exact post-primary state for replica stage",
+    "replica_priority": {
+      "source_file": "replica_fit_owner_frequency.csv",
+      "source_sha256": "90c870725a37f97016c6f11e7bcb5e44734b2d9708e96493ffaf62a1f0b0e66f",
+      "source_visits_sha256": "2a8d99072917a1cccb07d3bdd1ea868bc650f10eefcbcee4639ed29364e25981",
+      "fit_batches_inclusive": [
+        0,
+        19
+      ],
+      "fit_visits": 280638,
+      "fit_owners": 242379,
+      "ranking": "descending frozen visit count, descending normalized owner degree, ascending logical owner ID",
+      "allocation": "each owner once, all eligible non-hot primary-owned uncovered unique neighbors grouped up to available cap, then degree/ID fallback; no refit from hot profiling or formal run"
+    },
+    "cpu_hot_selection": {
+      "bootstrap": "accepted forward g8 no-hot artifact (manifest audit snapshot bound); same fanouts16/5/5, CUDA group sampler required",
+      "profile_seed": 0,
+      "train_order": "PCG64(0) permutation of complete official train CSV order",
+      "profile_batches": 1179,
+      "profile_epochs": 1,
+      "model_updates": 0,
+      "count": "int64 counter +1 per unique logical feature input per minibatch, after sampler dedup; no internal activation, label or eval frequency",
+      "ranking": "descending logical count, tie ascending logical ID; choose exactly cpu_cache_rows; count and disclose zero-frequency selections if needed",
+      "packing": "selected hot nodes sorted logical ID in a contiguous 4 KiB-aligned raw segment; no cold companions; no hot node in any primary/replica group",
+      "one_pass": "bootstrap layout used for one dry-run, then hot set frozen and new Full layout rebuilt once; no circular hot/layout refit",
+      "reuse": "single seed0 preprocessing artifact shared across all formal seeds; not per-seed optimized"
+    },
+    "bfs": {
+      "graph": "undirected training-induced normalized original graph, omit self edges; retain multiedge multiplicity for degree ordering as existing bfs_order.py",
+      "component_root": "highest remaining degree, tie lowest logical ID; include isolated training nodes",
+      "neighbor_order": "ascending logical ID",
+      "epoch_order": "shuffle complete 1024-node BFS blocks with PCG64(SeedSequence([seed,epoch])); retain within-block order and final 907-node tail",
+      "construction": "stream original edges/CSC to training-induced representation; exact parity to reference required, no full E-length transient arrays assumed",
+      "enabled_in_main_comparison": false
+    },
+    "gpu_policy": "fifo",
+    "sampling_contract": "unchanged inner raw sampler; existing outer weighted group units and logical dedup/explicit storage addressing; report target/actual fanout, underfilled owners, groups, inputs, EIDs; no padding or extra dummy edges",
+    "optional_components": [
+      "bfs_batch_block_shuffle"
+    ],
+    "train_order": "PCG64(SeedSequence([seed,epoch])) permutation of official train IDs in original CSV order, epoch zero-based",
+    "main_configuration_label": "DiGiT (random batches; GR, NS, hot cache/packing, GPU FIFO, mixed I/O)"
+  },
+  "evaluation": {
+    "trace_sampler": "standard uniform logical sampling on original normalized graph",
+    "fanouts": [
+      16,
+      5,
+      5
+    ],
+    "batch_size": 1024,
+    "trace_seed": 0,
+    "validation": "all 125265 official valid IDs in CSV order, 123 batches after each epoch",
+    "test": "all 214338 official test IDs in CSV order, 210 batches once after epoch20",
+    "test_used_for_tuning": false,
+    "checkpoint": "epoch20 model; no selection by validation/test",
+    "train_rng": "save/restore around trace construction/evaluation, or build trace in separate process",
+    "cache": "continues through validation; do not flush/recreate; shared logical evaluation trace maps to each arm physical primary rows with group flags false",
+    "common_eval": "same logical nodes, edges, features and labels across arms/seeds/repeats; no partial-eval headline",
+    "quality_gate": "average repeat results per seed first; mean paired final-test accuracy(Full-GIDS) >= -0.005 (0.5 percentage points); report all seed differences and intervals; no claim of statistical equivalence or guaranteed convergence"
+  },
+  "measurement": {
+    "profile": "off; no host/CUDA sampling profiler or extra per-batch synchronizations",
+    "primary_online": "monotonic fresh process start through final evaluation/report completion, including hash verification, graph load, CPU cache preload, metadata init, all20epochs and evaluations",
+    "paper_epoch": "sum complete epoch train wall /20; include first-batch lazy init and epoch-order/loader work, no warmup deletion",
+    "additional": [
+      "preprocess graph/group/layout/cache profile and baseline RevPR cost",
+      "payload write and full verification separately",
+      "GPU/CPU metadata init and cache preload",
+      "per-epoch train/validation time and cumulative totals",
+      "test wall",
+      "100-batch window aggregate sampling/feature/wall, primary+replay commands/bytes, cache counters, actual inputs/edges/fanout shortfall",
+      "process-tree host RSS, pinned host cache, GPU device and allocator peaks",
+      "one-task cold total and amortized reuse scenarios with stated number of jobs"
+    ],
+    "offline_accounting": "credit no missing historical work as zero: bootstrap no-hot layout and first20 statistics are preprocessing dependencies; inherited costs incomplete => cold-from-raw total unknown until measured",
+    "interruption": "retain failed attempt; fresh-process rerun of same immutable arm with attempt increment; do not mix resumed warm timing with fresh runs; checkpoints may be diagnostic only"
+  },
+  "statistics": {
+    "schedule": "run_schedule.csv",
+    "planned_runs": 12,
+    "planned_epochs": 240,
+    "planned_optimizer_updates": 282960,
+    "pairing": "same seed and repeat, reversed order in second repeat; no outlier deletion",
+    "aggregation": "compute paired fractional reduction per seed/repeat, average repeats within seed, then equal-weight3seeds; also report pooled totals separately",
+    "intervals": "95% t interval over3 independent seed means, df2 (timing repeats are not additional independent seeds)",
+    "performance_gate": "mean paired online-time reduction >0 and all3 seed mean reductions >0; same signs for complete20epoch train time; report intervals, statistical significance only if interval excludes0",
+    "claim_gate": "performance gate AND quality gate AND all correctness gates; component breakdown monotonicity not required"
+  }
+}

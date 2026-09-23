@@ -1,0 +1,7 @@
+{
+  "allowed_error": "nvidia-smi TimeoutExpired after 5 seconds only",
+  "max_error_fraction": 0.005,
+  "max_consecutive_errors": 1,
+  "max_sample_gap_seconds": 15.0,
+  "max_endpoint_gap_seconds": 2.0
+}

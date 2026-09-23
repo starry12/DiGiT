@@ -1,0 +1,57 @@
+{
+  "schema": "papers-model-admission-v1",
+  "model": "gcn",
+  "exact_parameters": 55212,
+  "components_bytes": {
+    "reordered_indptr": 964388264,
+    "reordered_indices": 6641303184,
+    "group_members": 303634432,
+    "group_storage_base": 37954304,
+    "supernode_to_group": 37954304,
+    "node_to_primary_row": 444239824,
+    "original_csc": 14702446280,
+    "cache_data": 536870912,
+    "cache_metadata_allowance": 134217728,
+    "bam_storage_range_allowance": 1066175552,
+    "model_optimizer_grad": 3506176,
+    "batch_features_activations": 3686006784,
+    "sampled_edges_and_sort_scratch": 160169984,
+    "labels_masks_seed_indices": 3553918592,
+    "runtime_reserve": 4294967296,
+    "common_degree_counter": 444239824,
+    "gat_projection_backward_allowance": 0,
+    "gat_edge_attention_backward_allowance": 0
+  },
+  "required_bytes": 44414392128,
+  "host_required_bytes": 276304253751,
+  "safety_multiplier": 1.2,
+  "formal_bound": true,
+  "reservation": false,
+  "common_to_both_arms": true,
+  "parent_required_bytes": 44414392128,
+  "historical_gpu_total_bytes": 47576711168,
+  "block_upper_envelope": [
+    {
+      "src": 626688,
+      "dst": 36864,
+      "edges": 589824
+    },
+    {
+      "src": 36864,
+      "dst": 6144,
+      "edges": 30720
+    },
+    {
+      "src": 6144,
+      "dst": 1024,
+      "edges": 5120
+    }
+  ],
+  "note": "Parent reserves retained; GAT adds four src/dst projection copies and eight edge-head scalars. Conservative engineering estimate, not measured demand. No lowering after an OOM or silent width change.",
+  "fits_historical_device_total": true,
+  "preparation_admission": {
+    "sha256": "854fab63a290ab5683a534bbf99576dce76d7b1cf9e850ea4a35fc6fed619e3d",
+    "bytes": 3755
+  },
+  "protocol_sha256": "b112cabd1c5622cfb3beac28f4db8873a38f4cb153d2371a7d92834209784653"
+}

@@ -1,0 +1,3418 @@
+{
+  "files": {
+    "ae/common.py": {
+      "adapted": true,
+      "sha256": "4451beb033907d29e8e7c99cf8faa6d853d116005523a7a6d453ddce2fdb5e29",
+      "source": "ae/common.py",
+      "source_sha256": "abf4b5c3adf33b07c1cf4a04b0156320d3f7674713106a6ccc3b1a7823e3be72"
+    },
+    "ae/native/identity/common.c": {
+      "adapted": false,
+      "sha256": "52e8a2d2e79e2c4774a2348405fd9e2662aaedaf3076eec6701ad439e4911470",
+      "source": "ae/native/identity/common.c",
+      "source_sha256": "52e8a2d2e79e2c4774a2348405fd9e2662aaedaf3076eec6701ad439e4911470"
+    },
+    "ae/native/identity/common.h": {
+      "adapted": false,
+      "sha256": "68a35bcd50c72ea9eaef314d337ac814565b9c92bc9d5e7682cf193618ee6316",
+      "source": "ae/native/identity/common.h",
+      "source_sha256": "68a35bcd50c72ea9eaef314d337ac814565b9c92bc9d5e7682cf193618ee6316"
+    },
+    "ae/native/identity/module.c": {
+      "adapted": false,
+      "sha256": "a79de975faffa7a21a468bb82406a176001a1c5c31a27c99d82f0109ff0cf473",
+      "source": "ae/native/identity/module.c",
+      "source_sha256": "a79de975faffa7a21a468bb82406a176001a1c5c31a27c99d82f0109ff0cf473"
+    },
+    "ae/native/papers/output/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "60dd06a60b7cf25760cffd01b2fb90e33f2b50ea42cd24213024f4dd4f6cdf14",
+      "source": "ae/native/papers/output/CMakeLists.txt",
+      "source_sha256": "60dd06a60b7cf25760cffd01b2fb90e33f2b50ea42cd24213024f4dd4f6cdf14"
+    },
+    "ae/native/papers/output/output_fusion.cu": {
+      "adapted": false,
+      "sha256": "17ae2fa441205e9441d9e3c5f501f709896eae5b969d4d1aff64f0616c139315",
+      "source": "ae/native/papers/output/output_fusion.cu",
+      "source_sha256": "17ae2fa441205e9441d9e3c5f501f709896eae5b969d4d1aff64f0616c139315"
+    },
+    "ae/pa_sage/common.py": {
+      "adapted": false,
+      "sha256": "03a0207c43483afbb0bc47b13fbc4b9ece27a44fc5e5d96bf98f95338afe8562",
+      "source": "ae/pa_sage/common.py",
+      "source_sha256": "03a0207c43483afbb0bc47b13fbc4b9ece27a44fc5e5d96bf98f95338afe8562"
+    },
+    "ae/pa_sage/evaluation.py": {
+      "adapted": false,
+      "sha256": "897a7b4ff05ef0da5d4059233daa558de9673541cf384699056ba47d5eb99561",
+      "source": "ae/pa_sage/evaluation.py",
+      "source_sha256": "897a7b4ff05ef0da5d4059233daa558de9673541cf384699056ba47d5eb99561"
+    },
+    "ae/pa_sage/full_validation.py": {
+      "adapted": false,
+      "sha256": "f719f898a74d1d1b2ee7a5db80dc9743dd521f5f36db182d340512ec36515805",
+      "source": "ae/pa_sage/full_validation.py",
+      "source_sha256": "f719f898a74d1d1b2ee7a5db80dc9743dd521f5f36db182d340512ec36515805"
+    },
+    "ae/pa_sage/gpu_monitor.py": {
+      "adapted": false,
+      "sha256": "203e555a95a5520f9b718b56c0ace652c14bdab6b0c6e21caa7679016759889a",
+      "source": "ae/pa_sage/gpu_monitor.py",
+      "source_sha256": "203e555a95a5520f9b718b56c0ace652c14bdab6b0c6e21caa7679016759889a"
+    },
+    "ae/pa_sage/monitor_control.py": {
+      "adapted": false,
+      "sha256": "5e5643f330cdfcba421f5672292dbec4f99be7fd7753815ab3c66a0f7fe3e8a0",
+      "source": "ae/pa_sage/monitor_control.py",
+      "source_sha256": "5e5643f330cdfcba421f5672292dbec4f99be7fd7753815ab3c66a0f7fe3e8a0"
+    },
+    "ae/pa_sage/observations.py": {
+      "adapted": false,
+      "sha256": "aca2d6dfe4dcc713fb09173401556e643ca52e8f03aa13c0094381eb71ebda54",
+      "source": "ae/pa_sage/observations.py",
+      "source_sha256": "aca2d6dfe4dcc713fb09173401556e643ca52e8f03aa13c0094381eb71ebda54"
+    },
+    "ae/pa_sage/trace_cache.py": {
+      "adapted": false,
+      "sha256": "48fb4adda0aca26c7c2ce2191674d5aca23faa4c0fe5aef6b71b6c66b3de1f90",
+      "source": "ae/pa_sage/trace_cache.py",
+      "source_sha256": "48fb4adda0aca26c7c2ce2191674d5aca23faa4c0fe5aef6b71b6c66b3de1f90"
+    },
+    "ae/papers/dataset.py": {
+      "adapted": false,
+      "sha256": "ac3c64bcbfd6a10b8527d381aa01ab6c84d3ecf1cfedfa1cce52cc09fad87850",
+      "source": "ae/papers/dataset.py",
+      "source_sha256": "ac3c64bcbfd6a10b8527d381aa01ab6c84d3ecf1cfedfa1cce52cc09fad87850"
+    },
+    "ae/papers/graph_checks.py": {
+      "adapted": false,
+      "sha256": "d82558845c662037ad1175ce284eebe7c2a74722265191c51cc82013fdca05dd",
+      "source": "candidates/pa_sage_direction_v2/graph.py",
+      "source_sha256": "d82558845c662037ad1175ce284eebe7c2a74722265191c51cc82013fdca05dd"
+    },
+    "ae/papers/main_common.py": {
+      "adapted": false,
+      "sha256": "6c916cd1f39a4cf95e2cfb076fa8a1d8099cea622012a69d0b2be9bfd9833028",
+      "source": "ae/papers/main_common.py",
+      "source_sha256": "6c916cd1f39a4cf95e2cfb076fa8a1d8099cea622012a69d0b2be9bfd9833028"
+    },
+    "ae/papers/runner.py": {
+      "adapted": false,
+      "sha256": "be52ac84ecd4114b96effe4305e5ed72c619f54d309a4e2c299e3e31ddbc65f9",
+      "source": "ae/papers/runner.py",
+      "source_sha256": "be52ac84ecd4114b96effe4305e5ed72c619f54d309a4e2c299e3e31ddbc65f9"
+    },
+    "ae/papers/runtime/GIDS/GIDS.py": {
+      "adapted": false,
+      "sha256": "cf4c9cb287010afd813c60c7f949e5fceb2d2b24ea86f728ff3ff71666994f26",
+      "source": "ae/papers/runtime/GIDS/GIDS.py",
+      "source_sha256": "cf4c9cb287010afd813c60c7f949e5fceb2d2b24ea86f728ff3ff71666994f26"
+    },
+    "ae/papers/runtime/GIDS/__init__.py": {
+      "adapted": false,
+      "sha256": "1db29dd4e06b72cfcea7b6319bc8f8e3a07606283c0db44516a20ac720bb8931",
+      "source": "ae/papers/runtime/GIDS/__init__.py",
+      "source_sha256": "1db29dd4e06b72cfcea7b6319bc8f8e3a07606283c0db44516a20ac720bb8931"
+    },
+    "ae/papers/runtime/GIDS/cache_policy.py": {
+      "adapted": false,
+      "sha256": "67576fb3165764f120e296bf1514c8a68ba2f33d97fd47ae63a23634b201752d",
+      "source": "ae/papers/runtime/GIDS/cache_policy.py",
+      "source_sha256": "67576fb3165764f120e296bf1514c8a68ba2f33d97fd47ae63a23634b201752d"
+    },
+    "ae/papers/runtime/GIDS/feature_rows.py": {
+      "adapted": false,
+      "sha256": "50e9fc26024cdb2e90a75141d1a4a305bac4eabd2210a282d806013118e79d2e",
+      "source": "ae/papers/runtime/GIDS/feature_rows.py",
+      "source_sha256": "50e9fc26024cdb2e90a75141d1a4a305bac4eabd2210a282d806013118e79d2e"
+    },
+    "ae/papers/runtime/baseline_metrics.py": {
+      "adapted": false,
+      "sha256": "96e5096437479216c3521bc9afff565c18fcd5fea3853b227f5b1e58efb2df19",
+      "source": "ae/papers/runtime/baseline_metrics.py",
+      "source_sha256": "96e5096437479216c3521bc9afff565c18fcd5fea3853b227f5b1e58efb2df19"
+    },
+    "ae/papers/runtime/models.py": {
+      "adapted": false,
+      "sha256": "8deaac7daa7d25fd6e0141724797ff26a266a76db76fc70ac421e5d80b0c77ec",
+      "source": "ae/papers/runtime/models.py",
+      "source_sha256": "8deaac7daa7d25fd6e0141724797ff26a266a76db76fc70ac421e5d80b0c77ec"
+    },
+    "artifact_integrity.py": {
+      "adapted": true,
+      "sha256": "cac848cd67611d2bbb9c0b01f6adf8fc7fdb68d6c9c4a353717965b8b5893b64",
+      "source": "artifact_integrity.py",
+      "source_sha256": "aa5c35c57109eae7e1c33a7485cc11bfc52bc143e0ba612a48605dd1174b6c44"
+    },
+    "configs/device.json": {
+      "adapted": false,
+      "sha256": "5b8a0e38a86625debcc0ee516435c2172842d201fce7305f574418f7086a53df",
+      "source": "configs/device.json",
+      "source_sha256": "5b8a0e38a86625debcc0ee516435c2172842d201fce7305f574418f7086a53df"
+    },
+    "configs/external_paths.json": {
+      "adapted": true,
+      "sha256": "a2c3086db4be8fb9643b827de2ef9582d2168d44a04c83471da1dfec9052ff3a",
+      "source": "configs/external_paths.json",
+      "source_sha256": "c064985ba20c554ce36486114ee8fd8892989fc429f10fa5fc0537022a8251f8"
+    },
+    "configs/paper/pa_sage_random_v2.json": {
+      "adapted": false,
+      "sha256": "1412207fc6d35565b1b214bdd9997534ca182fa18c6c87b6a0af9c58b06453df",
+      "source": "configs/paper/pa_sage_random_v2.json",
+      "source_sha256": "1412207fc6d35565b1b214bdd9997534ca182fa18c6c87b6a0af9c58b06453df"
+    },
+    "configs/papers/admission.json": {
+      "adapted": false,
+      "sha256": "5da6de34b195d4ed2c030f96b664ee5e8fbca3cf004a86836763d3836cdf53ac",
+      "source": "configs/papers/admission.json",
+      "source_sha256": "5da6de34b195d4ed2c030f96b664ee5e8fbca3cf004a86836763d3836cdf53ac"
+    },
+    "configs/papers/contract.json": {
+      "adapted": false,
+      "sha256": "9b97e3b703f313eea1fbfe28a34698a9c1ba2663e3ab5c3dc46d26cb60a482e5",
+      "source": "configs/papers/contract.json",
+      "source_sha256": "9b97e3b703f313eea1fbfe28a34698a9c1ba2663e3ab5c3dc46d26cb60a482e5"
+    },
+    "configs/papers/gat_admission.json": {
+      "adapted": false,
+      "sha256": "632c48a3e6200cd4fa98528d8f3635549a571e48375e20e210f428ce0172a0c2",
+      "source": "configs/papers/gat_admission.json",
+      "source_sha256": "632c48a3e6200cd4fa98528d8f3635549a571e48375e20e210f428ce0172a0c2"
+    },
+    "configs/papers/gcn_admission.json": {
+      "adapted": false,
+      "sha256": "448eb427510918199a270a6bf3038510f3167704310fc04e2c16fa64d4eff1c6",
+      "source": "configs/papers/gcn_admission.json",
+      "source_sha256": "448eb427510918199a270a6bf3038510f3167704310fc04e2c16fa64d4eff1c6"
+    },
+    "configs/papers/inputs_ready.json": {
+      "adapted": false,
+      "sha256": "40adde2ca03d89dfe6aa467d445349aced0453bbc70d53562b25a78400025dc8",
+      "source": "configs/papers/inputs_ready.json",
+      "source_sha256": "40adde2ca03d89dfe6aa467d445349aced0453bbc70d53562b25a78400025dc8"
+    },
+    "configs/papers/orders.json": {
+      "adapted": false,
+      "sha256": "b0de1e1855c318119f499dc50f5d7f0c628d4f57a5d6bb36dd678c9c324101c1",
+      "source": "configs/papers/orders.json",
+      "source_sha256": "b0de1e1855c318119f499dc50f5d7f0c628d4f57a5d6bb36dd678c9c324101c1"
+    },
+    "configs/papers/protocol.json": {
+      "adapted": false,
+      "sha256": "2f88fdeb6a0549204f5d94aef9622fa2597c0743fe1c95b7c98f043d0d5be3cf",
+      "source": "configs/papers/protocol.json",
+      "source_sha256": "2f88fdeb6a0549204f5d94aef9622fa2597c0743fe1c95b7c98f043d0d5be3cf"
+    },
+    "configs/sage_selected.json": {
+      "adapted": false,
+      "sha256": "341d619dea12dde95e049e6e8601455e8bbe8dea0cf3d54ff56fdd1b595f4f19",
+      "source": "candidates/pa_sage_selected_v1/config.json",
+      "source_sha256": "341d619dea12dde95e049e6e8601455e8bbe8dea0cf3d54ff56fdd1b595f4f19"
+    },
+    "configs/ssd_payloads.json": {
+      "adapted": true,
+      "sha256": "35d8da9afe3d57a88f91d832c60352df65a1e7a39a814d3b4f3e50a6a77c5812",
+      "source": "configs/ssd_payloads.json",
+      "source_sha256": "a3d9e499a5480714f04105e1dc513ada0ebc9293e1fa3a847c1e920f44bfd311"
+    },
+    "digit_paths.py": {
+      "adapted": true,
+      "sha256": "4c75de5eb9fb1d06ff6f4b3cba2c5f9666c8f9a7287d4701c904c804b01f01a1",
+      "source": "digit_paths.py",
+      "source_sha256": "977cb98c736958628ce9b782b92afe3cf81f48aab269c1d2034438a24b20ffe2"
+    },
+    "environment/check.py": {
+      "adapted": false,
+      "sha256": "cba966bc3cf7f91512757972d016a6bad650e1f0ce67991c4466fd7d7ec0a74f",
+      "source": "submission/v2/environment/check.py",
+      "source_sha256": "cba966bc3cf7f91512757972d016a6bad650e1f0ce67991c4466fd7d7ec0a74f"
+    },
+    "environment/conda-linux-64.lock": {
+      "adapted": false,
+      "sha256": "a84a94c0a0212f24e2a2bb5860ed4a4b8a972fe263789dae22ef53f242c35037",
+      "source": "submission/v2/environment/conda-linux-64.lock",
+      "source_sha256": "a84a94c0a0212f24e2a2bb5860ed4a4b8a972fe263789dae22ef53f242c35037"
+    },
+    "environment/create.sh": {
+      "adapted": true,
+      "sha256": "f3976cc8058b5cc31f72ec0c86b2af331933326eafcaff2ae158b8c0e8f3fd04",
+      "source": "submission/v2/environment/create.sh",
+      "source_sha256": "22c7282bac9472de311297184bd49b2a741b489184a215a37ecaf6fac9cb8d7e"
+    },
+    "environment/requirements.lock": {
+      "adapted": false,
+      "sha256": "f83e93f22debc784e02465a79b1095c9950e96c3a4491e27412adf6004867f87",
+      "source": "submission/v2/environment/requirements.lock",
+      "source_sha256": "f83e93f22debc784e02465a79b1095c9950e96c3a4491e27412adf6004867f87"
+    },
+    "evaluation/gat/__init__.py": {
+      "adapted": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "submission/v4/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/gat/common.py": {
+      "adapted": false,
+      "sha256": "f9919bf37828a8b550f14c2512eafe122870ce5c458cd0dbaebb97a6ad343c85",
+      "source": "submission/v4/common.py",
+      "source_sha256": "f9919bf37828a8b550f14c2512eafe122870ce5c458cd0dbaebb97a6ad343c85"
+    },
+    "evaluation/gcn/__init__.py": {
+      "adapted": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "submission/v3/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/gcn/common.py": {
+      "adapted": false,
+      "sha256": "d1ea4d577afc799e31af6e74857b39feeb475d70c25d9b9f0157ed1ff3112e63",
+      "source": "submission/v3/common.py",
+      "source_sha256": "d1ea4d577afc799e31af6e74857b39feeb475d70c25d9b9f0157ed1ff3112e63"
+    },
+    "evaluation/sage/__init__.py": {
+      "adapted": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "submission/v2/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/sage/check.py": {
+      "adapted": true,
+      "sha256": "3384f378ef5cc7450e7d6b7a901a4aa9285c263c9988066ddbb902179a5a58cb",
+      "source": "submission/v2/check.py",
+      "source_sha256": "53124613e504173923a5425de6d57e112ebb060dff79e00b0b3258d6bb22c6c1"
+    },
+    "evaluation/sage/common.py": {
+      "adapted": true,
+      "sha256": "bf933d382aab1c4417e348111f887e205f55a2c1b089b7aa7abca441b15c7b0c",
+      "source": "submission/v2/common.py",
+      "source_sha256": "2bea9db2ccea8aefd46e21a325789b05bf3be876cf1ce8e09009c5bd0eedc42e"
+    },
+    "evaluation/sage/controller.py": {
+      "adapted": true,
+      "sha256": "22a0a8ab2ddb53d2b37be4f20f0e5c2a8b44a061d15db464437652d0dcadbeac",
+      "source": "submission/v2/controller.py",
+      "source_sha256": "83a991e897da0a8cc25a8497437ef1816ef8589c366981ad225b5b76ecde02ef"
+    },
+    "evaluation/sage/monitor_policy.json": {
+      "adapted": false,
+      "sha256": "7b1d682d385693871041e7f895941547a45468d4125c55f6d4ad4bf92575af23",
+      "source": "submission/v2/monitor_policy.json",
+      "source_sha256": "7b1d682d385693871041e7f895941547a45468d4125c55f6d4ad4bf92575af23"
+    },
+    "evaluation/sage/pa_sage_protocol.json": {
+      "adapted": false,
+      "sha256": "52adb154235ff4995d8d4d4793ebfac8000eb70bbc769cd262158645681eb471",
+      "source": "submission/v2/pa_sage_protocol.json",
+      "source_sha256": "52adb154235ff4995d8d4d4793ebfac8000eb70bbc769cd262158645681eb471"
+    },
+    "evaluation/sage/review.py": {
+      "adapted": true,
+      "sha256": "3ee312613fd533c07557cd021c905f32fe1196cac07e48139eff19d2829b9d9c",
+      "source": "submission/v2/review.py",
+      "source_sha256": "4c7fafe6fc86819247dc52d09c866baba9a0846100533a0e668ccbea60be3e31"
+    },
+    "evaluation/sage/summarize.py": {
+      "adapted": true,
+      "sha256": "eedbcdd46c0800a94b8c1b73737cbfd03dcbde7ae3753d3983f94384a6093567",
+      "source": "submission/v2/summarize.py",
+      "source_sha256": "f94549e23e00b69d36767fcf611d222da3a2e5ea129bbaaea285c70285d678af"
+    },
+    "reference/sage_correctness.json": {
+      "adapted": true,
+      "sha256": "0cc2ab5b5f13066508bca5f7a4143c3d47ab6c9d6ed184ed5f343e91c898e701",
+      "source": "candidates/pa_sage_selected_v1/selected_training_report.json",
+      "source_sha256": "2c29418bae15f1f5cd35d6f441cd3ac18f5aed6a0fdccbc4fc21b86e917ea171"
+    },
+    "runtime/io/accounting.py": {
+      "adapted": false,
+      "sha256": "01c6f3065f0dd738aef0cccdb7ce993e657787d907972b6aeec947eabb495fb6",
+      "source": "candidates/io_accounting_v1/accounting.py",
+      "source_sha256": "01c6f3065f0dd738aef0cccdb7ce993e657787d907972b6aeec947eabb495fb6"
+    },
+    "runtime/io/build.sh": {
+      "adapted": true,
+      "sha256": "245661ff7527a9b02c15d49ba5afb287137a8632afc36b4c1e4be4c894e8fe72",
+      "source": "candidates/io_accounting_v1/build.sh",
+      "source_sha256": "2d39207fa7f8778587b33350b46304509b8450b159db89a1f227b6b966cefed1"
+    },
+    "runtime/io/native/gids_module/gids_kernel.cu": {
+      "adapted": false,
+      "sha256": "60fb8b22068336fbbb8b547b0247b9e25e18691cb7c6946a6f36fb416d5dfb87",
+      "source": "candidates/io_accounting_v1/native/gids_module/gids_kernel.cu",
+      "source_sha256": "60fb8b22068336fbbb8b547b0247b9e25e18691cb7c6946a6f36fb416d5dfb87"
+    },
+    "runtime/io/native/gids_module/gids_nvme.cu": {
+      "adapted": false,
+      "sha256": "9d10260151e863b6c303d1677179a9801ee3d0e7f8929d0113ba96389e173363",
+      "source": "candidates/io_accounting_v1/native/gids_module/gids_nvme.cu",
+      "source_sha256": "9d10260151e863b6c303d1677179a9801ee3d0e7f8929d0113ba96389e173363"
+    },
+    "runtime/io/native/gids_module/include/bam_nvme.h": {
+      "adapted": false,
+      "sha256": "184530f71ddafae8eb5148b34e04b539e76dd81ad9cca998d690c90b5d3a8615",
+      "source": "candidates/io_accounting_v1/native/gids_module/include/bam_nvme.h",
+      "source_sha256": "184530f71ddafae8eb5148b34e04b539e76dd81ad9cca998d690c90b5d3a8615"
+    },
+    "runtime/io/native/include/page_cache.h": {
+      "adapted": false,
+      "sha256": "1b747f96f0847b03e38109256e335f77d1324b27ea375a632ef24f9a3014b764",
+      "source": "candidates/io_accounting_v1/native/bam/include/page_cache.h",
+      "source_sha256": "1b747f96f0847b03e38109256e335f77d1324b27ea375a632ef24f9a3014b764"
+    },
+    "runtime/io/runtime/BAM_Feature_Store/__init__.py": {
+      "adapted": false,
+      "sha256": "dccb84be89bf73362a278cc4464ea10fd034a2300644b96cfd366ad0d085f1ea",
+      "source": "candidates/io_accounting_v1/runtime/BAM_Feature_Store/__init__.py",
+      "source_sha256": "dccb84be89bf73362a278cc4464ea10fd034a2300644b96cfd366ad0d085f1ea"
+    },
+    "scripts/environment_snapshot.py": {
+      "adapted": true,
+      "sha256": "9d74022ddda6efa3b037e8788c3992140ae1736ac3b75cd1269d57445b58d64e",
+      "source": "scripts/environment_snapshot.py",
+      "source_sha256": "d97974a6c1681f128b1910961c2c9e72195202d356400df8cee94d8dcf712013"
+    },
+    "scripts/test_pa_cpu.py": {
+      "adapted": true,
+      "sha256": "8413968d5c919e28cdec7f95106073183c8a961f8e8cf19ebf28e18aaf0dc141",
+      "source": "scripts/test_pa_cpu.py",
+      "source_sha256": "25a6577eb6dbe805c670ad1ef58621ef2fe21276681696abafdded9a2c354d31"
+    },
+    "tests/fixtures/pa_budget_manifest.json": {
+      "adapted": false,
+      "sha256": "d080d95333cdf49bae01d38f324d9080fbf80461a12cb4043e6ede0274753802",
+      "source": "tests/fixtures/pa_budget_manifest.json",
+      "source_sha256": "d080d95333cdf49bae01d38f324d9080fbf80461a12cb4043e6ede0274753802"
+    },
+    "tests/fixtures/pa_prepared.json": {
+      "adapted": false,
+      "sha256": "84eefa732f9429d3fe891370946d251d20d963c76f047a8d9d7052ce7babbcc0",
+      "source": "tests/fixtures/pa_prepared.json",
+      "source_sha256": "84eefa732f9429d3fe891370946d251d20d963c76f047a8d9d7052ce7babbcc0"
+    },
+    "third_party/bam/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "71451107a8da0842ea56fe40c0413c5b6e132c3d5791dc19f21c2656a4cc65d8",
+      "source": "bam/CMakeLists.txt",
+      "source_sha256": "71451107a8da0842ea56fe40c0413c5b6e132c3d5791dc19f21c2656a4cc65d8"
+    },
+    "third_party/bam/LICENSE": {
+      "adapted": false,
+      "sha256": "8874d6060aaf8d993041f79386fd8a0df0e743bef4be88c1332affff49810a8c",
+      "source": "bam/LICENSE",
+      "source_sha256": "8874d6060aaf8d993041f79386fd8a0df0e743bef4be88c1332affff49810a8c"
+    },
+    "third_party/bam/README.md": {
+      "adapted": false,
+      "sha256": "3a5cf8d5d72ddfccfa2465547db768ae7d2a9c0ae7d431cddd893802c14412f0",
+      "source": "bam/README.md",
+      "source_sha256": "3a5cf8d5d72ddfccfa2465547db768ae7d2a9c0ae7d431cddd893802c14412f0"
+    },
+    "third_party/bam/benchmarks/array/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "ddc432a49bedbe73523fc80d6fd86694fa4933ce7d2e5890ce334cd8e4519403",
+      "source": "bam/benchmarks/array/CMakeLists.txt",
+      "source_sha256": "ddc432a49bedbe73523fc80d6fd86694fa4933ce7d2e5890ce334cd8e4519403"
+    },
+    "third_party/bam/benchmarks/array/benchmark.sh": {
+      "adapted": false,
+      "sha256": "4dc77df143924c24754093f702ceaf14dd23c2a1459c8585c52d81534d44259f",
+      "source": "bam/benchmarks/array/benchmark.sh",
+      "source_sha256": "4dc77df143924c24754093f702ceaf14dd23c2a1459c8585c52d81534d44259f"
+    },
+    "third_party/bam/benchmarks/array/main.cu": {
+      "adapted": false,
+      "sha256": "3a2af3b57f3b54572620f9a7f982b44cd199e0349a4e813b37a6d5ddad94dbe4",
+      "source": "bam/benchmarks/array/main.cu",
+      "source_sha256": "3a2af3b57f3b54572620f9a7f982b44cd199e0349a4e813b37a6d5ddad94dbe4"
+    },
+    "third_party/bam/benchmarks/array/settings.h": {
+      "adapted": false,
+      "sha256": "28864d4f79eba2603d98b54c0076656f08fd07ceda5288e134c4b6ba8155f048",
+      "source": "bam/benchmarks/array/settings.h",
+      "source_sha256": "28864d4f79eba2603d98b54c0076656f08fd07ceda5288e134c4b6ba8155f048"
+    },
+    "third_party/bam/benchmarks/block-cache/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "dea413789d5aab891ecea77f56a1d5e052c9e89043343ec4bc6a20b0e686aa52",
+      "source": "bam/benchmarks/block-cache/CMakeLists.txt",
+      "source_sha256": "dea413789d5aab891ecea77f56a1d5e052c9e89043343ec4bc6a20b0e686aa52"
+    },
+    "third_party/bam/benchmarks/block-cache/main-float-cache.cu": {
+      "adapted": false,
+      "sha256": "532feeda92c2d59e7df19368bcdf06202a3ec993d93c452ead386fe2a8fbfa26",
+      "source": "bam/benchmarks/block-cache/main-float-cache.cu",
+      "source_sha256": "532feeda92c2d59e7df19368bcdf06202a3ec993d93c452ead386fe2a8fbfa26"
+    },
+    "third_party/bam/benchmarks/block-cache/main-float-cache_jc.cu": {
+      "adapted": false,
+      "sha256": "d9afb5510216264c2f3f23b11d3fc37872efa0c70ae60a9013d11da06f01b5d8",
+      "source": "bam/benchmarks/block-cache/main-float-cache_jc.cu",
+      "source_sha256": "d9afb5510216264c2f3f23b11d3fc37872efa0c70ae60a9013d11da06f01b5d8"
+    },
+    "third_party/bam/benchmarks/block-cache/settings.h": {
+      "adapted": false,
+      "sha256": "af5653446d5f57f9404728dda4df8bdc222dd1a46b26b211e1e6757bdfbaf6f1",
+      "source": "bam/benchmarks/block-cache/settings.h",
+      "source_sha256": "af5653446d5f57f9404728dda4df8bdc222dd1a46b26b211e1e6757bdfbaf6f1"
+    },
+    "third_party/bam/benchmarks/block/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "76444ab4beaa2c16ef011a9b5b7b40ef648ef81a614cf7bd52c405ee7ec273bc",
+      "source": "bam/benchmarks/block/CMakeLists.txt",
+      "source_sha256": "76444ab4beaa2c16ef011a9b5b7b40ef648ef81a614cf7bd52c405ee7ec273bc"
+    },
+    "third_party/bam/benchmarks/block/benchmark.sh": {
+      "adapted": false,
+      "sha256": "86259272ae3a85166e23e64d7109880f4e298c3d15e953f717d4f020dd8df5bb",
+      "source": "bam/benchmarks/block/benchmark.sh",
+      "source_sha256": "86259272ae3a85166e23e64d7109880f4e298c3d15e953f717d4f020dd8df5bb"
+    },
+    "third_party/bam/benchmarks/block/main-jc.cu": {
+      "adapted": false,
+      "sha256": "0d88fe00c32a29ae9f6d0e84e11d797715dd988675a60c1d658c12c00d3c7647",
+      "source": "bam/benchmarks/block/main-jc.cu",
+      "source_sha256": "0d88fe00c32a29ae9f6d0e84e11d797715dd988675a60c1d658c12c00d3c7647"
+    },
+    "third_party/bam/benchmarks/block/main-wq.cu": {
+      "adapted": false,
+      "sha256": "5a1c413c87afda9d5a1ad78671fc5db368586efdd94fe7687a1f4e2a8da1b205",
+      "source": "bam/benchmarks/block/main-wq.cu",
+      "source_sha256": "5a1c413c87afda9d5a1ad78671fc5db368586efdd94fe7687a1f4e2a8da1b205"
+    },
+    "third_party/bam/benchmarks/block/main.cu": {
+      "adapted": false,
+      "sha256": "b5c52575710de1c3efd7fbfce58d514ed9c07f55973319bba1af2b42fafc55c5",
+      "source": "bam/benchmarks/block/main.cu",
+      "source_sha256": "b5c52575710de1c3efd7fbfce58d514ed9c07f55973319bba1af2b42fafc55c5"
+    },
+    "third_party/bam/benchmarks/block/settings.h": {
+      "adapted": false,
+      "sha256": "66befb54ec3d2e3ec7100a27401585713d4721bd4572966b0b48f31d8674142b",
+      "source": "bam/benchmarks/block/settings.h",
+      "source_sha256": "66befb54ec3d2e3ec7100a27401585713d4721bd4572966b0b48f31d8674142b"
+    },
+    "third_party/bam/benchmarks/block/test.sh": {
+      "adapted": false,
+      "sha256": "054ee1e086f4094aedce94d334d5171054fd67498ce7f2f73bad94a4d4136422",
+      "source": "bam/benchmarks/block/test.sh",
+      "source_sha256": "054ee1e086f4094aedce94d334d5171054fd67498ce7f2f73bad94a4d4136422"
+    },
+    "third_party/bam/benchmarks/iodepth-block/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "7aabcc2f4b7553833390aa6e87698a45f757f62e55eb92a4ce54af29f6156004",
+      "source": "bam/benchmarks/iodepth-block/CMakeLists.txt",
+      "source_sha256": "7aabcc2f4b7553833390aa6e87698a45f757f62e55eb92a4ce54af29f6156004"
+    },
+    "third_party/bam/benchmarks/iodepth-block/benchmark.sh": {
+      "adapted": false,
+      "sha256": "107b61bc8ac61c9cfadbf1390d5c060c0d3ba9b0e3701242afe8b94acc42ad28",
+      "source": "bam/benchmarks/iodepth-block/benchmark.sh",
+      "source_sha256": "107b61bc8ac61c9cfadbf1390d5c060c0d3ba9b0e3701242afe8b94acc42ad28"
+    },
+    "third_party/bam/benchmarks/iodepth-block/main.cu": {
+      "adapted": false,
+      "sha256": "08aa9da56700cf954f39041a13fef906fe50ca32bc08bc630e238552ca0a02a7",
+      "source": "bam/benchmarks/iodepth-block/main.cu",
+      "source_sha256": "08aa9da56700cf954f39041a13fef906fe50ca32bc08bc630e238552ca0a02a7"
+    },
+    "third_party/bam/benchmarks/iodepth-block/settings.h": {
+      "adapted": false,
+      "sha256": "326e329cd6eb6050cb503aac80b1cfae0bc32301aa26d81a52f975c45dd120b0",
+      "source": "bam/benchmarks/iodepth-block/settings.h",
+      "source_sha256": "326e329cd6eb6050cb503aac80b1cfae0bc32301aa26d81a52f975c45dd120b0"
+    },
+    "third_party/bam/benchmarks/iodepth-block/test.sh": {
+      "adapted": false,
+      "sha256": "054ee1e086f4094aedce94d334d5171054fd67498ce7f2f73bad94a4d4136422",
+      "source": "bam/benchmarks/iodepth-block/test.sh",
+      "source_sha256": "054ee1e086f4094aedce94d334d5171054fd67498ce7f2f73bad94a4d4136422"
+    },
+    "third_party/bam/benchmarks/readwrite/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "87abb6ed839945549598059c5d57001f293ef0ecb6b4a800e16eda94634d4e4f",
+      "source": "bam/benchmarks/readwrite/CMakeLists.txt",
+      "source_sha256": "87abb6ed839945549598059c5d57001f293ef0ecb6b4a800e16eda94634d4e4f"
+    },
+    "third_party/bam/benchmarks/readwrite/benchmark.sh": {
+      "adapted": false,
+      "sha256": "21a9e65c1414318beb10534fa270e4e9f23b86add604c46d59d2500670620214",
+      "source": "bam/benchmarks/readwrite/benchmark.sh",
+      "source_sha256": "21a9e65c1414318beb10534fa270e4e9f23b86add604c46d59d2500670620214"
+    },
+    "third_party/bam/benchmarks/readwrite/main.cu": {
+      "adapted": false,
+      "sha256": "aaa29130495328399f9005800d60f0a801565aa3324dadc9d6ef3eb53abfe532",
+      "source": "bam/benchmarks/readwrite/main.cu",
+      "source_sha256": "aaa29130495328399f9005800d60f0a801565aa3324dadc9d6ef3eb53abfe532"
+    },
+    "third_party/bam/benchmarks/readwrite/settings.h": {
+      "adapted": false,
+      "sha256": "d78c524d86cdfc898aee72f483355fd700dc7a72bbd44bb06a276e086ae50f0f",
+      "source": "bam/benchmarks/readwrite/settings.h",
+      "source_sha256": "d78c524d86cdfc898aee72f483355fd700dc7a72bbd44bb06a276e086ae50f0f"
+    },
+    "third_party/bam/benchmarks/readwrite_stripe/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "2d1f81c5efb262e77ffc4a02bae7486ec2deed92c08b281fdc76bffc78349d3d",
+      "source": "bam/benchmarks/readwrite_stripe/CMakeLists.txt",
+      "source_sha256": "2d1f81c5efb262e77ffc4a02bae7486ec2deed92c08b281fdc76bffc78349d3d"
+    },
+    "third_party/bam/benchmarks/readwrite_stripe/benchmark.sh": {
+      "adapted": false,
+      "sha256": "21a9e65c1414318beb10534fa270e4e9f23b86add604c46d59d2500670620214",
+      "source": "bam/benchmarks/readwrite_stripe/benchmark.sh",
+      "source_sha256": "21a9e65c1414318beb10534fa270e4e9f23b86add604c46d59d2500670620214"
+    },
+    "third_party/bam/benchmarks/readwrite_stripe/main-jc.cu": {
+      "adapted": false,
+      "sha256": "d20048933b5ead8db21fdf156f18d7fbbe25beccc72c287e6b9d86b89d68f712",
+      "source": "bam/benchmarks/readwrite_stripe/main-jc.cu",
+      "source_sha256": "d20048933b5ead8db21fdf156f18d7fbbe25beccc72c287e6b9d86b89d68f712"
+    },
+    "third_party/bam/benchmarks/readwrite_stripe/main.cu": {
+      "adapted": false,
+      "sha256": "c23fe83f9f3ec96474daabcbb4002c3c70b13a40ccec19b67591f71dfaaf79f3",
+      "source": "bam/benchmarks/readwrite_stripe/main.cu",
+      "source_sha256": "c23fe83f9f3ec96474daabcbb4002c3c70b13a40ccec19b67591f71dfaaf79f3"
+    },
+    "third_party/bam/benchmarks/readwrite_stripe/settings.h": {
+      "adapted": false,
+      "sha256": "d73ad07e2c57deb34061d661a9a2fd453a08d598ed355c0d49b8f4afb3ef58c5",
+      "source": "bam/benchmarks/readwrite_stripe/settings.h",
+      "source_sha256": "d73ad07e2c57deb34061d661a9a2fd453a08d598ed355c0d49b8f4afb3ef58c5"
+    },
+    "third_party/bam/include/bafs_ptr.h": {
+      "adapted": false,
+      "sha256": "b53f20e0fc765ac43204ae2b182bc8beea6995ada418900a991546c8439c45a8",
+      "source": "bam/include/bafs_ptr.h",
+      "source_sha256": "b53f20e0fc765ac43204ae2b182bc8beea6995ada418900a991546c8439c45a8"
+    },
+    "third_party/bam/include/buffer.h": {
+      "adapted": false,
+      "sha256": "b0736601979da4ba14c86e3727750820c0eeca587e5de664beac3aa384e8b47a",
+      "source": "bam/include/buffer.h",
+      "source_sha256": "b0736601979da4ba14c86e3727750820c0eeca587e5de664beac3aa384e8b47a"
+    },
+    "third_party/bam/include/ctrl.h": {
+      "adapted": false,
+      "sha256": "051bbc68f88ac30729b6f2966a16a8edd85f219f422c605422079a9b5c55278e",
+      "source": "bam/include/ctrl.h",
+      "source_sha256": "051bbc68f88ac30729b6f2966a16a8edd85f219f422c605422079a9b5c55278e"
+    },
+    "third_party/bam/include/event.h": {
+      "adapted": false,
+      "sha256": "cdbfac5375a313731b0804b5efe846d13a5d1e8b356c9f462ca84dd58c39083c",
+      "source": "bam/include/event.h",
+      "source_sha256": "cdbfac5375a313731b0804b5efe846d13a5d1e8b356c9f462ca84dd58c39083c"
+    },
+    "third_party/bam/include/freestanding/.gitignore": {
+      "adapted": false,
+      "sha256": "cd92890b59522351ffbcaf5a41ee4ae10df415d8dff02b57ad11c4194908acc7",
+      "source": "bam/include/freestanding/.gitignore",
+      "source_sha256": "cd92890b59522351ffbcaf5a41ee4ae10df415d8dff02b57ad11c4194908acc7"
+    },
+    "third_party/bam/include/freestanding/.gitmodules": {
+      "adapted": false,
+      "sha256": "77cfb725d3cd8af7cf2c3d1acc16906259686f936263a479d02db1e7fcac5d30",
+      "source": "bam/include/freestanding/.gitmodules",
+      "source_sha256": "77cfb725d3cd8af7cf2c3d1acc16906259686f936263a479d02db1e7fcac5d30"
+    },
+    "third_party/bam/include/freestanding/README.md": {
+      "adapted": false,
+      "sha256": "3d753cf69c51c5f7d7823af60c987b8f30f4c7106d9a12ca890f42566fc9212e",
+      "source": "bam/include/freestanding/README.md",
+      "source_sha256": "3d753cf69c51c5f7d7823af60c987b8f30f4c7106d9a12ca890f42566fc9212e"
+    },
+    "third_party/bam/include/freestanding/include/details/__atomic": {
+      "adapted": false,
+      "sha256": "20ce9ad6e773a57f01092acc48df245ba51c6daaa14dd1510873b24f6dee83bd",
+      "source": "bam/include/freestanding/include/details/__atomic",
+      "source_sha256": "20ce9ad6e773a57f01092acc48df245ba51c6daaa14dd1510873b24f6dee83bd"
+    },
+    "third_party/bam/include/freestanding/include/details/__atomic_derived": {
+      "adapted": false,
+      "sha256": "c2eb6f9bcff62b317b2ae35de9399f6e000a141693159cb547e29c0b4343c7f5",
+      "source": "bam/include/freestanding/include/details/__atomic_derived",
+      "source_sha256": "c2eb6f9bcff62b317b2ae35de9399f6e000a141693159cb547e29c0b4343c7f5"
+    },
+    "third_party/bam/include/freestanding/include/details/__atomic_generated": {
+      "adapted": false,
+      "sha256": "5ded86e1c7c7da7003ab5ed6fda266a7dfc1fb347f2c75c0e2f173633a22dce5",
+      "source": "bam/include/freestanding/include/details/__atomic_generated",
+      "source_sha256": "5ded86e1c7c7da7003ab5ed6fda266a7dfc1fb347f2c75c0e2f173633a22dce5"
+    },
+    "third_party/bam/include/freestanding/include/details/__config": {
+      "adapted": false,
+      "sha256": "ac7792bb0fea5b55b39ba99a97680ce25b3e4ff5d50fd4436a30f9f8f45026bf",
+      "source": "bam/include/freestanding/include/details/__config",
+      "source_sha256": "ac7792bb0fea5b55b39ba99a97680ce25b3e4ff5d50fd4436a30f9f8f45026bf"
+    },
+    "third_party/bam/include/freestanding/include/details/__debug": {
+      "adapted": false,
+      "sha256": "550e419e638dafcbd10f3bf8b6a7f0ddd54180da83578191a86438585bce2857",
+      "source": "bam/include/freestanding/include/details/__debug",
+      "source_sha256": "550e419e638dafcbd10f3bf8b6a7f0ddd54180da83578191a86438585bce2857"
+    },
+    "third_party/bam/include/freestanding/include/details/__functional_base": {
+      "adapted": false,
+      "sha256": "e643d2601571319d8f666dfef2502e79e70ec0fae69f087b4cc3e927a5d390e8",
+      "source": "bam/include/freestanding/include/details/__functional_base",
+      "source_sha256": "e643d2601571319d8f666dfef2502e79e70ec0fae69f087b4cc3e927a5d390e8"
+    },
+    "third_party/bam/include/freestanding/include/details/__threading_support": {
+      "adapted": false,
+      "sha256": "229e429e7613aae67ad903cb8a3d9a3efd08bf897eda0424a7a91aa7f831b840",
+      "source": "bam/include/freestanding/include/details/__threading_support",
+      "source_sha256": "229e429e7613aae67ad903cb8a3d9a3efd08bf897eda0424a7a91aa7f831b840"
+    },
+    "third_party/bam/include/freestanding/include/details/__tuple": {
+      "adapted": false,
+      "sha256": "349f3a4f69f87cf35e768eafabddaa4a267dea5888349ea14b6ca8691419b7e8",
+      "source": "bam/include/freestanding/include/details/__tuple",
+      "source_sha256": "349f3a4f69f87cf35e768eafabddaa4a267dea5888349ea14b6ca8691419b7e8"
+    },
+    "third_party/bam/include/freestanding/include/details/cassert": {
+      "adapted": false,
+      "sha256": "5b991983ed277bffb06dfc0eedd710f1a860e4ca043f2ab665728931ba605391",
+      "source": "bam/include/freestanding/include/details/cassert",
+      "source_sha256": "5b991983ed277bffb06dfc0eedd710f1a860e4ca043f2ab665728931ba605391"
+    },
+    "third_party/bam/include/freestanding/include/details/cmath": {
+      "adapted": false,
+      "sha256": "a22e372ce590a7cc979fbc0dd0f547ac1cfccc016c2f4f6b77fe9abda0e73e6a",
+      "source": "bam/include/freestanding/include/details/cmath",
+      "source_sha256": "a22e372ce590a7cc979fbc0dd0f547ac1cfccc016c2f4f6b77fe9abda0e73e6a"
+    },
+    "third_party/bam/include/freestanding/include/details/cstring": {
+      "adapted": false,
+      "sha256": "84bf5af4beeddf9f58faafbb71af70aea41368eb7c541e49a2bba901f136c02f",
+      "source": "bam/include/freestanding/include/details/cstring",
+      "source_sha256": "84bf5af4beeddf9f58faafbb71af70aea41368eb7c541e49a2bba901f136c02f"
+    },
+    "third_party/bam/include/freestanding/include/details/iosfwd": {
+      "adapted": false,
+      "sha256": "be77dc208bd7c74c5418abec10b9eeaa4f63e3045a8de4f5940376fb45c8499e",
+      "source": "bam/include/freestanding/include/details/iosfwd",
+      "source_sha256": "be77dc208bd7c74c5418abec10b9eeaa4f63e3045a8de4f5940376fb45c8499e"
+    },
+    "third_party/bam/include/freestanding/include/details/iterator": {
+      "adapted": false,
+      "sha256": "7b3c2a5035fe94be7131c665e2c769423456f544e918291fe2111c90be3c6260",
+      "source": "bam/include/freestanding/include/details/iterator",
+      "source_sha256": "7b3c2a5035fe94be7131c665e2c769423456f544e918291fe2111c90be3c6260"
+    },
+    "third_party/bam/include/freestanding/include/details/stdexcept": {
+      "adapted": false,
+      "sha256": "afa929b8d3e6dacd667a3bd526fd855b454f2975a59edab93cc44c8ad134de69",
+      "source": "bam/include/freestanding/include/details/stdexcept",
+      "source_sha256": "afa929b8d3e6dacd667a3bd526fd855b454f2975a59edab93cc44c8ad134de69"
+    },
+    "third_party/bam/include/freestanding/include/simt/atomic": {
+      "adapted": false,
+      "sha256": "be76e48e2255ffc83e5fff6386af8772453a51747aae143aa15b56188d76f778",
+      "source": "bam/include/freestanding/include/simt/atomic",
+      "source_sha256": "be76e48e2255ffc83e5fff6386af8772453a51747aae143aa15b56188d76f778"
+    },
+    "third_party/bam/include/freestanding/include/simt/barrier": {
+      "adapted": false,
+      "sha256": "f8dcd6048d70566549fef824547463f79758511fd60477ace1a0123623152827",
+      "source": "bam/include/freestanding/include/simt/barrier",
+      "source_sha256": "f8dcd6048d70566549fef824547463f79758511fd60477ace1a0123623152827"
+    },
+    "third_party/bam/include/freestanding/include/simt/cfloat": {
+      "adapted": false,
+      "sha256": "644c6dae5c1d062ddb83ef97b581398cf244c23744337ba16d4816468475bd83",
+      "source": "bam/include/freestanding/include/simt/cfloat",
+      "source_sha256": "644c6dae5c1d062ddb83ef97b581398cf244c23744337ba16d4816468475bd83"
+    },
+    "third_party/bam/include/freestanding/include/simt/chrono": {
+      "adapted": false,
+      "sha256": "df27818e2013e852fb14fef673140d92e8821b205eaa5f75d151daeefc42a0fe",
+      "source": "bam/include/freestanding/include/simt/chrono",
+      "source_sha256": "df27818e2013e852fb14fef673140d92e8821b205eaa5f75d151daeefc42a0fe"
+    },
+    "third_party/bam/include/freestanding/include/simt/ciso646": {
+      "adapted": false,
+      "sha256": "c471c1500950d0350a193f6527962b4af9305f87dfbe4c23e30a5e9d4013bb29",
+      "source": "bam/include/freestanding/include/simt/ciso646",
+      "source_sha256": "c471c1500950d0350a193f6527962b4af9305f87dfbe4c23e30a5e9d4013bb29"
+    },
+    "third_party/bam/include/freestanding/include/simt/climits": {
+      "adapted": false,
+      "sha256": "7d25d2060eff70166cddfedbef74d7d487a6ad8485c5bd32e4dca101d66e5013",
+      "source": "bam/include/freestanding/include/simt/climits",
+      "source_sha256": "7d25d2060eff70166cddfedbef74d7d487a6ad8485c5bd32e4dca101d66e5013"
+    },
+    "third_party/bam/include/freestanding/include/simt/complex": {
+      "adapted": false,
+      "sha256": "bef5e5b7d30cce3b9de7fcbbdb7e5736f3234956775ba2b1c92a8cc77742606f",
+      "source": "bam/include/freestanding/include/simt/complex",
+      "source_sha256": "bef5e5b7d30cce3b9de7fcbbdb7e5736f3234956775ba2b1c92a8cc77742606f"
+    },
+    "third_party/bam/include/freestanding/include/simt/cstdarg": {
+      "adapted": false,
+      "sha256": "838bd530efd8ada333303dede29b677cb9497dae885038dfddf77296d4e632eb",
+      "source": "bam/include/freestanding/include/simt/cstdarg",
+      "source_sha256": "838bd530efd8ada333303dede29b677cb9497dae885038dfddf77296d4e632eb"
+    },
+    "third_party/bam/include/freestanding/include/simt/cstdbool": {
+      "adapted": false,
+      "sha256": "444bb84466282bcf1c8b45e81de475b09fab11b566b0e36b828084718d9f4663",
+      "source": "bam/include/freestanding/include/simt/cstdbool",
+      "source_sha256": "444bb84466282bcf1c8b45e81de475b09fab11b566b0e36b828084718d9f4663"
+    },
+    "third_party/bam/include/freestanding/include/simt/cstddef": {
+      "adapted": false,
+      "sha256": "996d9e580e8384f5fc308a3f76ef02b9d2893289535adcd61b9396c9595951a6",
+      "source": "bam/include/freestanding/include/simt/cstddef",
+      "source_sha256": "996d9e580e8384f5fc308a3f76ef02b9d2893289535adcd61b9396c9595951a6"
+    },
+    "third_party/bam/include/freestanding/include/simt/cstdint": {
+      "adapted": false,
+      "sha256": "6ebaedca2cd5a5d263a831da6c596a925e278def18997e8414c83e36e05ec8b8",
+      "source": "bam/include/freestanding/include/simt/cstdint",
+      "source_sha256": "6ebaedca2cd5a5d263a831da6c596a925e278def18997e8414c83e36e05ec8b8"
+    },
+    "third_party/bam/include/freestanding/include/simt/cstdlib": {
+      "adapted": false,
+      "sha256": "9f9b57792d144e2dac8b9a8bd7283dcf78ce4c48cff12c5fc42e8944820adb10",
+      "source": "bam/include/freestanding/include/simt/cstdlib",
+      "source_sha256": "9f9b57792d144e2dac8b9a8bd7283dcf78ce4c48cff12c5fc42e8944820adb10"
+    },
+    "third_party/bam/include/freestanding/include/simt/ctime": {
+      "adapted": false,
+      "sha256": "fe9d6382ec4aea7713a904d626d132826cb58da9f9ca220feda3cd52b492f763",
+      "source": "bam/include/freestanding/include/simt/ctime",
+      "source_sha256": "fe9d6382ec4aea7713a904d626d132826cb58da9f9ca220feda3cd52b492f763"
+    },
+    "third_party/bam/include/freestanding/include/simt/exception": {
+      "adapted": false,
+      "sha256": "5b97f6c32e539f078897bc77564a381ddb1dd528caaae6a602c8aeac0ccf2368",
+      "source": "bam/include/freestanding/include/simt/exception",
+      "source_sha256": "5b97f6c32e539f078897bc77564a381ddb1dd528caaae6a602c8aeac0ccf2368"
+    },
+    "third_party/bam/include/freestanding/include/simt/initializer_list": {
+      "adapted": false,
+      "sha256": "27aa9cc927cf121a92255aeedee0d8478bdb7110cfbb1d0a4d04d1ea9a1ba0d4",
+      "source": "bam/include/freestanding/include/simt/initializer_list",
+      "source_sha256": "27aa9cc927cf121a92255aeedee0d8478bdb7110cfbb1d0a4d04d1ea9a1ba0d4"
+    },
+    "third_party/bam/include/freestanding/include/simt/latch": {
+      "adapted": false,
+      "sha256": "87549cc8789d6dde7d9c04e1ec26d70b3c9a273bb4fdb8ebce6b60bd66dbb46b",
+      "source": "bam/include/freestanding/include/simt/latch",
+      "source_sha256": "87549cc8789d6dde7d9c04e1ec26d70b3c9a273bb4fdb8ebce6b60bd66dbb46b"
+    },
+    "third_party/bam/include/freestanding/include/simt/limits": {
+      "adapted": false,
+      "sha256": "3227c5b54220ef02052b71fc90674bbed369cd96f8e4b021c04193ee3fca7910",
+      "source": "bam/include/freestanding/include/simt/limits",
+      "source_sha256": "3227c5b54220ef02052b71fc90674bbed369cd96f8e4b021c04193ee3fca7910"
+    },
+    "third_party/bam/include/freestanding/include/simt/memory": {
+      "adapted": false,
+      "sha256": "bbca19f3e42973c1adf31fa04bfe380183f2b8e1a8a4f8aac37e948990b0d0bb",
+      "source": "bam/include/freestanding/include/simt/memory",
+      "source_sha256": "bbca19f3e42973c1adf31fa04bfe380183f2b8e1a8a4f8aac37e948990b0d0bb"
+    },
+    "third_party/bam/include/freestanding/include/simt/new": {
+      "adapted": false,
+      "sha256": "3fc962a2971553d65ace33ab389bcee2fc13e57f56c7e6165239a5550650bbd4",
+      "source": "bam/include/freestanding/include/simt/new",
+      "source_sha256": "3fc962a2971553d65ace33ab389bcee2fc13e57f56c7e6165239a5550650bbd4"
+    },
+    "third_party/bam/include/freestanding/include/simt/ratio": {
+      "adapted": false,
+      "sha256": "59518ec0793325fa7b6b99631b117617d842dd85432afcb2d65e167107a53e67",
+      "source": "bam/include/freestanding/include/simt/ratio",
+      "source_sha256": "59518ec0793325fa7b6b99631b117617d842dd85432afcb2d65e167107a53e67"
+    },
+    "third_party/bam/include/freestanding/include/simt/semaphore": {
+      "adapted": false,
+      "sha256": "ab87aeda81cd4df298492caf574148db5f4f0ab7c438ae2feb577a16ba8d8a60",
+      "source": "bam/include/freestanding/include/simt/semaphore",
+      "source_sha256": "ab87aeda81cd4df298492caf574148db5f4f0ab7c438ae2feb577a16ba8d8a60"
+    },
+    "third_party/bam/include/freestanding/include/simt/tuple": {
+      "adapted": false,
+      "sha256": "ef09e969b4749c550fc9b9fc0a2eeb5cd8a9e52c580420f3ea823aea789cd8b8",
+      "source": "bam/include/freestanding/include/simt/tuple",
+      "source_sha256": "ef09e969b4749c550fc9b9fc0a2eeb5cd8a9e52c580420f3ea823aea789cd8b8"
+    },
+    "third_party/bam/include/freestanding/include/simt/type_traits": {
+      "adapted": false,
+      "sha256": "6f1463dcd905fa7947315f4231a4ff3b3ba778d8c9cd38b9c90dfa81a3d708c7",
+      "source": "bam/include/freestanding/include/simt/type_traits",
+      "source_sha256": "6f1463dcd905fa7947315f4231a4ff3b3ba778d8c9cd38b9c90dfa81a3d708c7"
+    },
+    "third_party/bam/include/freestanding/include/simt/typeinfo": {
+      "adapted": false,
+      "sha256": "d7a9973174fa638a6d7297640530e7f292498b1e060c7a1a61e9754c2432e52b",
+      "source": "bam/include/freestanding/include/simt/typeinfo",
+      "source_sha256": "d7a9973174fa638a6d7297640530e7f292498b1e060c7a1a61e9754c2432e52b"
+    },
+    "third_party/bam/include/freestanding/include/simt/utility": {
+      "adapted": false,
+      "sha256": "0ea0282dcc79682b9ce1029dd9fcb9b8203f9fcb6d96c630165ce733fa9bae2a",
+      "source": "bam/include/freestanding/include/simt/utility",
+      "source_sha256": "0ea0282dcc79682b9ce1029dd9fcb9b8203f9fcb6d96c630165ce733fa9bae2a"
+    },
+    "third_party/bam/include/freestanding/include/simt/version": {
+      "adapted": false,
+      "sha256": "acb049e7d89369fdf7288ba802e1484db8d8499e1154b3bbd2d958c7aefde12f",
+      "source": "bam/include/freestanding/include/simt/version",
+      "source_sha256": "acb049e7d89369fdf7288ba802e1484db8d8499e1154b3bbd2d958c7aefde12f"
+    },
+    "third_party/bam/include/freestanding/libcxx/.arcconfig": {
+      "adapted": false,
+      "sha256": "bd150b6a23e543aa9b7da364fa7235852934518e5e2b650558c058c1de27d099",
+      "source": "bam/include/freestanding/libcxx/.arcconfig",
+      "source_sha256": "bd150b6a23e543aa9b7da364fa7235852934518e5e2b650558c058c1de27d099"
+    },
+    "third_party/bam/include/freestanding/libcxx/.clang-format": {
+      "adapted": false,
+      "sha256": "6ac8b24474a5aebab96cb4456d342d9141a1fdaa5fdedf428b9512e036c6bd07",
+      "source": "bam/include/freestanding/libcxx/.clang-format",
+      "source_sha256": "6ac8b24474a5aebab96cb4456d342d9141a1fdaa5fdedf428b9512e036c6bd07"
+    },
+    "third_party/bam/include/freestanding/libcxx/.gitignore": {
+      "adapted": false,
+      "sha256": "1db987b2a8eb1569a2aa787a8cbfecd2b99971ff0e6844000cd02134232ae565",
+      "source": "bam/include/freestanding/libcxx/.gitignore",
+      "source_sha256": "1db987b2a8eb1569a2aa787a8cbfecd2b99971ff0e6844000cd02134232ae565"
+    },
+    "third_party/bam/include/freestanding/libcxx/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "47a4bd7f78a472f71000ee6c2d9f29441e7cbff39c6022ec5e9c1f962ec48bb0",
+      "source": "bam/include/freestanding/libcxx/CMakeLists.txt",
+      "source_sha256": "47a4bd7f78a472f71000ee6c2d9f29441e7cbff39c6022ec5e9c1f962ec48bb0"
+    },
+    "third_party/bam/include/freestanding/libcxx/CREDITS.TXT": {
+      "adapted": false,
+      "sha256": "20c25563258c0e4c7dde6aa0c55ab74dfaf5f2bae4fbc3372ec92127a3e7f2ff",
+      "source": "bam/include/freestanding/libcxx/CREDITS.TXT",
+      "source_sha256": "20c25563258c0e4c7dde6aa0c55ab74dfaf5f2bae4fbc3372ec92127a3e7f2ff"
+    },
+    "third_party/bam/include/freestanding/libcxx/LICENSE.TXT": {
+      "adapted": false,
+      "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b",
+      "source": "bam/include/freestanding/libcxx/LICENSE.TXT",
+      "source_sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b"
+    },
+    "third_party/bam/include/freestanding/libcxx/NOTES.TXT": {
+      "adapted": false,
+      "sha256": "d5009a376ffcb9ff53d5a4c01485eb27a68b4f57e45d0baf66f5dfb30e8dc523",
+      "source": "bam/include/freestanding/libcxx/NOTES.TXT",
+      "source_sha256": "d5009a376ffcb9ff53d5a4c01485eb27a68b4f57e45d0baf66f5dfb30e8dc523"
+    },
+    "third_party/bam/include/freestanding/libcxx/TODO.TXT": {
+      "adapted": false,
+      "sha256": "597bb7e4a2aec6207e5264bb1147c9e80060511f49d139530b0cbfcb8afdc3db",
+      "source": "bam/include/freestanding/libcxx/TODO.TXT",
+      "source_sha256": "597bb7e4a2aec6207e5264bb1147c9e80060511f49d139530b0cbfcb8afdc3db"
+    },
+    "third_party/bam/include/freestanding/libcxx/appveyor-reqs-install.cmd": {
+      "adapted": false,
+      "sha256": "07498040e95624c3984b849a9799cb283162fac6925766d79a1d09e733443490",
+      "source": "bam/include/freestanding/libcxx/appveyor-reqs-install.cmd",
+      "source_sha256": "07498040e95624c3984b849a9799cb283162fac6925766d79a1d09e733443490"
+    },
+    "third_party/bam/include/freestanding/libcxx/appveyor.yml": {
+      "adapted": false,
+      "sha256": "a2bc60fd2c3fe6eb57662d5552a1a2be37fd1f864c4e26a3356779faca035f2b",
+      "source": "bam/include/freestanding/libcxx/appveyor.yml",
+      "source_sha256": "a2bc60fd2c3fe6eb57662d5552a1a2be37fd1f864c4e26a3356779faca035f2b"
+    },
+    "third_party/bam/include/freestanding/libcxx/cmake/Modules/CheckLibcxxAtomic.cmake": {
+      "adapted": false,
+      "sha256": "546a32b71ae2650c1f42b0885f68fccb0eaa1ce073e3e6d519613469ff360782",
+      "source": "bam/include/freestanding/libcxx/cmake/Modules/CheckLibcxxAtomic.cmake",
+      "source_sha256": "546a32b71ae2650c1f42b0885f68fccb0eaa1ce073e3e6d519613469ff360782"
+    },
+    "third_party/bam/include/freestanding/libcxx/cmake/Modules/CodeCoverage.cmake": {
+      "adapted": false,
+      "sha256": "d689aacd3c20f27b5b13f09e62f6cd5e02ab496c2e83b0163ae03be56f9a7f37",
+      "source": "bam/include/freestanding/libcxx/cmake/Modules/CodeCoverage.cmake",
+      "source_sha256": "d689aacd3c20f27b5b13f09e62f6cd5e02ab496c2e83b0163ae03be56f9a7f37"
+    },
+    "third_party/bam/include/freestanding/libcxx/cmake/Modules/HandleCompilerRT.cmake": {
+      "adapted": false,
+      "sha256": "811646f6436096fc4b9accd16a34d69cf06e9152c7ef92d89a11e693acb06765",
+      "source": "bam/include/freestanding/libcxx/cmake/Modules/HandleCompilerRT.cmake",
+      "source_sha256": "811646f6436096fc4b9accd16a34d69cf06e9152c7ef92d89a11e693acb06765"
+    },
+    "third_party/bam/include/freestanding/libcxx/cmake/Modules/HandleLibCXXABI.cmake": {
+      "adapted": false,
+      "sha256": "f006e430c9bc1409bd3914d113c5d38c821610ddb2393cf220dc3db2cd824edc",
+      "source": "bam/include/freestanding/libcxx/cmake/Modules/HandleLibCXXABI.cmake",
+      "source_sha256": "f006e430c9bc1409bd3914d113c5d38c821610ddb2393cf220dc3db2cd824edc"
+    },
+    "third_party/bam/include/freestanding/libcxx/cmake/Modules/HandleLibcxxFlags.cmake": {
+      "adapted": false,
+      "sha256": "77a4f9bf5e0a58d26104d99919a2084564f827730e73c1076e62eb7c509795b2",
+      "source": "bam/include/freestanding/libcxx/cmake/Modules/HandleLibcxxFlags.cmake",
+      "source_sha256": "77a4f9bf5e0a58d26104d99919a2084564f827730e73c1076e62eb7c509795b2"
+    },
+    "third_party/bam/include/freestanding/libcxx/cmake/Modules/HandleOutOfTreeLLVM.cmake": {
+      "adapted": false,
+      "sha256": "05276de308ebd40a80d6d5607d082525e4348b6b9b71606fd26938d9ea4fe093",
+      "source": "bam/include/freestanding/libcxx/cmake/Modules/HandleOutOfTreeLLVM.cmake",
+      "source_sha256": "05276de308ebd40a80d6d5607d082525e4348b6b9b71606fd26938d9ea4fe093"
+    },
+    "third_party/bam/include/freestanding/libcxx/cmake/Modules/MacroEnsureOutOfSourceBuild.cmake": {
+      "adapted": false,
+      "sha256": "1e175aa50f8f4b6486a88d2a1626842f83a6392134cec3b6a41242d3bc3036ce",
+      "source": "bam/include/freestanding/libcxx/cmake/Modules/MacroEnsureOutOfSourceBuild.cmake",
+      "source_sha256": "1e175aa50f8f4b6486a88d2a1626842f83a6392134cec3b6a41242d3bc3036ce"
+    },
+    "third_party/bam/include/freestanding/libcxx/cmake/caches/Apple.cmake": {
+      "adapted": false,
+      "sha256": "87c589663f536b9d062a036570c8f5a950999f0e5b695b247c249497002d71ce",
+      "source": "bam/include/freestanding/libcxx/cmake/caches/Apple.cmake",
+      "source_sha256": "87c589663f536b9d062a036570c8f5a950999f0e5b695b247c249497002d71ce"
+    },
+    "third_party/bam/include/freestanding/libcxx/cmake/config-ix.cmake": {
+      "adapted": false,
+      "sha256": "d3c054128376df76e721d0c90add551e02881b530899e816d469265ea325714a",
+      "source": "bam/include/freestanding/libcxx/cmake/config-ix.cmake",
+      "source_sha256": "d3c054128376df76e721d0c90add551e02881b530899e816d469265ea325714a"
+    },
+    "third_party/bam/include/freestanding/libcxx/fuzzing/RoutineNames.txt": {
+      "adapted": false,
+      "sha256": "40ef2a7585c7f959c80837a5ee0bc5cdf409f774137183cb10de77c0fba6f31a",
+      "source": "bam/include/freestanding/libcxx/fuzzing/RoutineNames.txt",
+      "source_sha256": "40ef2a7585c7f959c80837a5ee0bc5cdf409f774137183cb10de77c0fba6f31a"
+    },
+    "third_party/bam/include/freestanding/libcxx/fuzzing/fuzz_test.cpp": {
+      "adapted": false,
+      "sha256": "0772d0b228161d53864605bfe90845d90c85f5b19385a61d38af986940d6ba86",
+      "source": "bam/include/freestanding/libcxx/fuzzing/fuzz_test.cpp",
+      "source_sha256": "0772d0b228161d53864605bfe90845d90c85f5b19385a61d38af986940d6ba86"
+    },
+    "third_party/bam/include/freestanding/libcxx/fuzzing/fuzzing.cpp": {
+      "adapted": false,
+      "sha256": "a73b0fd5334a524180675557dc8f7ba52ee962d26a2247143fc34c6ce08265c8",
+      "source": "bam/include/freestanding/libcxx/fuzzing/fuzzing.cpp",
+      "source_sha256": "a73b0fd5334a524180675557dc8f7ba52ee962d26a2247143fc34c6ce08265c8"
+    },
+    "third_party/bam/include/freestanding/libcxx/fuzzing/fuzzing.h": {
+      "adapted": false,
+      "sha256": "07c90f2f38d7d5a7781b8c275de4a21b73ba8c3d7aa6592970efd77f56cd5b05",
+      "source": "bam/include/freestanding/libcxx/fuzzing/fuzzing.h",
+      "source_sha256": "07c90f2f38d7d5a7781b8c275de4a21b73ba8c3d7aa6592970efd77f56cd5b05"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "01da88bfdb8fb488ff5e140124c82496bb5601e1f8aceeed7ba47c48f50d5e04",
+      "source": "bam/include/freestanding/libcxx/include/CMakeLists.txt",
+      "source_sha256": "01da88bfdb8fb488ff5e140124c82496bb5601e1f8aceeed7ba47c48f50d5e04"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__bit_reference": {
+      "adapted": false,
+      "sha256": "2bf566ebe88e2ff2387c521e76429d055242808cdc32cc437c5280fd9394ae66",
+      "source": "bam/include/freestanding/libcxx/include/__bit_reference",
+      "source_sha256": "2bf566ebe88e2ff2387c521e76429d055242808cdc32cc437c5280fd9394ae66"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__bsd_locale_defaults.h": {
+      "adapted": false,
+      "sha256": "dd806af48fa7d0aa8732f26a2bf4625856fa8fbce1f61f117bb2b65bc4439f3d",
+      "source": "bam/include/freestanding/libcxx/include/__bsd_locale_defaults.h",
+      "source_sha256": "dd806af48fa7d0aa8732f26a2bf4625856fa8fbce1f61f117bb2b65bc4439f3d"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__bsd_locale_fallbacks.h": {
+      "adapted": false,
+      "sha256": "d15e4151c0a70cdec010db244d963edc031915923f7393158d166f6908537081",
+      "source": "bam/include/freestanding/libcxx/include/__bsd_locale_fallbacks.h",
+      "source_sha256": "d15e4151c0a70cdec010db244d963edc031915923f7393158d166f6908537081"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__config": {
+      "adapted": false,
+      "sha256": "f59c920bcddeb8d5e8f0ea89751b420c13bb61731ba4b33250b137d48e843cc7",
+      "source": "bam/include/freestanding/libcxx/include/__config",
+      "source_sha256": "f59c920bcddeb8d5e8f0ea89751b420c13bb61731ba4b33250b137d48e843cc7"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__config_site.in": {
+      "adapted": false,
+      "sha256": "f747544bf0f1417980873815801f0375861a55cd0b4fa34a86263cda4d61e09d",
+      "source": "bam/include/freestanding/libcxx/include/__config_site.in",
+      "source_sha256": "f747544bf0f1417980873815801f0375861a55cd0b4fa34a86263cda4d61e09d"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__debug": {
+      "adapted": false,
+      "sha256": "f63a69616ca9f759ed94e719a8d628960957d624b64cf6bcfab260e2ed3c63be",
+      "source": "bam/include/freestanding/libcxx/include/__debug",
+      "source_sha256": "f63a69616ca9f759ed94e719a8d628960957d624b64cf6bcfab260e2ed3c63be"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__errc": {
+      "adapted": false,
+      "sha256": "f15577f4c431b3f2bda90309c5259b935220bcc378854bc307ad9f70c71d3465",
+      "source": "bam/include/freestanding/libcxx/include/__errc",
+      "source_sha256": "f15577f4c431b3f2bda90309c5259b935220bcc378854bc307ad9f70c71d3465"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__functional_03": {
+      "adapted": false,
+      "sha256": "a36426c141fb016b3de0d1d69e2619a0946bb77db5975fb72a8754cd77c02a54",
+      "source": "bam/include/freestanding/libcxx/include/__functional_03",
+      "source_sha256": "a36426c141fb016b3de0d1d69e2619a0946bb77db5975fb72a8754cd77c02a54"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__functional_base": {
+      "adapted": false,
+      "sha256": "fb92afb4876af74d7332b6f4b40a870d9a8b882529a63ec40c39773572b9fe09",
+      "source": "bam/include/freestanding/libcxx/include/__functional_base",
+      "source_sha256": "fb92afb4876af74d7332b6f4b40a870d9a8b882529a63ec40c39773572b9fe09"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__functional_base_03": {
+      "adapted": false,
+      "sha256": "22dac28b4c7402dc5cce7aecd0382fb13e213e6aa9131c76d4dcabd45388c77d",
+      "source": "bam/include/freestanding/libcxx/include/__functional_base_03",
+      "source_sha256": "22dac28b4c7402dc5cce7aecd0382fb13e213e6aa9131c76d4dcabd45388c77d"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__hash_table": {
+      "adapted": false,
+      "sha256": "76dc338685a2056e4a9e8c5eb856c1cd3c91faaf7a829fd6214cec8d807f4a4b",
+      "source": "bam/include/freestanding/libcxx/include/__hash_table",
+      "source_sha256": "76dc338685a2056e4a9e8c5eb856c1cd3c91faaf7a829fd6214cec8d807f4a4b"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__libcpp_version": {
+      "adapted": false,
+      "sha256": "876e13f4e07bb39705302c01f445ffd2d2c3b180a207e4d959d6b671c67da09b",
+      "source": "bam/include/freestanding/libcxx/include/__libcpp_version",
+      "source_sha256": "876e13f4e07bb39705302c01f445ffd2d2c3b180a207e4d959d6b671c67da09b"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__locale": {
+      "adapted": false,
+      "sha256": "7d6ba841ce5ca62786adf11fd912bb66c67a4a78ce366119af6123b3ac419ca8",
+      "source": "bam/include/freestanding/libcxx/include/__locale",
+      "source_sha256": "7d6ba841ce5ca62786adf11fd912bb66c67a4a78ce366119af6123b3ac419ca8"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__mutex_base": {
+      "adapted": false,
+      "sha256": "9b54101f9a6b68b1c70ec6ab3dd8bcf5727c84612dc49527718e4fc484c6b7b0",
+      "source": "bam/include/freestanding/libcxx/include/__mutex_base",
+      "source_sha256": "9b54101f9a6b68b1c70ec6ab3dd8bcf5727c84612dc49527718e4fc484c6b7b0"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__node_handle": {
+      "adapted": false,
+      "sha256": "6a8d1b5867095843feb5c5974902c1b65cdb8bf32f03199dd393366983375d3a",
+      "source": "bam/include/freestanding/libcxx/include/__node_handle",
+      "source_sha256": "6a8d1b5867095843feb5c5974902c1b65cdb8bf32f03199dd393366983375d3a"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__nullptr": {
+      "adapted": false,
+      "sha256": "3ae4cecb126730c52b9b0de609014580f3bc37f24fde9ada2a4bb2f4bb61bbb4",
+      "source": "bam/include/freestanding/libcxx/include/__nullptr",
+      "source_sha256": "3ae4cecb126730c52b9b0de609014580f3bc37f24fde9ada2a4bb2f4bb61bbb4"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__split_buffer": {
+      "adapted": false,
+      "sha256": "d31ab9da31893e0d5c7d94100735def1e36a827cf6f791139c59581b6b07c5ef",
+      "source": "bam/include/freestanding/libcxx/include/__split_buffer",
+      "source_sha256": "d31ab9da31893e0d5c7d94100735def1e36a827cf6f791139c59581b6b07c5ef"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__sso_allocator": {
+      "adapted": false,
+      "sha256": "47235b21061142e7cef26d99e147d131e469f94e51e8a86f29880f2b5a89bd71",
+      "source": "bam/include/freestanding/libcxx/include/__sso_allocator",
+      "source_sha256": "47235b21061142e7cef26d99e147d131e469f94e51e8a86f29880f2b5a89bd71"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__std_stream": {
+      "adapted": false,
+      "sha256": "1f448f846d817539f39f22904136fbefc73de05defbec2838d1246c224718b44",
+      "source": "bam/include/freestanding/libcxx/include/__std_stream",
+      "source_sha256": "1f448f846d817539f39f22904136fbefc73de05defbec2838d1246c224718b44"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__string": {
+      "adapted": false,
+      "sha256": "ed0cb8703bff9c941ede5cf819327fdee4b75a83540e7abdf02b8ebdf1249e51",
+      "source": "bam/include/freestanding/libcxx/include/__string",
+      "source_sha256": "ed0cb8703bff9c941ede5cf819327fdee4b75a83540e7abdf02b8ebdf1249e51"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__threading_support": {
+      "adapted": false,
+      "sha256": "63a733d17842b27968f365591262ca889937241321ce70886677f005f33dbb7f",
+      "source": "bam/include/freestanding/libcxx/include/__threading_support",
+      "source_sha256": "63a733d17842b27968f365591262ca889937241321ce70886677f005f33dbb7f"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__tree": {
+      "adapted": false,
+      "sha256": "5a80fcba3c2faabbeec941b851e5a37051f319fcfa8ede16ce7e05b964cf108c",
+      "source": "bam/include/freestanding/libcxx/include/__tree",
+      "source_sha256": "5a80fcba3c2faabbeec941b851e5a37051f319fcfa8ede16ce7e05b964cf108c"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__tuple": {
+      "adapted": false,
+      "sha256": "f9ba903e50cd73939a762f64bd1182157b5b3bc8a04ebe85b85c8760046dc45c",
+      "source": "bam/include/freestanding/libcxx/include/__tuple",
+      "source_sha256": "f9ba903e50cd73939a762f64bd1182157b5b3bc8a04ebe85b85c8760046dc45c"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/__undef_macros": {
+      "adapted": false,
+      "sha256": "081f0a08312dd2a8e7617cdaf6b702f594c0cc31e59549b7b7e77f53ade95544",
+      "source": "bam/include/freestanding/libcxx/include/__undef_macros",
+      "source_sha256": "081f0a08312dd2a8e7617cdaf6b702f594c0cc31e59549b7b7e77f53ade95544"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/algorithm": {
+      "adapted": false,
+      "sha256": "239a0a479b0a6cd5152cc68b26bc5bcc913ba63ebc7ac92b571e379171c07442",
+      "source": "bam/include/freestanding/libcxx/include/algorithm",
+      "source_sha256": "239a0a479b0a6cd5152cc68b26bc5bcc913ba63ebc7ac92b571e379171c07442"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/any": {
+      "adapted": false,
+      "sha256": "437777b77f861e8d2c7a93016508ec0cd60099f80e9f92d23b25718829fca816",
+      "source": "bam/include/freestanding/libcxx/include/any",
+      "source_sha256": "437777b77f861e8d2c7a93016508ec0cd60099f80e9f92d23b25718829fca816"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/array": {
+      "adapted": false,
+      "sha256": "ae2d084602145d773f486e4854366a90f885b0ef0b684d191ec2e1b243af1d96",
+      "source": "bam/include/freestanding/libcxx/include/array",
+      "source_sha256": "ae2d084602145d773f486e4854366a90f885b0ef0b684d191ec2e1b243af1d96"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/atomic": {
+      "adapted": false,
+      "sha256": "c3711276dcad7cc4b9b1124a05a929cf5034086492a99ecd7e6acad4891e16f3",
+      "source": "bam/include/freestanding/libcxx/include/atomic",
+      "source_sha256": "c3711276dcad7cc4b9b1124a05a929cf5034086492a99ecd7e6acad4891e16f3"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/barrier": {
+      "adapted": false,
+      "sha256": "96513c0789420a184e04ce28a307dc2e1b055aa22efe7fdf15f3d1d4fa05a894",
+      "source": "bam/include/freestanding/libcxx/include/barrier",
+      "source_sha256": "96513c0789420a184e04ce28a307dc2e1b055aa22efe7fdf15f3d1d4fa05a894"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/bit": {
+      "adapted": false,
+      "sha256": "f60a48dd3378e94af4d192bfabb2363ac3417de9ae62ec3dfd18c4f1195f8e40",
+      "source": "bam/include/freestanding/libcxx/include/bit",
+      "source_sha256": "f60a48dd3378e94af4d192bfabb2363ac3417de9ae62ec3dfd18c4f1195f8e40"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/bitset": {
+      "adapted": false,
+      "sha256": "30d4e3d5520eb9b1f885d3fa0b48f3578b80551302d38c141dad9ab4f552c3aa",
+      "source": "bam/include/freestanding/libcxx/include/bitset",
+      "source_sha256": "30d4e3d5520eb9b1f885d3fa0b48f3578b80551302d38c141dad9ab4f552c3aa"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cassert": {
+      "adapted": false,
+      "sha256": "39538129101d912e455f17132a5d9815a25ef32f9fd608a85dcdcc9a4379ca07",
+      "source": "bam/include/freestanding/libcxx/include/cassert",
+      "source_sha256": "39538129101d912e455f17132a5d9815a25ef32f9fd608a85dcdcc9a4379ca07"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ccomplex": {
+      "adapted": false,
+      "sha256": "1b3687368b8ed17e4b7c5c0b1e7d65f60902b9506608a91c4ea3b0002328e8e7",
+      "source": "bam/include/freestanding/libcxx/include/ccomplex",
+      "source_sha256": "1b3687368b8ed17e4b7c5c0b1e7d65f60902b9506608a91c4ea3b0002328e8e7"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cctype": {
+      "adapted": false,
+      "sha256": "0a6d4c0172f9c173ff40d5441dd327acdf5c57b7238fe888c2ae9c4252e756f9",
+      "source": "bam/include/freestanding/libcxx/include/cctype",
+      "source_sha256": "0a6d4c0172f9c173ff40d5441dd327acdf5c57b7238fe888c2ae9c4252e756f9"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cerrno": {
+      "adapted": false,
+      "sha256": "d55619e17c898fdbea290157674f9c9d8d7343ca75e115e87b5336430b9850c7",
+      "source": "bam/include/freestanding/libcxx/include/cerrno",
+      "source_sha256": "d55619e17c898fdbea290157674f9c9d8d7343ca75e115e87b5336430b9850c7"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cfenv": {
+      "adapted": false,
+      "sha256": "f23cb53f5d1ea1faa3f424e9e651d6efdd69af75b1d4ca7d00c7baf11cb02f09",
+      "source": "bam/include/freestanding/libcxx/include/cfenv",
+      "source_sha256": "f23cb53f5d1ea1faa3f424e9e651d6efdd69af75b1d4ca7d00c7baf11cb02f09"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cfloat": {
+      "adapted": false,
+      "sha256": "fd97afd22fd26d05e97f0f3f784e5d7dc1995298e2c3fc5ce2cdc2b098ad516b",
+      "source": "bam/include/freestanding/libcxx/include/cfloat",
+      "source_sha256": "fd97afd22fd26d05e97f0f3f784e5d7dc1995298e2c3fc5ce2cdc2b098ad516b"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/charconv": {
+      "adapted": false,
+      "sha256": "d31dfd342998b53502da978e61e5d1364da6b20986adbaa30a110046d9050f62",
+      "source": "bam/include/freestanding/libcxx/include/charconv",
+      "source_sha256": "d31dfd342998b53502da978e61e5d1364da6b20986adbaa30a110046d9050f62"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/chrono": {
+      "adapted": false,
+      "sha256": "e6052d6fcff1505c0acb1dd36132c34184b7fcdf0cb2adc5d59324a26e06870c",
+      "source": "bam/include/freestanding/libcxx/include/chrono",
+      "source_sha256": "e6052d6fcff1505c0acb1dd36132c34184b7fcdf0cb2adc5d59324a26e06870c"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cinttypes": {
+      "adapted": false,
+      "sha256": "92ee5558f4bd9eac4ba44a28d83d017242e89d4dc38945d68ba2832b7265085f",
+      "source": "bam/include/freestanding/libcxx/include/cinttypes",
+      "source_sha256": "92ee5558f4bd9eac4ba44a28d83d017242e89d4dc38945d68ba2832b7265085f"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ciso646": {
+      "adapted": false,
+      "sha256": "3853a1ef658005be4e32235b4cc772e89dffe501da17794c305ff2326c11d0e8",
+      "source": "bam/include/freestanding/libcxx/include/ciso646",
+      "source_sha256": "3853a1ef658005be4e32235b4cc772e89dffe501da17794c305ff2326c11d0e8"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/climits": {
+      "adapted": false,
+      "sha256": "ddbb1dcd4a2d69f6b1d1330c42c5d3d0075c62b3e1329a80d1fa6a6a17d40f8d",
+      "source": "bam/include/freestanding/libcxx/include/climits",
+      "source_sha256": "ddbb1dcd4a2d69f6b1d1330c42c5d3d0075c62b3e1329a80d1fa6a6a17d40f8d"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/clocale": {
+      "adapted": false,
+      "sha256": "e2533f0ca78cb4bef8ebb98b36b22bf22637a53fb2ea20af62a72af232550e7e",
+      "source": "bam/include/freestanding/libcxx/include/clocale",
+      "source_sha256": "e2533f0ca78cb4bef8ebb98b36b22bf22637a53fb2ea20af62a72af232550e7e"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cmath": {
+      "adapted": false,
+      "sha256": "353e5b9cd47daf6b24a316395c9a766281ba0617bf411ea2f9f27693195298cf",
+      "source": "bam/include/freestanding/libcxx/include/cmath",
+      "source_sha256": "353e5b9cd47daf6b24a316395c9a766281ba0617bf411ea2f9f27693195298cf"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/codecvt": {
+      "adapted": false,
+      "sha256": "af6ae4f3429a687a3d29dbc3c383aecf4c2a8d3fe233413acbf114e9eea0f845",
+      "source": "bam/include/freestanding/libcxx/include/codecvt",
+      "source_sha256": "af6ae4f3429a687a3d29dbc3c383aecf4c2a8d3fe233413acbf114e9eea0f845"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/compare": {
+      "adapted": false,
+      "sha256": "4910540383e6315851cef94b3a6201281f53bd084beffc90723e7099b28ce157",
+      "source": "bam/include/freestanding/libcxx/include/compare",
+      "source_sha256": "4910540383e6315851cef94b3a6201281f53bd084beffc90723e7099b28ce157"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/complex": {
+      "adapted": false,
+      "sha256": "998fb876e23ac05b93e8f45b5ef8cb53b43e2d699e8119d233f18803dddd2cfe",
+      "source": "bam/include/freestanding/libcxx/include/complex",
+      "source_sha256": "998fb876e23ac05b93e8f45b5ef8cb53b43e2d699e8119d233f18803dddd2cfe"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/complex.h": {
+      "adapted": false,
+      "sha256": "580570a3a1b62ac9902844ac46f81ebe74fd6acc3df162b4388932c6d33ba03d",
+      "source": "bam/include/freestanding/libcxx/include/complex.h",
+      "source_sha256": "580570a3a1b62ac9902844ac46f81ebe74fd6acc3df162b4388932c6d33ba03d"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/condition_variable": {
+      "adapted": false,
+      "sha256": "7adec4a2faec8d1a639df9542c09e718be46be53f9ab6a2954c1e7845ab2dd87",
+      "source": "bam/include/freestanding/libcxx/include/condition_variable",
+      "source_sha256": "7adec4a2faec8d1a639df9542c09e718be46be53f9ab6a2954c1e7845ab2dd87"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/csetjmp": {
+      "adapted": false,
+      "sha256": "e32bf52e385fd81101afaad8b2a246a146d555c3a863157e03ef2a9cade00d3e",
+      "source": "bam/include/freestanding/libcxx/include/csetjmp",
+      "source_sha256": "e32bf52e385fd81101afaad8b2a246a146d555c3a863157e03ef2a9cade00d3e"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/csignal": {
+      "adapted": false,
+      "sha256": "62ca809c9e992d478bbc4df5498792a84df1bee47c98d52bb0fcef54d46ddea0",
+      "source": "bam/include/freestanding/libcxx/include/csignal",
+      "source_sha256": "62ca809c9e992d478bbc4df5498792a84df1bee47c98d52bb0fcef54d46ddea0"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cstdarg": {
+      "adapted": false,
+      "sha256": "5cf276d03d26d791005a2e9dbeac6fc2a4e6c5a30587b1d6c714189341316105",
+      "source": "bam/include/freestanding/libcxx/include/cstdarg",
+      "source_sha256": "5cf276d03d26d791005a2e9dbeac6fc2a4e6c5a30587b1d6c714189341316105"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cstdbool": {
+      "adapted": false,
+      "sha256": "4ca0ee0443dd9d3161e46e9040348d4d29520e6fac481cf9ccd857c97b0a04bc",
+      "source": "bam/include/freestanding/libcxx/include/cstdbool",
+      "source_sha256": "4ca0ee0443dd9d3161e46e9040348d4d29520e6fac481cf9ccd857c97b0a04bc"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cstddef": {
+      "adapted": false,
+      "sha256": "6fb01be10f0a52b4dc88d7a6e2bcab8f52f424d429be7eb21e8ad6398f332bfe",
+      "source": "bam/include/freestanding/libcxx/include/cstddef",
+      "source_sha256": "6fb01be10f0a52b4dc88d7a6e2bcab8f52f424d429be7eb21e8ad6398f332bfe"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cstdint": {
+      "adapted": false,
+      "sha256": "df91009bbebaae24ec75b16ff42ca2a26457e6a78f6b5a74a2ad753cc256877a",
+      "source": "bam/include/freestanding/libcxx/include/cstdint",
+      "source_sha256": "df91009bbebaae24ec75b16ff42ca2a26457e6a78f6b5a74a2ad753cc256877a"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cstdio": {
+      "adapted": false,
+      "sha256": "738e6bddf66dfbffda0c6c78acf8bfad8cdfb76c154f8a034c0899b884f8a027",
+      "source": "bam/include/freestanding/libcxx/include/cstdio",
+      "source_sha256": "738e6bddf66dfbffda0c6c78acf8bfad8cdfb76c154f8a034c0899b884f8a027"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cstdlib": {
+      "adapted": false,
+      "sha256": "c8d67ef12aa3641c5a47a9c2226787c0f8fdf013a35d96e70200310b1139d080",
+      "source": "bam/include/freestanding/libcxx/include/cstdlib",
+      "source_sha256": "c8d67ef12aa3641c5a47a9c2226787c0f8fdf013a35d96e70200310b1139d080"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cstring": {
+      "adapted": false,
+      "sha256": "47fa46b58fe047bf5468bb612442a8bc482648b9ddc7d6776f408abfa84bd5e1",
+      "source": "bam/include/freestanding/libcxx/include/cstring",
+      "source_sha256": "47fa46b58fe047bf5468bb612442a8bc482648b9ddc7d6776f408abfa84bd5e1"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ctgmath": {
+      "adapted": false,
+      "sha256": "11420f984b2e2bffcbe4555c979f058fa30b49af10bdbd9d38e974e6d9fbf388",
+      "source": "bam/include/freestanding/libcxx/include/ctgmath",
+      "source_sha256": "11420f984b2e2bffcbe4555c979f058fa30b49af10bdbd9d38e974e6d9fbf388"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ctime": {
+      "adapted": false,
+      "sha256": "ebabe437acdda67429a73f12c6cebd35339021921db505b094a19918ee16fa9e",
+      "source": "bam/include/freestanding/libcxx/include/ctime",
+      "source_sha256": "ebabe437acdda67429a73f12c6cebd35339021921db505b094a19918ee16fa9e"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ctype.h": {
+      "adapted": false,
+      "sha256": "950f00b7b74314a83d3283e003f4753a79de0bc56688e3c9a979115181016951",
+      "source": "bam/include/freestanding/libcxx/include/ctype.h",
+      "source_sha256": "950f00b7b74314a83d3283e003f4753a79de0bc56688e3c9a979115181016951"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cwchar": {
+      "adapted": false,
+      "sha256": "6a3d246b9c191357aac9054f6c40371ece497bddf3b4c34eabf5e592fac212e5",
+      "source": "bam/include/freestanding/libcxx/include/cwchar",
+      "source_sha256": "6a3d246b9c191357aac9054f6c40371ece497bddf3b4c34eabf5e592fac212e5"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/cwctype": {
+      "adapted": false,
+      "sha256": "b0f9cedd3d1c26a4713ea99b8f429e3cf996c13c5f9a7093711c5a1c2f99bead",
+      "source": "bam/include/freestanding/libcxx/include/cwctype",
+      "source_sha256": "b0f9cedd3d1c26a4713ea99b8f429e3cf996c13c5f9a7093711c5a1c2f99bead"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/deque": {
+      "adapted": false,
+      "sha256": "e4cf84d5805d53e00199960f03a042e11c67f62eddd10d0476c2d1eb4203e27a",
+      "source": "bam/include/freestanding/libcxx/include/deque",
+      "source_sha256": "e4cf84d5805d53e00199960f03a042e11c67f62eddd10d0476c2d1eb4203e27a"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/errno.h": {
+      "adapted": false,
+      "sha256": "ec9516dff3e8879f9c446b7140505af8a4ab8548e6d4c85f4cef2dd72bd54f30",
+      "source": "bam/include/freestanding/libcxx/include/errno.h",
+      "source_sha256": "ec9516dff3e8879f9c446b7140505af8a4ab8548e6d4c85f4cef2dd72bd54f30"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/exception": {
+      "adapted": false,
+      "sha256": "8da30b14b3f9b471ca9993b778209686ccb80128e3c4f47a74c22fb09e6e8ba2",
+      "source": "bam/include/freestanding/libcxx/include/exception",
+      "source_sha256": "8da30b14b3f9b471ca9993b778209686ccb80128e3c4f47a74c22fb09e6e8ba2"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/execution": {
+      "adapted": false,
+      "sha256": "0309dcc2e46bd2fa621e8c18ab5c90971c13a4862784be3d768ef908417bbcac",
+      "source": "bam/include/freestanding/libcxx/include/execution",
+      "source_sha256": "0309dcc2e46bd2fa621e8c18ab5c90971c13a4862784be3d768ef908417bbcac"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/__config": {
+      "adapted": false,
+      "sha256": "0c5031f44663172b48441a08bc8019aa77473911881b96cc0681787ac9783ce6",
+      "source": "bam/include/freestanding/libcxx/include/experimental/__config",
+      "source_sha256": "0c5031f44663172b48441a08bc8019aa77473911881b96cc0681787ac9783ce6"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/__memory": {
+      "adapted": false,
+      "sha256": "7c4a690b1d665f2516cf84fb37b31b25f8f58cb553840a7df5137de394d39dd6",
+      "source": "bam/include/freestanding/libcxx/include/experimental/__memory",
+      "source_sha256": "7c4a690b1d665f2516cf84fb37b31b25f8f58cb553840a7df5137de394d39dd6"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/algorithm": {
+      "adapted": false,
+      "sha256": "27a69f0a842261e37c0d7210e62b713b768076d4f2747b1ebba21fca56c0a2a1",
+      "source": "bam/include/freestanding/libcxx/include/experimental/algorithm",
+      "source_sha256": "27a69f0a842261e37c0d7210e62b713b768076d4f2747b1ebba21fca56c0a2a1"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/coroutine": {
+      "adapted": false,
+      "sha256": "e4acfcd5354f3f067bca4479888ddbfe77370414636946e1ee14af53354f175c",
+      "source": "bam/include/freestanding/libcxx/include/experimental/coroutine",
+      "source_sha256": "e4acfcd5354f3f067bca4479888ddbfe77370414636946e1ee14af53354f175c"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/deque": {
+      "adapted": false,
+      "sha256": "e7528d7cebb83b55dabae903c45a2b448725ca304cea236d7e978a80af56dce7",
+      "source": "bam/include/freestanding/libcxx/include/experimental/deque",
+      "source_sha256": "e7528d7cebb83b55dabae903c45a2b448725ca304cea236d7e978a80af56dce7"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/filesystem": {
+      "adapted": false,
+      "sha256": "39e402f329e292b07f537e82c8ff18d603c553863c665b1f3a7937b9bec69b49",
+      "source": "bam/include/freestanding/libcxx/include/experimental/filesystem",
+      "source_sha256": "39e402f329e292b07f537e82c8ff18d603c553863c665b1f3a7937b9bec69b49"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/forward_list": {
+      "adapted": false,
+      "sha256": "4a2865d1adcfcf2e6e3e31a50cb1839c9eea9e65306c114ce606f1bd4bfd94aa",
+      "source": "bam/include/freestanding/libcxx/include/experimental/forward_list",
+      "source_sha256": "4a2865d1adcfcf2e6e3e31a50cb1839c9eea9e65306c114ce606f1bd4bfd94aa"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/functional": {
+      "adapted": false,
+      "sha256": "dffee93b158009d907c86674201a742acfe53dbce5d537b0d7b516f2f38e43e3",
+      "source": "bam/include/freestanding/libcxx/include/experimental/functional",
+      "source_sha256": "dffee93b158009d907c86674201a742acfe53dbce5d537b0d7b516f2f38e43e3"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/iterator": {
+      "adapted": false,
+      "sha256": "59d27bbebc62d3fc4fabd0bed9b75212fa274b72fa5835071e0be6f08bb32848",
+      "source": "bam/include/freestanding/libcxx/include/experimental/iterator",
+      "source_sha256": "59d27bbebc62d3fc4fabd0bed9b75212fa274b72fa5835071e0be6f08bb32848"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/list": {
+      "adapted": false,
+      "sha256": "3f99ea05587ba43c83a3e27e3ea6140e3a8976366ca425152435e61e148cfc86",
+      "source": "bam/include/freestanding/libcxx/include/experimental/list",
+      "source_sha256": "3f99ea05587ba43c83a3e27e3ea6140e3a8976366ca425152435e61e148cfc86"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/map": {
+      "adapted": false,
+      "sha256": "8039e44cdf0b0488260e627b58f67ba2379e46c49eeea1c733b558d15289df2c",
+      "source": "bam/include/freestanding/libcxx/include/experimental/map",
+      "source_sha256": "8039e44cdf0b0488260e627b58f67ba2379e46c49eeea1c733b558d15289df2c"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/memory_resource": {
+      "adapted": false,
+      "sha256": "4ebbb67b5290d5edb69cbeb55388478093d1380102443e0b0b669a361c19a3d7",
+      "source": "bam/include/freestanding/libcxx/include/experimental/memory_resource",
+      "source_sha256": "4ebbb67b5290d5edb69cbeb55388478093d1380102443e0b0b669a361c19a3d7"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/propagate_const": {
+      "adapted": false,
+      "sha256": "551033499f767e2617f649259ceb3c258eba93a806b14f0f2f8551ed79a65135",
+      "source": "bam/include/freestanding/libcxx/include/experimental/propagate_const",
+      "source_sha256": "551033499f767e2617f649259ceb3c258eba93a806b14f0f2f8551ed79a65135"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/regex": {
+      "adapted": false,
+      "sha256": "578737882cd8df1c38ee6a8597f97bcca281ae23bafc2cf887d17b6f6bf8b900",
+      "source": "bam/include/freestanding/libcxx/include/experimental/regex",
+      "source_sha256": "578737882cd8df1c38ee6a8597f97bcca281ae23bafc2cf887d17b6f6bf8b900"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/set": {
+      "adapted": false,
+      "sha256": "b0e2c54e2cb74eb85b06d4754136e044d0cbccd723a6d98955e31ea60637aca7",
+      "source": "bam/include/freestanding/libcxx/include/experimental/set",
+      "source_sha256": "b0e2c54e2cb74eb85b06d4754136e044d0cbccd723a6d98955e31ea60637aca7"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/simd": {
+      "adapted": false,
+      "sha256": "f594079e9a165d2ecd3e32f1b5ced27ccc8b9a0edb15953df33a9b779c467f68",
+      "source": "bam/include/freestanding/libcxx/include/experimental/simd",
+      "source_sha256": "f594079e9a165d2ecd3e32f1b5ced27ccc8b9a0edb15953df33a9b779c467f68"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/string": {
+      "adapted": false,
+      "sha256": "d9a0ea681ccd773ad6126835b1064b7742b0945304e1f3e6bd4f4026d3d2330e",
+      "source": "bam/include/freestanding/libcxx/include/experimental/string",
+      "source_sha256": "d9a0ea681ccd773ad6126835b1064b7742b0945304e1f3e6bd4f4026d3d2330e"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/type_traits": {
+      "adapted": false,
+      "sha256": "c74af8994f88bea163cf29e3939f635f37d7f098aa176b6d413385eaf01c518c",
+      "source": "bam/include/freestanding/libcxx/include/experimental/type_traits",
+      "source_sha256": "c74af8994f88bea163cf29e3939f635f37d7f098aa176b6d413385eaf01c518c"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/unordered_map": {
+      "adapted": false,
+      "sha256": "834c9230641828d372d36d8a7e8ce8ef0a18675127edee5d3364ca99ec8f89f2",
+      "source": "bam/include/freestanding/libcxx/include/experimental/unordered_map",
+      "source_sha256": "834c9230641828d372d36d8a7e8ce8ef0a18675127edee5d3364ca99ec8f89f2"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/unordered_set": {
+      "adapted": false,
+      "sha256": "3cf73243c7a722a0351ef6cc4fd967902e4e1c259526623d14f35e81e271ca7a",
+      "source": "bam/include/freestanding/libcxx/include/experimental/unordered_set",
+      "source_sha256": "3cf73243c7a722a0351ef6cc4fd967902e4e1c259526623d14f35e81e271ca7a"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/utility": {
+      "adapted": false,
+      "sha256": "492917ce2e81c1f525c4a57ae05d57c9f85e13693293c5dad1fa488e6fc7b060",
+      "source": "bam/include/freestanding/libcxx/include/experimental/utility",
+      "source_sha256": "492917ce2e81c1f525c4a57ae05d57c9f85e13693293c5dad1fa488e6fc7b060"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/experimental/vector": {
+      "adapted": false,
+      "sha256": "61059af32e50bcbf6b5fa684c00ea17c08c294ce52fa09251dd029234b8907a0",
+      "source": "bam/include/freestanding/libcxx/include/experimental/vector",
+      "source_sha256": "61059af32e50bcbf6b5fa684c00ea17c08c294ce52fa09251dd029234b8907a0"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ext/__hash": {
+      "adapted": false,
+      "sha256": "00b8255ed7522f35dbbacc14baeac40656b93f194c55fb8964a03fea1cf5a86e",
+      "source": "bam/include/freestanding/libcxx/include/ext/__hash",
+      "source_sha256": "00b8255ed7522f35dbbacc14baeac40656b93f194c55fb8964a03fea1cf5a86e"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ext/hash_map": {
+      "adapted": false,
+      "sha256": "cb1c2ef33f906445cde5a1f2f383c97a8cfb06d878be9309aa96c5b7939e8631",
+      "source": "bam/include/freestanding/libcxx/include/ext/hash_map",
+      "source_sha256": "cb1c2ef33f906445cde5a1f2f383c97a8cfb06d878be9309aa96c5b7939e8631"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ext/hash_set": {
+      "adapted": false,
+      "sha256": "73b309709eda1ccdf9e54803bd47c2969f1e1aad751a8d8316804b7849422b35",
+      "source": "bam/include/freestanding/libcxx/include/ext/hash_set",
+      "source_sha256": "73b309709eda1ccdf9e54803bd47c2969f1e1aad751a8d8316804b7849422b35"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/fenv.h": {
+      "adapted": false,
+      "sha256": "6149a5c239fa69568ec9e76702a8e635ddd9d5d881965816c271588634018b29",
+      "source": "bam/include/freestanding/libcxx/include/fenv.h",
+      "source_sha256": "6149a5c239fa69568ec9e76702a8e635ddd9d5d881965816c271588634018b29"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/filesystem": {
+      "adapted": false,
+      "sha256": "0b9f6109fa718e69c9813f020c528e6b773cfc1205cab2622771b420569d10eb",
+      "source": "bam/include/freestanding/libcxx/include/filesystem",
+      "source_sha256": "0b9f6109fa718e69c9813f020c528e6b773cfc1205cab2622771b420569d10eb"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/float.h": {
+      "adapted": false,
+      "sha256": "2d84c521eb891eac14870dc90de28f33f8f6fd51b1f8200280f73a4a96e56154",
+      "source": "bam/include/freestanding/libcxx/include/float.h",
+      "source_sha256": "2d84c521eb891eac14870dc90de28f33f8f6fd51b1f8200280f73a4a96e56154"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/forward_list": {
+      "adapted": false,
+      "sha256": "9f4cf502a773ca4425e339b0281eb50e2c4206a0892fb49d92e776886d764813",
+      "source": "bam/include/freestanding/libcxx/include/forward_list",
+      "source_sha256": "9f4cf502a773ca4425e339b0281eb50e2c4206a0892fb49d92e776886d764813"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/fstream": {
+      "adapted": false,
+      "sha256": "b0fc4e1195405c451b4545fa90cda4b585b865da071d77d9bf680d8da3e3974d",
+      "source": "bam/include/freestanding/libcxx/include/fstream",
+      "source_sha256": "b0fc4e1195405c451b4545fa90cda4b585b865da071d77d9bf680d8da3e3974d"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/functional": {
+      "adapted": false,
+      "sha256": "3ec152b34e4c9eee3e030ea9991637819372ab7658844e220dea8a7d110ae3f4",
+      "source": "bam/include/freestanding/libcxx/include/functional",
+      "source_sha256": "3ec152b34e4c9eee3e030ea9991637819372ab7658844e220dea8a7d110ae3f4"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/future": {
+      "adapted": false,
+      "sha256": "3a32bc60e56e9aecce76452f3bff3c0ebb908f78a8e5c22af8ccb9c2b07c72e6",
+      "source": "bam/include/freestanding/libcxx/include/future",
+      "source_sha256": "3a32bc60e56e9aecce76452f3bff3c0ebb908f78a8e5c22af8ccb9c2b07c72e6"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/initializer_list": {
+      "adapted": false,
+      "sha256": "be7ebd1afa2d8c9270f38d1d40f422b4b6ad64ed3005568830d6b1cdd07b99c8",
+      "source": "bam/include/freestanding/libcxx/include/initializer_list",
+      "source_sha256": "be7ebd1afa2d8c9270f38d1d40f422b4b6ad64ed3005568830d6b1cdd07b99c8"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/inttypes.h": {
+      "adapted": false,
+      "sha256": "49105e3371a36b8dc5404de20e61952bd7e7835aca20c47fc65ccb641040f7ff",
+      "source": "bam/include/freestanding/libcxx/include/inttypes.h",
+      "source_sha256": "49105e3371a36b8dc5404de20e61952bd7e7835aca20c47fc65ccb641040f7ff"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/iomanip": {
+      "adapted": false,
+      "sha256": "8b2618c975f6c9dc3b61dd2d7fd8ec8f212438a4950bbfbeff618408b37a2498",
+      "source": "bam/include/freestanding/libcxx/include/iomanip",
+      "source_sha256": "8b2618c975f6c9dc3b61dd2d7fd8ec8f212438a4950bbfbeff618408b37a2498"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ios": {
+      "adapted": false,
+      "sha256": "af30d1a48e24a7b860f8d8da0ad4879cbf074885210ba9852d7511c44915957d",
+      "source": "bam/include/freestanding/libcxx/include/ios",
+      "source_sha256": "af30d1a48e24a7b860f8d8da0ad4879cbf074885210ba9852d7511c44915957d"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/iosfwd": {
+      "adapted": false,
+      "sha256": "7740ac59d4ff18002f8637f8ef0b4ad69bd45c310ef1b650ea7e94e1e6f617da",
+      "source": "bam/include/freestanding/libcxx/include/iosfwd",
+      "source_sha256": "7740ac59d4ff18002f8637f8ef0b4ad69bd45c310ef1b650ea7e94e1e6f617da"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/iostream": {
+      "adapted": false,
+      "sha256": "51c66fc2c463d232666955b268db47b5b05437e614e17655052ab4867adea25c",
+      "source": "bam/include/freestanding/libcxx/include/iostream",
+      "source_sha256": "51c66fc2c463d232666955b268db47b5b05437e614e17655052ab4867adea25c"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/istream": {
+      "adapted": false,
+      "sha256": "8e9018e901f36912d579e9a8687aa92edce6702936e8ead58b7bdff7d17e8cad",
+      "source": "bam/include/freestanding/libcxx/include/istream",
+      "source_sha256": "8e9018e901f36912d579e9a8687aa92edce6702936e8ead58b7bdff7d17e8cad"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/iterator": {
+      "adapted": false,
+      "sha256": "47c23748bdc57bebdd7e1b0a674b95a1f136d7a02efae959fcd5dcae0bee38d9",
+      "source": "bam/include/freestanding/libcxx/include/iterator",
+      "source_sha256": "47c23748bdc57bebdd7e1b0a674b95a1f136d7a02efae959fcd5dcae0bee38d9"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/latch": {
+      "adapted": false,
+      "sha256": "b63082bf813e1d9d4c0d484f6087379c4cb7c6114c52f54e8b13da64b858d018",
+      "source": "bam/include/freestanding/libcxx/include/latch",
+      "source_sha256": "b63082bf813e1d9d4c0d484f6087379c4cb7c6114c52f54e8b13da64b858d018"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/limits": {
+      "adapted": false,
+      "sha256": "caa548bac972f507fa5b6f38d3ce3d59b8b8d11c0a7ddf990c572e79580400e1",
+      "source": "bam/include/freestanding/libcxx/include/limits",
+      "source_sha256": "caa548bac972f507fa5b6f38d3ce3d59b8b8d11c0a7ddf990c572e79580400e1"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/limits.h": {
+      "adapted": false,
+      "sha256": "4c083b008caebadeab9bfc45f4450acf9cf4a488272344a66cbaf1fe4322ab25",
+      "source": "bam/include/freestanding/libcxx/include/limits.h",
+      "source_sha256": "4c083b008caebadeab9bfc45f4450acf9cf4a488272344a66cbaf1fe4322ab25"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/list": {
+      "adapted": false,
+      "sha256": "39cb389cb1dbc34b1e29dac8dcf095d210b2ddabf0654a5704d006641c936523",
+      "source": "bam/include/freestanding/libcxx/include/list",
+      "source_sha256": "39cb389cb1dbc34b1e29dac8dcf095d210b2ddabf0654a5704d006641c936523"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/locale": {
+      "adapted": false,
+      "sha256": "7c3731430fa2a34cf78392bb62681e3fda04a02ecc2e47f73219b27faac230b7",
+      "source": "bam/include/freestanding/libcxx/include/locale",
+      "source_sha256": "7c3731430fa2a34cf78392bb62681e3fda04a02ecc2e47f73219b27faac230b7"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/locale.h": {
+      "adapted": false,
+      "sha256": "4196b0e549bb8ce6a52886af2d670626ab1ebe9b4e4cdecb9b5269200634a9ad",
+      "source": "bam/include/freestanding/libcxx/include/locale.h",
+      "source_sha256": "4196b0e549bb8ce6a52886af2d670626ab1ebe9b4e4cdecb9b5269200634a9ad"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/map": {
+      "adapted": false,
+      "sha256": "e9c1cfe0be30d696f1451a47f75cb1a22b2f0d349db80128a2a284ee59345578",
+      "source": "bam/include/freestanding/libcxx/include/map",
+      "source_sha256": "e9c1cfe0be30d696f1451a47f75cb1a22b2f0d349db80128a2a284ee59345578"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/math.h": {
+      "adapted": false,
+      "sha256": "872aa7a81a68d66c8e0fb44b7bc98716745f3033fe3d29996e49b83aa91bba3e",
+      "source": "bam/include/freestanding/libcxx/include/math.h",
+      "source_sha256": "872aa7a81a68d66c8e0fb44b7bc98716745f3033fe3d29996e49b83aa91bba3e"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/memory": {
+      "adapted": false,
+      "sha256": "0daa30c3f7a8299361ed440115ba555fd817d620e28e9fbb0fc4a0a52f2428b3",
+      "source": "bam/include/freestanding/libcxx/include/memory",
+      "source_sha256": "0daa30c3f7a8299361ed440115ba555fd817d620e28e9fbb0fc4a0a52f2428b3"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/module.modulemap": {
+      "adapted": false,
+      "sha256": "95eeaaf5def4f4a56b7fcc5d91bf931402605f85c5c30fc18f3641b6b57e6d74",
+      "source": "bam/include/freestanding/libcxx/include/module.modulemap",
+      "source_sha256": "95eeaaf5def4f4a56b7fcc5d91bf931402605f85c5c30fc18f3641b6b57e6d74"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/mutex": {
+      "adapted": false,
+      "sha256": "8776acde2d18e1b14051b14359aae918e6b1cee47cad0ffb7406e3a0aba8e680",
+      "source": "bam/include/freestanding/libcxx/include/mutex",
+      "source_sha256": "8776acde2d18e1b14051b14359aae918e6b1cee47cad0ffb7406e3a0aba8e680"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/new": {
+      "adapted": false,
+      "sha256": "68dbd5e9db4f4ac63abb72603f7d22affb9b30017022bbf9ccb8ef1324d2876b",
+      "source": "bam/include/freestanding/libcxx/include/new",
+      "source_sha256": "68dbd5e9db4f4ac63abb72603f7d22affb9b30017022bbf9ccb8ef1324d2876b"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/numeric": {
+      "adapted": false,
+      "sha256": "0a365d3663f21de0a73f52aeb06a89e94bd4cf827123fdbe44058e185fabad07",
+      "source": "bam/include/freestanding/libcxx/include/numeric",
+      "source_sha256": "0a365d3663f21de0a73f52aeb06a89e94bd4cf827123fdbe44058e185fabad07"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/optional": {
+      "adapted": false,
+      "sha256": "e4dc1125b05ecd5ff58948a35a7e8f33d91ee0365b4f143aa0e813840ed01138",
+      "source": "bam/include/freestanding/libcxx/include/optional",
+      "source_sha256": "e4dc1125b05ecd5ff58948a35a7e8f33d91ee0365b4f143aa0e813840ed01138"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ostream": {
+      "adapted": false,
+      "sha256": "c7817feb7ced53fd633139316c73b57f9cdc1aad143fb614eb5de4ec7606b099",
+      "source": "bam/include/freestanding/libcxx/include/ostream",
+      "source_sha256": "c7817feb7ced53fd633139316c73b57f9cdc1aad143fb614eb5de4ec7606b099"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/queue": {
+      "adapted": false,
+      "sha256": "9a57ea76722e162c538c0375d327daba4a0e7e90ad7839beb024bdef7fb92260",
+      "source": "bam/include/freestanding/libcxx/include/queue",
+      "source_sha256": "9a57ea76722e162c538c0375d327daba4a0e7e90ad7839beb024bdef7fb92260"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/random": {
+      "adapted": false,
+      "sha256": "6e2f9b00ee61a1569107288f92a05f0c1c125a26c968d0b84b221c0ef7c8ab91",
+      "source": "bam/include/freestanding/libcxx/include/random",
+      "source_sha256": "6e2f9b00ee61a1569107288f92a05f0c1c125a26c968d0b84b221c0ef7c8ab91"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/ratio": {
+      "adapted": false,
+      "sha256": "b7fbf8018250dc0c41f47005f910581f841defd9f67082f4c55a81a394d3b7e5",
+      "source": "bam/include/freestanding/libcxx/include/ratio",
+      "source_sha256": "b7fbf8018250dc0c41f47005f910581f841defd9f67082f4c55a81a394d3b7e5"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/regex": {
+      "adapted": false,
+      "sha256": "de4a503d9551d3996b21e547bdc7e23e166c589ca31e51c5dfcc4b412f8c999d",
+      "source": "bam/include/freestanding/libcxx/include/regex",
+      "source_sha256": "de4a503d9551d3996b21e547bdc7e23e166c589ca31e51c5dfcc4b412f8c999d"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/scoped_allocator": {
+      "adapted": false,
+      "sha256": "c6e661440ac5d16ec97692aea1207cbd460b1bf390499ebde95cb15667ce1eda",
+      "source": "bam/include/freestanding/libcxx/include/scoped_allocator",
+      "source_sha256": "c6e661440ac5d16ec97692aea1207cbd460b1bf390499ebde95cb15667ce1eda"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/semaphore": {
+      "adapted": false,
+      "sha256": "d886bfb0407d651ae73dde4719bfb20d0b52ec2802d95c575bd5271613531680",
+      "source": "bam/include/freestanding/libcxx/include/semaphore",
+      "source_sha256": "d886bfb0407d651ae73dde4719bfb20d0b52ec2802d95c575bd5271613531680"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/set": {
+      "adapted": false,
+      "sha256": "5dbcdaae6edef02056b1fa0305aa103f89df8e79c5106822729fd867ebbe0291",
+      "source": "bam/include/freestanding/libcxx/include/set",
+      "source_sha256": "5dbcdaae6edef02056b1fa0305aa103f89df8e79c5106822729fd867ebbe0291"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/setjmp.h": {
+      "adapted": false,
+      "sha256": "f30e7fd679a1738b9d9f4a1a12c6a41334d5946ff0a28374d06bc624a80e41ee",
+      "source": "bam/include/freestanding/libcxx/include/setjmp.h",
+      "source_sha256": "f30e7fd679a1738b9d9f4a1a12c6a41334d5946ff0a28374d06bc624a80e41ee"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/shared_mutex": {
+      "adapted": false,
+      "sha256": "5626bd3855f4385f459a0ba4c03984e26ab3d43e1e1e04050559698a298e3603",
+      "source": "bam/include/freestanding/libcxx/include/shared_mutex",
+      "source_sha256": "5626bd3855f4385f459a0ba4c03984e26ab3d43e1e1e04050559698a298e3603"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/span": {
+      "adapted": false,
+      "sha256": "18634fe3e392bf73e0135f12e289840a8b1a4a82b5aa02e83d37ea7f92c70be8",
+      "source": "bam/include/freestanding/libcxx/include/span",
+      "source_sha256": "18634fe3e392bf73e0135f12e289840a8b1a4a82b5aa02e83d37ea7f92c70be8"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/sstream": {
+      "adapted": false,
+      "sha256": "16041ae120674083c7447053b52429625268069891a81a61ffdb275015d10cfc",
+      "source": "bam/include/freestanding/libcxx/include/sstream",
+      "source_sha256": "16041ae120674083c7447053b52429625268069891a81a61ffdb275015d10cfc"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/stack": {
+      "adapted": false,
+      "sha256": "74031c407b1170954fb760aa3e4305ad561703fc9e7a6ca51475325c84d8a182",
+      "source": "bam/include/freestanding/libcxx/include/stack",
+      "source_sha256": "74031c407b1170954fb760aa3e4305ad561703fc9e7a6ca51475325c84d8a182"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/stdbool.h": {
+      "adapted": false,
+      "sha256": "888270d1d26ffc56121ce454bbf386f4e61a11d7eea2e5ef153860e6611e355d",
+      "source": "bam/include/freestanding/libcxx/include/stdbool.h",
+      "source_sha256": "888270d1d26ffc56121ce454bbf386f4e61a11d7eea2e5ef153860e6611e355d"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/stddef.h": {
+      "adapted": false,
+      "sha256": "bbb970c8c5ef84bc7c939d2fe5829f9a885323ce76c1cce377c8fd6464834dbc",
+      "source": "bam/include/freestanding/libcxx/include/stddef.h",
+      "source_sha256": "bbb970c8c5ef84bc7c939d2fe5829f9a885323ce76c1cce377c8fd6464834dbc"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/stdexcept": {
+      "adapted": false,
+      "sha256": "5d9441e2936e993d7f3020936b4b9273deb90ac29f826b31016bd7d0145163cc",
+      "source": "bam/include/freestanding/libcxx/include/stdexcept",
+      "source_sha256": "5d9441e2936e993d7f3020936b4b9273deb90ac29f826b31016bd7d0145163cc"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/stdint.h": {
+      "adapted": false,
+      "sha256": "b58da07f11b3f7aa75146285829a7ac8ec2ee1971a4316890d07e38b9bb163ea",
+      "source": "bam/include/freestanding/libcxx/include/stdint.h",
+      "source_sha256": "b58da07f11b3f7aa75146285829a7ac8ec2ee1971a4316890d07e38b9bb163ea"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/stdio.h": {
+      "adapted": false,
+      "sha256": "777cfa4abaf423cfbc0f9b6500c2bf5fe260dc867338e905e7a34418c32d2aed",
+      "source": "bam/include/freestanding/libcxx/include/stdio.h",
+      "source_sha256": "777cfa4abaf423cfbc0f9b6500c2bf5fe260dc867338e905e7a34418c32d2aed"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/stdlib.h": {
+      "adapted": false,
+      "sha256": "a5225a4568794d02162c0ea14ed9140959739898d1afc3cf794cd0404754de38",
+      "source": "bam/include/freestanding/libcxx/include/stdlib.h",
+      "source_sha256": "a5225a4568794d02162c0ea14ed9140959739898d1afc3cf794cd0404754de38"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/streambuf": {
+      "adapted": false,
+      "sha256": "2742fd723dc65c63449195bc329743730b9cc8c2e32d1bb720d0e146f2a72f25",
+      "source": "bam/include/freestanding/libcxx/include/streambuf",
+      "source_sha256": "2742fd723dc65c63449195bc329743730b9cc8c2e32d1bb720d0e146f2a72f25"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/string": {
+      "adapted": false,
+      "sha256": "7967e945ebbc99d042e31503ca038c715c7cadbc8bf7388e5772fa473545513a",
+      "source": "bam/include/freestanding/libcxx/include/string",
+      "source_sha256": "7967e945ebbc99d042e31503ca038c715c7cadbc8bf7388e5772fa473545513a"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/string.h": {
+      "adapted": false,
+      "sha256": "cf0606814bea9a699479df7cf2b261d79c6478fa6c46877d9152a00063bfc867",
+      "source": "bam/include/freestanding/libcxx/include/string.h",
+      "source_sha256": "cf0606814bea9a699479df7cf2b261d79c6478fa6c46877d9152a00063bfc867"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/string_view": {
+      "adapted": false,
+      "sha256": "13e29871f751b4c85ced91844c2844f244c88e0c84a2b038a5596daf2facd038",
+      "source": "bam/include/freestanding/libcxx/include/string_view",
+      "source_sha256": "13e29871f751b4c85ced91844c2844f244c88e0c84a2b038a5596daf2facd038"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/strstream": {
+      "adapted": false,
+      "sha256": "ebc63ba623b5d0a52d04e892ba55f4dc99d556b30fca3c5c4341ac9d84889207",
+      "source": "bam/include/freestanding/libcxx/include/strstream",
+      "source_sha256": "ebc63ba623b5d0a52d04e892ba55f4dc99d556b30fca3c5c4341ac9d84889207"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/android/locale_bionic.h": {
+      "adapted": false,
+      "sha256": "de87dcb3cce8cc4f74c5619e5cb72ffd1926b0cdd49fbd0011527ce435f5dcf3",
+      "source": "bam/include/freestanding/libcxx/include/support/android/locale_bionic.h",
+      "source_sha256": "de87dcb3cce8cc4f74c5619e5cb72ffd1926b0cdd49fbd0011527ce435f5dcf3"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/fuchsia/xlocale.h": {
+      "adapted": false,
+      "sha256": "77f46ef4e9a21f737609dcc3181183afeacc88f0762514dc9390123bba523f4b",
+      "source": "bam/include/freestanding/libcxx/include/support/fuchsia/xlocale.h",
+      "source_sha256": "77f46ef4e9a21f737609dcc3181183afeacc88f0762514dc9390123bba523f4b"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/ibm/limits.h": {
+      "adapted": false,
+      "sha256": "0a7c1e6633a1ad2e05bca08d05a73ccac120448fdc360ec451eafe488fccf2bb",
+      "source": "bam/include/freestanding/libcxx/include/support/ibm/limits.h",
+      "source_sha256": "0a7c1e6633a1ad2e05bca08d05a73ccac120448fdc360ec451eafe488fccf2bb"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/ibm/locale_mgmt_aix.h": {
+      "adapted": false,
+      "sha256": "262c68c796288cf1f0509a544658373b9d45595bb2e00d799a9f07539236c7ec",
+      "source": "bam/include/freestanding/libcxx/include/support/ibm/locale_mgmt_aix.h",
+      "source_sha256": "262c68c796288cf1f0509a544658373b9d45595bb2e00d799a9f07539236c7ec"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/ibm/support.h": {
+      "adapted": false,
+      "sha256": "c4ccfd08f9f60a0684d212713c2eca574c554fb2192bb70df782b62dbacf7f4c",
+      "source": "bam/include/freestanding/libcxx/include/support/ibm/support.h",
+      "source_sha256": "c4ccfd08f9f60a0684d212713c2eca574c554fb2192bb70df782b62dbacf7f4c"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/ibm/xlocale.h": {
+      "adapted": false,
+      "sha256": "03486dc3ce39006399eb0dcdf5c751734eeab85574044babc46f676215f4b6f8",
+      "source": "bam/include/freestanding/libcxx/include/support/ibm/xlocale.h",
+      "source_sha256": "03486dc3ce39006399eb0dcdf5c751734eeab85574044babc46f676215f4b6f8"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/musl/xlocale.h": {
+      "adapted": false,
+      "sha256": "1a113c9811ecfe97a253a76c04cdd3f7559dc07581a44fc7b27fcd1511fd94b0",
+      "source": "bam/include/freestanding/libcxx/include/support/musl/xlocale.h",
+      "source_sha256": "1a113c9811ecfe97a253a76c04cdd3f7559dc07581a44fc7b27fcd1511fd94b0"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/newlib/xlocale.h": {
+      "adapted": false,
+      "sha256": "bc8e523dda33b20aaa0f166d3bc2bb49bb77235a339cee3db1f2ef7f5f64ce6a",
+      "source": "bam/include/freestanding/libcxx/include/support/newlib/xlocale.h",
+      "source_sha256": "bc8e523dda33b20aaa0f166d3bc2bb49bb77235a339cee3db1f2ef7f5f64ce6a"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/solaris/floatingpoint.h": {
+      "adapted": false,
+      "sha256": "61192165d1889cca5e429a3039e8608f42eee906179ee053b81c593eea986578",
+      "source": "bam/include/freestanding/libcxx/include/support/solaris/floatingpoint.h",
+      "source_sha256": "61192165d1889cca5e429a3039e8608f42eee906179ee053b81c593eea986578"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/solaris/wchar.h": {
+      "adapted": false,
+      "sha256": "48a416d72b4f49a5851d55d9f9dd1d2295e1855514be323368f9bed277a5eb62",
+      "source": "bam/include/freestanding/libcxx/include/support/solaris/wchar.h",
+      "source_sha256": "48a416d72b4f49a5851d55d9f9dd1d2295e1855514be323368f9bed277a5eb62"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/solaris/xlocale.h": {
+      "adapted": false,
+      "sha256": "c0ee36a5efaeeac1d80f85461d8c39d4cf13cc65f1ba71eb24e0c72f1ad4ebf3",
+      "source": "bam/include/freestanding/libcxx/include/support/solaris/xlocale.h",
+      "source_sha256": "c0ee36a5efaeeac1d80f85461d8c39d4cf13cc65f1ba71eb24e0c72f1ad4ebf3"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/win32/limits_msvc_win32.h": {
+      "adapted": false,
+      "sha256": "f5b9420bde5c478ca32d88ca9bf8a1e778f358c5b72ad0a17100fa0008655faf",
+      "source": "bam/include/freestanding/libcxx/include/support/win32/limits_msvc_win32.h",
+      "source_sha256": "f5b9420bde5c478ca32d88ca9bf8a1e778f358c5b72ad0a17100fa0008655faf"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/win32/locale_win32.h": {
+      "adapted": false,
+      "sha256": "19378c945a0b97a449a17d19a0c88e06cefc463374fb567c901492282f3fe954",
+      "source": "bam/include/freestanding/libcxx/include/support/win32/locale_win32.h",
+      "source_sha256": "19378c945a0b97a449a17d19a0c88e06cefc463374fb567c901492282f3fe954"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/xlocale/__nop_locale_mgmt.h": {
+      "adapted": false,
+      "sha256": "baa238af119e6ac39385d58aa085e3174b130df7543b2cd2f24aea6be6512630",
+      "source": "bam/include/freestanding/libcxx/include/support/xlocale/__nop_locale_mgmt.h",
+      "source_sha256": "baa238af119e6ac39385d58aa085e3174b130df7543b2cd2f24aea6be6512630"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/xlocale/__posix_l_fallback.h": {
+      "adapted": false,
+      "sha256": "021109654ee34641611c9763ad8bceb4e42a573abf8def74eea3fad133413b97",
+      "source": "bam/include/freestanding/libcxx/include/support/xlocale/__posix_l_fallback.h",
+      "source_sha256": "021109654ee34641611c9763ad8bceb4e42a573abf8def74eea3fad133413b97"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/support/xlocale/__strtonum_fallback.h": {
+      "adapted": false,
+      "sha256": "fcbd12299a59eb99e620119932f2879f7b8baee4c2cb009cee053926afe40384",
+      "source": "bam/include/freestanding/libcxx/include/support/xlocale/__strtonum_fallback.h",
+      "source_sha256": "fcbd12299a59eb99e620119932f2879f7b8baee4c2cb009cee053926afe40384"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/system_error": {
+      "adapted": false,
+      "sha256": "5b132e5dfd706ad0d1df20d1687fdbceb3684f2ad188df2fb3b0e0a0bd7f22eb",
+      "source": "bam/include/freestanding/libcxx/include/system_error",
+      "source_sha256": "5b132e5dfd706ad0d1df20d1687fdbceb3684f2ad188df2fb3b0e0a0bd7f22eb"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/tgmath.h": {
+      "adapted": false,
+      "sha256": "4cfa46765545a5edd08dc4872249f65d732063f57a7945e69d50d2f6a15cf8e7",
+      "source": "bam/include/freestanding/libcxx/include/tgmath.h",
+      "source_sha256": "4cfa46765545a5edd08dc4872249f65d732063f57a7945e69d50d2f6a15cf8e7"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/thread": {
+      "adapted": false,
+      "sha256": "e63575bc3b5004b937714b4b72572e38129f88bb5bde28eed3784ac73938a0ee",
+      "source": "bam/include/freestanding/libcxx/include/thread",
+      "source_sha256": "e63575bc3b5004b937714b4b72572e38129f88bb5bde28eed3784ac73938a0ee"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/tuple": {
+      "adapted": false,
+      "sha256": "5df1bf27cdd8d06f79137d7276453ab5c9d7eaedb730cd23298a4cdff3d2b690",
+      "source": "bam/include/freestanding/libcxx/include/tuple",
+      "source_sha256": "5df1bf27cdd8d06f79137d7276453ab5c9d7eaedb730cd23298a4cdff3d2b690"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/type_traits": {
+      "adapted": false,
+      "sha256": "06ec36541c1faee0e32f46c16a7f93ec5f9380c7336c1cedf19ea7ba7af8bc8a",
+      "source": "bam/include/freestanding/libcxx/include/type_traits",
+      "source_sha256": "06ec36541c1faee0e32f46c16a7f93ec5f9380c7336c1cedf19ea7ba7af8bc8a"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/typeindex": {
+      "adapted": false,
+      "sha256": "73ba53eecf774673a84647091d47fe897daa6904f7b9da2c3b14b5f351939ac1",
+      "source": "bam/include/freestanding/libcxx/include/typeindex",
+      "source_sha256": "73ba53eecf774673a84647091d47fe897daa6904f7b9da2c3b14b5f351939ac1"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/typeinfo": {
+      "adapted": false,
+      "sha256": "5e6f7f6c72974f5cbc0bdddada71c7856bfbe990bd02f9da119e0731d103a142",
+      "source": "bam/include/freestanding/libcxx/include/typeinfo",
+      "source_sha256": "5e6f7f6c72974f5cbc0bdddada71c7856bfbe990bd02f9da119e0731d103a142"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/unordered_map": {
+      "adapted": false,
+      "sha256": "7b91a86ed740d6f81a661e58b85b4a3a14306adc2ba91cfcf233d108f46aa74c",
+      "source": "bam/include/freestanding/libcxx/include/unordered_map",
+      "source_sha256": "7b91a86ed740d6f81a661e58b85b4a3a14306adc2ba91cfcf233d108f46aa74c"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/unordered_set": {
+      "adapted": false,
+      "sha256": "662dcd63fd68580fb76f6a4126b34f6e1ee4dd490e3a1f557bb6683ec295481e",
+      "source": "bam/include/freestanding/libcxx/include/unordered_set",
+      "source_sha256": "662dcd63fd68580fb76f6a4126b34f6e1ee4dd490e3a1f557bb6683ec295481e"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/utility": {
+      "adapted": false,
+      "sha256": "a5a0c05c363c221b24f89f4718b35cfde3880f43f57062bc31d7ef9cf4eb9e91",
+      "source": "bam/include/freestanding/libcxx/include/utility",
+      "source_sha256": "a5a0c05c363c221b24f89f4718b35cfde3880f43f57062bc31d7ef9cf4eb9e91"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/valarray": {
+      "adapted": false,
+      "sha256": "9c6afd75c69087a45c96af7ffc4c008d68c02cd9396bb21b8ade956bfd4d81f1",
+      "source": "bam/include/freestanding/libcxx/include/valarray",
+      "source_sha256": "9c6afd75c69087a45c96af7ffc4c008d68c02cd9396bb21b8ade956bfd4d81f1"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/variant": {
+      "adapted": false,
+      "sha256": "228fd83d63a47ba6053f9fb6803e954e00086f1b36eec717c409d47b3066a999",
+      "source": "bam/include/freestanding/libcxx/include/variant",
+      "source_sha256": "228fd83d63a47ba6053f9fb6803e954e00086f1b36eec717c409d47b3066a999"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/vector": {
+      "adapted": false,
+      "sha256": "57d6ba925ac9d7c5c78524d29885cbdd13e510e3680b97e3e50108f11c5b6cda",
+      "source": "bam/include/freestanding/libcxx/include/vector",
+      "source_sha256": "57d6ba925ac9d7c5c78524d29885cbdd13e510e3680b97e3e50108f11c5b6cda"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/version": {
+      "adapted": false,
+      "sha256": "92632a3327b5f83419eeb57a36190d944c916e51911ed773a099b35ac4a3ebd6",
+      "source": "bam/include/freestanding/libcxx/include/version",
+      "source_sha256": "92632a3327b5f83419eeb57a36190d944c916e51911ed773a099b35ac4a3ebd6"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/wchar.h": {
+      "adapted": false,
+      "sha256": "b75a80006f23b89dc72a66c35c60d2cd2da19a620b3ca8199e2716a86760ed3b",
+      "source": "bam/include/freestanding/libcxx/include/wchar.h",
+      "source_sha256": "b75a80006f23b89dc72a66c35c60d2cd2da19a620b3ca8199e2716a86760ed3b"
+    },
+    "third_party/bam/include/freestanding/libcxx/include/wctype.h": {
+      "adapted": false,
+      "sha256": "060e864770cdb8e4b53859abdf54ab7d7942a1fb9367b77fc5e6b100bd89db90",
+      "source": "bam/include/freestanding/libcxx/include/wctype.h",
+      "source_sha256": "060e864770cdb8e4b53859abdf54ab7d7942a1fb9367b77fc5e6b100bd89db90"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/3.9/x86_64-apple-darwin16.abilist": {
+      "adapted": false,
+      "sha256": "1d6018519d175d2ea670fcfa1f60a668551037d87e9504999daee806fe1d585a",
+      "source": "bam/include/freestanding/libcxx/lib/abi/3.9/x86_64-apple-darwin16.abilist",
+      "source_sha256": "1d6018519d175d2ea670fcfa1f60a668551037d87e9504999daee806fe1d585a"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/3.9/x86_64-linux-gnu.abilist": {
+      "adapted": false,
+      "sha256": "941a06ed1c99bb956c3016389f93facecbd2964a3cddb7b6a43d8182d9c7bba7",
+      "source": "bam/include/freestanding/libcxx/lib/abi/3.9/x86_64-linux-gnu.abilist",
+      "source_sha256": "941a06ed1c99bb956c3016389f93facecbd2964a3cddb7b6a43d8182d9c7bba7"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/4.0/x86_64-apple-darwin16.abilist": {
+      "adapted": false,
+      "sha256": "ddd008848e144e2278d3cdaa7f6a9c67cad439691e04fb4a8ca354e40541cc4f",
+      "source": "bam/include/freestanding/libcxx/lib/abi/4.0/x86_64-apple-darwin16.abilist",
+      "source_sha256": "ddd008848e144e2278d3cdaa7f6a9c67cad439691e04fb4a8ca354e40541cc4f"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/4.0/x86_64-unknown-linux-gnu.abilist": {
+      "adapted": false,
+      "sha256": "08883a3cda1a7026e1ac75b0b1926e457b9e0518f1652f70db374c886532946a",
+      "source": "bam/include/freestanding/libcxx/lib/abi/4.0/x86_64-unknown-linux-gnu.abilist",
+      "source_sha256": "08883a3cda1a7026e1ac75b0b1926e457b9e0518f1652f70db374c886532946a"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/5.0/x86_64-apple-darwin16.abilist": {
+      "adapted": false,
+      "sha256": "932687d33c1c5c3796ef1f2a3a9b96a195a698e719e392ef28d3e5b4a08d4dc3",
+      "source": "bam/include/freestanding/libcxx/lib/abi/5.0/x86_64-apple-darwin16.abilist",
+      "source_sha256": "932687d33c1c5c3796ef1f2a3a9b96a195a698e719e392ef28d3e5b4a08d4dc3"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/5.0/x86_64-unknown-linux-gnu.abilist": {
+      "adapted": false,
+      "sha256": "8bb4e5fcfde79485d8068b1ea1e25c5dfb3640a6dd3d4d562d0ec7de861437e0",
+      "source": "bam/include/freestanding/libcxx/lib/abi/5.0/x86_64-unknown-linux-gnu.abilist",
+      "source_sha256": "8bb4e5fcfde79485d8068b1ea1e25c5dfb3640a6dd3d4d562d0ec7de861437e0"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/6.0/x86_64-apple-darwin16.abilist": {
+      "adapted": false,
+      "sha256": "932687d33c1c5c3796ef1f2a3a9b96a195a698e719e392ef28d3e5b4a08d4dc3",
+      "source": "bam/include/freestanding/libcxx/lib/abi/6.0/x86_64-apple-darwin16.abilist",
+      "source_sha256": "932687d33c1c5c3796ef1f2a3a9b96a195a698e719e392ef28d3e5b4a08d4dc3"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/6.0/x86_64-unknown-linux-gnu.abilist": {
+      "adapted": false,
+      "sha256": "8bb4e5fcfde79485d8068b1ea1e25c5dfb3640a6dd3d4d562d0ec7de861437e0",
+      "source": "bam/include/freestanding/libcxx/lib/abi/6.0/x86_64-unknown-linux-gnu.abilist",
+      "source_sha256": "8bb4e5fcfde79485d8068b1ea1e25c5dfb3640a6dd3d4d562d0ec7de861437e0"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/8.0/x86_64-apple-darwin.v1.abilist": {
+      "adapted": false,
+      "sha256": "5772e1a12d729f05721a86667f03e16da540e6895d7fc2901b448e5374535415",
+      "source": "bam/include/freestanding/libcxx/lib/abi/8.0/x86_64-apple-darwin.v1.abilist",
+      "source_sha256": "5772e1a12d729f05721a86667f03e16da540e6895d7fc2901b448e5374535415"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/8.0/x86_64-apple-darwin.v2.abilist": {
+      "adapted": false,
+      "sha256": "f22ea6a74cb86fe98f3abff4c14890e601af1d980cb46b6632866ad1a4d68acf",
+      "source": "bam/include/freestanding/libcxx/lib/abi/8.0/x86_64-apple-darwin.v2.abilist",
+      "source_sha256": "f22ea6a74cb86fe98f3abff4c14890e601af1d980cb46b6632866ad1a4d68acf"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/8.0/x86_64-unknown-linux-gnu.v1.abilist": {
+      "adapted": false,
+      "sha256": "3304f10fe4b70dfb6dfd077c264a9a6c636650972ed5b0093fa6a96f31c901d1",
+      "source": "bam/include/freestanding/libcxx/lib/abi/8.0/x86_64-unknown-linux-gnu.v1.abilist",
+      "source_sha256": "3304f10fe4b70dfb6dfd077c264a9a6c636650972ed5b0093fa6a96f31c901d1"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/CHANGELOG.TXT": {
+      "adapted": false,
+      "sha256": "2c6fc73f2222deb8eef96e3bfc4db77e3abeb42734d2d57042dd4329c77c212a",
+      "source": "bam/include/freestanding/libcxx/lib/abi/CHANGELOG.TXT",
+      "source_sha256": "2c6fc73f2222deb8eef96e3bfc4db77e3abeb42734d2d57042dd4329c77c212a"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "6df7a1c21f65988b12d02c5821de4b63ddeed4e86982f7e2ea5cd6ef0a4c1c7c",
+      "source": "bam/include/freestanding/libcxx/lib/abi/CMakeLists.txt",
+      "source_sha256": "6df7a1c21f65988b12d02c5821de4b63ddeed4e86982f7e2ea5cd6ef0a4c1c7c"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/README.TXT": {
+      "adapted": false,
+      "sha256": "becb76e05d41497dade26fe6ffc17c00683effc6b156730d3aaa8230d58f013e",
+      "source": "bam/include/freestanding/libcxx/lib/abi/README.TXT",
+      "source_sha256": "becb76e05d41497dade26fe6ffc17c00683effc6b156730d3aaa8230d58f013e"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/x86_64-apple-darwin.v1.abilist": {
+      "adapted": false,
+      "sha256": "b4ba3276e600bd2dff59d6a40276e95494f6f2bdc4497c5906a4dc52d0b13d9a",
+      "source": "bam/include/freestanding/libcxx/lib/abi/x86_64-apple-darwin.v1.abilist",
+      "source_sha256": "b4ba3276e600bd2dff59d6a40276e95494f6f2bdc4497c5906a4dc52d0b13d9a"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/x86_64-apple-darwin.v2.abilist": {
+      "adapted": false,
+      "sha256": "86f5b0fe712ed90e5bc6792014de8e0d2df22ccff9fae78440c84871cf18769e",
+      "source": "bam/include/freestanding/libcxx/lib/abi/x86_64-apple-darwin.v2.abilist",
+      "source_sha256": "86f5b0fe712ed90e5bc6792014de8e0d2df22ccff9fae78440c84871cf18769e"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/abi/x86_64-unknown-linux-gnu.v1.abilist": {
+      "adapted": false,
+      "sha256": "f73c9065c7d7608ad579f5ea52f54675036a23626e3772aa0d13965b5a2219d3",
+      "source": "bam/include/freestanding/libcxx/lib/abi/x86_64-unknown-linux-gnu.v1.abilist",
+      "source_sha256": "f73c9065c7d7608ad579f5ea52f54675036a23626e3772aa0d13965b5a2219d3"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/libc++abi-new-delete.exp": {
+      "adapted": false,
+      "sha256": "5a23dffadf3cc418bca0570b2ca29b05936c0f8d342ba7272d66246403f71d84",
+      "source": "bam/include/freestanding/libcxx/lib/libc++abi-new-delete.exp",
+      "source_sha256": "5a23dffadf3cc418bca0570b2ca29b05936c0f8d342ba7272d66246403f71d84"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/libc++abi.v1.exp": {
+      "adapted": false,
+      "sha256": "dbd7c3b0ea7f267f60d47ac7d3dc3e404b150d0e19d84e6e9c374c62971aebcc",
+      "source": "bam/include/freestanding/libcxx/lib/libc++abi.v1.exp",
+      "source_sha256": "dbd7c3b0ea7f267f60d47ac7d3dc3e404b150d0e19d84e6e9c374c62971aebcc"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/libc++abi.v2.exp": {
+      "adapted": false,
+      "sha256": "54b219f3786a8ff4fcaf4bc363bb5200997edd684ec390918c2c6b411149bb2b",
+      "source": "bam/include/freestanding/libcxx/lib/libc++abi.v2.exp",
+      "source_sha256": "54b219f3786a8ff4fcaf4bc363bb5200997edd684ec390918c2c6b411149bb2b"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/libc++sjlj-abi.v1.exp": {
+      "adapted": false,
+      "sha256": "0163f7c607b0f1d21470f48c93b21d59d4f580ecfe1c6f00e3adc68b92bf1bb2",
+      "source": "bam/include/freestanding/libcxx/lib/libc++sjlj-abi.v1.exp",
+      "source_sha256": "0163f7c607b0f1d21470f48c93b21d59d4f580ecfe1c6f00e3adc68b92bf1bb2"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/libc++sjlj-abi.v2.exp": {
+      "adapted": false,
+      "sha256": "62cac2c309b4692c80097d3230589a7b874cba6f8aebe42cecf7c52bd8465c0e",
+      "source": "bam/include/freestanding/libcxx/lib/libc++sjlj-abi.v2.exp",
+      "source_sha256": "62cac2c309b4692c80097d3230589a7b874cba6f8aebe42cecf7c52bd8465c0e"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/libc++unexp.exp": {
+      "adapted": false,
+      "sha256": "c51d9eedfba0a7e7b39856b45a6d6f17d6b16cd568052aac6cd1e67157f89d36",
+      "source": "bam/include/freestanding/libcxx/lib/libc++unexp.exp",
+      "source_sha256": "c51d9eedfba0a7e7b39856b45a6d6f17d6b16cd568052aac6cd1e67157f89d36"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/notweak.exp": {
+      "adapted": false,
+      "sha256": "ff18c6d38defedfd3ffeab65f908b1a4e611ce36c2b016e5b8efe7b6ff709a39",
+      "source": "bam/include/freestanding/libcxx/lib/notweak.exp",
+      "source_sha256": "ff18c6d38defedfd3ffeab65f908b1a4e611ce36c2b016e5b8efe7b6ff709a39"
+    },
+    "third_party/bam/include/freestanding/libcxx/lib/weak.exp": {
+      "adapted": false,
+      "sha256": "35eb1a8ed57f6ea1eb4f5255ad2796521de9e93fab0eec24bb1fcb559d009c61",
+      "source": "bam/include/freestanding/libcxx/lib/weak.exp",
+      "source_sha256": "35eb1a8ed57f6ea1eb4f5255ad2796521de9e93fab0eec24bb1fcb559d009c61"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/CMakeLists.txt": {
+      "adapted": false,
+      "sha256": "7a5b0d7de495095db90f90c9ff3fe13342e953dfa147782afa91291590f86eac",
+      "source": "bam/include/freestanding/libcxx/src/CMakeLists.txt",
+      "source_sha256": "7a5b0d7de495095db90f90c9ff3fe13342e953dfa147782afa91291590f86eac"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/algorithm.cpp": {
+      "adapted": false,
+      "sha256": "bdf229ed4762e0fe09cdb2bb39ce5df538e0091a06d0966a0fd5a36802caa2f0",
+      "source": "bam/include/freestanding/libcxx/src/algorithm.cpp",
+      "source_sha256": "bdf229ed4762e0fe09cdb2bb39ce5df538e0091a06d0966a0fd5a36802caa2f0"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/any.cpp": {
+      "adapted": false,
+      "sha256": "05a6d7bb684590496c74a4fd9f16185507112a2154e55d243ab93732b3ae9c05",
+      "source": "bam/include/freestanding/libcxx/src/any.cpp",
+      "source_sha256": "05a6d7bb684590496c74a4fd9f16185507112a2154e55d243ab93732b3ae9c05"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/atomic.cpp": {
+      "adapted": false,
+      "sha256": "432121ddb883a9c05dded04649e3eb82dbdeab29de1d4d8c4c8fe5a55dd4ce20",
+      "source": "bam/include/freestanding/libcxx/src/atomic.cpp",
+      "source_sha256": "432121ddb883a9c05dded04649e3eb82dbdeab29de1d4d8c4c8fe5a55dd4ce20"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/barrier.cpp": {
+      "adapted": false,
+      "sha256": "3e55823f6c0f7494bb49123cc94312c45f118470095c4c34f0c09ba48bd73668",
+      "source": "bam/include/freestanding/libcxx/src/barrier.cpp",
+      "source_sha256": "3e55823f6c0f7494bb49123cc94312c45f118470095c4c34f0c09ba48bd73668"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/bind.cpp": {
+      "adapted": false,
+      "sha256": "2c6efa5595d6b0c50aed5b3a13f2fd1c98a67675f3acc0b08d54525cf6d22be3",
+      "source": "bam/include/freestanding/libcxx/src/bind.cpp",
+      "source_sha256": "2c6efa5595d6b0c50aed5b3a13f2fd1c98a67675f3acc0b08d54525cf6d22be3"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/charconv.cpp": {
+      "adapted": false,
+      "sha256": "007e133c1fd90568126629da8b7da95929ccbeaa50cb6bc7eee53cf5368ea076",
+      "source": "bam/include/freestanding/libcxx/src/charconv.cpp",
+      "source_sha256": "007e133c1fd90568126629da8b7da95929ccbeaa50cb6bc7eee53cf5368ea076"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/chrono.cpp": {
+      "adapted": false,
+      "sha256": "4e7a2a92559051dd6a5dd9badc9cd171cdafdba8f3dd7eb383cf62446c9348df",
+      "source": "bam/include/freestanding/libcxx/src/chrono.cpp",
+      "source_sha256": "4e7a2a92559051dd6a5dd9badc9cd171cdafdba8f3dd7eb383cf62446c9348df"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/condition_variable.cpp": {
+      "adapted": false,
+      "sha256": "bc45e3909f998759b611b13620d2c7161c815babcad72d134fe18a2d089e6285",
+      "source": "bam/include/freestanding/libcxx/src/condition_variable.cpp",
+      "source_sha256": "bc45e3909f998759b611b13620d2c7161c815babcad72d134fe18a2d089e6285"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/condition_variable_destructor.cpp": {
+      "adapted": false,
+      "sha256": "66bb065a3715db9a9565a16b6e209a5fbff4222cf7e59277160d593cb32933e4",
+      "source": "bam/include/freestanding/libcxx/src/condition_variable_destructor.cpp",
+      "source_sha256": "66bb065a3715db9a9565a16b6e209a5fbff4222cf7e59277160d593cb32933e4"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/debug.cpp": {
+      "adapted": false,
+      "sha256": "a39840bdab77ffbaf125104cd676606ce5cd443d1b13659cf5b6f402ec259a4f",
+      "source": "bam/include/freestanding/libcxx/src/debug.cpp",
+      "source_sha256": "a39840bdab77ffbaf125104cd676606ce5cd443d1b13659cf5b6f402ec259a4f"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/exception.cpp": {
+      "adapted": false,
+      "sha256": "8f2dce3ce7455019aad4b2d88692e029e6d51439e54bebd56d65ae6b27e502d3",
+      "source": "bam/include/freestanding/libcxx/src/exception.cpp",
+      "source_sha256": "8f2dce3ce7455019aad4b2d88692e029e6d51439e54bebd56d65ae6b27e502d3"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/experimental/memory_resource.cpp": {
+      "adapted": false,
+      "sha256": "77f7d6a7d29c082e35a8ed9ed2ae901411e1eb76a99e0ab66aa65a39e6c1939d",
+      "source": "bam/include/freestanding/libcxx/src/experimental/memory_resource.cpp",
+      "source_sha256": "77f7d6a7d29c082e35a8ed9ed2ae901411e1eb76a99e0ab66aa65a39e6c1939d"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/filesystem/directory_iterator.cpp": {
+      "adapted": false,
+      "sha256": "1dbc16b47560e3992223eb1e47d2a3133947d4531e11aa4129950e59dacfbe43",
+      "source": "bam/include/freestanding/libcxx/src/filesystem/directory_iterator.cpp",
+      "source_sha256": "1dbc16b47560e3992223eb1e47d2a3133947d4531e11aa4129950e59dacfbe43"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/filesystem/filesystem_common.h": {
+      "adapted": false,
+      "sha256": "1b32eacff427ae168f5d3f7b9440d9c8f4f86d5152e74a653a236b13158cb809",
+      "source": "bam/include/freestanding/libcxx/src/filesystem/filesystem_common.h",
+      "source_sha256": "1b32eacff427ae168f5d3f7b9440d9c8f4f86d5152e74a653a236b13158cb809"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/filesystem/int128_builtins.cpp": {
+      "adapted": false,
+      "sha256": "7b3a71e71ad0447d65b7049d8dc277c1cbe8c0ca7ccf02d0fed648efe1338787",
+      "source": "bam/include/freestanding/libcxx/src/filesystem/int128_builtins.cpp",
+      "source_sha256": "7b3a71e71ad0447d65b7049d8dc277c1cbe8c0ca7ccf02d0fed648efe1338787"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/filesystem/operations.cpp": {
+      "adapted": false,
+      "sha256": "715bc8547cc9e2ccf938bace1d30bf2e39fe76353d7829fd74863332c63ad8f7",
+      "source": "bam/include/freestanding/libcxx/src/filesystem/operations.cpp",
+      "source_sha256": "715bc8547cc9e2ccf938bace1d30bf2e39fe76353d7829fd74863332c63ad8f7"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/functional.cpp": {
+      "adapted": false,
+      "sha256": "6cf94f4c9cadce311a31177ca4321d012a571453e6e96a4700ebb1f5d6e8a13c",
+      "source": "bam/include/freestanding/libcxx/src/functional.cpp",
+      "source_sha256": "6cf94f4c9cadce311a31177ca4321d012a571453e6e96a4700ebb1f5d6e8a13c"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/future.cpp": {
+      "adapted": false,
+      "sha256": "a05309f1215056d7732ad970ad1b45a3905fcfff9e2abdcc4156868577486593",
+      "source": "bam/include/freestanding/libcxx/src/future.cpp",
+      "source_sha256": "a05309f1215056d7732ad970ad1b45a3905fcfff9e2abdcc4156868577486593"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/hash.cpp": {
+      "adapted": false,
+      "sha256": "7f25a5bbccfb528f679003b62004cd224170628bcf7c5235aaf36a2ac66eebea",
+      "source": "bam/include/freestanding/libcxx/src/hash.cpp",
+      "source_sha256": "7f25a5bbccfb528f679003b62004cd224170628bcf7c5235aaf36a2ac66eebea"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/include/apple_availability.h": {
+      "adapted": false,
+      "sha256": "02fe8e0bfaeb9ccdbb8c6da9587c2a9ead73c6c498fdf3719b950e8fc9d9fbeb",
+      "source": "bam/include/freestanding/libcxx/src/include/apple_availability.h",
+      "source_sha256": "02fe8e0bfaeb9ccdbb8c6da9587c2a9ead73c6c498fdf3719b950e8fc9d9fbeb"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/include/atomic_support.h": {
+      "adapted": false,
+      "sha256": "6702bfc4593696ee720edd1472c81e7ec277699797bf44d4cffdd4a83508c46f",
+      "source": "bam/include/freestanding/libcxx/src/include/atomic_support.h",
+      "source_sha256": "6702bfc4593696ee720edd1472c81e7ec277699797bf44d4cffdd4a83508c46f"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/include/config_elast.h": {
+      "adapted": false,
+      "sha256": "7637f5cb8e6dca7656e4c7bba55ba97d9f8d4012ad08265c8883764afd7e22d8",
+      "source": "bam/include/freestanding/libcxx/src/include/config_elast.h",
+      "source_sha256": "7637f5cb8e6dca7656e4c7bba55ba97d9f8d4012ad08265c8883764afd7e22d8"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/include/refstring.h": {
+      "adapted": false,
+      "sha256": "ebe7859a2c8e5c0bbf5d0b62016381dd77305a0bfa55842495d803906d62711a",
+      "source": "bam/include/freestanding/libcxx/src/include/refstring.h",
+      "source_sha256": "ebe7859a2c8e5c0bbf5d0b62016381dd77305a0bfa55842495d803906d62711a"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/ios.cpp": {
+      "adapted": false,
+      "sha256": "c7a00a31d462fd9cddea68f36ba1b9d76a319aa97c6b78c846507d5b9843a818",
+      "source": "bam/include/freestanding/libcxx/src/ios.cpp",
+      "source_sha256": "c7a00a31d462fd9cddea68f36ba1b9d76a319aa97c6b78c846507d5b9843a818"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/iostream.cpp": {
+      "adapted": false,
+      "sha256": "f92b7029766afc56bf81dc8a7fbc46659f196c8545bd2b0c4efa85d1b5d5543b",
+      "source": "bam/include/freestanding/libcxx/src/iostream.cpp",
+      "source_sha256": "f92b7029766afc56bf81dc8a7fbc46659f196c8545bd2b0c4efa85d1b5d5543b"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/locale.cpp": {
+      "adapted": false,
+      "sha256": "c8cce8f1acf2ab313381d753a5bf260d123beb93c7b9609a497e9d342e1e88c7",
+      "source": "bam/include/freestanding/libcxx/src/locale.cpp",
+      "source_sha256": "c8cce8f1acf2ab313381d753a5bf260d123beb93c7b9609a497e9d342e1e88c7"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/memory.cpp": {
+      "adapted": false,
+      "sha256": "2265fe2cf9daf86b471f2b41b3a195afdfcbd71347d228f1fbe62a2b3086e73d",
+      "source": "bam/include/freestanding/libcxx/src/memory.cpp",
+      "source_sha256": "2265fe2cf9daf86b471f2b41b3a195afdfcbd71347d228f1fbe62a2b3086e73d"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/mutex.cpp": {
+      "adapted": false,
+      "sha256": "df03cde9fd044e0ac70ddf3d2fe09e1e6014408c5f9cba858801e3270d6e37a2",
+      "source": "bam/include/freestanding/libcxx/src/mutex.cpp",
+      "source_sha256": "df03cde9fd044e0ac70ddf3d2fe09e1e6014408c5f9cba858801e3270d6e37a2"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/mutex_destructor.cpp": {
+      "adapted": false,
+      "sha256": "c556c488aec01d6af6411573256e294d072541facc95bf683f9f076756667c21",
+      "source": "bam/include/freestanding/libcxx/src/mutex_destructor.cpp",
+      "source_sha256": "c556c488aec01d6af6411573256e294d072541facc95bf683f9f076756667c21"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/new.cpp": {
+      "adapted": false,
+      "sha256": "b0d3ac71ad17ff543e2162b2d6f49b0f5cf07098940956b24a4d62cccf99f62a",
+      "source": "bam/include/freestanding/libcxx/src/new.cpp",
+      "source_sha256": "b0d3ac71ad17ff543e2162b2d6f49b0f5cf07098940956b24a4d62cccf99f62a"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/optional.cpp": {
+      "adapted": false,
+      "sha256": "e5fd7ea00be8fa32431be606ddc5301852f704b2adce533efeee3e35e5aa2732",
+      "source": "bam/include/freestanding/libcxx/src/optional.cpp",
+      "source_sha256": "e5fd7ea00be8fa32431be606ddc5301852f704b2adce533efeee3e35e5aa2732"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/random.cpp": {
+      "adapted": false,
+      "sha256": "00cb0fac78835ff2e0823063e91800dfee4dc18e3614b0bc3a8e894d7f3d7062",
+      "source": "bam/include/freestanding/libcxx/src/random.cpp",
+      "source_sha256": "00cb0fac78835ff2e0823063e91800dfee4dc18e3614b0bc3a8e894d7f3d7062"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/regex.cpp": {
+      "adapted": false,
+      "sha256": "76789df18fe5a58d5af4ebb83ecae09bca307179ccc36a04ffc53405be06313b",
+      "source": "bam/include/freestanding/libcxx/src/regex.cpp",
+      "source_sha256": "76789df18fe5a58d5af4ebb83ecae09bca307179ccc36a04ffc53405be06313b"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/semaphore.cpp": {
+      "adapted": false,
+      "sha256": "5aaaa806a7107a3807ac1af31b183d4aa92dd2d156ad8f5b2437ff62120c4452",
+      "source": "bam/include/freestanding/libcxx/src/semaphore.cpp",
+      "source_sha256": "5aaaa806a7107a3807ac1af31b183d4aa92dd2d156ad8f5b2437ff62120c4452"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/shared_mutex.cpp": {
+      "adapted": false,
+      "sha256": "c645376ad2ac753011f8e35f58e4c53114db39fbf9f12742e9673f81dff9e534",
+      "source": "bam/include/freestanding/libcxx/src/shared_mutex.cpp",
+      "source_sha256": "c645376ad2ac753011f8e35f58e4c53114db39fbf9f12742e9673f81dff9e534"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/stdexcept.cpp": {
+      "adapted": false,
+      "sha256": "3ae2843de556262f4e95643609c384bf109442dfde48976a5f4f8ef9aac197a2",
+      "source": "bam/include/freestanding/libcxx/src/stdexcept.cpp",
+      "source_sha256": "3ae2843de556262f4e95643609c384bf109442dfde48976a5f4f8ef9aac197a2"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/string.cpp": {
+      "adapted": false,
+      "sha256": "18f4bcaa65a61c6733eeff118af24b8ebd517dfb5d138804d4788552dabb3e9f",
+      "source": "bam/include/freestanding/libcxx/src/string.cpp",
+      "source_sha256": "18f4bcaa65a61c6733eeff118af24b8ebd517dfb5d138804d4788552dabb3e9f"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/strstream.cpp": {
+      "adapted": false,
+      "sha256": "4138b0bde3063119cf8875bc6643288e2acaebf5ba6b021af6b43f756e8894ce",
+      "source": "bam/include/freestanding/libcxx/src/strstream.cpp",
+      "source_sha256": "4138b0bde3063119cf8875bc6643288e2acaebf5ba6b021af6b43f756e8894ce"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/exception_fallback.ipp": {
+      "adapted": false,
+      "sha256": "bbe877e2a8bf9834b7e305899f8d14952bdc7cb6732e723cb2af5cfa52d28d6c",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/exception_fallback.ipp",
+      "source_sha256": "bbe877e2a8bf9834b7e305899f8d14952bdc7cb6732e723cb2af5cfa52d28d6c"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/exception_glibcxx.ipp": {
+      "adapted": false,
+      "sha256": "69b3a3a2b48adf49e931ba3fc343455ef793d578e9811f6435efeaf698487e5f",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/exception_glibcxx.ipp",
+      "source_sha256": "69b3a3a2b48adf49e931ba3fc343455ef793d578e9811f6435efeaf698487e5f"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/exception_libcxxabi.ipp": {
+      "adapted": false,
+      "sha256": "37afe0e7a55cb1ccdaddc6cb76605e09b083d9441dd5feaf93780cae79335bae",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/exception_libcxxabi.ipp",
+      "source_sha256": "37afe0e7a55cb1ccdaddc6cb76605e09b083d9441dd5feaf93780cae79335bae"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/exception_libcxxrt.ipp": {
+      "adapted": false,
+      "sha256": "81937752d6acfe69228075c484a0a704f5abc91ae83889010a61c384df96b5c7",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/exception_libcxxrt.ipp",
+      "source_sha256": "81937752d6acfe69228075c484a0a704f5abc91ae83889010a61c384df96b5c7"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/exception_msvc.ipp": {
+      "adapted": false,
+      "sha256": "bdd823eb1e65190b20935005517262dc1280488655d24a6405f23225fe42656b",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/exception_msvc.ipp",
+      "source_sha256": "bdd823eb1e65190b20935005517262dc1280488655d24a6405f23225fe42656b"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/exception_pointer_cxxabi.ipp": {
+      "adapted": false,
+      "sha256": "4c768c92358860c74a9786e65969749aeae060affbff92f454eb87480dc11482",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/exception_pointer_cxxabi.ipp",
+      "source_sha256": "4c768c92358860c74a9786e65969749aeae060affbff92f454eb87480dc11482"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/exception_pointer_glibcxx.ipp": {
+      "adapted": false,
+      "sha256": "e2c3248eaf786bd38acf53c12b443a750c7dcc7838348229e602cd8019804028",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/exception_pointer_glibcxx.ipp",
+      "source_sha256": "e2c3248eaf786bd38acf53c12b443a750c7dcc7838348229e602cd8019804028"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/exception_pointer_msvc.ipp": {
+      "adapted": false,
+      "sha256": "cb7dc39cec278b7772ec64cddc9603a62e8e263d9527fdfa8aa3716c2be1511d",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/exception_pointer_msvc.ipp",
+      "source_sha256": "cb7dc39cec278b7772ec64cddc9603a62e8e263d9527fdfa8aa3716c2be1511d"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/exception_pointer_unimplemented.ipp": {
+      "adapted": false,
+      "sha256": "9b8497f9201c16fb2f2c70816abca214f4617f2d53596f6ba7a10d42a6082ca1",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/exception_pointer_unimplemented.ipp",
+      "source_sha256": "9b8497f9201c16fb2f2c70816abca214f4617f2d53596f6ba7a10d42a6082ca1"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/new_handler_fallback.ipp": {
+      "adapted": false,
+      "sha256": "efe6ad3fd9ea6691b5d41561d1ab564749e4ae240639575a5adec469b61d4f7c",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/new_handler_fallback.ipp",
+      "source_sha256": "efe6ad3fd9ea6691b5d41561d1ab564749e4ae240639575a5adec469b61d4f7c"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/stdexcept_default.ipp": {
+      "adapted": false,
+      "sha256": "6d87b0c20fd114260fc494fe5fd81472634adeca8c0d3367f35982d659ac9972",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/stdexcept_default.ipp",
+      "source_sha256": "6d87b0c20fd114260fc494fe5fd81472634adeca8c0d3367f35982d659ac9972"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/runtime/stdexcept_vcruntime.ipp": {
+      "adapted": false,
+      "sha256": "0ec54984623619f75c3d94629ae0f0d1adaa5d396f6429601253a7cb761d405e",
+      "source": "bam/include/freestanding/libcxx/src/support/runtime/stdexcept_vcruntime.ipp",
+      "source_sha256": "0ec54984623619f75c3d94629ae0f0d1adaa5d396f6429601253a7cb761d405e"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/solaris/README": {
+      "adapted": false,
+      "sha256": "6f1fc25467bd0c057ae2921363b61f8f40c5fa46d7d646eb8f23ed351d8042cc",
+      "source": "bam/include/freestanding/libcxx/src/support/solaris/README",
+      "source_sha256": "6f1fc25467bd0c057ae2921363b61f8f40c5fa46d7d646eb8f23ed351d8042cc"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/solaris/mbsnrtowcs.inc": {
+      "adapted": false,
+      "sha256": "da505e49b5f7eac0e135bbc6a6ceb4da7993b6dcda1b9fb2ead5f578a6fa22a7",
+      "source": "bam/include/freestanding/libcxx/src/support/solaris/mbsnrtowcs.inc",
+      "source_sha256": "da505e49b5f7eac0e135bbc6a6ceb4da7993b6dcda1b9fb2ead5f578a6fa22a7"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/solaris/wcsnrtombs.inc": {
+      "adapted": false,
+      "sha256": "1e5ebf9fe641a01e026be41736e9efbabd688cdea4d5d65add36c81a8e3c787c",
+      "source": "bam/include/freestanding/libcxx/src/support/solaris/wcsnrtombs.inc",
+      "source_sha256": "1e5ebf9fe641a01e026be41736e9efbabd688cdea4d5d65add36c81a8e3c787c"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/solaris/xlocale.cpp": {
+      "adapted": false,
+      "sha256": "29e198f0362e84f79dd93f39ba2a9347672d9118c87f98d6c83de1f4369270f2",
+      "source": "bam/include/freestanding/libcxx/src/support/solaris/xlocale.cpp",
+      "source_sha256": "29e198f0362e84f79dd93f39ba2a9347672d9118c87f98d6c83de1f4369270f2"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/win32/locale_win32.cpp": {
+      "adapted": false,
+      "sha256": "493834bcc917e98f137b395aa210b030897d8350612622b080bf9b5a6d7461d2",
+      "source": "bam/include/freestanding/libcxx/src/support/win32/locale_win32.cpp",
+      "source_sha256": "493834bcc917e98f137b395aa210b030897d8350612622b080bf9b5a6d7461d2"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/win32/support.cpp": {
+      "adapted": false,
+      "sha256": "0b66aedddddabfe49246d094ff346e6a1507868b981db4b94a38911d924dc127",
+      "source": "bam/include/freestanding/libcxx/src/support/win32/support.cpp",
+      "source_sha256": "0b66aedddddabfe49246d094ff346e6a1507868b981db4b94a38911d924dc127"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/support/win32/thread_win32.cpp": {
+      "adapted": false,
+      "sha256": "2c62b6116c5c4d010e7c7f6174eabb26d1a0addbc481e9e148eb439012be2fba",
+      "source": "bam/include/freestanding/libcxx/src/support/win32/thread_win32.cpp",
+      "source_sha256": "2c62b6116c5c4d010e7c7f6174eabb26d1a0addbc481e9e148eb439012be2fba"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/system_error.cpp": {
+      "adapted": false,
+      "sha256": "bde8a77af0600f10424436e604ba2730da3e3aa7822fff904bade5e138287896",
+      "source": "bam/include/freestanding/libcxx/src/system_error.cpp",
+      "source_sha256": "bde8a77af0600f10424436e604ba2730da3e3aa7822fff904bade5e138287896"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/thread.cpp": {
+      "adapted": false,
+      "sha256": "99f1fb5351c853084954f7a02dea9a3603e2bef41951c505abe64915b7245f51",
+      "source": "bam/include/freestanding/libcxx/src/thread.cpp",
+      "source_sha256": "99f1fb5351c853084954f7a02dea9a3603e2bef41951c505abe64915b7245f51"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/typeinfo.cpp": {
+      "adapted": false,
+      "sha256": "c9e684b63f4404c44d0d3cf9979b91139c193de18538e661ecfe958650688a6e",
+      "source": "bam/include/freestanding/libcxx/src/typeinfo.cpp",
+      "source_sha256": "c9e684b63f4404c44d0d3cf9979b91139c193de18538e661ecfe958650688a6e"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/utility.cpp": {
+      "adapted": false,
+      "sha256": "38ec0006ed7492f2b6c5d50efd4eb4f0966862603cb7f1488ed1d87562882f88",
+      "source": "bam/include/freestanding/libcxx/src/utility.cpp",
+      "source_sha256": "38ec0006ed7492f2b6c5d50efd4eb4f0966862603cb7f1488ed1d87562882f88"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/valarray.cpp": {
+      "adapted": false,
+      "sha256": "39ef474647c438db1daddd6597378ad1b145a58c19de1e10703553b2c53aef5a",
+      "source": "bam/include/freestanding/libcxx/src/valarray.cpp",
+      "source_sha256": "39ef474647c438db1daddd6597378ad1b145a58c19de1e10703553b2c53aef5a"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/variant.cpp": {
+      "adapted": false,
+      "sha256": "a1ef06b81f5807e9158c8d3ffa22ffc57d0606491958eec3f8b7368cbef2058c",
+      "source": "bam/include/freestanding/libcxx/src/variant.cpp",
+      "source_sha256": "a1ef06b81f5807e9158c8d3ffa22ffc57d0606491958eec3f8b7368cbef2058c"
+    },
+    "third_party/bam/include/freestanding/libcxx/src/vector.cpp": {
+      "adapted": false,
+      "sha256": "7bd9248aa32c5cce72562574b6feea10c482200b9335370b9854d64cde85b183",
+      "source": "bam/include/freestanding/libcxx/src/vector.cpp",
+      "source_sha256": "7bd9248aa32c5cce72562574b6feea10c482200b9335370b9854d64cde85b183"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/atomic_design.html": {
+      "adapted": false,
+      "sha256": "aff4f5cd360c20c045d15ea08ed792252136e29813f9a350a98b61f0dceaaa90",
+      "source": "bam/include/freestanding/libcxx/www/atomic_design.html",
+      "source_sha256": "aff4f5cd360c20c045d15ea08ed792252136e29813f9a350a98b61f0dceaaa90"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/atomic_design_a.html": {
+      "adapted": false,
+      "sha256": "73307ef40e234bb515f9a4d2c4ded8fdff4bac1cf8e14003bf948c6f53287f2e",
+      "source": "bam/include/freestanding/libcxx/www/atomic_design_a.html",
+      "source_sha256": "73307ef40e234bb515f9a4d2c4ded8fdff4bac1cf8e14003bf948c6f53287f2e"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/atomic_design_b.html": {
+      "adapted": false,
+      "sha256": "af1e4c9325974379fcace3cb6dd6d16033a461697969d14474b8b5363be88d51",
+      "source": "bam/include/freestanding/libcxx/www/atomic_design_b.html",
+      "source_sha256": "af1e4c9325974379fcace3cb6dd6d16033a461697969d14474b8b5363be88d51"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/atomic_design_c.html": {
+      "adapted": false,
+      "sha256": "cb21bc4ad235da092fde3b140357ec1407480673af1dcbd2c711281edb64523b",
+      "source": "bam/include/freestanding/libcxx/www/atomic_design_c.html",
+      "source_sha256": "cb21bc4ad235da092fde3b140357ec1407480673af1dcbd2c711281edb64523b"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/content.css": {
+      "adapted": false,
+      "sha256": "f8a3bfe9aafc58fb0ebdcf3ca61e303dfd3e8fd9a648512966a54e57de507dbc",
+      "source": "bam/include/freestanding/libcxx/www/content.css",
+      "source_sha256": "f8a3bfe9aafc58fb0ebdcf3ca61e303dfd3e8fd9a648512966a54e57de507dbc"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/cxx1y_status.html": {
+      "adapted": false,
+      "sha256": "13553e7686dd19375c74f453ee2164ce2117abfac4eddfad060fbb7f817fc2cb",
+      "source": "bam/include/freestanding/libcxx/www/cxx1y_status.html",
+      "source_sha256": "13553e7686dd19375c74f453ee2164ce2117abfac4eddfad060fbb7f817fc2cb"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/cxx1z_status.html": {
+      "adapted": false,
+      "sha256": "54b29c218a102bbe4ba48efce79b677ce518c05cfb24bd756f9108080eb6a314",
+      "source": "bam/include/freestanding/libcxx/www/cxx1z_status.html",
+      "source_sha256": "54b29c218a102bbe4ba48efce79b677ce518c05cfb24bd756f9108080eb6a314"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/cxx2a_status.html": {
+      "adapted": false,
+      "sha256": "3e7c3e134e911d0709df62af706d239c36128389edce3127df50166723845f4e",
+      "source": "bam/include/freestanding/libcxx/www/cxx2a_status.html",
+      "source_sha256": "3e7c3e134e911d0709df62af706d239c36128389edce3127df50166723845f4e"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/index.html": {
+      "adapted": false,
+      "sha256": "ce2b3bb608dc88c2f516c561e864fe4393ff06637e0693e23219062e38b5daa2",
+      "source": "bam/include/freestanding/libcxx/www/index.html",
+      "source_sha256": "ce2b3bb608dc88c2f516c561e864fe4393ff06637e0693e23219062e38b5daa2"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/menu.css": {
+      "adapted": false,
+      "sha256": "0b59a582810c76b5170cd11e81424a54d8bd987f35867d38fe9569458023f1d2",
+      "source": "bam/include/freestanding/libcxx/www/menu.css",
+      "source_sha256": "0b59a582810c76b5170cd11e81424a54d8bd987f35867d38fe9569458023f1d2"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/ts1z_status.html": {
+      "adapted": false,
+      "sha256": "5167ad51cd7cdb464b03c0384255ad479960912ddda562d061370946e91012cf",
+      "source": "bam/include/freestanding/libcxx/www/ts1z_status.html",
+      "source_sha256": "5167ad51cd7cdb464b03c0384255ad479960912ddda562d061370946e91012cf"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/type_traits_design.html": {
+      "adapted": false,
+      "sha256": "d580b15b52528768945815d41bf8dbd0b98b042f67ca467b7c0e597be8f437de",
+      "source": "bam/include/freestanding/libcxx/www/type_traits_design.html",
+      "source_sha256": "d580b15b52528768945815d41bf8dbd0b98b042f67ca467b7c0e597be8f437de"
+    },
+    "third_party/bam/include/freestanding/libcxx/www/upcoming_meeting.html": {
+      "adapted": false,
+      "sha256": "faed0d3b0193463ca8019c07154f1d031e8b8455a8dbb0ec23f438325aa9f6f5",
+      "source": "bam/include/freestanding/libcxx/www/upcoming_meeting.html",
+      "source_sha256": "faed0d3b0193463ca8019c07154f1d031e8b8455a8dbb0ec23f438325aa9f6f5"
+    },
+    "third_party/bam/include/host_util.h": {
+      "adapted": false,
+      "sha256": "c849bc07c8ec386a9df9868411e49259919ba34d3dadd17cbe060f45109d72cf",
+      "source": "bam/include/host_util.h",
+      "source_sha256": "c849bc07c8ec386a9df9868411e49259919ba34d3dadd17cbe060f45109d72cf"
+    },
+    "third_party/bam/include/nvm_admin.h": {
+      "adapted": false,
+      "sha256": "865a05df6907ab3999e443468b4be55e03326e92263355f047403c4fe3b80e55",
+      "source": "bam/include/nvm_admin.h",
+      "source_sha256": "865a05df6907ab3999e443468b4be55e03326e92263355f047403c4fe3b80e55"
+    },
+    "third_party/bam/include/nvm_aq.h": {
+      "adapted": false,
+      "sha256": "f597377b38f5928de0dcff450d72b10948f8645e44919af2fc08e2b19bdbbcea",
+      "source": "bam/include/nvm_aq.h",
+      "source_sha256": "f597377b38f5928de0dcff450d72b10948f8645e44919af2fc08e2b19bdbbcea"
+    },
+    "third_party/bam/include/nvm_cmd.h": {
+      "adapted": false,
+      "sha256": "627360ab2b01ad678e4ee3ebba164e9a0427cbed5eb70556a2307110767d9bcf",
+      "source": "bam/include/nvm_cmd.h",
+      "source_sha256": "627360ab2b01ad678e4ee3ebba164e9a0427cbed5eb70556a2307110767d9bcf"
+    },
+    "third_party/bam/include/nvm_ctrl.h": {
+      "adapted": false,
+      "sha256": "3da41747bf2bf9d18ca49836e68bd73a621176c3ce2ddc66e370e2f016ffab7b",
+      "source": "bam/include/nvm_ctrl.h",
+      "source_sha256": "3da41747bf2bf9d18ca49836e68bd73a621176c3ce2ddc66e370e2f016ffab7b"
+    },
+    "third_party/bam/include/nvm_dma.h": {
+      "adapted": false,
+      "sha256": "670ffdec485c763e344a2f4aedf6558b28004baaa27969655dfad47e060e5a52",
+      "source": "bam/include/nvm_dma.h",
+      "source_sha256": "670ffdec485c763e344a2f4aedf6558b28004baaa27969655dfad47e060e5a52"
+    },
+    "third_party/bam/include/nvm_error.h": {
+      "adapted": false,
+      "sha256": "cb3012069150a526a2a0e3a73019a40f7b4f400c0afb9bd19f04156f727bf1dc",
+      "source": "bam/include/nvm_error.h",
+      "source_sha256": "cb3012069150a526a2a0e3a73019a40f7b4f400c0afb9bd19f04156f727bf1dc"
+    },
+    "third_party/bam/include/nvm_io.h": {
+      "adapted": false,
+      "sha256": "902a615e0fac4b27dd633c5a37980df26320f5cea137b910d333308e603b0fa9",
+      "source": "bam/include/nvm_io.h",
+      "source_sha256": "902a615e0fac4b27dd633c5a37980df26320f5cea137b910d333308e603b0fa9"
+    },
+    "third_party/bam/include/nvm_parallel_queue.h": {
+      "adapted": false,
+      "sha256": "3c3b300a8397ddfae62798fef8b5a4af3e226cc28dc04ba2fe61ccacb8254fa8",
+      "source": "bam/include/nvm_parallel_queue.h",
+      "source_sha256": "3c3b300a8397ddfae62798fef8b5a4af3e226cc28dc04ba2fe61ccacb8254fa8"
+    },
+    "third_party/bam/include/nvm_queue.h": {
+      "adapted": false,
+      "sha256": "6dbea35484326d7d6c83a7842844cf1e64b4c15f9f97aace0a42eb91e6b3ed1d",
+      "source": "bam/include/nvm_queue.h",
+      "source_sha256": "6dbea35484326d7d6c83a7842844cf1e64b4c15f9f97aace0a42eb91e6b3ed1d"
+    },
+    "third_party/bam/include/nvm_rpc.h": {
+      "adapted": false,
+      "sha256": "56578a26608fbbaf5145ee9e202e957af6c54b3df560f7a563c1b58c3f602225",
+      "source": "bam/include/nvm_rpc.h",
+      "source_sha256": "56578a26608fbbaf5145ee9e202e957af6c54b3df560f7a563c1b58c3f602225"
+    },
+    "third_party/bam/include/nvm_types.h": {
+      "adapted": false,
+      "sha256": "47a69fd7b6922c9934dedaf065994f8152fad6267c675b6edaf49163e5162f72",
+      "source": "bam/include/nvm_types.h",
+      "source_sha256": "47a69fd7b6922c9934dedaf065994f8152fad6267c675b6edaf49163e5162f72"
+    },
+    "third_party/bam/include/nvm_util.h": {
+      "adapted": false,
+      "sha256": "5eb71caa8f78d10a0b7746717b4376d54c343d20782cabcfaa33ddec27449c42",
+      "source": "bam/include/nvm_util.h",
+      "source_sha256": "5eb71caa8f78d10a0b7746717b4376d54c343d20782cabcfaa33ddec27449c42"
+    },
+    "third_party/bam/include/page_cache.h": {
+      "adapted": false,
+      "sha256": "75581fb294d88a5ccad30e5617d39b90f363e665c2265af2e6b96541b541ae58",
+      "source": "bam/include/page_cache.h",
+      "source_sha256": "75581fb294d88a5ccad30e5617d39b90f363e665c2265af2e6b96541b541ae58"
+    },
+    "third_party/bam/include/queue.h": {
+      "adapted": false,
+      "sha256": "57d7dbd46b50b291ec4e7dc015f8829088c5a2c002783e6597fffece99f45ca7",
+      "source": "bam/include/queue.h",
+      "source_sha256": "57d7dbd46b50b291ec4e7dc015f8829088c5a2c002783e6597fffece99f45ca7"
+    },
+    "third_party/bam/include/util.h": {
+      "adapted": false,
+      "sha256": "b59dbee4bc17cdd9a04d6d23044652ad234f117e49b4f33ad7e0d7dbc932b0f4",
+      "source": "bam/include/util.h",
+      "source_sha256": "b59dbee4bc17cdd9a04d6d23044652ad234f117e49b4f33ad7e0d7dbc932b0f4"
+    },
+    "third_party/bam/include/window_buffer.h": {
+      "adapted": false,
+      "sha256": "8caa527a5304129a6125e68e6faf7383d37fbb6e783d87dc2788f2b18cf7ae26",
+      "source": "bam/include/window_buffer.h",
+      "source_sha256": "8caa527a5304129a6125e68e6faf7383d37fbb6e783d87dc2788f2b18cf7ae26"
+    },
+    "third_party/bam/module/Makefile.in": {
+      "adapted": false,
+      "sha256": "3cdf67567d8e3adcc1abd9579c3d7b8fac263e5f1ff6b31e03d13550d9ecb3ab",
+      "source": "bam/module/Makefile.in",
+      "source_sha256": "3cdf67567d8e3adcc1abd9579c3d7b8fac263e5f1ff6b31e03d13550d9ecb3ab"
+    },
+    "third_party/bam/module/ctrl.c": {
+      "adapted": false,
+      "sha256": "00487f73dc1b3009bc9030f078d3413d582f5102a8679db86c6ef90ab2e4a977",
+      "source": "bam/module/ctrl.c",
+      "source_sha256": "00487f73dc1b3009bc9030f078d3413d582f5102a8679db86c6ef90ab2e4a977"
+    },
+    "third_party/bam/module/ctrl.h": {
+      "adapted": false,
+      "sha256": "e792eb2852bd056e92434d98e8b3a7f25c2bb7983f0a856493b80b19677cd7f7",
+      "source": "bam/module/ctrl.h",
+      "source_sha256": "e792eb2852bd056e92434d98e8b3a7f25c2bb7983f0a856493b80b19677cd7f7"
+    },
+    "third_party/bam/module/list.c": {
+      "adapted": false,
+      "sha256": "a83048536a87dc1bbb58177146125e34f747d6106fd4b33cba47a51eb704bbc8",
+      "source": "bam/module/list.c",
+      "source_sha256": "a83048536a87dc1bbb58177146125e34f747d6106fd4b33cba47a51eb704bbc8"
+    },
+    "third_party/bam/module/list.h": {
+      "adapted": false,
+      "sha256": "1f072de43557716d99c160fd49f1f3fe031da15c43d037f4034fba55fae6cf9d",
+      "source": "bam/module/list.h",
+      "source_sha256": "1f072de43557716d99c160fd49f1f3fe031da15c43d037f4034fba55fae6cf9d"
+    },
+    "third_party/bam/module/map.c": {
+      "adapted": false,
+      "sha256": "90abc124d7148cbd1f0843395ec3b233ad852dfca40284df01cd525c74b1a23e",
+      "source": "bam/module/map.c",
+      "source_sha256": "90abc124d7148cbd1f0843395ec3b233ad852dfca40284df01cd525c74b1a23e"
+    },
+    "third_party/bam/module/map.h": {
+      "adapted": false,
+      "sha256": "af926a4c6ff391d5a596ee95e8843ba47af605b570d870e51729b0bf2d5eefc8",
+      "source": "bam/module/map.h",
+      "source_sha256": "af926a4c6ff391d5a596ee95e8843ba47af605b570d870e51729b0bf2d5eefc8"
+    },
+    "third_party/bam/module/pci.c": {
+      "adapted": false,
+      "sha256": "e80f826c6bac21a5bdf3fe54f05bf895348c7ab00ee6eaf4ac3fb30112e7712f",
+      "source": "bam/module/pci.c",
+      "source_sha256": "e80f826c6bac21a5bdf3fe54f05bf895348c7ab00ee6eaf4ac3fb30112e7712f"
+    },
+    "third_party/bam/src/admin.cpp": {
+      "adapted": false,
+      "sha256": "8c3016974c8d7722c6a48a97fb2c8e9ba6ae820857f74d84ee54179af1bf5203",
+      "source": "bam/src/admin.cpp",
+      "source_sha256": "8c3016974c8d7722c6a48a97fb2c8e9ba6ae820857f74d84ee54179af1bf5203"
+    },
+    "third_party/bam/src/ctrl.cpp": {
+      "adapted": false,
+      "sha256": "5f5aceba1051a33cc6fd1dac5f40874e68fcdf40544e8188055666d125fe95e2",
+      "source": "bam/src/ctrl.cpp",
+      "source_sha256": "5f5aceba1051a33cc6fd1dac5f40874e68fcdf40544e8188055666d125fe95e2"
+    },
+    "third_party/bam/src/dis/device.c": {
+      "adapted": false,
+      "sha256": "42886c3facf02db9f1d891dd4bd2b25c92607de217fac6d27673f0ef016590b8",
+      "source": "bam/src/dis/device.c",
+      "source_sha256": "42886c3facf02db9f1d891dd4bd2b25c92607de217fac6d27673f0ef016590b8"
+    },
+    "third_party/bam/src/dis/device.h": {
+      "adapted": false,
+      "sha256": "9f8979c8d6a55b68b968e4f9ae47229c0e83dbbfc77186d24ef72d64fe127cbc",
+      "source": "bam/src/dis/device.h",
+      "source_sha256": "9f8979c8d6a55b68b968e4f9ae47229c0e83dbbfc77186d24ef72d64fe127cbc"
+    },
+    "third_party/bam/src/dis/dma.c": {
+      "adapted": false,
+      "sha256": "1bdada23f39961b993571e3a137478ad96145d269dff5b363bc11d56ca89c012",
+      "source": "bam/src/dis/dma.c",
+      "source_sha256": "1bdada23f39961b993571e3a137478ad96145d269dff5b363bc11d56ca89c012"
+    },
+    "third_party/bam/src/dis/interrupt.c": {
+      "adapted": false,
+      "sha256": "7bc21ef9f8629460c037bda284adda626fe0c965ee3113c03dcbcaebad3dedaf",
+      "source": "bam/src/dis/interrupt.c",
+      "source_sha256": "7bc21ef9f8629460c037bda284adda626fe0c965ee3113c03dcbcaebad3dedaf"
+    },
+    "third_party/bam/src/dis/interrupt.h": {
+      "adapted": false,
+      "sha256": "560965aec0d4b384dde0238a11cbeb332d5eb1022598837462d9c7425ddcf03c",
+      "source": "bam/src/dis/interrupt.h",
+      "source_sha256": "560965aec0d4b384dde0238a11cbeb332d5eb1022598837462d9c7425ddcf03c"
+    },
+    "third_party/bam/src/dis/map.h": {
+      "adapted": false,
+      "sha256": "9a62388b9006104fe1c269044c06ad1189544887e5982b75d7df9d678473fc66",
+      "source": "bam/src/dis/map.h",
+      "source_sha256": "9a62388b9006104fe1c269044c06ad1189544887e5982b75d7df9d678473fc66"
+    },
+    "third_party/bam/src/dis/rpc.c": {
+      "adapted": false,
+      "sha256": "ea33d204bd9bcf5858f9f5d52d0e137fccb70f25ca6501fcf59b0cfb59aafce5",
+      "source": "bam/src/dis/rpc.c",
+      "source_sha256": "ea33d204bd9bcf5858f9f5d52d0e137fccb70f25ca6501fcf59b0cfb59aafce5"
+    },
+    "third_party/bam/src/dma.cpp": {
+      "adapted": false,
+      "sha256": "0eb8db5151dfbf6c4ec7d37c9fb9c5d0a14ee7b5eb0f402e4f77dca250234e3b",
+      "source": "bam/src/dma.cpp",
+      "source_sha256": "0eb8db5151dfbf6c4ec7d37c9fb9c5d0a14ee7b5eb0f402e4f77dca250234e3b"
+    },
+    "third_party/bam/src/dma.h": {
+      "adapted": false,
+      "sha256": "e90513fbdd522f03a0e81454e633089de4d4d8649237e13c6b0eaa422ba05b3d",
+      "source": "bam/src/dma.h",
+      "source_sha256": "e90513fbdd522f03a0e81454e633089de4d4d8649237e13c6b0eaa422ba05b3d"
+    },
+    "third_party/bam/src/dprintf.h": {
+      "adapted": false,
+      "sha256": "6d84252cd2c598e880420b19a9c0991e87b7137ba30923aef4783ed13162e90e",
+      "source": "bam/src/dprintf.h",
+      "source_sha256": "6d84252cd2c598e880420b19a9c0991e87b7137ba30923aef4783ed13162e90e"
+    },
+    "third_party/bam/src/error.cpp": {
+      "adapted": false,
+      "sha256": "968ce997d1c0cb406218926cfbd8045f168ad57e52e7e8142c1ca5174963b9af",
+      "source": "bam/src/error.cpp",
+      "source_sha256": "968ce997d1c0cb406218926cfbd8045f168ad57e52e7e8142c1ca5174963b9af"
+    },
+    "third_party/bam/src/lib_ctrl.h": {
+      "adapted": false,
+      "sha256": "e9eb3eea21b20a38bbb8f6817fa0f0fa2a4ea5bbd8cd2814e46a77fc5915ebc6",
+      "source": "bam/src/lib_ctrl.h",
+      "source_sha256": "e9eb3eea21b20a38bbb8f6817fa0f0fa2a4ea5bbd8cd2814e46a77fc5915ebc6"
+    },
+    "third_party/bam/src/lib_util.h": {
+      "adapted": false,
+      "sha256": "d80034a8fe61be8ff66b0689b6179f8ab166fd8d039cb1de5c3cae32c71bace5",
+      "source": "bam/src/lib_util.h",
+      "source_sha256": "d80034a8fe61be8ff66b0689b6179f8ab166fd8d039cb1de5c3cae32c71bace5"
+    },
+    "third_party/bam/src/linux/device.cpp": {
+      "adapted": false,
+      "sha256": "3c60af75da8c127f83578d3aec0c844f0df64111615551b717385749d6e636c8",
+      "source": "bam/src/linux/device.cpp",
+      "source_sha256": "3c60af75da8c127f83578d3aec0c844f0df64111615551b717385749d6e636c8"
+    },
+    "third_party/bam/src/linux/dma.cpp": {
+      "adapted": false,
+      "sha256": "d3321ef6902cb58ef8344ad3bcaa8ec341bb88fd1271b6cfe4aac68b91ea83ab",
+      "source": "bam/src/linux/dma.cpp",
+      "source_sha256": "d3321ef6902cb58ef8344ad3bcaa8ec341bb88fd1271b6cfe4aac68b91ea83ab"
+    },
+    "third_party/bam/src/linux/ioctl.h": {
+      "adapted": false,
+      "sha256": "201742b0a49b465f825383554c42d4935b3dfa9e762dd6df05206aeaa5d96924",
+      "source": "bam/src/linux/ioctl.h",
+      "source_sha256": "201742b0a49b465f825383554c42d4935b3dfa9e762dd6df05206aeaa5d96924"
+    },
+    "third_party/bam/src/linux/map.h": {
+      "adapted": false,
+      "sha256": "20c1d20ad0e649c791bc73f7576164fa14ba6afa3f0087024e2cf5a24480d54b",
+      "source": "bam/src/linux/map.h",
+      "source_sha256": "20c1d20ad0e649c791bc73f7576164fa14ba6afa3f0087024e2cf5a24480d54b"
+    },
+    "third_party/bam/src/mutex.cpp": {
+      "adapted": false,
+      "sha256": "64d4c2f6edd10d68176e28103bdc900760b23af33eb54dea6dc6a7cb76c248ee",
+      "source": "bam/src/mutex.cpp",
+      "source_sha256": "64d4c2f6edd10d68176e28103bdc900760b23af33eb54dea6dc6a7cb76c248ee"
+    },
+    "third_party/bam/src/mutex.h": {
+      "adapted": false,
+      "sha256": "24513892ffd1c6c75315aebba566d6e8371ea8492c0954999a8e47db9ff287f4",
+      "source": "bam/src/mutex.h",
+      "source_sha256": "24513892ffd1c6c75315aebba566d6e8371ea8492c0954999a8e47db9ff287f4"
+    },
+    "third_party/bam/src/queue.cpp": {
+      "adapted": false,
+      "sha256": "a00a6388a7e90c86976e3c7c36a64b47ee1dc749a3a5bb2af01dc738101e3162",
+      "source": "bam/src/queue.cpp",
+      "source_sha256": "a00a6388a7e90c86976e3c7c36a64b47ee1dc749a3a5bb2af01dc738101e3162"
+    },
+    "third_party/bam/src/regs.h": {
+      "adapted": false,
+      "sha256": "176fdfe28eb021eb694679a47d320ea833c5716437026182866f2a9478e57ea7",
+      "source": "bam/src/regs.h",
+      "source_sha256": "176fdfe28eb021eb694679a47d320ea833c5716437026182866f2a9478e57ea7"
+    },
+    "third_party/bam/src/rpc.cpp": {
+      "adapted": false,
+      "sha256": "065b8de771a4ef8f332bf7692c873d0dfa3e2ba95ed0b16078449b227f869fe6",
+      "source": "bam/src/rpc.cpp",
+      "source_sha256": "065b8de771a4ef8f332bf7692c873d0dfa3e2ba95ed0b16078449b227f869fe6"
+    },
+    "third_party/bam/src/rpc.h": {
+      "adapted": false,
+      "sha256": "4f532044a4df030fded4b17a79c4fef069d14e5b2d3d2c094be101140d04a4f0",
+      "source": "bam/src/rpc.h",
+      "source_sha256": "4f532044a4df030fded4b17a79c4fef069d14e5b2d3d2c094be101140d04a4f0"
+    },
+    "training/gat/__init__.py": {
+      "adapted": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "candidates/pa_gat_native_v1/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "training/gat/admission.py": {
+      "adapted": true,
+      "sha256": "4e2da2c4535fcab592bbff25438cbc9c80e097dc2c0cb108d98dd72c77cd5a06",
+      "source": "candidates/pa_gat_native_v1/admission.py",
+      "source_sha256": "0906dd4e921674d005aef9f795c172011281964d986ff476986169799f54088b"
+    },
+    "training/gat/check.py": {
+      "adapted": true,
+      "sha256": "8744e42247b772d898cbb26b10544e3d6d2c7844e64bc8d97a335d54c16e8c10",
+      "source": "candidates/pa_gat_native_v1/check.py",
+      "source_sha256": "29b2ac094b196bdc000f41697811373430d1074747d6365242e2f9e8ed311368"
+    },
+    "training/gat/common.py": {
+      "adapted": true,
+      "sha256": "13879f86feae6279ada20477a08c7652c0b2bfdd8e3e3e8c971c1aadbd13742c",
+      "source": "candidates/pa_gat_native_v1/common.py",
+      "source_sha256": "c6f0dc733c789015178b32a328415e4e2cd57eb5611e5cdd08a371680ef10e63"
+    },
+    "training/gat/controller.py": {
+      "adapted": true,
+      "sha256": "f29eddff0798ff779f6d1f4f57e149eee8af4bea86ef9d5e067701abc09d860c",
+      "source": "candidates/pa_gat_native_v1/controller.py",
+      "source_sha256": "3f9d6d17cb7b376f7ae3a94c87b8155394f4088e359a404c871d46313f010e82"
+    },
+    "training/gat/cuda_checks.py": {
+      "adapted": true,
+      "sha256": "d4f043ffd116daae38d5f4282fd8fc9df568fe3a337efbd766531ab201e8aeb9",
+      "source": "candidates/pa_gat_native_v1/cuda_checks.py",
+      "source_sha256": "82af20edef6dee7806b71d05f703312a8103779dd977448a94c65e1ed285d5ca"
+    },
+    "training/gat/evaluation.py": {
+      "adapted": true,
+      "sha256": "aafc8186c106d5818ac1008d1352adf2782aa039722a1f044f6d9cb6a8b3b462",
+      "source": "candidates/pa_gat_native_v1/evaluation.py",
+      "source_sha256": "cc1b3590a61179c760ebb786be2348261db1e93efd1bfc0cb45c4b89c0c163ae"
+    },
+    "training/gat/inputs.py": {
+      "adapted": true,
+      "sha256": "050a29cdbfce69f977c75c7e1d0b6eec82eb655dc5c4ae7b5bed711cbf976684",
+      "source": "candidates/pa_gat_native_v1/inputs.py",
+      "source_sha256": "ac0170cf6493c92bfe543754e5810a61d7b7289cabf5fe4c04f2dae561b9f65a"
+    },
+    "training/gat/memory_checks.py": {
+      "adapted": true,
+      "sha256": "1b61a19c3be175e0dce57a4390d6449bf3cbaad8483d764fbccfd242de988fe2",
+      "source": "candidates/pa_gat_native_v1/memory_checks.py",
+      "source_sha256": "045e55376586ec7cf5d391921d383f6285f55d9c68018546a9d7528f18827efd"
+    },
+    "training/gat/model.py": {
+      "adapted": true,
+      "sha256": "91a392479c2af01daab8230a114015f53deddb4b19576435d68637719c68c254",
+      "source": "candidates/pa_gat_native_v1/model.py",
+      "source_sha256": "bea1076b3aee22a33daff74c73eb28264bdaf8daaa03aac27a0bd8972107f964"
+    },
+    "training/gat/protocol.json": {
+      "adapted": false,
+      "sha256": "af37d21280df4142058a013472984fac7c81fc08a45a3d96dfbaf4cfd836e940",
+      "source": "candidates/pa_gat_native_v1/protocol.json",
+      "source_sha256": "af37d21280df4142058a013472984fac7c81fc08a45a3d96dfbaf4cfd836e940"
+    },
+    "training/gat/review.py": {
+      "adapted": true,
+      "sha256": "a6e7663bb26245e198a94c851e1739063fb536d52d1245042b25b4cbdf536c2e",
+      "source": "candidates/pa_gat_native_v1/review.py",
+      "source_sha256": "2186d69e15a025d151132eb11093d3e8e70936c035ac30b3277cacc04e13d0c7"
+    },
+    "training/gat/summarize.py": {
+      "adapted": true,
+      "sha256": "3faf4f49abc6aec9609a186003d7384ab4567710b58ebc0b90ec47510392be1a",
+      "source": "candidates/pa_gat_native_v1/summarize.py",
+      "source_sha256": "d3297c8404689d9c9ccc82bc881641d416f166265dce9da118bb6ae2c30c7017"
+    },
+    "training/gat/tests.py": {
+      "adapted": true,
+      "sha256": "535654e865eae528677c05427aaa9fa4c42a6e7b738ba0bf1f97298dff9534f0",
+      "source": "candidates/pa_gat_native_v1/tests.py",
+      "source_sha256": "16c77fe0ad9f48aa65e5810be6079219acd8929de97c7718628d6283ac3a6d52"
+    },
+    "training/gat/training_loop.py": {
+      "adapted": true,
+      "sha256": "4ca4f1986423135c6702daf4f96c5c42b92445c9a139d9edda726232878f6b00",
+      "source": "candidates/pa_gat_native_v1/training_loop.py",
+      "source_sha256": "8e11cfea82b508345c00568317f5d0a4b87532e75f1ce7dc73b2ad24eba4fb81"
+    },
+    "training/gat/validation.py": {
+      "adapted": true,
+      "sha256": "1360c3d5691c620d21c1faf08f87fb715cb1c41f81f68cc458d9fc7de7908b04",
+      "source": "candidates/pa_gat_native_v1/validation.py",
+      "source_sha256": "a8c05786d2cccae84b04d78971d7fdf37269ffd158573ed7c9f0ba9dec0a0dee"
+    },
+    "training/gat/worker.py": {
+      "adapted": true,
+      "sha256": "6adeb160cd43ab066a46b2c8171bf4b344dcd37a63cfbfd53d62f261f4847d46",
+      "source": "candidates/pa_gat_native_v1/worker.py",
+      "source_sha256": "897f319e52226358eef5cab4052f7f1b12f0bba9f5669b848b7fa2065f3d6a74"
+    },
+    "training/gcn/__init__.py": {
+      "adapted": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "candidates/pa_gcn_native_v1/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "training/gcn/admission.py": {
+      "adapted": true,
+      "sha256": "1a5dfeb490f1312acf9b0e00d317dd682ba98b15c73f4d6c4cf6b9b7d9397468",
+      "source": "candidates/pa_gcn_native_v1/admission.py",
+      "source_sha256": "3292254ab192304543c4b89619ddc4269e3518010901ac94b4c8af6c7fc828b0"
+    },
+    "training/gcn/check.py": {
+      "adapted": true,
+      "sha256": "59d712d24040c10886727cd96db47ab19cddbb5f3b6afac529ab8aa0c7c040e6",
+      "source": "candidates/pa_gcn_native_v1/check.py",
+      "source_sha256": "3ab33a79691443c7dbd803525655f52dd6109e719967df9618c1f7c5fd7ff972"
+    },
+    "training/gcn/common.py": {
+      "adapted": true,
+      "sha256": "50d995e0455b6a372e91797c764af74b1ed4793bef8fa2d25e5a2930ccedd06a",
+      "source": "candidates/pa_gcn_native_v1/common.py",
+      "source_sha256": "909bd41a8aeb40af7deb811a215f5cbe562cf61a413d8cb161e7ce977da09e5b"
+    },
+    "training/gcn/controller.py": {
+      "adapted": true,
+      "sha256": "4c367f08623c0ca642240464b75e5e7c7daf4387e47dd1a055f669b2a0338938",
+      "source": "candidates/pa_gcn_native_v1/controller.py",
+      "source_sha256": "ab17dabf728b83941b5c2075c87c2206fa8d3c9efc85dbe937d51498e96fffdb"
+    },
+    "training/gcn/cuda_checks.py": {
+      "adapted": true,
+      "sha256": "7fa2b06e1b44424a86b2cfb971495d926fe61d084baf6bc9e20a392d473959a4",
+      "source": "candidates/pa_gcn_native_v1/cuda_checks.py",
+      "source_sha256": "4e3225f9d35cc82cf6c74ca3e99b3cfc06dd023572dbaf520ea85fe8aa0f4311"
+    },
+    "training/gcn/evaluation.py": {
+      "adapted": true,
+      "sha256": "f42a0f7c7c138fd6d1d6e2df83fa82f86a92abeb6c01214a444af491f26f8466",
+      "source": "candidates/pa_gcn_native_v1/evaluation.py",
+      "source_sha256": "bd283f688b87c1bce71cd05382e6931a2a8f5b25d0e2a9af6e9eda6cd5671e5d"
+    },
+    "training/gcn/inputs.py": {
+      "adapted": true,
+      "sha256": "d0d287f34019b8bfafb064919db137d66f9f785af0911186e513ebb8a1af48c9",
+      "source": "candidates/pa_gcn_native_v1/inputs.py",
+      "source_sha256": "bb16dbf2eb597fa9e052e924a1cdef01ac21974a1799d17cb5f0f7f9ccb4594f"
+    },
+    "training/gcn/model.py": {
+      "adapted": true,
+      "sha256": "30274a23720aaae0f52d8c37ce91e07e4fedf99f66003195f048aeadc205beb7",
+      "source": "candidates/pa_gcn_native_v1/model.py",
+      "source_sha256": "ade2576fab78810149e770eac8054469eac05ca1a1efca23135ec1ff1f58d596"
+    },
+    "training/gcn/protocol.json": {
+      "adapted": false,
+      "sha256": "c1b63f28318897c326a584b1f2e5d553940acbee2fae20a3aaab73a2f368d402",
+      "source": "candidates/pa_gcn_native_v1/protocol.json",
+      "source_sha256": "c1b63f28318897c326a584b1f2e5d553940acbee2fae20a3aaab73a2f368d402"
+    },
+    "training/gcn/review.py": {
+      "adapted": true,
+      "sha256": "89d48dcc15602de229e89a0695b069137e9228ab41b9418e1c4a7ba76e4f03d0",
+      "source": "candidates/pa_gcn_native_v1/review.py",
+      "source_sha256": "e30e729d0a4b07bd3be8a1d99bc7a808aace28ee7c416241adf3987c181bff13"
+    },
+    "training/gcn/summarize.py": {
+      "adapted": true,
+      "sha256": "8a1f2e5e3b0b9b81e4b44a103c9b9a0c139d0616872ab82ae4df312975596674",
+      "source": "candidates/pa_gcn_native_v1/summarize.py",
+      "source_sha256": "12c1aa94ffdbcca5a06238789fc98089501ffcf70eef40ad4019e21e03c80993"
+    },
+    "training/gcn/tests.py": {
+      "adapted": true,
+      "sha256": "086695e5f37e41d280748248c9187658016f248f6387dfe2720af1288e0f3cea",
+      "source": "candidates/pa_gcn_native_v1/tests.py",
+      "source_sha256": "1e70b1a103875c355ec55b9dccf8acbec148dfb4d886aac7c04b1d8eb39df05a"
+    },
+    "training/gcn/training_loop.py": {
+      "adapted": true,
+      "sha256": "cbd1d67a9ee6787e577acf3ee55c042dc8eb5c28bd19ecdd4c10ece574b08204",
+      "source": "candidates/pa_gcn_native_v1/training_loop.py",
+      "source_sha256": "b28d8ddc9de973a4914db224659b90c93ba9586cf939b24fdc76c3886f6d097b"
+    },
+    "training/gcn/validation.py": {
+      "adapted": true,
+      "sha256": "a86dd3aa4dbc72de11bebc69165421a053c69f94987ca7ea63131a20020fe017",
+      "source": "candidates/pa_gcn_native_v1/validation.py",
+      "source_sha256": "a39cf34056dd603b7727537c4eede748eb34bc1ba405abf0ba9a82c5ff5d3fd1"
+    },
+    "training/gcn/worker.py": {
+      "adapted": true,
+      "sha256": "36aad48187c0e9ddfdd94736c1b35f6e29bd05fb3dc45691256b65d75376cb7c",
+      "source": "candidates/pa_gcn_native_v1/worker.py",
+      "source_sha256": "20b59294444dbdbd830dabde067e81f95d400bfb05ef64e8cb73a2fba2a5ee38"
+    },
+    "training/sage/__init__.py": {
+      "adapted": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "candidates/pa_sage_bidir_native_v2/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "training/sage/admission.py": {
+      "adapted": true,
+      "sha256": "7fecbfb1acb3847b90ee7cdeddabe333f3080a7e0ff4c0737f1238d0e06c280f",
+      "source": "candidates/pa_sage_bidir_native_v2/admission.py",
+      "source_sha256": "46ae97a3408e73d498b2ef23538f612e1356c50398c28b0d61e89537ee5b5ab3"
+    },
+    "training/sage/build.sh": {
+      "adapted": false,
+      "sha256": "f288855252dc01afaf0c6a87b79ac2c654c7d5cb53dfea762d568159ada3bf29",
+      "source": "candidates/pa_sage_bidir_native_v2/build.sh",
+      "source_sha256": "f288855252dc01afaf0c6a87b79ac2c654c7d5cb53dfea762d568159ada3bf29"
+    },
+    "training/sage/common.py": {
+      "adapted": true,
+      "sha256": "372deef303dcf159b67eb069d703623af3a4813c9470c9131331ab25c19bec0e",
+      "source": "candidates/pa_sage_bidir_native_v2/common.py",
+      "source_sha256": "3cf7ddb9e466c34939e0e5151ae93d03274d9311f1199cb43f7cedb739b78abf"
+    },
+    "training/sage/evaluation.py": {
+      "adapted": true,
+      "sha256": "ea9e286d8d0b00ae23f625ec092faa17fe2b8c4e108bf213ddaf282ea73e7ecb",
+      "source": "candidates/pa_sage_bidir_native_v2/evaluation.py",
+      "source_sha256": "bdbe693541673f86dc93cb7ed435a434c43be94f3342c6f449043a7d9d70463a"
+    },
+    "training/sage/graph_io.py": {
+      "adapted": true,
+      "sha256": "2d35bd069ffe927d5b8d07dd0c4727f6d247ba5b2f39b83fe16a77a07b72b741",
+      "source": "candidates/pa_sage_bidir_native_v2/graph_io.py",
+      "source_sha256": "9cb8a264166c5ad9a9991e2535c5490f1ee9a02eb10c96f257e08e27443524cb"
+    },
+    "training/sage/native/digit_sampler_cuda.cu": {
+      "adapted": false,
+      "sha256": "49beadf6d388388f08a803b4e73cfe9be4484ae8e36816c73bf372220f906c5f",
+      "source": "candidates/pa_sage_bidir_native_v2/native/digit_sampler_cuda.cu",
+      "source_sha256": "49beadf6d388388f08a803b4e73cfe9be4484ae8e36816c73bf372220f906c5f"
+    },
+    "training/sage/overlay.py": {
+      "adapted": true,
+      "sha256": "e84a03f6eadd0669633a923bf8ac9ae5834005cb6810464c61e1be787d6a360f",
+      "source": "candidates/pa_sage_bidir_native_v2/overlay.py",
+      "source_sha256": "65e43c0131d82d250a170cf7b58d2ee75882ff21b7d1f238a69bca57b1613fe8"
+    },
+    "training/sage/protocol.json": {
+      "adapted": false,
+      "sha256": "52adb154235ff4995d8d4d4793ebfac8000eb70bbc769cd262158645681eb471",
+      "source": "candidates/pa_sage_bidir_native_v2/protocol.json",
+      "source_sha256": "52adb154235ff4995d8d4d4793ebfac8000eb70bbc769cd262158645681eb471"
+    },
+    "training/sage/run.py": {
+      "adapted": true,
+      "sha256": "4f2949e00f25adc6717ea21446f6d5bb179627bbc7ba5d7fbd4d49234ed40358",
+      "source": "candidates/pa_sage_bidir_native_v2/run.py",
+      "source_sha256": "23c74e5e964e51885b3a5e756b8ea3f1ce4261ec64addf676956b7099f435adf"
+    },
+    "training/sage/runtime/digit/__init__.py": {
+      "adapted": false,
+      "sha256": "9f781bf317f9dceff7d47e7876d2b676413ba406335e5beed937603af2f97ea7",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/__init__.py",
+      "source_sha256": "9f781bf317f9dceff7d47e7876d2b676413ba406335e5beed937603af2f97ea7"
+    },
+    "training/sage/runtime/digit/artifacts.py": {
+      "adapted": false,
+      "sha256": "1ca048a9f22817fd3bcc6c9f69fac8e273872d4ff211a842f06c3f9526ac743d",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/artifacts.py",
+      "source_sha256": "1ca048a9f22817fd3bcc6c9f69fac8e273872d4ff211a842f06c3f9526ac743d"
+    },
+    "training/sage/runtime/digit/bfs_order.py": {
+      "adapted": false,
+      "sha256": "248096bd7e0ee250ff2fc56eca69db7e22836bfd9fd33652655cb34ff24a4a12",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/bfs_order.py",
+      "source_sha256": "248096bd7e0ee250ff2fc56eca69db7e22836bfd9fd33652655cb34ff24a4a12"
+    },
+    "training/sage/runtime/digit/bounded_artifacts.py": {
+      "adapted": false,
+      "sha256": "402aff6d87d964f4529645bfd28cc474e44e753cb5fdb034793ff7ba514c23bf",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/bounded_artifacts.py",
+      "source_sha256": "402aff6d87d964f4529645bfd28cc474e44e753cb5fdb034793ff7ba514c23bf"
+    },
+    "training/sage/runtime/digit/compact_gpu_ids.py": {
+      "adapted": false,
+      "sha256": "cceb79ec0e940441ca7a9870b908bf80b4b340444cba310998fb9483e36e5c7e",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/compact_gpu_ids.py",
+      "source_sha256": "cceb79ec0e940441ca7a9870b908bf80b4b340444cba310998fb9483e36e5c7e"
+    },
+    "training/sage/runtime/digit/compact_validate.py": {
+      "adapted": false,
+      "sha256": "460396be823dd1deb2da5b0aa5fdcedf907abc8adc866e4b6cbfcdae838ad444",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/compact_validate.py",
+      "source_sha256": "460396be823dd1deb2da5b0aa5fdcedf907abc8adc866e4b6cbfcdae838ad444"
+    },
+    "training/sage/runtime/digit/cpu_cache.py": {
+      "adapted": false,
+      "sha256": "e6513be8e41fd8c1156bbd43cfb07d33f72030cae0458cb99b88c9466f9f399a",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/cpu_cache.py",
+      "source_sha256": "e6513be8e41fd8c1156bbd43cfb07d33f72030cae0458cb99b88c9466f9f399a"
+    },
+    "training/sage/runtime/digit/cpu_eids.py": {
+      "adapted": false,
+      "sha256": "80de06ee5d1da9d7e656dfb4dc6c752cda8e0dc110bded4233140f784ffcd20e",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/cpu_eids.py",
+      "source_sha256": "80de06ee5d1da9d7e656dfb4dc6c752cda8e0dc110bded4233140f784ffcd20e"
+    },
+    "training/sage/runtime/digit/eval_trace.py": {
+      "adapted": false,
+      "sha256": "0a4c8985ff0dae03097834b4665b2d2ef69015e111c08b3da72b5c5b4c26d052",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/eval_trace.py",
+      "source_sha256": "0a4c8985ff0dae03097834b4665b2d2ef69015e111c08b3da72b5c5b4c26d052"
+    },
+    "training/sage/runtime/digit/fast_artifacts.py": {
+      "adapted": false,
+      "sha256": "1b77c2604906e4d0e24097fbd01aa272aa99f474cbb1de4b807e526140f015cf",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/fast_artifacts.py",
+      "source_sha256": "1b77c2604906e4d0e24097fbd01aa272aa99f474cbb1de4b807e526140f015cf"
+    },
+    "training/sage/runtime/digit/gpu_admission.py": {
+      "adapted": false,
+      "sha256": "daaf9c779320d0a76e08808bf62239e1a1e990bd09e1b8c5bd4f1ae03eff9f10",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/gpu_admission.py",
+      "source_sha256": "daaf9c779320d0a76e08808bf62239e1a1e990bd09e1b8c5bd4f1ae03eff9f10"
+    },
+    "training/sage/runtime/digit/graph_source.py": {
+      "adapted": false,
+      "sha256": "cdd0f39137cc36694e08cba28aeec2527a50ba490f3105c619e5becdf0657562",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/graph_source.py",
+      "source_sha256": "cdd0f39137cc36694e08cba28aeec2527a50ba490f3105c619e5becdf0657562"
+    },
+    "training/sage/runtime/digit/io_geometry.py": {
+      "adapted": false,
+      "sha256": "2e78448c618f26bfb728a69a7c35cbbbb08c5b7d45f3cee936e691d7f8069b31",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/io_geometry.py",
+      "source_sha256": "2e78448c618f26bfb728a69a7c35cbbbb08c5b7d45f3cee936e691d7f8069b31"
+    },
+    "training/sage/runtime/digit/outer_selection.py": {
+      "adapted": false,
+      "sha256": "b81da8967ab831a4b4aa79ab4c130393d2d722494321c2547f7abd8b2299eaeb",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/outer_selection.py",
+      "source_sha256": "b81da8967ab831a4b4aa79ab4c130393d2d722494321c2547f7abd8b2299eaeb"
+    },
+    "training/sage/runtime/digit/output_fusion.py": {
+      "adapted": false,
+      "sha256": "49bfbdb9424908d786d1cff0983157007cefc702eec498f3a5bad68157ed2d4a",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/output_fusion.py",
+      "source_sha256": "49bfbdb9424908d786d1cff0983157007cefc702eec498f3a5bad68157ed2d4a"
+    },
+    "training/sage/runtime/digit/reorganization.py": {
+      "adapted": false,
+      "sha256": "1ccffaf9287a635695d8bda6b74be1419d757a8fcd922fbc6cbe466ecfc3d458",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/reorganization.py",
+      "source_sha256": "1ccffaf9287a635695d8bda6b74be1419d757a8fcd922fbc6cbe466ecfc3d458"
+    },
+    "training/sage/runtime/digit/sampler.py": {
+      "adapted": false,
+      "sha256": "0aac0e872bed6616001ea66b348e760d706912f5838796115f8c811b5afb0738",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/sampler.py",
+      "source_sha256": "0aac0e872bed6616001ea66b348e760d706912f5838796115f8c811b5afb0738"
+    },
+    "training/sage/runtime/digit/ssd_payload.py": {
+      "adapted": true,
+      "sha256": "a92479111314c88c98967ffc183e0cf2c225f9320f601ca7836dd152ea800d71",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/ssd_payload.py",
+      "source_sha256": "77f97690f3623647ae3241f9f69ea31ab7e133ce4df6b0b77763eb1c7db5455e"
+    },
+    "training/sage/runtime/digit/validation_support.py": {
+      "adapted": false,
+      "sha256": "cce0487ef5304a1c4814eb520048bace72062fc7471bb421e42fdc2df2089ca2",
+      "source": "candidates/pa_sage_bidir_native_v2/runtime/digit/validation_support.py",
+      "source_sha256": "cce0487ef5304a1c4814eb520048bace72062fc7471bb421e42fdc2df2089ca2"
+    },
+    "training/sage/training_loop.py": {
+      "adapted": true,
+      "sha256": "8024438af8288267225a20d516368b535258a900015c4669f6ce9f96c5df0a2d",
+      "source": "candidates/pa_sage_bidir_native_v2/training_loop.py",
+      "source_sha256": "ed331afa5bec8af70ea3b46cdef6ba1a431561e8479d4a848d5aa6c4a22a05b1"
+    },
+    "training/sage/validation.py": {
+      "adapted": true,
+      "sha256": "aa97153b5df604b3175aa4205dd361ee7c68a1bcc052ade799e98fa4563597aa",
+      "source": "candidates/pa_sage_bidir_native_v2/validation.py",
+      "source_sha256": "8617968f8d9642d7c8658dfd4fb0e1a9f7796acd54be20c1bafd91ea4f44d8a6"
+    },
+    "training/sage/worker.py": {
+      "adapted": true,
+      "sha256": "e8180e553feb30304b2e16651acf820c3eb00094606dc228463c79f1cc99ad50",
+      "source": "candidates/pa_sage_bidir_native_v2/worker.py",
+      "source_sha256": "1a5ceb71e452a94e45d5457272fc0588064766cc9c423f5d86dcfd8cee147769"
+    }
+  },
+  "generated_files": [
+    ".digit-root",
+    ".gitignore",
+    "LICENSE_STATUS.md",
+    "README.md",
+    "ae/__init__.py",
+    "ae/pa_sage/__init__.py",
+    "ae/papers/__init__.py",
+    "artifact.py",
+    "docs/CLAIMS.md",
+    "docs/CODE.md",
+    "docs/DATA.md",
+    "docs/ENVIRONMENT.md",
+    "docs/NATIVE_BUILD.md",
+    "docs/PUBLISH.md",
+    "docs/RESULTS.md",
+    "docs/REVIEWER.md",
+    "environment/observed.json",
+    "evaluation/__init__.py",
+    "provenance/components.json",
+    "provenance/preparation_hashes.json",
+    "reference/results.json",
+    "run.sh",
+    "runtime/__init__.py",
+    "runtime/io/__init__.py",
+    "scripts/bind_data.py",
+    "scripts/build_native.sh",
+    "scripts/seal.py",
+    "tests/test_entry.py",
+    "tools/build_native.py",
+    "tools/cpu_example.py",
+    "training/__init__.py"
+  ],
+  "native_acceptance": "Pending for the refactored source. Preserved service evidence remains separately identified.",
+  "scope": "Only selected PA implementations; paths and entry consolidated, no research Git history.",
+  "source_package_sha256": "afdde9f30f93f35e69c6f376d87d4a4c8eb967c0a85c6b7638731b12421307c2"
+}

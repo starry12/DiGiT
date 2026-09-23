@@ -1,0 +1,18 @@
+{
+  "traces": {
+    "valid": {
+      "path": "${PROJECT_ROOT}/data/papers/valid_trace",
+      "manifest_sha256": "adc794ab2f994fb624f161a638f717b4f1869a146b1a6a8122edf5320c864fe6",
+      "examples": 125265,
+      "batches": 123
+    },
+    "test": {
+      "path": "${PAPERS_TEST_TRACE}",
+      "manifest_sha256": "7e934b780a423865eaec1279b9d8a46da73d625c4883ced27ae0fa0b089c709c",
+      "examples": 214338,
+      "batches": 210
+    }
+  },
+  "degrees_sha256": "9d1097db633220d3fc73d1c0c5a498d3db6a0265fd4e9f5f6e98b7a2b7e40958",
+  "orders_sha256": "b0de1e1855c318119f499dc50f5d7f0c628d4f57a5d6bb36dd678c9c324101c1"
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "scope": "CPU/static/source validation; no GPU or raw SSD workload",
+  "model_cpu_tests": 22,
+  "entry_boundary_tests": 8,
+  "cpu_example_models": [
+    "sage",
+    "gcn",
+    "gat"
+  ],
+  "cpu_example_updates_per_model": 3,
+  "selected_protocols_byte_identical": true,
+  "core_files_identical_except_imports_and_paths": 84,
+  "python_files_checked": 108,
+  "markdown_local_links_checked": 22,
+  "native_acceptance": false,
+  "source_release_preserved": true,
+  "native_build_plan_checked": true,
+  "native_compile_performed": false,
+  "locked_environment_check_passed": true,
+  "publication_update": "Reviewer GCN/GAT smoke receipts and related documentation only; no runtime, protocol or build changes."
+}

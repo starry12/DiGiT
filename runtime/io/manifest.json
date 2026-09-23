@@ -1,0 +1,13 @@
+{
+  "component": "runtime/io",
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "accounting.py": "01c6f3065f0dd738aef0cccdb7ce993e657787d907972b6aeec947eabb495fb6",
+    "build.sh": "245661ff7527a9b02c15d49ba5afb287137a8632afc36b4c1e4be4c894e8fe72",
+    "native/gids_module/gids_kernel.cu": "60fb8b22068336fbbb8b547b0247b9e25e18691cb7c6946a6f36fb416d5dfb87",
+    "native/gids_module/gids_nvme.cu": "9d10260151e863b6c303d1677179a9801ee3d0e7f8929d0113ba96389e173363",
+    "native/gids_module/include/bam_nvme.h": "184530f71ddafae8eb5148b34e04b539e76dd81ad9cca998d690c90b5d3a8615",
+    "native/include/page_cache.h": "1b747f96f0847b03e38109256e335f77d1324b27ea375a632ef24f9a3014b764",
+    "runtime/BAM_Feature_Store/__init__.py": "dccb84be89bf73362a278cc4464ea10fd034a2300644b96cfd366ad0d085f1ea"
+  }
+}

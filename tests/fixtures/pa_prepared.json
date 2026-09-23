@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "protocol_sha256": "52adb154235ff4995d8d4d4793ebfac8000eb70bbc769cd262158645681eb471",
+  "base_manifest_sha256": "d080d95333cdf49bae01d38f324d9080fbf80461a12cb4043e6ede0274753802",
+  "graph": {
+    "indptr": {
+      "file": "original_indptr.npy",
+      "sha256": "6b9b4784bbe2cdf5e0b10cbd6a8bb97978dd2d17a1dc5b3dabf1bdbac4b3726b",
+      "array_sha256": "7d5e673666a047d439ffdbded926d637634f133fbc83d29af74bb7bac20b3b63",
+      "shape": [
+        111059957
+      ]
+    },
+    "indices": {
+      "file": "original_indices.npy",
+      "sha256": "5a69cb06d8a6eddf748ef921d8cba174c64bc9a859f92da1fb9f5e85c882a444",
+      "array_sha256": "1276664d1cca1d5aa81924c39fb9f203f36519d1611753fc0b4df2cca7768c90",
+      "shape": [
+        3342431700
+      ]
+    },
+    "eids": {
+      "file": "original_eids.npy",
+      "sha256": "36086ce44d6e9c33b2bc669b94d8e196f0998c84b7708d8bb6b9d1a771e12443",
+      "array_sha256": "6bda924d3fb58aa9d40e97f8166ddfa2a6c20c24ad3201de1e21871deedd5ece",
+      "shape": [
+        3342431700
+      ]
+    }
+  },
+  "bindings": {
+    "original_indices.npy": "5a69cb06d8a6eddf748ef921d8cba174c64bc9a859f92da1fb9f5e85c882a444",
+    "original_eids.npy": "36086ce44d6e9c33b2bc669b94d8e196f0998c84b7708d8bb6b9d1a771e12443",
+    "reordered_indices.npy": "b109704ce7e8b71605321c1f0cea354194bb191c30d8309e4366e034f0593f93",
+    "original_indptr.npy": "6b9b4784bbe2cdf5e0b10cbd6a8bb97978dd2d17a1dc5b3dabf1bdbac4b3726b",
+    "reordered_indptr.npy": "851654b311d77c9116e5df4727084b449f084d17ec8af0fbc37695789c32bd1c"
+  },
+  "validation": {
+    "passed": true,
+    "nodes": 111059956,
+    "edges": 3342431700,
+    "units": 3295898651,
+    "groups": 46533049,
+    "preserves_parallel_edges": true
+  },
+  "preparation_code_sha256": {
+    "candidates/pa_sage_bidir_native_v1/prepare.py": "5f16e010e0cddc02976281c53f256b1aaed82b5f9bea62b42fba4e741c9359e5",
+    "candidates/pa_sage_bidir_native_v1/common.py": "4d63804bc08522aaf680a561d2d3136d53fb921a8cc6d5266ec2cf78e7062908",
+    "candidates/pa_sage_bidir_native_v1/overlay.py": "c57e400c4e858fa4384e7b5092016b09c1b119bd7ed31092b20533c592d5256c",
+    "candidates/pa_sage_bidir_native_v1/protocol.json": "52adb154235ff4995d8d4d4793ebfac8000eb70bbc769cd262158645681eb471",
+    "candidates/pa_sage_direction_v2/graph.py": "d82558845c662037ad1175ce284eebe7c2a74722265191c51cc82013fdca05dd"
+  },
+  "raw_ssd_writes": false,
+  "finished_unix": 1789998629.9860997
+}
