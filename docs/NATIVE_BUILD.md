@@ -1,6 +1,6 @@
 # Building this source snapshot
 
-The prepared server is the currently validated native execution route. The concise source layout and recipe below need their own fresh native acceptance; do not substitute older server results for that evidence.
+This concise source passed a fresh locked environment installation and native compilation, followed by PA/SAGE, GCN and GAT preflight and paired native smoke on 2026-09-23. See the [build receipt](../provenance/native_build_validation.json) and [native acceptance receipt](../reference/rebuilt_native_smoke.json). The initial smoke exposed an omitted `GIDS.breakdown` file; it was restored from the preserved server release, and all six steps were repeated on the repaired copy. Five native binaries were reused byte-for-byte from the successful build. This is short acceptance with existing prepared data, not a new full experiment or a reviewer-account workflow test.
 
 Use the locked Python environment, CUDA toolkit and sm89-compatible hardware described in [ENVIRONMENT](ENVIRONMENT.md). Inspect the build plan first:
 
@@ -12,7 +12,7 @@ bash scripts/build_native.sh --output "$HOME/digit-native" --dry-run
 bash scripts/build_native.sh --output "$HOME/digit-native"
 ```
 
-Adjust the environment and CUDA paths to your installation. The output directory must be new and outside the source checkout. The script copies into a new directory and builds libnvm user space, the SSD identity utility, the feature store with useful I/O counters, the bidirectional DiGiT sampler, and output annotation. It does not install a kernel module or access the SSD. The source directory is preserved. Build logs are under the new copy's `results/build/`. The new copy receives its own manifest.
+Adjust the environment and CUDA paths to your installation. The output directory must be new and outside the source checkout. The script copies into a new directory and builds libnvm user space, the SSD identity utility, the feature store with useful I/O counters, the bidirectional DiGiT sampler, and output annotation. It does not install a kernel module or access the SSD. The source directory is preserved. Build logs are under the new copy's `results/build/`. Before sealing, the build also imports the real training runner and all three model workers with CUDA hidden. This catches missing Python runtime files such as `GIDS.breakdown`; extension-only import checks do not cover that dependency. The new copy receives its own manifest.
 
 Switch to the built copy before binding data or launching native commands:
 

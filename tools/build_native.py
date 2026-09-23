@@ -8,20 +8,23 @@ p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--output',type=Path,required=True);p.add_argument('--dry-run',action='store_true');a=p.parse_args()
 parent=verify_package();target=a.output.expanduser().resolve()
 if target.exists() or a.output.is_symlink() or target==ROOT or ROOT in target.parents:p.error('Choose a new directory outside this source tree')
-python=sys.executable;nvcc=os.environ.get('DIGIT_NVCC','nvcc');cmake=os.environ.get('DIGIT_CMAKE','cmake');cc=os.environ.get('CC','cc');jobs=os.environ.get('DIGIT_BUILD_JOBS','2')
+python=sys.executable;nvcc=os.environ.get('DIGIT_NVCC','nvcc');cmake=os.environ.get('DIGIT_CMAKE','cmake');cxx=os.environ.get('CXX','c++');jobs=os.environ.get('DIGIT_BUILD_JOBS','2')
 if not jobs.isdecimal() or int(jobs)<1:p.error('DIGIT_BUILD_JOBS must be positive')
 if not a.dry_run:
-    for cmd in (nvcc,cmake,cc):
+    for cmd in (nvcc,cmake,cxx):
         if not shutil.which(cmd):p.error('Missing build tool: '+cmd)
 pybind='<python -m pybind11 --cmakedir>' if a.dry_run else subprocess.check_output([python,'-m','pybind11','--cmakedir'],text=True).strip()
+nvcc_path=shutil.which(nvcc)
+cuda_include=str(Path(nvcc_path or nvcc).resolve().parent.parent/'include') if nvcc_path or '/' in nvcc else '<CUDA Toolkit include from nvcc path>'
 bam=target/'third_party/bam';output=target/'training/sage/runtime/digit';build=target/'.native-build/output'
 steps=[
  [cmake,'-S',bam,'-B',bam/'build','-DCMAKE_CUDA_COMPILER='+nvcc,'-DCMAKE_CUDA_ARCHITECTURES=89','-Dnvidia_archs=89','-Dno_module=ON','-Dno_smartio=ON','-Dno_fio=ON'],
  [cmake,'--build',bam/'build','--target','libnvm','--parallel',jobs],
- [cc,'-std=gnu11','-O2','-I'+str(bam/'include'),'-I'+str(bam/'build/include'),target/'ae/native/identity/module.c',target/'ae/native/identity/common.c','-L'+str(bam/'build/lib'),'-Wl,-rpath,$ORIGIN/../../../third_party/bam/build/lib','-lnvm','-o',target/'ae/native/identity/identify-module'],
+ [cxx,'-std=gnu++11','-O2','-I'+cuda_include,'-I'+str(bam/'include'),'-I'+str(bam/'include/freestanding/include'),'-I'+str(bam/'build/include'),target/'ae/native/identity/module.c',target/'ae/native/identity/common.c','-L'+str(bam/'build/lib'),'-Wl,-rpath,$ORIGIN/../../../third_party/bam/build/lib','-lnvm','-o',target/'ae/native/identity/identify-module'],
  ['bash',target/'runtime/io/build.sh'],['bash',target/'training/sage/build.sh'],
  [cmake,'-S',target/'ae/native/papers/output','-B',build,'-Dpybind11_DIR='+pybind,'-DPYTHON_EXECUTABLE='+python,'-DPython_EXECUTABLE='+python,'-DCMAKE_CUDA_COMPILER='+nvcc,'-DCMAKE_CUDA_ARCHITECTURES=89','-DDIGIT_EXTENSION_OUTPUT='+str(output)],
  [cmake,'--build',build,'--parallel',jobs],
+ [python,'-B',target/'tools/check_native_imports.py'],
 ]
 print(json.dumps(dict(parent_sha256=parent,target=str(target),commands=[[str(x) for x in row] for row in steps],gpu_workload=False,ssd_access=False,native_acceptance='pending'),indent=2))
 if a.dry_run:sys.exit(0)

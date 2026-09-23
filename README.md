@@ -26,7 +26,7 @@ digit-ae results PA sage --action smoke
 
 After smoke passes, start a full comparison with `digit-ae run PA sage` and read it with `digit-ae results PA sage --action run`. Substitute `gcn` or `gat` for the other models; run requests sequentially. Services survive SSH disconnects. [Reviewer instructions](docs/REVIEWER.md) explain progress, completion and result export.
 
-The service currently executes the preserved, accepted server release. This repository reorganizes that release into a concise source tree; its native rebuild and native acceptance are tracked separately. Source origins and adaptations are recorded in [the source map](provenance/source_map.json). The service is not silently upgraded when this repository changes.
+The service currently executes the preserved, accepted server release. This repository reorganizes that release into a concise source tree; its native compilation in a fresh locked environment and subsequent PA/SAGE, GCN and GAT preflight and paired smoke have passed; see the [rebuilt-source receipt](reference/rebuilt_native_smoke.json). Source origins and adaptations are recorded in [the source map](provenance/source_map.json). The service is not silently upgraded when this repository changes.
 
 ## Current evaluation scope
 
@@ -44,7 +44,7 @@ The source tree contains one selected implementation per model. It excludes rese
 
 These selected measurements are [reference evidence](reference/results.json), not measurements of newly rebuilt binaries. Fresh reviewer GCN/GAT preflight and paired smoke have also passed, with error-free monitoring and normal service exit; see [smoke acceptance](reference/reviewer_smoke.json). These short checks do not replace full performance/accuracy evidence. One seed does not establish statistical accuracy equivalence or the paper's absolute accuracy. See [metric definitions](docs/RESULTS.md).
 
-The [validation receipt](provenance/validation.json) records 22 model/budget checks, eight entry/counter boundary checks, a three-model CPU example, exact environment checks, and source/configuration parity checks. Native compilation and execution of this refactored source are still pending.
+The [validation receipt](provenance/validation.json) records 22 model/budget checks, eight entry/counter boundary checks, a three-model CPU example, exact environment checks, and source/configuration parity checks. A subsequent [fresh-install and native-build receipt](provenance/native_build_validation.json) records successful locked environment installation, the three-model CPU example, compilation and module imports. After restoring the omitted `GIDS.breakdown` dependency, GPU/SSD preflight and paired smoke passed for all three models: six workers exited normally, strict monitors reported zero query errors, and 130 evidence hashes matched. Each arm performed four training updates and two limited validation calls, with no final test. The [rebuilt-source receipt](reference/rebuilt_native_smoke.json) records the accepted package identity and binary reuse; this does not claim new full experiments or reviewer-account workflow acceptance. Earlier validation receipts retain their original scope.
 
 ## Set up from source
 
