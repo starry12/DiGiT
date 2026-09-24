@@ -8,7 +8,6 @@ This repository provides the DiGiT implementation, the GIDS comparison path, and
 
 | What you want to do | Start here |
 |---|---|
-| View PA/SAGE ablation results | [Results table](#pa-sage-component-ablation) and [CSV download](reference/pa_sage_ablation_perf.csv) |
 | Run experiments on the provided AE server | [Reviewer guide](docs/REVIEWER.md) and [AE server commands](#ae-environment-and-reproduction) |
 | Create an environment from scratch on your own machine | [Environment setup](docs/ENVIRONMENT.md): prerequisites, locked dependencies and checks |
 | Compile DiGiT and its GIDS/BaM dependencies | [Native build guide](docs/NATIVE_BUILD.md) |
