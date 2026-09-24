@@ -36,3 +36,7 @@ Each request runs four fresh smoke workers, then GIDS → adjacency-only +GR →
 The service uses a separate root-owned snapshot and read-only prepared-data mounts. Existing PA/IG commands and the submitted sealed release remain separate. The extension sources are under `tools/ablation/`; they target this prepared server and its matching administrator-provisioned runtime snapshot, not a standalone ablation run from the concise checkout. The standard two-arm `run.sh` interface remains unchanged.
 
 At this publication, CPU command tests, source-snapshot integrity and native-module imports passed. Administrator installation, the real AE-account control check and this new service's native run are **pending**; existing accepted author measurements above do not certify the new command. After installation, use status/results to distinguish RUNNING, FINALIZING, PASS and FAILED. No final table is shown for a partial/failed request; old successes are not substituted. The installer starts one fresh acceptance request as `atc27_ae` after its namespace/input and permission checks succeed.
+
+## Deployment status after initial installation
+
+The extension is installed and its AE-account start permission passed. The first GIDS smoke worker failed before training: the snapshot was missing its `.digit-root` marker. The deployment fix and isolated-import regression are prepared; native acceptance has not passed. See [repair details](../tools/ablation/README.md#deployment-marker-repair). Existing author performance results remain valid and are not new-service measurements.

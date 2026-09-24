@@ -56,6 +56,11 @@ def execute(selftest=False):
         for name in ('/run/digit-ae-selfservice/exclusive.lock', '/tmp/digit-pa-bidir-controller.lock'):
             handle = open(name, 'a+'); fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB); locks.append(handle)
         save(stage='verifying_snapshot_and_inputs'); bindings = bind_inputs(output)
+        save(stage='verifying_isolated_runtime_imports')
+        import_env = dict(os.environ, CUDA_VISIBLE_DEVICES='')
+        with (output / 'runtime_imports.log').open('x') as log:
+            subprocess.run([sys.executable, '-I', '-B', str(CONTROL / 'check_imports.py'), str(ROOT)],
+                cwd='/tmp', env=import_env, stdout=log, stderr=subprocess.STDOUT, timeout=120, check=True)
         if selftest:
             save(stage='complete', passed=True, complete=True, native_acceptance=False, finished_unix=time.time())
             return
