@@ -1,6 +1,6 @@
 # PA/SAGE supplementary component ablation
 
-Updated accepted author measurements on 2026-09-24. Each arm completed one entire seed-0 training epoch (1,207,179 examples; 1,179 updates), without validation/test. GIDS and revised +GR reuse accepted independent runs; ++NS and DiGiT are fresh runs completed at 18:55:18 UTC+8. Every selected worker exited normally with zero monitor query errors. All runs used physical GPU 2.
+Updated accepted author measurements on 2026-09-24. Each arm completed one entire seed-0 training epoch (1,207,179 examples; 1,179 updates), without validation/test. GIDS and revised +GR reuse accepted independent runs; ++NS and DiGiT are fresh runs completed at 18:55:18 UTC+8. Every selected worker exited normally with zero monitor query errors. All runs used physical GPU 2. Download the [full-precision results CSV](../reference/pa_sage_ablation_perf.csv), including setup costs and observed monitoring delays. The 43 source evidence hashes were rechecked for this publication; the selected measurements are unchanged.
 
 | Stage | CPU cache rows | Training (s) | Speedup vs measured GIDS |
 |---|---:|---:|---:|
@@ -35,8 +35,12 @@ Each request runs four fresh smoke workers, then GIDS → adjacency-only +GR →
 
 The service uses a separate root-owned snapshot and read-only prepared-data mounts. Existing PA/IG commands and the submitted sealed release remain separate. The extension sources are under `tools/ablation/`; they target this prepared server and its matching administrator-provisioned runtime snapshot, not a standalone ablation run from the concise checkout. The standard two-arm `run.sh` interface remains unchanged.
 
-At this publication, CPU command tests, source-snapshot integrity and native-module imports passed. Administrator installation, the real AE-account control check and this new service's native run are **pending**; existing accepted author measurements above do not certify the new command. After installation, use status/results to distinguish RUNNING, FINALIZING, PASS and FAILED. No final table is shown for a partial/failed request; old successes are not substituted. The installer starts one fresh acceptance request as `atc27_ae` after its namespace/input and permission checks succeed.
+## Current AE reproduction status — 2026-09-24
 
-## Deployment status after initial installation
+The four-arm extension is installed and has been launched through the AE account. Reproduction is **incomplete and paused at the author's request** until a quieter server window. GIDS/+GR smoke evidence was reused and ++NS smoke passed in the latest request; DiGiT smoke stopped after a 13.03-second NVML query exceeded the strict heartbeat limit. No full epoch ran in that AE request. These partial results do not replace the accepted author table above.
 
-The extension is installed and its AE-account start permission passed. The first GIDS smoke worker failed before training: the snapshot was missing its `.digit-root` marker. The deployment fix and isolated-import regression are prepared; native acceptance has not passed. See [repair details](../tools/ablation/README.md#deployment-marker-repair). Existing author performance results remain valid and are not new-service measurements.
+The deployed service now uses a 192 GiB available-host-memory admission threshold. Preparation delays are recorded; strict monitoring covers model/metadata initialization and all training. This changes neither cache capacities nor the training protocol. The server-side monitoring/admission repairs are later than the extension baseline published under `tools/ablation/`; the existing author receipt retains its original publication-time extension metadata. The submitted tag remains unchanged.
+
+## Author-run monitoring versus AE monitoring
+
+The selected author runs used separate `nvidia-smi` sampling processes with a 5-second query timeout and an end-of-run zero-error acceptance check. Their observed maximum query times were 0.538/0.641/0.589/0.752 seconds for GIDS/GR/NS/DiGiT, with maximum sampling gaps of 1.039/1.141/1.090/1.253 seconds. The later AE monitor uses persistent NVML queries and a live 5.5-second heartbeat guard in the strict interval. The latest 13.03-second query therefore stopped the AE attempt. This is not evidence of an account-specific training failure or invalid author measurements. The underlying driver-delay cause remains unconfirmed; a quieter retry is planned, not guaranteed to resolve it.
