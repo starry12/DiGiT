@@ -1,4 +1,4 @@
-"""Fresh four-arm AE run over an immutable namespace-mounted author snapshot."""
+"""Four fresh full epochs with optional one-time accepted-smoke reuse over a sealed snapshot."""
 import fcntl, importlib, json, os, signal, subprocess, sys, time, uuid
 from pathlib import Path
 ROOT = Path('/home/embed/digit')
@@ -6,8 +6,11 @@ CONTROL = Path('/srv/digit-ae/admin/ablation_v1')
 OUTPUTS = Path('/srv/digit-ae/ablation-results')
 ARMS = ('gids', 'gr', 'ns', 'digit_full')
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(CONTROL))
 from ae.common import require, read, write, sha, check_device
 from ae.pa_sage.monitor_control import ExternalMonitor
+import ablation_resume
+import ablation_host_admission as host_admission
 from ae.pa_sage.monitor_validation import monitor_evidence
 from candidates.pa_sage_ablation_graph_v4.validation import matrix_check
 
@@ -46,7 +49,9 @@ def execute(selftest=False):
     output = OUTPUTS / (time.strftime('%Y%m%d_%H%M%S') + '_' + uuid.uuid4().hex[:12])
     output.mkdir(); state = dict(passed=False, complete=False, stage='admission', pid=os.getpid(),
         started_unix=time.time(), workers=[], selftest=selftest, gpu=2,
-        snapshot_sha256=sha(CONTROL / 'snapshot_manifest.json'), raw_ssd_writes=False)
+        snapshot_sha256=sha(CONTROL / 'snapshot_manifest.json'), raw_ssd_writes=False,
+        monitoring_backend='nvidia-smi_author_v1', reused_smoke=None, host_admission_policy=host_admission.policy(),
+        monitor_source_sha256={name: sha(ROOT / 'ae/pa_sage' / name) for name in ('gpu_monitor.py','monitor_control.py')})
     def save(**kw): state.update(kw, updated_unix=time.time()); write(output / 'status.json', state)
     save(); write(CONTROL / ('state/selftest.json' if selftest else 'state/latest.json'), dict(output=str(output), request_origin='fixed AE service; systemd does not record caller identity here', authorized_account='atc27_ae', started_unix=state['started_unix']))
     locks = []; monitor = None; child = None
@@ -61,21 +66,41 @@ def execute(selftest=False):
         with (output / 'runtime_imports.log').open('x') as log:
             subprocess.run([sys.executable, '-I', '-B', str(CONTROL / 'check_imports.py'), str(ROOT)],
                 cwd='/tmp', env=import_env, stdout=log, stderr=subprocess.STDOUT, timeout=120, check=True)
+        save(stage='verifying_effective_host_admission')
+        with (output / 'host_admission_selftest.log').open('x') as log:
+            subprocess.run([sys.executable, '-I', '-B', str(CONTROL / 'ablation_worker.py'), '--selftest'],
+                env=import_env, cwd='/tmp', stdout=log, stderr=subprocess.STDOUT, timeout=120, check=True)
+        save(stage='verifying_resume_evidence')
+        reused, provenance = ablation_resume.verify(CONTROL, bindings, package)
         if selftest:
+            save(stage='verifying_nvidia_smi_monitor')
+            monitor = ExternalMonitor(output / 'nvidia_smi_selftest'); monitor.start()
+            for _ in range(6): time.sleep(.5)
+            code = monitor.stop(); monitor = None
+            measured = read(output / 'nvidia_smi_selftest/summary.json')
+            require(code == 0 and measured['passed'] and measured['complete'] and measured['errors'] == []
+                and measured['samples'] >= 3 and measured['peak_rss_bytes'] <= 64*2**20, 'nvidia-smi selftest failed')
+            write(output / 'nvidia_smi_selftest.json', dict(passed=True, backend='nvidia-smi_author_v1', source_sha256=state['monitor_source_sha256'], summary=measured, resume_verified=provenance))
             save(stage='complete', passed=True, complete=True, native_acceptance=False, finished_unix=time.time())
             return
         gpu = subprocess.check_output(['nvidia-smi', '-i', '2', '--query-gpu=uuid', '--format=csv,noheader'], text=True).strip()
         apps = subprocess.check_output(['nvidia-smi', '--query-compute-apps=gpu_uuid,pid', '--format=csv,noheader'], text=True)
         require(gpu == 'GPU-927ce617-743a-4bfe-6a60-8a8311cfc703' and gpu not in apps, 'GPU 2 occupied or changed')
+        if provenance:
+            # Global service locks serialize this one-time claim; selftest never consumes it.
+            write(CONTROL / 'state/resume_consumed_setup_v3.json', dict(output=str(output), consumed_unix=time.time(), **provenance))
+            for arm, report in reused.items(): write(output / ('smoke_' + arm + '_accepted.json'), report)
+            save(reused_smoke=provenance)
         for mode in ('smoke', 'full'):
-            reports = {}
+            reports = dict(reused) if mode == 'smoke' else {}
             for arm in ARMS:
+                if arm in reports: continue
                 save(stage=mode + '_' + arm); check_device()
                 folder = output / mode / arm; folder.parent.mkdir(exist_ok=True)
                 mon_dir = output / (mode + '_monitor_' + arm); mon_dir.mkdir()
                 monitor = ExternalMonitor(mon_dir / 'external_gpu'); ready = monitor.start()
                 key = 'gr' if arm == 'gr' else 'gids'
-                command = [sys.executable, '-B', '-u', '-m', package(arm) + '.worker', '--arm', arm,
+                command = [sys.executable, '-I', '-B', '-u', str(CONTROL / 'ablation_worker.py'), '--arm', arm,
                     '--output', str(folder), '--binding', str(output / ('inputs_' + key + '.json'))]
                 if mode == 'smoke': command.append('--smoke')
                 w = dict(mode=mode, arm=arm, status='running', started_unix=time.time())
@@ -97,6 +122,8 @@ def execute(selftest=False):
                 require(rc == 0 and released and code == 0, 'Worker/monitor failed')
                 require(sha(folder / 'report.json') == read(folder / 'worker_ready.json')['report_sha256'], 'Report changed')
                 r = read(folder / 'report.json')
+                host_admission.validate_receipt(r['admission'])
+                require(r['admission'] == read(folder / 'admission.json'), 'Admission receipt changed')
                 require(read(mon_dir / 'external_gpu/summary.json')['errors'] == [], 'Monitor query errors')
                 ms = dict(pid=state['pid'], workers=[w], external_monitor=ready, external_monitor_returncode=code)
                 r['external_monitor'] = monitor_evidence(mon_dir, ms, arm, read(folder / 'resources.json'))
@@ -106,6 +133,12 @@ def execute(selftest=False):
                 write(output / (mode + '_' + arm + '_accepted.json'), r); reports[arm] = r
             summary = matrix_check(reports, mode == 'smoke')
             summary.update(snapshot_sha256=state['snapshot_sha256'], reused_full_arms=[],
+                reused_smoke=provenance if mode == 'smoke' else None,
+                monitoring_backends={arm: ('nvidia-smi (reused accepted smoke)' if mode == 'smoke' and arm in reused else 'nvidia-smi_author_v1') for arm in ARMS},
+                monitoring_policy='Author nvidia-smi monitor: 5s subprocess query timeout; 0.5s wait after query; query errors recorded and rejected at completion; no live heartbeat or phase-gap gate',
+                monitor_source_sha256=state['monitor_source_sha256'],
+                host_admission_policy=host_admission.policy(),
+                host_reservations_bytes={arm: reports[arm]['admission']['host_required_bytes'] for arm in ARMS},
                 report_sha256={arm: sha(output / (mode + '_' + arm + '_accepted.json')) for arm in ARMS},
                 candidate_sha256={arm: r['candidate_sha256'] for arm, r in reports.items()})
             write(output / (mode + '_summary.json'), summary); save(stage=mode + '_accepted')
@@ -117,10 +150,15 @@ def execute(selftest=False):
         save(stage='failed', error=type(exc).__name__ + ': ' + str(exc)); raise
     finally:
         if monitor is not None: monitor.stop()
-        if child is not None and child.poll() is None:
-            child.terminate()
-            try: child.wait(timeout=60)
-            except subprocess.TimeoutExpired: child.kill(); child.wait()
+        if child is not None:
+            if child.poll() is None:
+                child.terminate()
+                try: child.wait(timeout=60)
+                except subprocess.TimeoutExpired: child.kill(); child.wait()
+            w=state['workers'][-1]
+            if w['pid']==child.pid:
+                w.update(status='stopped_after_controller_failure',returncode=child.returncode,finished_unix=time.time())
+                save()
         for handle in locks: handle.close()
 
 if __name__ == '__main__':
