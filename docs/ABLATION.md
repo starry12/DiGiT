@@ -1,27 +1,31 @@
 # PA/SAGE supplementary component ablation
 
-Updated accepted author measurements on 2026-09-24. Each arm completed one entire seed-0 training epoch (1,207,179 examples; 1,179 updates), without validation/test. GIDS and revised +GR reuse accepted independent runs; ++NS and DiGiT are fresh runs completed at 18:55:18 UTC+8. Every selected worker exited normally with zero monitor query errors. All runs used physical GPU 2. Download the [full-precision results CSV](../reference/pa_sage_ablation_perf.csv), including setup costs and observed monitoring delays. The 43 source evidence hashes were rechecked for this publication; the selected measurements are unchanged.
+The prepared-server four-arm AE request **passed** on 2026-09-25 at 00:55:23 UTC+8. It ran from 2026-09-24 23:55:55 for 59 min 28 s, including smoke, initialization and full workers. All four smoke and four full workers were fresh processes, exited normally and recorded zero monitor query errors. Each full arm completed one seed-0 epoch: 1,207,179 examples and 1,179 updates, without validation/test. The service exited successfully and GPU 2 was released.
 
-| Stage | CPU cache rows | Training (s) | Speedup vs measured GIDS |
-|---|---:|---:|---:|
-| GIDS (main RevPR CPU cache) | 11105992 | 194.45 | 1.0000x |
-| +GR (adjacency only) | 11105992 | 194.76 | 0.9984x |
-| ++NS | 11105992 | 161.73 | 1.2023x |
-| DiGiT | 11105992 | 104.50 | 1.8608x |
+| Stage | Training time (s) | Speedup vs GIDS |
+|---|---:|---:|
+| GIDS | 194.63 | 1.0000× |
+| +GR (adjacency only) | 196.12 | 0.9924× |
+| ++NS | 160.38 | 1.2136× |
+| DiGiT | 103.69 | 1.8770× |
 
-The first three arms share the main GIDS RevPR logical hot set (11,105,992 rows); every arm has a 4 GiB GPU feature cache. **+GR changes only adjacency order**: node IDs, edge multiset/EIDs, original feature payload, CPU cache lookup and legacy GPU replacement are retained. Its 194.76 s measurement is essentially unchanged from GIDS 194.45 s in this single observation (+0.16% time).
+All arms use a 4 GiB GPU feature cache and 11,105,992 CPU-cached rows. The first three share the main GIDS RevPR logical hot set. **+GR changes only adjacency order**: node IDs, edge multiset/EIDs, original feature payload, CPU cache lookup and legacy GPU replacement are retained. Its 196.12 s measurement is 0.77% slower than GIDS 194.63 s in this single observation.
 
-++NS retains grouped feature storage, group-aware sampling and mixed I/O, with row-exact mapping of the same logical RevPR hot set. Thus GR→NS includes the feature-layout change and is not an isolated NS effect. DiGiT uses the frequency-selected CPU hot set and FIFO GPU replacement together; NS→DiGiT is not FIFO alone. NS and DiGiT have identical losses, final model and batch shapes; both record 49 fanout shortfalls out of 335,564,917 target edges.
+++NS retains grouped feature storage, group-aware sampling and mixed I/O, with row-exact mapping of the same logical RevPR hot set. GR→NS therefore includes a feature-layout change. DiGiT changes CPU hot-set selection and GPU replacement together; NS→DiGiT is not FIFO alone. NS and DiGiT have identical losses, final model and batch shapes, with 49 fanout shortfalls out of 335,564,917 target edges each.
 
-DiGiT takes **104.50 s (1.8608x)** against the measured 194.45 s GIDS baseline. The main PA/SAGE **1.8027x** result still describes the separate 20-epoch accuracy protocol; do not replace its denominator or claim these are repeated measurements of the same protocol. Training includes root-order generation, sampling, feature fetch and model updates, but excludes preparation and setup. NS/DiGiT setup costs are 505.39/435.55 s, separately recorded. No warmup, steady-state, multi-run variance or accuracy claim is made.
+DiGiT takes **103.69 s (1.8770×)** against the measured GIDS baseline. The main PA/SAGE **1.8027×** remains a separate 20-epoch accuracy result. Training includes root-order generation, sampling, feature fetch and model updates; preparation, setup and teardown are separate. NS/DiGiT setup took 505.02/363.79 s. These single-seed first-epoch measurements make no steady-state, variance or accuracy claim.
 
-The previous published CPU-cache-disabled experiment (227.37 / 167.93 / 181.51 / 105.60 s, 2.1531x, NS 8.09% slower than GR) remains in the [historical receipt](../reference/pa_sage_ablation_perf_v2_historical.json). It uses a different cache/GR definition and is not the current table. The later old-layout GR 151.75 s result is also excluded: it changed feature storage rather than adjacency. The earlier NS 162.05 s attempt failed strict monitoring and is not the accepted NS value.
+The [full-precision CSV](../reference/pa_sage_ablation_perf.csv) includes setup and observed monitoring delays. The [acceptance receipt](../reference/pa_sage_ablation_perf.json) records protocols, per-arm I/O, all eight workers and 85 independently rechecked evidence hashes. The [source index](../provenance/pa_sage_ablation_perf_manifest.json) binds candidate, deployed controller, monitor and admission-policy identities. Private input bindings, datasets and checkpoints are not included in the public package.
 
-The [curated receipt](../reference/pa_sage_ablation_perf.json) records per-arm protocols, I/O, setup costs, source versions, acceptance and evidence hashes. The [source identity index](../provenance/pa_sage_ablation_perf_manifest.json) identifies the unchanged v3 NS/DiGiT runtime and revised v4 GR candidate. These are accepted author results; a separate prepared-server extension is supplied below; `run.sh` and the sealed main reviewer runtime are unchanged. The submitted `ae-pa-v1` and main three-model results remain separate.
+## Earlier measurements
+
+The accepted afternoon author results remain unchanged in the [historical author receipt](../reference/pa_sage_ablation_author_20260924.json) and [CSV](../reference/pa_sage_ablation_author_20260924.csv): 194.45/194.76/161.73/104.50 s, 1.8608×. That record retains its publication-time extension status; it is not the current AE status. Its [source index](../provenance/pa_sage_ablation_author_20260924_manifest.json) is preserved byte for byte.
+
+The [older cache-disabled receipt](../reference/pa_sage_ablation_perf_v2_historical.json) retains 227.37/167.93/181.51/105.60 s. The old-layout GR 151.75 s and failed NS 162.05 s observations remain excluded from the selected table. Prior incomplete AE attempts are retained on the server; no failed attempt is relabeled as accepted.
 
 ## Four-arm AE command
 
-The prepared-server extension adds these commands after administrator installation:
+The extension is installed on the prepared server. To read existing accepted results without starting another run, use `digit-ae results PA sage --action ablation`.
 
 ```bash
 digit-ae ablation PA sage
@@ -31,20 +35,18 @@ digit-ae logs PA sage --action ablation
 digit-ae stop PA sage --action ablation
 ```
 
-Each request runs four fresh smoke workers, then GIDS → adjacency-only +GR → ++NS → DiGiT for one complete training epoch each, without validation/test. It reuses prepared data but does not reuse historical performance reports. GPU 2, data locations, units and protocol are fixed; busy requests fail instead of queueing. The global GPU/NVMe lock is shared with the main AE services. Starting and stopping require only two exact administrator-installed sudo permissions; no arbitrary privileged command, configuration, GPU or output path is accepted.
+A new request runs fresh GIDS → adjacency-only +GR → ++NS → DiGiT smoke workers, then one full training epoch per arm. GPU 2, data paths and protocol are fixed. Requests share the main AE GPU/NVMe exclusion lock and reject busy resources. The service survives SSH disconnects. `PASS` requires closed accepted reports and successful service exit; the CLI never substitutes an earlier success for a later failure.
 
-The service uses a separate root-owned snapshot and read-only prepared-data mounts. Existing PA/IG commands and the submitted sealed release remain separate. The extension sources are under `tools/ablation/`; they target this prepared server and its matching administrator-provisioned runtime snapshot, not a standalone ablation run from the concise checkout. The standard two-arm `run.sh` interface remains unchanged.
+The extension source is in `tools/ablation/` and targets a separately provisioned runtime snapshot with read-only data mounts. It does not provide a standalone four-arm run from the concise checkout. The main two-arm `run.sh` interface and submitted `ae-pa-v1` remain separate.
 
-## Current AE reproduction status — 2026-09-24
+## Current AE reproduction status — 2026-09-25
 
-The four-arm extension is installed and has been launched through the AE account. Reproduction is **incomplete and paused at the author's request** until a quieter server window. GIDS/+GR smoke evidence was reused and ++NS smoke passed in the latest request; DiGiT smoke stopped after a 13.03-second NVML query exceeded the strict heartbeat limit. No full epoch ran in that AE request. These partial results do not replace the accepted author table above.
+The prepared-server four-arm AE request **passed** on 2026-09-25 at 00:55:23 UTC+8. It ran from 2026-09-24 23:55:55 for 59 min 28 s, including smoke, initialization and full workers. All four smoke and four full workers were fresh processes, exited normally and recorded zero monitor query errors. Each full arm completed one seed-0 epoch: 1,207,179 examples and 1,179 updates, without validation/test. The service exited successfully and GPU 2 was released.
 
-The updated four-arm controller uses the same external `nvidia-smi` monitor sources as the accepted afternoon author runs. Each query has a 5-second subprocess timeout, followed by a 0.5-second wait. The first successful sample is required before a worker starts. Later query errors are recorded while sampling continues; final acceptance requires zero query errors, a normally exited worker and monitor, valid ownership, and resource/report checks. The later NVML live heartbeat and phase-gap gates are removed. The host admission threshold stays at 192 GiB; cache sizes and training candidates are unchanged.
+Accepted request: `20260924_235555_5afe836d9f74`. All eight workers and their monitoring belong to this request; no accepted-smoke reuse claim was used.
 
-The source update is prepared and tested; administrator installation of this monitoring change is pending. The previously installed service still uses the recorded NVML policy until that installation succeeds. Retesting remains paused. The installer for this update performs a namespace selftest only and does not launch training. Monitor/source checks alone do not establish native acceptance. The existing author receipt retains its publication-time extension metadata; current extension files are bound by `ARTIFACT_MANIFEST.json`. The submitted tag remains unchanged.
+## Monitoring and resource admission
 
-## Author-run monitoring versus AE monitoring
+The service uses the original author external `nvidia-smi` monitor: a 5-second subprocess query timeout and a 0.5-second wait after each query. The first successful sample is required before a worker starts. Later query errors are recorded while sampling continues; final acceptance requires zero query errors, normal worker and monitor exits, valid ownership, and resource/report checks. There is no live heartbeat or phase-gap gate. Available-host-memory admission is 192 GiB; cache capacities and training candidates are unchanged.
 
-The selected author runs used separate `nvidia-smi` sampling processes with a 5-second query timeout and an end-of-run zero-error acceptance check. Their observed maximum query times were 0.538/0.641/0.589/0.752 seconds for GIDS/GR/NS/DiGiT, with maximum sampling gaps of 1.039/1.141/1.090/1.253 seconds. The failed AE attempt used persistent NVML queries and a live 5.5-second heartbeat guard in the strict interval. The latest 13.03-second query therefore stopped the AE attempt. This is not evidence of an account-specific training failure or invalid author measurements. The underlying driver-delay cause remains unconfirmed; a quieter retry is planned, not guaranteed to resolve it.
-
-The restored policy matches the author implementation byte for byte; it does not guarantee that a busy driver will answer within 5 seconds. A query timeout still prevents acceptance even though it no longer triggers a live heartbeat abort.
+Earlier NVML attempts stopped on monitoring latency. The successful request uses the restored `nvidia-smi` implementation; its zero-error record does not establish the root cause of those earlier delays.

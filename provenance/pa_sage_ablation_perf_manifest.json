@@ -1,4 +1,10 @@
 {
+  "acceptance": {
+    "full_summary_sha256": "11839c8edfae5bcedc11eeab7b519687cbb2725a8e905c3e58b0f2c99638dfb1",
+    "path": "reference/pa_sage_ablation_perf.json",
+    "sha256": "4f89e6d6da3c494c2d732d7c90860a6332f34091fca51ec47e13b5abd7d80a74",
+    "source_run": "20260924_235555_5afe836d9f74"
+  },
   "arm_sources": {
     "digit_full": "cache_v3",
     "gids": "cache_v3",
@@ -13,12 +19,31 @@
     "graph_v4": {
       "path": "provenance/pa_sage_ablation_graph_v4_manifest.json",
       "sha256": "3577bf914261c8f7d96794143922e902bf8e0f95ef088a791b954ba7532d6b45"
-    },
-    "resume2": {
-      "path": "provenance/pa_sage_ablation_resume2_manifest.json",
-      "sha256": "1d00e77eeec3e4e6785463841bd9554fe9b49097c3f96bb24c0c6be7b0e5b172"
     }
   },
-  "historical": "provenance/pa_sage_ablation_perf_v2_historical_manifest.json",
-  "schema": "digit-mixed-ablation-source-index-v1"
+  "deployment": {
+    "host_admission_policy": {
+      "candidate_default_host_required_bytes": 343597383680,
+      "host_required_bytes": 206158430208,
+      "id": "ae-host-admission-192gib-v1",
+      "scope": "Host startup admission only; no training or cache configuration change",
+      "source_sha256": "ed48cb0bbf47ecbff1e239c154fe265111db4c70858d4b10faf6bcfa4b4c72c7",
+      "worker_launcher_sha256": "1f22fd4c005b4fd7f16931d0d993ef25dcd5839eef01b09bfb171d61e07f3a1d"
+    },
+    "monitoring_backend": "nvidia-smi_author_v1",
+    "snapshot_manifest_sha256": "9a10a2bae3a21220ff87cca8a577957745e44389ee92b0d156ef46e00df97e36",
+    "source_sha256": {
+      "ae/pa_sage/gpu_monitor.py": "203e555a95a5520f9b718b56c0ace652c14bdab6b0c6e21caa7679016759889a",
+      "ae/pa_sage/monitor_control.py": "5e5643f330cdfcba421f5672292dbec4f99be7fd7753815ab3c66a0f7fe3e8a0",
+      "tools/ablation/ablation_host_admission.py": "ed48cb0bbf47ecbff1e239c154fe265111db4c70858d4b10faf6bcfa4b4c72c7",
+      "tools/ablation/ablation_resume.py": "2f2e006b0ae72ae0f153d0ddf1d4602dcc900e6310c497fcb43824262767c584",
+      "tools/ablation/ablation_worker.py": "1f22fd4c005b4fd7f16931d0d993ef25dcd5839eef01b09bfb171d61e07f3a1d",
+      "tools/ablation/check_imports.py": "54b2b2767612a2e6e8f38656668a9eeaa8fbeaa2c69a0d638de2c63a764a4c4a",
+      "tools/ablation/cli.py": "3cb5b9f6b9c4c2b532b738da96d4cf0af2cbeb46ece3f41277e2becc7680e1ec",
+      "tools/ablation/controller.py": "77020fc2547dfc43ff99c670fb874bdec2036ef509b0b7e73bf5423793529697"
+    },
+    "validated_extension_source_commit": "edaf7aecdd1fdb4e637d9c513f102a0c4558664a"
+  },
+  "historical": "provenance/pa_sage_ablation_author_20260924_manifest.json",
+  "schema": "digit-ae-ablation-source-index-v2"
 }

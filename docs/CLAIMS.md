@@ -15,4 +15,4 @@ IG/web graphs, ablations, sensitivity, scalability, other systems and multi-seed
 
 ## Later supplementary evidence
 
-The excluded-submission list above still describes the frozen AE scope. The later [cache-aligned author ablation](ABLATION.md) now includes adjacency-only GR and accepted NS/DiGiT full epochs. It supports this single-configuration, single-epoch performance table, not every paper ablation, isolated NS/FIFO attribution, multi-seed accuracy or native acceptance through the public CLI.
+The excluded-submission list above describes the frozen AE scope. The later [PA/SAGE four-arm ablation](ABLATION.md) passed prepared-server AE self-service reproduction on 2026-09-25. It supports the stated single-configuration, single-epoch performance table, with adjacency-only GR, aligned first-three-arm RevPR hot sets and fresh workers. It does not establish every paper ablation, isolated NS/FIFO attribution, multi-seed accuracy or standalone native reproduction from this concise checkout.

@@ -1,0 +1,24 @@
+{
+  "arm_sources": {
+    "digit_full": "cache_v3",
+    "gids": "cache_v3",
+    "gr": "graph_v4",
+    "ns": "cache_v3"
+  },
+  "candidates": {
+    "cache_v3": {
+      "path": "provenance/pa_sage_ablation_cache_v3_manifest.json",
+      "sha256": "2fa25aaa0d34ec77c46fe1bfe169577d546b152aac1d18acc9cf8325337d7a6c"
+    },
+    "graph_v4": {
+      "path": "provenance/pa_sage_ablation_graph_v4_manifest.json",
+      "sha256": "3577bf914261c8f7d96794143922e902bf8e0f95ef088a791b954ba7532d6b45"
+    },
+    "resume2": {
+      "path": "provenance/pa_sage_ablation_resume2_manifest.json",
+      "sha256": "1d00e77eeec3e4e6785463841bd9554fe9b49097c3f96bb24c0c6be7b0e5b172"
+    }
+  },
+  "historical": "provenance/pa_sage_ablation_perf_v2_historical_manifest.json",
+  "schema": "digit-mixed-ablation-source-index-v1"
+}

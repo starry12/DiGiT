@@ -46,20 +46,18 @@ These selected measurements are [fresh reviewer full results](reference/results.
 
 ### PA/SAGE component ablation
 
-Accepted author measurements: one complete seed-0 training epoch per arm, without validation/test.
+Accepted AE self-service measurements, completed 2026-09-25: one full seed-0 training epoch per arm, without validation/test.
 
 | Stage | Training time (s) | Speedup vs GIDS |
 |---|---:|---:|
-| GIDS | 194.45 | 1.0000× |
-| +GR (adjacency only) | 194.76 | 0.9984× |
-| ++NS | 161.73 | 1.2023× |
-| DiGiT | 104.50 | 1.8608× |
+| GIDS | 194.63 | 1.0000× |
+| +GR (adjacency only) | 196.12 | 0.9924× |
+| ++NS | 160.38 | 1.2136× |
+| DiGiT | 103.69 | 1.8770× |
 
-All arms use a 4 GiB GPU feature cache; the first three share the main RevPR CPU hot set. +GR changes adjacency order only. GR→NS also changes feature layout. Training time excludes preparation and setup; these measurements are separate from the main 20-epoch accuracy experiments above.
+Four-arm smoke and full acceptance passed with normal exits and zero monitor query errors. All arms use a 4 GiB GPU feature cache; the first three share the main RevPR CPU hot set. +GR changes adjacency order only; GR→NS also changes feature layout. Training excludes preparation and setup.
 
-[Full results and protocol](docs/ABLATION.md) · [Download CSV](reference/pa_sage_ablation_perf.csv) · [Acceptance evidence](reference/pa_sage_ablation_perf.json)
-
-The separate AE reproduction is incomplete and paused pending a quieter server window. See [current status](docs/ABLATION.md#current-ae-reproduction-status--2026-09-24).
+[Full results and protocol](docs/ABLATION.md) · [Download CSV](reference/pa_sage_ablation_perf.csv) · [AE acceptance evidence](reference/pa_sage_ablation_perf.json) · [Earlier author results](reference/pa_sage_ablation_author_20260924.json)
 
 The [validation receipt](provenance/validation.json) records 22 model/budget checks, eight entry/counter boundary checks, a three-model CPU example, exact environment checks, and source/configuration parity checks. A subsequent [fresh-install and native-build receipt](provenance/native_build_validation.json) records successful locked environment installation, the three-model CPU example, compilation and module imports. After restoring the omitted `GIDS.breakdown` dependency, GPU/SSD preflight and paired smoke passed for all three models: six workers exited normally, strict monitors reported zero query errors, and 130 evidence hashes matched. Each arm performed four training updates and two limited validation calls, with no final test. The [rebuilt-source receipt](reference/rebuilt_native_smoke.json) records the accepted package identity and binary reuse; this does not claim new full experiments or reviewer-account workflow acceptance. Earlier validation receipts retain their original scope.
 

@@ -732,11 +732,14 @@
   "scope": "Fresh reviewer full pairs on the sealed server release; rebuilt-source short acceptance is separately recorded",
   "supplementary_experiments": {
     "pa_sage_component_ablation": {
-      "description": "Cache-aligned author ablation with adjacency-only GR; one complete first epoch per arm",
-      "historical_receipt": "reference/pa_sage_ablation_perf_v2_historical.json",
+      "csv": "reference/pa_sage_ablation_perf.csv",
+      "description": "Fresh AE self-service four-arm ablation, completed 2026-09-25; one full first epoch per arm",
+      "earlier_protocol_receipt": "reference/pa_sage_ablation_perf_v2_historical.json",
+      "historical_receipt": "reference/pa_sage_ablation_author_20260924.json",
+      "native_acceptance": true,
       "receipt": "reference/pa_sage_ablation_perf.json",
       "submitted_main_matrix": false,
-      "training_speedup": 1.860821171401096
+      "training_speedup": 1.8769720364905167
     }
   }
 }
