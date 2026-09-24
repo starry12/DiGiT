@@ -1,21 +1,24 @@
 {
-  "schema": "digit-one-epoch-performance-freeze-v2",
-  "parent_candidate_sha256": "a6049d5c8a7580a923cc156400edcee58686196de83e325e6b1ea533102fefe2",
-  "files": {
-    "README.md": "b46dc56a1a86494d3260dcb95631870ed320c2db4052a11cfb860de69e0fcf00",
-    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "admission.py": "867fd18e0a6e2c9afd5359e35dc6697439ffa4e98aeddec78c382663d9b06428",
-    "common.py": "d883a822974d42d0dc4881dda1c61d95948ed15d3c2c242327fc1a95667d67a9",
-    "protocol.json": "7266ff079c393ee3eda368af9bb64c06dcbac9456a00e3f7fa48fba4fa414952",
-    "run.py": "9352656b4e5c24b3dc6343b36bebeabb6e2b120fcdcbc877232bbe5228b54e50",
-    "sampling.py": "ccf654e7d8699e207aaeecf46b95519669285ecdc89703a3098c8b07b33e48aa",
-    "tests.py": "067afad5cafbb451bec6d536f61e8be192d3c68a8ed0317378126ae7c6c69fa1",
-    "training_loop.py": "e56e90cd36720cdb15d56f82a74290b7292c2038ee6bbd3f4c85533db4fc6b9b",
-    "validation.py": "d1bec16ca523cd162d338c93985245dfbe234cd90a055e3c08bcf1a3ec735801",
-    "worker.py": "ddd1dfd00b5eef0e9580704660d6b272a71816bf75ab7d7314620204282acf4a"
+  "arm_sources": {
+    "digit_full": "cache_v3",
+    "gids": "cache_v3",
+    "gr": "graph_v4",
+    "ns": "cache_v3"
   },
-  "external_files": {
-    "results/pa_sage_ablation_perf_20260924_v2/start.py": "d23272145f39c5d7a940b6ce63580406fe3cf5cac1d5d546eeeedb043b4ff7b2",
-    "results/pa_sage_ablation_perf_20260924_v2/launcher_tests.py": "ace4367883109974aaa79115feed4034605dffb545dc44c91a8e01a55d3d9465"
-  }
+  "candidates": {
+    "cache_v3": {
+      "path": "provenance/pa_sage_ablation_cache_v3_manifest.json",
+      "sha256": "2fa25aaa0d34ec77c46fe1bfe169577d546b152aac1d18acc9cf8325337d7a6c"
+    },
+    "graph_v4": {
+      "path": "provenance/pa_sage_ablation_graph_v4_manifest.json",
+      "sha256": "3577bf914261c8f7d96794143922e902bf8e0f95ef088a791b954ba7532d6b45"
+    },
+    "resume2": {
+      "path": "provenance/pa_sage_ablation_resume2_manifest.json",
+      "sha256": "1d00e77eeec3e4e6785463841bd9554fe9b49097c3f96bb24c0c6be7b0e5b172"
+    }
+  },
+  "historical": "provenance/pa_sage_ablation_perf_v2_historical_manifest.json",
+  "schema": "digit-mixed-ablation-source-index-v1"
 }

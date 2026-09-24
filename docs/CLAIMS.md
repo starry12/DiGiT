@@ -15,4 +15,4 @@ BFS, IG/web graphs, ablations, sensitivity, scalability, other systems and multi
 
 ## Later supplementary evidence
 
-The excluded-submission list above remains the frozen AE scope. A later [author PA/SAGE four-stage ablation](ABLATION.md) has passed native acceptance for one training epoch per arm, with measured I/O and no validation/test. It covers only this reconstruction and configuration; it does not establish the full paper ablation matrix, multi-seed accuracy, or native acceptance through the public CLI.
+The excluded-submission list above still describes the frozen AE scope. The later [cache-aligned author ablation](ABLATION.md) now includes adjacency-only GR and accepted NS/DiGiT full epochs. It supports this single-configuration, single-epoch performance table, not every paper ablation, isolated NS/FIFO attribution, multi-seed accuracy or native acceptance through the public CLI.

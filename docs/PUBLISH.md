@@ -30,4 +30,6 @@ The project license decision remains pending in [LICENSE_STATUS](../LICENSE_STAT
 
 ## Supplementary ablation results update — 2026-09-24
 
-This update publishes [one-epoch author ablation results](ABLATION.md), their protocol, source-candidate identity and evidence hashes. It keeps actual measured GIDS time 227.37 s, the 2.1531x end-to-end training speedup and the 8.09% NS regression. The main three-model index entries, training implementation, reviewer service and frozen `ae-pa-v1` are unchanged. This is a documentation/result publication; the author four-arm controller is not ported into the concise runtime.
+This revision replaces the selected supplementary table with [cache-aligned results and adjacency-only GR](ABLATION.md): 194.45/194.76/161.73/104.50 s, 1.8608x. The previous published receipt and candidate identity are archived explicitly. Each current arm records its actual source candidate and report hash; GIDS/GR were reused, NS/DiGiT rerun. Main model rows, training implementation, reviewer service and frozen ae-pa-v1 remain unchanged. This update also supplies a separate prepared-server four-arm command extension; its installation/native acceptance remains pending. It does not modify the concise main training implementation.
+
+The prepared-server extension is in `tools/ablation/`. Administrator installation and an actual new four-arm run must be verified before claiming reviewer acceptance. The current published table remains the accepted author evidence.

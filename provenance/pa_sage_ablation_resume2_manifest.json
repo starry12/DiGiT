@@ -1,0 +1,26 @@
+{
+  "schema": "digit-ns-digit-continuation-v1",
+  "worker_candidate_sha256": "2fa25aaa0d34ec77c46fe1bfe169577d546b152aac1d18acc9cf8325337d7a6c",
+  "gr_candidate_sha256": "3577bf914261c8f7d96794143922e902bf8e0f95ef088a791b954ba7532d6b45",
+  "physical_gpu": 2,
+  "files": {
+    "evidence.py": "bf9c44631a1b0ead6914b77a38665512f46059e85f868a237faeb9708124ece1",
+    "start.py": "0e1af62c3ce43d762a2552df69a3e0e04d260c451cf4b64904f0f331bf55a503",
+    "run.py": "b30c8cc759a86b05e556f011dfe009622c76c7814da5db9b65be41a02dc39feb",
+    "tests.py": "5c7eac4bddd3b33658be585a7d1dd542d04d8a11f1e70a4ffa1137b465171304"
+  },
+  "evidence": {
+    "results/pa_sage_ablation_graph_20260924_v4/native/status.json": "6369a2746be1b66266353c46d7d67b97c4d047e962d6984d935f9116f48253ea",
+    "results/pa_sage_ablation_graph_20260924_v4/native/inputs.json": "67b6d8595894878454f666cf54a68d2df4168e0d83b9548806b4bb178425106e",
+    "results/pa_sage_ablation_graph_20260924_v4/native/full_gr_accepted.json": "d80211936d959affbb255b232726e9847c0c73aecb507d2aa8c0ed6f26f8a166",
+    "results/pa_sage_ablation_graph_20260924_v4/native/full/gr/report.json": "d2fe7f226e1f50fddae263cbad8fd5abd2d07e5003ae489c02e29e89cfd7725a",
+    "results/pa_sage_ablation_graph_20260924_v4/native/full/gr/worker_ready.json": "9e11fe3e901b36c20cbc154ac69efcae62623c3e8a2ac42e4da22987220af392",
+    "results/pa_sage_ablation_graph_20260924_v4/native/full/gr/release_worker.json": "6b8c44bda0a1378c49088980fab7be308285b70c6d11eafd0d7fb48c2ee62765",
+    "results/pa_sage_ablation_graph_20260924_v4/native/full/gr/resources.json": "3628a535ffe0a194820f332570fa21ed0f622b7bc3d7d313de73d3104af6a2df",
+    "results/pa_sage_ablation_graph_20260924_v4/native/full/gr/final_model.pt": "4d0c9e128f340cc917753429b4c59eff57c3a2de3a6ee8aded59c921af02139b",
+    "results/pa_sage_ablation_graph_20260924_v4/native/full_monitor_gr/external_gpu/summary.json": "ac18e4894c4e5a48fbe459ef5be79459bc0f09dd845c4cceb4744431956bdfe5",
+    "results/pa_sage_ablation_graph_20260924_v4/native/full_monitor_gr/external_gpu/samples.jsonl": "7549995ab81517a4f735edc6b16c32f278c39792785553501a9189d8bd7cb148",
+    "results/pa_sage_ablation_cache_20260924_v3/resume1/evidence.py": "34c16d16d2c604816a9c3c8ee2bb04ec406ae2d01c8c94d56c843388e317352b",
+    "results/pa_sage_ablation_cache_20260924_v3/resume1/manifest.json": "29c9fa18fea5194f619bd3f30505f91d7eaf59829e1ace0bf0d8bd77b2ef2320"
+  }
+}

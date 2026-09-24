@@ -12,4 +12,4 @@ For a new local native run, use `summarize --input` with a successful matching-p
 
 ## Supplementary ablation
 
-[Measured four-stage PA/SAGE results](ABLATION.md) use one complete first epoch per arm and no validation/test. Use 227.37 s as their zero-CPU-cache GIDS baseline, giving 2.1531x for DiGiT; retain the NS-versus-GR slowdown. The main 1.8027x SAGE result above is a separate comparison. The [index](../reference/results.json) keeps these results under `supplementary_experiments` without changing the selected model rows.
+[Updated PA/SAGE ablation](ABLATION.md): GIDS/+GR/++NS/DiGiT take 194.45/194.76/161.73/104.50 s, with 1.8608x DiGiT speedup. GIDS and GR are reused accepted runs, NS/DiGiT are fresh runs on the same GPU. Use this measured baseline; keep the main 1.8027x SAGE comparison and [previous zero-CPU-cache experiment](../reference/pa_sage_ablation_perf_v2_historical.json) separate. Preparation and setup are excluded. No accuracy or steady-state claim; GR→NS also changes feature layout. The [index](../reference/results.json) preserves all main model rows.

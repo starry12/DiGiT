@@ -732,10 +732,11 @@
   "scope": "Fresh reviewer full pairs on the sealed server release; rebuilt-source short acceptance is separately recorded",
   "supplementary_experiments": {
     "pa_sage_component_ablation": {
-      "description": "Author native performance-only four-stage ablation, one epoch per arm; zero CPU cache baseline",
+      "description": "Cache-aligned author ablation with adjacency-only GR; one complete first epoch per arm",
+      "historical_receipt": "reference/pa_sage_ablation_perf_v2_historical.json",
       "receipt": "reference/pa_sage_ablation_perf.json",
       "submitted_main_matrix": false,
-      "training_speedup": 2.1531157434456034
+      "training_speedup": 1.860821171401096
     }
   }
 }

@@ -78,4 +78,6 @@ The CPU example runs three updates with each selected model and optimizer. It ne
 
 ## Supplementary author experiments
 
-[PA/SAGE component ablation](docs/ABLATION.md) now has accepted one-epoch performance results: GIDS (CPU cache disabled), +GR, ++NS and DiGiT took **227.37 / 167.93 / 181.51 / 105.60 s**. DiGiT is **2.1531x** faster than this measured GIDS baseline; NS is **8.09% slower** than GR. This supplements the main results and does not replace their CPU-cache-enabled GIDS reference or accuracy protocol. [Protocol and acceptance receipt](reference/pa_sage_ablation_perf.json). The four-arm author controller is not integrated into the published or reviewer CLI.
+[PA/SAGE component ablation](docs/ABLATION.md) has updated accepted results: **194.45 / 194.76 / 161.73 / 104.50 s** for GIDS, adjacency-only +GR, ++NS and DiGiT; **1.8608x** DiGiT speedup. The first three arms share the main RevPR CPU hot set. Each result covers one complete first epoch with no validation/test. GR→NS also changes feature layout. [Protocol and acceptance](reference/pa_sage_ablation_perf.json); [previous experiment](reference/pa_sage_ablation_perf_v2_historical.json). Main three-model accuracy results and the frozen submission are separate; the prepared-server four-arm extension is described below; its installation acceptance is separate.
+
+The [four-arm command extension](docs/ABLATION.md#four-arm-ae-command) is ready for administrator installation; new AE-account native acceptance is pending.
