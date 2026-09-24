@@ -8,6 +8,7 @@ This repository provides the DiGiT implementation, the GIDS comparison path, and
 
 | What you want to do | Start here |
 |---|---|
+| View PA/SAGE ablation results | [Results table](#pa-sage-component-ablation) and [CSV download](reference/pa_sage_ablation_perf.csv) |
 | Run experiments on the provided AE server | [Reviewer guide](docs/REVIEWER.md) and [AE server commands](#ae-environment-and-reproduction) |
 | Create an environment from scratch on your own machine | [Environment setup](docs/ENVIRONMENT.md): prerequisites, locked dependencies and checks |
 | Compile DiGiT and its GIDS/BaM dependencies | [Native build guide](docs/NATIVE_BUILD.md) |
@@ -30,7 +31,7 @@ The service currently executes the preserved, accepted server release. This repo
 
 ## Current evaluation scope
 
-The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each full comparison uses seed 0, 20 epochs, full validation and one final test. This is a reconstruction of the paper implementation; BFS is disabled.
+The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each full comparison uses seed 0, 20 epochs, full validation and one final test. This is a reconstruction of the paper implementation.
 
 The source tree contains one selected implementation per model. It excludes research Git history, intermediate implementations, training logs, checkpoints, compiled binaries and datasets.
 
@@ -43,6 +44,23 @@ The source tree contains one selected implementation per model. It excludes rese
 | GAT | 1.7266× | 48.6204% | 47.9574% | Fresh reviewer full pair; strict monitoring passed |
 
 These selected measurements are [fresh reviewer full results](reference/results.json) from the sealed server release. GCN and GAT completed through the reviewer-account workflow on 2026-09-24: each arm ran 20 epochs, 20 full validations and one final test; all workers exited normally and strict monitors had zero query errors. The [full acceptance receipt](reference/reviewer_full.json) binds 202 independently checked evidence hashes. DiGiT test accuracy is lower by 0.3788 percentage points for GCN and 0.6630 for GAT. One seed does not establish statistical accuracy equivalence or the paper's absolute accuracy. The [previous index](reference/results_before_reviewer_full_20260924.json) preserves original GCN/GAT results, including four GCN GIDS monitor timeouts. [Earlier reviewer smoke](reference/reviewer_smoke.json) and rebuilt-source acceptance remain separate. See [metric definitions](docs/RESULTS.md).
+
+### PA/SAGE component ablation
+
+Accepted author measurements: one complete seed-0 training epoch per arm, without validation/test.
+
+| Stage | Training time (s) | Speedup vs GIDS |
+|---|---:|---:|
+| GIDS | 194.45 | 1.0000× |
+| +GR (adjacency only) | 194.76 | 0.9984× |
+| ++NS | 161.73 | 1.2023× |
+| DiGiT | 104.50 | 1.8608× |
+
+All arms use a 4 GiB GPU feature cache; the first three share the main RevPR CPU hot set. +GR changes adjacency order only. GR→NS also changes feature layout. Training time excludes preparation and setup; these measurements are separate from the main 20-epoch accuracy experiments above.
+
+[Full results and protocol](docs/ABLATION.md) · [Download CSV](reference/pa_sage_ablation_perf.csv) · [Acceptance evidence](reference/pa_sage_ablation_perf.json)
+
+The separate AE reproduction is incomplete and paused pending a quieter server window. See [current status](docs/ABLATION.md#current-ae-reproduction-status--2026-09-24).
 
 The [validation receipt](provenance/validation.json) records 22 model/budget checks, eight entry/counter boundary checks, a three-model CPU example, exact environment checks, and source/configuration parity checks. A subsequent [fresh-install and native-build receipt](provenance/native_build_validation.json) records successful locked environment installation, the three-model CPU example, compilation and module imports. After restoring the omitted `GIDS.breakdown` dependency, GPU/SSD preflight and paired smoke passed for all three models: six workers exited normally, strict monitors reported zero query errors, and 130 evidence hashes matched. Each arm performed four training updates and two limited validation calls, with no final test. The [rebuilt-source receipt](reference/rebuilt_native_smoke.json) records the accepted package identity and binary reuse; this does not claim new full experiments or reviewer-account workflow acceptance. Earlier validation receipts retain their original scope.
 
@@ -75,9 +93,3 @@ The CPU example runs three updates with each selected model and optimizer. It ne
 - `reference/`: selected result summaries and the necessary deterministic SAGE correctness oracle.
 
 [Data](docs/DATA.md) and [native build instructions](docs/NATIVE_BUILD.md) describe the prepared-input contract. A fresh end-to-end dataset download/preparation pipeline and a container deployment have not been validated. IG and the web graphs, ablations, sensitivity and scalability are outside this submission. Project licensing is recorded in [LICENSE_STATUS.md](LICENSE_STATUS.md).
-
-## Supplementary author experiments
-
-[PA/SAGE component ablation](docs/ABLATION.md) has updated accepted results: **194.45 / 194.76 / 161.73 / 104.50 s** for GIDS, adjacency-only +GR, ++NS and DiGiT; **1.8608x** DiGiT speedup. The first three arms share the main RevPR CPU hot set. Each result covers one complete first epoch with no validation/test. GR→NS also changes feature layout. [Download results CSV](reference/pa_sage_ablation_perf.csv); [protocol and acceptance](reference/pa_sage_ablation_perf.json); [previous experiment](reference/pa_sage_ablation_perf_v2_historical.json). Main three-model accuracy results and the frozen submission are separate; the prepared-server four-arm extension is described below; its installation acceptance is separate.
-
-The [four-arm command extension](docs/ABLATION.md#four-arm-ae-command) is installed. Its separate AE reproduction is incomplete and paused pending a quieter server window; the accepted author measurements above remain the selected results. See the [current status and monitoring distinction](docs/ABLATION.md#current-ae-reproduction-status--2026-09-24).

@@ -11,7 +11,7 @@ The DiGiT paper is the scope reference; original paper source was unavailable, s
 
 Fixed settings: batch 1024, fanouts 10/5/5, three layers, hidden width 128, dropout 0.2, g2, GPU cache 4 GiB and CPU cache 11,105,992 rows. SAGE uses Adam lr 0.001 / weight decay 0; GCN/GAT use lr 0.01 / weight decay 0.001. GAT has four heads. The authoritative selected protocols are in `training/{sage,gcn,gat}/protocol.json`.
 
-BFS, IG/web graphs, ablations, sensitivity, scalability, other systems and multi-seed accuracy claims are excluded. The GIDS path includes the disclosed static CPU-cache adaptation. The source tree has been reorganized; current service evidence belongs to its separately sealed server release. [Source provenance](../provenance/source_map.json) records the relationship.
+IG/web graphs, ablations, sensitivity, scalability, other systems and multi-seed accuracy claims are excluded. The GIDS path includes the disclosed static CPU-cache adaptation. The source tree has been reorganized; current service evidence belongs to its separately sealed server release. [Source provenance](../provenance/source_map.json) records the relationship.
 
 ## Later supplementary evidence
 
