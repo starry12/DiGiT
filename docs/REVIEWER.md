@@ -29,3 +29,7 @@ This repeats paired smoke before two fresh 20-epoch workers; each worker validat
 Replace `sage` with `gcn` or `gat` for those models. All three models now have accepted full reviewer pairs. GCN followed by GAT completed on 2026-09-24 in 5 h 10 min 20 s combined, including repeated smoke and initialization. Each full arm completed 20 epochs, 20 full validations and a final test, with zero monitor query errors; see [full acceptance](../reference/reviewer_full.json). Use `digit-ae results PA gcn --action run` or the corresponding GAT command to inspect existing results without launching another run. The CLI selects the latest request; the receipt identifies the fixed accepted directories. [Earlier smoke acceptance](../reference/reviewer_smoke.json) remains separate.
 
 The server release remains separately sealed. `activate.sh` changes into that server directory. To inspect this concise repository, return to your clone and consult [CODE.md](CODE.md). Do not equate a newly built checkout with an already accepted service binary; each new deployment needs its own preflight/smoke evidence.
+
+## Supplementary author ablation
+
+[PA/SAGE one-epoch ablation](ABLATION.md) is available as curated existing evidence. It ran under an administrator-owned author service, not this reviewer self-service interface. Do not use the standard two-arm `run` command as a four-arm ablation reproduction. The main reviewer experiment protocol remains 20 epochs with validation/test.

@@ -75,3 +75,7 @@ The CPU example runs three updates with each selected model and optimizer. It ne
 - `reference/`: selected result summaries and the necessary deterministic SAGE correctness oracle.
 
 [Data](docs/DATA.md) and [native build instructions](docs/NATIVE_BUILD.md) describe the prepared-input contract. A fresh end-to-end dataset download/preparation pipeline and a container deployment have not been validated. IG and the web graphs, ablations, sensitivity and scalability are outside this submission. Project licensing is recorded in [LICENSE_STATUS.md](LICENSE_STATUS.md).
+
+## Supplementary author experiments
+
+[PA/SAGE component ablation](docs/ABLATION.md) now has accepted one-epoch performance results: GIDS (CPU cache disabled), +GR, ++NS and DiGiT took **227.37 / 167.93 / 181.51 / 105.60 s**. DiGiT is **2.1531x** faster than this measured GIDS baseline; NS is **8.09% slower** than GR. This supplements the main results and does not replace their CPU-cache-enabled GIDS reference or accuracy protocol. [Protocol and acceptance receipt](reference/pa_sage_ablation_perf.json). The four-arm author controller is not integrated into the published or reviewer CLI.

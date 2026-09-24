@@ -729,5 +729,13 @@
       "strict_resource_acceptance": true
     }
   },
-  "scope": "Fresh reviewer full pairs on the sealed server release; rebuilt-source short acceptance is separately recorded"
+  "scope": "Fresh reviewer full pairs on the sealed server release; rebuilt-source short acceptance is separately recorded",
+  "supplementary_experiments": {
+    "pa_sage_component_ablation": {
+      "description": "Author native performance-only four-stage ablation, one epoch per arm; zero CPU cache baseline",
+      "receipt": "reference/pa_sage_ablation_perf.json",
+      "submitted_main_matrix": false,
+      "training_speedup": 2.1531157434456034
+    }
+  }
 }
