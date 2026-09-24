@@ -18,6 +18,10 @@ The frozen tag remains unchanged. If the submitted version should include newer 
 
 Do not commit datasets, credentials, checkpoints, local deployment bindings or raw generated run directories. Curated acceptance summaries and evidence hashes belong under `reference/` or `provenance/`. Source updates do not modify `/srv/digit-ae/releases/digit_ae_20260923_v3`; its native acceptance belongs to that sealed release. The concise source now has a fresh-install and compilation [receipt](../provenance/native_build_validation.json); PA/SAGE, GCN and GAT GPU/SSD preflight and paired smoke have also passed after the runtime dependency repair; the [rebuilt-source receipt](../reference/rebuilt_native_smoke.json) binds the accepted package, six worker results and 130 evidence hashes. The receipt records the original run identity; the documentation-only publication snapshot has its own manifest identity. These follow-up changes do not alter the submitted `ae-pa-v1`.
 
+## Reviewer full results update — 2026-09-24
+
+The current [result index](../reference/results.json) selects fresh reviewer full pairs for SAGE, GCN and GAT. [GCN/GAT acceptance](../reference/reviewer_full.json) records 202 evidence hashes; the [previous index](../reference/results_before_reviewer_full_20260924.json) preserves historical monitoring gaps and measurements. This documentation/evidence update changes no training implementation or sealed server package. The submitted `ae-pa-v1` remains unchanged.
+
 ## Submission closeout
 
 The author confirmed on 2026-09-23 that the conference AE form has been submitted using `ae-pa-v1` (commit `e03c15277c57690fd7b7ee96acff85566d06b9c6`). This is an author-confirmed submission status; the conference success receipt was not independently inspected. Later main documentation updates do not change that submitted version. Preserve the tag and use a separate version for any subsequent delivery.
