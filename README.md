@@ -8,29 +8,93 @@ This repository provides the DiGiT implementation, the GIDS comparison path, and
 
 | What you want to do | Start here |
 |---|---|
-| Run experiments on the provided AE server | [Reviewer guide](docs/REVIEWER.md) and [AE server commands](#ae-environment-and-reproduction) |
+| Run experiments on the provided AE server | [Main experiments, ablation and layout-grid commands](#ae-environment-and-reproduction) |
 | Create an environment from scratch on your own machine | [Environment setup](docs/ENVIRONMENT.md): prerequisites, locked dependencies and checks |
 | Compile DiGiT and its GIDS/BaM dependencies | [Native build guide](docs/NATIVE_BUILD.md) |
 | Connect the prepared graph, features and SSD data | [Data guide](docs/DATA.md) |
 
 ## AE environment and reproduction
 
-The provided AE server includes the Python/CUDA environment, compiled native components and prepared data. SSH access is provided privately through the AE channel. After login, activate the prepared environment and start the short comparison:
+The provided AE server includes the Python/CUDA environment, compiled native components, prepared read-only data, and the installed ablation and layout-grid extensions. Log in with the reviewer SSH account supplied privately through AE, then activate the environment:
 
 ```bash
 source /srv/digit-ae/activate.sh
-digit-ae smoke PA sage
-digit-ae status PA sage
-digit-ae results PA sage --action smoke
 ```
 
-After smoke passes, start a full comparison with `digit-ae run PA sage` and read it with `digit-ae results PA sage --action run`. Substitute `gcn` or `gat` for the other models; run requests sequentially. Services survive SSH disconnects. [Reviewer instructions](docs/REVIEWER.md) explain progress, completion and result export.
+**Run one request at a time:** main models, ablation and the layout grid share GPU 2 and the SSD. Wait for the current request to finish and release resources before starting the next; busy requests are rejected rather than queued. Each launch creates fresh results and continues after SSH disconnects. No local build or data preparation is needed on this server.
 
-The service currently executes the preserved, accepted server release. This repository reorganizes that release into a concise source tree; its native compilation in a fresh locked environment and subsequent PA/SAGE, GCN and GAT preflight and paired smoke have passed; see the [rebuilt-source receipt](reference/rebuilt_native_smoke.json). Source origins and adaptations are recorded in [the source map](provenance/source_map.json). The service is not silently upgraded when this repository changes.
+### Main experiments: PA × GraphSAGE / GCN / GAT
+
+Choose one model below. Each `run` request performs paired smoke first, then trains **GIDS → DiGiT for 20 epochs each**, with full validation after every epoch and one final test per system.
+
+| Model | Start a new full comparison | Read its results |
+|---|---|---|
+| GraphSAGE | `digit-ae run PA sage` | `digit-ae results PA sage --action run` |
+| GCN | `digit-ae run PA gcn` | `digit-ae results PA gcn --action run` |
+| GAT | `digit-ae run PA gat` | `digit-ae results PA gat --action run` |
+
+For progress and recent logs, use the same model name:
+
+```bash
+digit-ae status PA sage --action run
+digit-ae logs PA sage --action run
+```
+
+For a short check on its own, use `digit-ae smoke PA sage`, then `digit-ae results PA sage --action smoke`; substitute `gcn` or `gat` as needed. A full `run` already includes smoke, so this separate request is optional.
+
+### Component ablation: PA / GraphSAGE
+
+This request runs four-arm smoke, then **GIDS → +GR (adjacency only) → ++NS → DiGiT**, each for **one complete training epoch (1,179 updates), without validation/test**:
+
+```bash
+digit-ae ablation PA sage
+digit-ae status PA sage --action ablation
+digit-ae results PA sage --action ablation
+digit-ae logs PA sage --action ablation
+```
+
+Expect a four-row table of training seconds and speedup versus GIDS after acceptance. The existing AE run has passed; [protocol and evidence](docs/ABLATION.md) describe the cache settings and component boundaries.
+
+### Grouping and replication grid: PA / GraphSAGE
+
+This request covers **group sizes {1, 2, 4} × replication ratios {0%, 10%, 20%, 40%, 80%}**, for **15 fresh full-epoch measurements (1,179 updates each), without validation/test**:
+
+```bash
+digit-ae layout PA sage
+digit-ae status PA sage --action layout
+digit-ae results PA sage --action layout
+digit-ae logs PA sage --action layout
+```
+
+The service reuses the 15 prepared layouts and shared proxy-feature SSD region, with real sampling, I/O and model updates. It runs a fresh g2/r20 smoke before the full grid; the other 14 points retain the declared runtime checks. It does not regenerate large layouts. Status reports completion out of 15; accepted results list training seconds and speedup relative to g2/r20.
+
+The published author grid is accepted and the AE extension is installed; a fresh AE grid replay has not yet been accepted. To view the author measurements without starting a run:
+
+```bash
+digit-ae results PA sage --action layout --reference
+```
+
+This explicitly prints `AUTHOR_REFERENCE`, separate from a new AE request's `PASS`. See [grid protocol and evidence](docs/LAYOUT_GRID.md) for proxy-feature calibration and verification scope.
+
+### Completion, stopping and result files
+
+`status`, `logs` and `results` only inspect records. Use the matching `--action run`, `--action ablation` or `--action layout` above to select the experiment. They select the latest request for that action, including a failed one. Final **`PASS` requires accepted reports and successful service completion**; a launch acknowledgement or running/provisional table is not final acceptance. The printed output path contains the logs, reports and summaries and can be downloaded with SFTP/SCP through the supplied SSH route.
+
+To cancel a request, use its matching command and wait for inactive status and resource release:
+
+| Request | Stop command |
+|---|---|
+| Main comparison | `digit-ae stop PA sage` (substitute `gcn` or `gat`) |
+| Four-arm ablation | `digit-ae stop PA sage --action ablation` |
+| Layout grid | `digit-ae stop PA sage --action layout` |
+
+The main SAGE full workflow previously took about **2 h 25 min**, and four-arm ablation about **59 min**, including smoke and setup. These are observed wall times, not estimates from the per-epoch result tables; server load can change them. [Reviewer instructions](docs/REVIEWER.md) provide additional troubleshooting and environment details.
+
+The main experiments execute the preserved, accepted server release; the supplementary services use separately installed runtime snapshots. This repository reorganizes the main release into a concise source tree; its native compilation in a fresh locked environment and subsequent PA/SAGE, GCN and GAT preflight and paired smoke have passed; see the [rebuilt-source receipt](reference/rebuilt_native_smoke.json). Source origins and adaptations are recorded in [the source map](provenance/source_map.json). Server runtimes are updated through explicit installation.
 
 ## Current evaluation scope
 
-The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each full comparison uses seed 0, 20 epochs, full validation and one final test. This is a reconstruction of the paper implementation.
+The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation and grouping/replication grid use one complete epoch per setting and report performance only. This is a reconstruction of the paper implementation.
 
 The source tree contains one selected implementation per model. It excludes research Git history, intermediate implementations, training logs, checkpoints, compiled binaries and datasets.
 
@@ -104,4 +168,4 @@ The CPU example runs three updates with each selected model and optimizer. It ne
 - `environment/`, `configs/`, `scripts/`: dependency locks, data contracts and build/binding helpers.
 - `reference/`: selected result summaries and the necessary deterministic SAGE correctness oracle.
 
-[Data](docs/DATA.md) and [native build instructions](docs/NATIVE_BUILD.md) describe the prepared-input contract. A fresh end-to-end dataset download/preparation pipeline and a container deployment have not been validated. IG and the web graphs, ablations, sensitivity and scalability are outside this submission. Project licensing is recorded in [LICENSE_STATUS.md](LICENSE_STATUS.md).
+[Data](docs/DATA.md) and [native build instructions](docs/NATIVE_BUILD.md) describe the prepared-input contract. A fresh end-to-end dataset download/preparation pipeline and a container deployment have not been validated. The current prepared server supports the PA main experiments and the supplementary PA/SAGE ablation and layout grid above. IG, the web graphs and the remaining sensitivity/scalability experiments are outside this evaluation. The submitted `ae-pa-v1` remains the frozen initial PA snapshot; these supplementary updates are on `main`. Project licensing is recorded in [LICENSE_STATUS.md](LICENSE_STATUS.md).
