@@ -55,3 +55,7 @@ The extension source is in `tools/ablation/` and targets a separately provisione
 ## Four-arm monitoring
 
 The service uses the original author external `nvidia-smi` monitor: a 5-second subprocess query timeout and a 0.5-second wait after each query. The first successful sample is required before a worker starts. Later query errors are recorded while sampling continues; final acceptance requires zero query errors, normal worker and monitor exits, valid ownership, and resource/report checks. There is no live heartbeat or phase-gap gate. Available-host-memory admission is 192 GiB; cache capacities and training candidates are unchanged.
+
+## Supplementary layout grid — 2026-09-26
+
+The accepted author 15-point grid and exact supplementary code are now indexed in [LAYOUT_GRID](LAYOUT_GRID.md). The prepared-server command is `digit-ae layout PA sage` after extension installation. It produces fresh evidence; publication of the author result is not AE replay acceptance. The main experiments and immutable `ae-pa-v1` are unchanged.

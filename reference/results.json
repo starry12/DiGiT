@@ -740,6 +740,15 @@
       "receipt": "reference/pa_sage_ablation_perf.json",
       "submitted_main_matrix": false,
       "training_speedup": 1.8769720364905167
+    },
+    "pa_sage_layout_grid": {
+      "receipt": "reference/pa_sage_layout_grid.json",
+      "csv": "reference/pa_sage_layout_grid.csv",
+      "description": "Author native PA/SAGE g=1/2/4 x replication=0/10/20/40/80 percent; one full first epoch per point",
+      "native_author_acceptance": true,
+      "ae_replay_acceptance": false,
+      "submitted_main_matrix": false,
+      "points": 15
     }
   }
 }

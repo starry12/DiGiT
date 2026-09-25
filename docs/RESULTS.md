@@ -13,3 +13,7 @@ For a new local native run, use `summarize --input` with a successful matching-p
 ## Supplementary ablation
 
 [AE four-arm results](ABLATION.md): GIDS/+GR/++NS/DiGiT take 194.63/196.12/160.38/103.69 s, with 1.8770× DiGiT speedup. All arms were rerun in one accepted AE request. Each full arm completed one entire epoch without validation/test. Training excludes preparation and setup. GR→NS also changes feature layout, so this is not an isolated NS effect. The [index](../reference/results.json) preserves the main 20-epoch results and links the [historical author receipt](../reference/pa_sage_ablation_author_20260924.json).
+
+## Supplementary layout grid — 2026-09-26
+
+The accepted author 15-point grid and exact supplementary code are now indexed in [LAYOUT_GRID](LAYOUT_GRID.md). The prepared-server command is `digit-ae layout PA sage` after extension installation. It produces fresh evidence; publication of the author result is not AE replay acceptance. The main experiments and immutable `ae-pa-v1` are unchanged.

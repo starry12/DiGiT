@@ -1,0 +1,11 @@
+#!/usr/bin/python3 -I
+"""Dispatch layout explicitly; retain installed main/ablation CLI byte for byte."""
+import os,sys
+BASE='/srv/digit-ae/admin/layout_v1/'
+args=sys.argv[1:]
+layout=bool(args and args[0]=='layout') or any(
+    x=='--action=layout' or x=='--action' and i+1<len(args) and args[i+1]=='layout'
+    for i,x in enumerate(args))
+if args in (['--help'],['-h']):
+    print('Supplementary: digit-ae layout PA sage; inspect with --action layout',flush=True)
+os.execv('/usr/bin/python3',['/usr/bin/python3','-I','-B',BASE+('cli.py' if layout else 'legacy_cli.py'),*args])

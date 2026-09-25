@@ -61,6 +61,21 @@ Four-arm smoke and full acceptance passed with normal exits and zero monitor que
 
 The [validation receipt](provenance/validation.json) records 22 model/budget checks, eight entry/counter boundary checks, a three-model CPU example, exact environment checks, and source/configuration parity checks. A subsequent [fresh-install and native-build receipt](provenance/native_build_validation.json) records successful locked environment installation, the three-model CPU example, compilation and module imports. After restoring the omitted `GIDS.breakdown` dependency, GPU/SSD preflight and paired smoke passed for all three models: six workers exited normally, strict monitors reported zero query errors, and 130 evidence hashes matched. Each arm performed four training updates and two limited validation calls, with no final test. The [rebuilt-source receipt](reference/rebuilt_native_smoke.json) records the accepted package identity and binary reuse; this does not claim new full experiments or reviewer-account workflow acceptance. Earlier validation receipts retain their original scope.
 
+### PA/SAGE grouping and replication
+
+Accepted author measurements: one complete first epoch per point, using shared proxy
+features and real sampling/I/O/model computation. Training seconds:
+
+| Group size | 0% | 10% | 20% | 40% | 80% |
+|---|---:|---:|---:|---:|---:|
+| g = 1 | 120.09 | 119.79 | 120.61 | 122.11 | 122.33 |
+| g = 2 | 105.27 | 104.18 | 104.34 | 104.56 | 104.49 |
+| g = 4 | 92.58 | 91.18 | 92.58 | 92.09 | 90.21 |
+
+[Protocol, verification scope and AE replay commands](docs/LAYOUT_GRID.md) ·
+[JSON](reference/pa_sage_layout_grid.json) · [CSV](reference/pa_sage_layout_grid.csv).
+The author grid is accepted; a fresh AE extension replay remains separately verifiable.
+
 ## Set up from source
 
 Start with Linux x86_64, Git, Python 3 and Conda. The [environment guide](docs/ENVIRONMENT.md) lists the recorded software versions, installation prerequisites and expected check results. Use a new environment directory outside the source checkout:

@@ -35,3 +35,7 @@ The prepared-server four-arm AE request **passed** on 2026-09-25 at 00:55:23 UTC
 The [result index](../reference/results.json), [receipt](../reference/pa_sage_ablation_perf.json), [CSV](../reference/pa_sage_ablation_perf.csv) and [source identities](../provenance/pa_sage_ablation_perf_manifest.json) now select 194.63/196.12/160.38/103.69 s, 1.8770×. The afternoon author receipt, CSV and source index are archived byte for byte; prior cache-disabled evidence remains available.
 
 The installed extension uses the monitor and 192 GiB host-admission sources published in `edaf7aecdd1fdb4e637d9c513f102a0c4558664a`. This publication updates documentation and curated evidence only. It neither starts experiments nor modifies runtime code, data, main model results or the immutable submitted `ae-pa-v1` tag. Server documentation installation and GitHub publication have separate receipts.
+
+## Supplementary layout grid — 2026-09-26
+
+The accepted author 15-point grid and exact supplementary code are now indexed in [LAYOUT_GRID](LAYOUT_GRID.md). The prepared-server command is `digit-ae layout PA sage` after extension installation. It produces fresh evidence; publication of the author result is not AE replay acceptance. The main experiments and immutable `ae-pa-v1` are unchanged.
