@@ -121,26 +121,57 @@ The source tree contains one selected implementation per model. It excludes rese
 
 ## Results and boundaries
 
-| Experiment | Final speedup |
+### PA main experiments
+
+Accepted reviewer comparisons over 20 training epochs per system. Speedup is GIDS training time divided by DiGiT training time.
+
+| Model | Training speedup vs GIDS |
 |---|---:|
-| PA / GraphSAGE main comparison | 1.80× |
-| PA / GCN main comparison | 1.86× |
-| PA / GAT main comparison | 1.73× |
-| PA / GraphSAGE component ablation, final DiGiT vs GIDS | 1.88× |
-| PA / GraphSAGE best layout vs g2/r20 | 1.16× |
-| IG / GraphSAGE, maximum paired speedup across five rounds | 2.02× |
+| GraphSAGE | 1.80× |
+| GCN | 1.86× |
+| GAT | 1.73× |
 
-PA main results are accepted reviewer comparisons over 20 training epochs.
-The accepted PA ablation uses one full epoch per arm. The layout result selects
-g4/r80 from the accepted author grid, relative to g2/r20, rather than GIDS.
-IG is an accepted author short-window result: five paired rounds, each with
-20 warmup and 300 timed mini-batches. Its maximum observed speedup does not
-establish average or stable performance. Fresh AE layout/IG replay acceptance
-remains separate from publication and installation.
+[Main results and metric definitions](docs/RESULTS.md).
 
-[Metric definitions](docs/RESULTS.md) · [Ablation protocol](docs/ABLATION.md) ·
-[Layout protocol](docs/LAYOUT_GRID.md) · [IG protocol](docs/IG_PERFORMANCE.md).
-Default presentation shows final speedups; machine-readable audit evidence is retained.
+### PA/SAGE component ablation
+
+Accepted AE measurements: one complete training epoch per arm, without validation/test. All speedups use the measured GIDS arm as the baseline.
+
+| Stage | Speedup vs GIDS |
+|---|---:|
+| GIDS | 1.00× |
+| +GR (adjacency only) | 0.99× |
+| ++NS | 1.21× |
+| DiGiT | 1.88× |
+
++GR changes adjacency order only; GR→NS also changes feature layout.
+[Ablation protocol and evidence](docs/ABLATION.md).
+
+### PA/SAGE grouping and replication
+
+Accepted author grid: one complete first epoch per point, with shared proxy features and real sampling, I/O and model computation. Speedups are relative to **g2/r20**, not GIDS.
+
+| Group size | 0% | 10% | 20% | 40% | 80% |
+|---|---:|---:|---:|---:|---:|
+| g = 1 | 0.87× | 0.87× | 0.87× | 0.85× | 0.85× |
+| g = 2 | 0.99× | 1.00× | 1.00× | 1.00× | 1.00× |
+| g = 4 | 1.13× | 1.14× | 1.13× | 1.13× | 1.16× |
+
+[Grid protocol and evidence](docs/LAYOUT_GRID.md). Fresh AE grid replay acceptance remains separate from the author results.
+
+### IG/SAGE performance comparison
+
+Accepted author short-window comparison: five paired rounds, each with 20 warmup and 300 timed mini-batches per system.
+
+| Model | Maximum paired speedup vs GIDS (five rounds) |
+|---|---:|
+| GraphSAGE | 2.02× |
+
+The reported value is the maximum same-round GIDS/DiGiT ratio, not average or stable performance. GIDS uses default CPU scheduling; DiGiT binds to CPU2 after imports. No accuracy or full-epoch claim is made. Fresh AE replay acceptance remains separate from installation.
+
+[IG protocol and evidence](docs/IG_PERFORMANCE.md).
+
+All displayed ratios are rounded to two decimal places; full-precision audit evidence is retained.
 
 ## Set up from source
 
