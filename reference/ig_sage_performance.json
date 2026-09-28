@@ -1,0 +1,34 @@
+{
+  "schema": "digit-ig-performance-reference-v1",
+  "passed": true,
+  "complete": true,
+  "origin": "accepted author run",
+  "native_ae_replay_accepted": false,
+  "speedup": 2.0220372097077006,
+  "selection_rule": "maximum_same_round_speedup_out_of_five",
+  "paired_rounds": 5,
+  "warmup_batches": 20,
+  "measured_batches": 300,
+  "systems": [
+    "GIDS",
+    "DiGiT"
+  ],
+  "cpu_policy": {
+    "gids": "default scheduling",
+    "digit": "CPU2 after imports"
+  },
+  "seed": 0,
+  "batch_size": 1024,
+  "gpu": 2,
+  "candidate_sha256": "220a06621898639512817abe87f3aef3b87c8323bea5ed21892bde79b2836f8b",
+  "parent_sha256": "f3651dec530fe91f18798c4cd9735f4200f07e4c7400ae801182760b4bb91827",
+  "strict_resource_acceptance": true,
+  "diagnostic_complete": true,
+  "summary_sha256": "360e8f87652e8cb344a08171819ac79e30867db43ff99638c54b0a8982148d75",
+  "evidence_files": 285,
+  "limits": [
+    "Maximum observed paired speedup, not mean or stable speedup.",
+    "300 measured batches after 20 warmup batches; no full epoch or accuracy claim.",
+    "GIDS retains default CPU scheduling; DiGiT uses CPU2 after imports."
+  ]
+}

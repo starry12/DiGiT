@@ -1,0 +1,59 @@
+{
+  "schema": "digit-ig-host-telemetry-protocol-v1",
+  "parent_candidate_sha256": "64f861d639361408a5e892ecd5acf57478a3fb5d1b269b770a3d8f46f611f25b",
+  "schedule": [
+    {
+      "mode": "gids_1",
+      "arm": "gids",
+      "smoke": false
+    },
+    {
+      "mode": "digit_1",
+      "arm": "digit_full",
+      "smoke": false
+    },
+    {
+      "mode": "digit_2",
+      "arm": "digit_full",
+      "smoke": false
+    },
+    {
+      "mode": "gids_2",
+      "arm": "gids",
+      "smoke": false
+    }
+  ],
+  "model": "sage",
+  "gpu": 2,
+  "host_admission_gib": 320,
+  "cpu_policy": {
+    "gids": "unchanged default scheduling",
+    "digit_full": "all worker threads on logical CPU2"
+  },
+  "formal_extent": "Each fresh worker: 20 warmup + 3x100 timed batches; batch1024, original frozen roots, model, Adam and seed0.",
+  "profile_mode": "host",
+  "raw_ssd_writes": false,
+  "native_backend_changed": false,
+  "graph_or_feature_layout_changed": false,
+  "cpu_cache_or_gpu_cache_changed": false,
+  "model_or_optimizer_changed": false,
+  "ae_changed": false,
+  "separate_sampling_probe": false,
+  "accuracy_or_epoch_claim": false,
+  "continuous_monitor": "unchanged IG persistent NVML",
+  "independent_runs_per_arm": 2,
+  "interpretation": "System comparison includes different CPU scheduling. Not an isolated sampler gain or a comparison with both systems equally CPU-bound. Setup and warmup separate; preserve every run/window and negative results.",
+  "reused_smoke_gate": "Revalidate both accepted original native smokes from affinity_pair v1 before formal training. No reused formal times.",
+  "telemetry": {
+    "cpu_period_seconds": 0.25,
+    "gpu_period_seconds": 0.5,
+    "worker_threads": "stat/status/schedstat",
+    "cpu_frequency": "sysfs scaling_cur_freq for CPUs observed in worker threads plus CPU2 and SMT sibling",
+    "gpu_frequency": "persistent read-only NVML: graphics/SM/memory clocks, P-state, throttle reasons, power/temperature",
+    "monitor_cpu": "minimum available CPU outside CPU2 and its SMT sibling",
+    "schedstats_policy": "Read only; disabled runqueue stats reported unavailable. No sysctl/governor/global affinity changes.",
+    "query_failures": "retain raw errors and coverage gaps; diagnostic completeness reported separately from native training acceptance",
+    "window_alignment": "perf_counter start and existing elapsed wall time; markers written after original timing/counter collection",
+    "extra_cuda_synchronization": false
+  }
+}

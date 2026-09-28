@@ -1,0 +1,1 @@
+atc27_ae ALL=(root) NOPASSWD:NOSETENV: /usr/bin/systemctl --no-block start digit-ae-ig-sage-performance.service, /usr/bin/systemctl --no-block stop digit-ae-ig-sage-performance.service

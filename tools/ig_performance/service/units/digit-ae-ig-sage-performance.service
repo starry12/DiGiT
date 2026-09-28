@@ -1,0 +1,27 @@
+[Unit]
+Description=DiGiT AE IG SAGE five paired performance rounds
+Requires=digit-ae-ig-performance-data.service
+After=digit-ae-ig-performance-data.service
+[Service]
+Type=exec
+User=root
+Group=root
+WorkingDirectory=/home/embed/digit
+ExecStart=/srv/digit-ae/env/bin/python -I -B -u /srv/digit-ae/admin/ig_performance_v1/runner.py
+Environment=CUDA_VISIBLE_DEVICES=2 PYTHONDONTWRITEBYTECODE=1 CUDA_CACHE_DISABLE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+Environment=LD_LIBRARY_PATH=/home/embed/digit/bam/build/lib
+UnsetEnvironment=PYTHONPATH PYTHONHOME PYTHONOPTIMIZE LD_PRELOAD
+UMask=0022
+KillMode=control-group
+TimeoutStopSec=90
+LimitMEMLOCK=infinity
+Restart=no
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=tmpfs
+PrivateTmp=no
+BindReadOnlyPaths=/srv/digit-ae/releases/ig_sage_performance_20260928_v1:/home/embed/digit
+ReadOnlyPaths=/mnt
+ReadWritePaths=/srv/digit-ae/ig-performance-results /srv/digit-ae/admin/ig_performance_v1/state /run/digit-ae-selfservice /tmp
+StandardOutput=journal
+StandardError=journal

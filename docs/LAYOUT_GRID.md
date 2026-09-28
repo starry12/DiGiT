@@ -4,17 +4,8 @@ The accepted **author** grid completed on 2026-09-25 at 23:46:56 UTC+8. All 15 p
 passed their declared checks. Each point ran one complete seed-0 first epoch:
 1,207,179 training roots and 1,179 updates, without validation/test.
 
-Training seconds, including root-order generation:
-
-| Group size | 0% | 10% | 20% | 40% | 80% |
-|---|---:|---:|---:|---:|---:|
-| g = 1 | 120.09 | 119.79 | 120.61 | 122.11 | 122.33 |
-| g = 2 | 105.27 | 104.18 | 104.34 | 104.56 | 104.49 |
-| g = 4 | 92.58 | 91.18 | 92.58 | 92.09 | 90.21 |
-
-The reference is g2/r20 (104.34 s); the fastest measured point is g4/r80 (90.21 s).
+Final best-layout speedup: **1.16×** (g4/r80 relative to g2/r20).
 These are single first-epoch observations, not a statistical optimum or accuracy result.
-The machine-readable CSV retains full precision; tables display two decimal places.
 
 ## Feature and verification scope
 

@@ -1,0 +1,83 @@
+{
+  "schema": "digit-ig-window-v1",
+  "dataset": "IGB-HOM full",
+  "seed": 0,
+  "epochs": null,
+  "batch_size": 1024,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "nodes": 269346174,
+  "edges": 3996442004,
+  "train_nodes": 136278514,
+  "valid_nodes": 45426171,
+  "test_nodes": 45426173,
+  "feature_dim": 1024,
+  "feature_row_bytes": 4096,
+  "classes": 19,
+  "hidden": 128,
+  "layers": 3,
+  "dropout": 0.2,
+  "gat_heads": 4,
+  "optimizer": {
+    "name": "Adam",
+    "kwargs": {
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    }
+  },
+  "models": [
+    "sage",
+    "gcn",
+    "gat"
+  ],
+  "systems": [
+    "gids",
+    "digit_full"
+  ],
+  "gpu_cache_bytes": 4294967296,
+  "cpu_cache_rows": 26934617,
+  "group_size": 2,
+  "bfs_enabled": false,
+  "metadata_mode": "shared_csc_host_uva_i32_eid64_warp",
+  "graph_policy": "Retain verified IG directed multigraph, remove old self loops then append exactly one per node; no PA-style reverse-edge overlay.",
+  "split_policy": "Frozen IG contiguous labeled splits: train [0,136278514), valid [136278514,181704685), test [181704685,227130858); remaining nodes unlabeled.",
+  "validation": null,
+  "test_calls": 0,
+  "smoke_train_batches": 2,
+  "smoke_validation_batches": 0,
+  "window_batches": 30,
+  "scope": "Per arm: 20 training warmup batches followed by three consecutive 30-batch timed training windows. No validation, test, accuracy, epoch extrapolation or steady-state claim.",
+  "author_decision": "2026-09-22: replace unfinished IG epoch with bounded training windows to exercise all model/system workflows.",
+  "reconstruction": "Paper fanout10/5/5, hidden128, batch1024, group2 and GPU4GiB/CPU10%. Reuse existing verified IG graph/layout/cache selection. Adam and dropout from historical IG SAGE; same optimizer extended to GCN/GAT as untuned reconstruction. GAT 4x128 per head from historical implementation.",
+  "runtime_gpu_floor_bytes": 4294967296,
+  "runtime_host_floor_bytes": 68719476736,
+  "host_required_bytes": 343597383680,
+  "torch_allocator_cap_bytes": 25769803776,
+  "model_probe_limit_bytes": 12884901888,
+  "preflight_output": "results/ig_perf_preflight_20260922_v5/check",
+  "train_order": "data/ig_window_v2/train_order.npy",
+  "warmup_batches": 20,
+  "measurement_windows": 3,
+  "measured_batches": 90,
+  "total_train_batches": 110,
+  "validation_calls": 0,
+  "epoch_time_claim": false,
+  "source_train_order": "data/ig_perf_v2/train_order.npy",
+  "source_order_ready": "data/ig_perf_v2/ready.json",
+  "source_order_protocol_sha256": "10143519d30a7b1bf2c024004bf18b97a99ea9a4a0e809efb3a019b524aa0a1c",
+  "timing": "CUDA synchronized wall time around each consecutive training window, including sampling, native feature fetch, copies, forward, loss, backward and optimizer. Counter snapshots, report writes, setup and warmup excluded. Cache/model/optimizer retained across windows; accounting region reset only at warmup/measurement boundary. Three windows share a process and are not independent repetitions."
+}

@@ -1,0 +1,674 @@
+{
+  "files": {
+    "tools/ig_performance/runtime_sources/ae/igb/bounded_io.py": {
+      "original": "ae/igb/bounded_io.py",
+      "sha256": "23040e93b58f4f6ad26902b9a01abea95df7e181faf8cc210c5aa8d2d8a52ef5"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/contract.py": {
+      "original": "ae/igb/contract.py",
+      "sha256": "a106386cb56331121fb110a00012508a284ebe360648b398ca86026dae650653"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/engine.py": {
+      "original": "ae/igb/engine.py",
+      "sha256": "6f9804b5d183ba448d0855ccb86c88c78abf5202e3125409c2321c323e4ce2fe"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/ig_common.py": {
+      "original": "ae/igb/ig_common.py",
+      "sha256": "7e3ac9efc38ff078875d2ac10ff3f0579ec75986b9ec1d43ab12c35b3c4f631b"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/io_accounting.py": {
+      "original": "ae/igb/io_accounting.py",
+      "sha256": "26e9bd11d6fc60a1ff8bf0e098d236a7747b7897226752bb5f70a03a406645e3"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/models.py": {
+      "original": "ae/igb/models.py",
+      "sha256": "8deaac7daa7d25fd6e0141724797ff26a266a76db76fc70ac421e5d80b0c77ec"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/native_fetch.py": {
+      "original": "ae/igb/native_fetch.py",
+      "sha256": "d571217c80b2d249cbd2af495433a53d4dbf114f2d57c9cc3ee8951c8dd648c1"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/__init__.py": {
+      "original": "ae/igb/runtime/digit/__init__.py",
+      "sha256": "9f781bf317f9dceff7d47e7876d2b676413ba406335e5beed937603af2f97ea7"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/artifacts.py": {
+      "original": "ae/igb/runtime/digit/artifacts.py",
+      "sha256": "1ca048a9f22817fd3bcc6c9f69fac8e273872d4ff211a842f06c3f9526ac743d"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/bfs_order.py": {
+      "original": "ae/igb/runtime/digit/bfs_order.py",
+      "sha256": "248096bd7e0ee250ff2fc56eca69db7e22836bfd9fd33652655cb34ff24a4a12"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/bounded_artifacts.py": {
+      "original": "ae/igb/runtime/digit/bounded_artifacts.py",
+      "sha256": "e5d69194ea7140c210060030b4353913ba4e1b0a998f6a921ff524af07144b52"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/compact_gpu_ids.py": {
+      "original": "ae/igb/runtime/digit/compact_gpu_ids.py",
+      "sha256": "1763bb418dda49f1e5925d13e5b04cf6520d0919011ad17ee585b68dc97b04e4"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/compact_validate.py": {
+      "original": "ae/igb/runtime/digit/compact_validate.py",
+      "sha256": "460396be823dd1deb2da5b0aa5fdcedf907abc8adc866e4b6cbfcdae838ad444"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/cpu_cache.py": {
+      "original": "ae/igb/runtime/digit/cpu_cache.py",
+      "sha256": "e6513be8e41fd8c1156bbd43cfb07d33f72030cae0458cb99b88c9466f9f399a"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/cpu_eids.py": {
+      "original": "ae/igb/runtime/digit/cpu_eids.py",
+      "sha256": "80de06ee5d1da9d7e656dfb4dc6c752cda8e0dc110bded4233140f784ffcd20e"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/fast_artifacts.py": {
+      "original": "ae/igb/runtime/digit/fast_artifacts.py",
+      "sha256": "1b77c2604906e4d0e24097fbd01aa272aa99f474cbb1de4b807e526140f015cf"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/io_geometry.py": {
+      "original": "ae/igb/runtime/digit/io_geometry.py",
+      "sha256": "2e78448c618f26bfb728a69a7c35cbbbb08c5b7d45f3cee936e691d7f8069b31"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/outer_selection.py": {
+      "original": "ae/igb/runtime/digit/outer_selection.py",
+      "sha256": "b81da8967ab831a4b4aa79ab4c130393d2d722494321c2547f7abd8b2299eaeb"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/reorganization.py": {
+      "original": "ae/igb/runtime/digit/reorganization.py",
+      "sha256": "1ccffaf9287a635695d8bda6b74be1419d757a8fcd922fbc6cbe466ecfc3d458"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/runtime/digit/sampler.py": {
+      "original": "ae/igb/runtime/digit/sampler.py",
+      "sha256": "00c11f7ad25545e1016d010f8399f3ba99b27e3097816e7367bd8d0a2d47ce2c"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/sampler_config.py": {
+      "original": "ae/igb/sampler_config.py",
+      "sha256": "3d079a63a8f60e98155b21d9d7627eeb656d58325e6e22d46838bc2af49b8b4d"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/ssd_guard.py": {
+      "original": "ae/igb/ssd_guard.py",
+      "sha256": "b7260aa3c570f692231699a5886fb0a6f6def5bc5facf3a0b3149fca846c0022"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/stage_profile.py": {
+      "original": "ae/igb/stage_profile.py",
+      "sha256": "33062fc2c59f7abb220dc391edd93029d2f3199a58ac7f2943c50b37f7caff03"
+    },
+    "tools/ig_performance/runtime_sources/ae/igb/uva_sampler.py": {
+      "original": "ae/igb/uva_sampler.py",
+      "sha256": "a18f5057ae76ab9f5076a46a149ef54e6681e16f2565501c952a33d4fdeeb1a4"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_monitor_v1/fake_sampler.py": {
+      "original": "candidates/ig_monitor_v1/fake_sampler.py",
+      "sha256": "9b6583c53af800647dbfec234a552e31f394907bd6dcb97d2481a60e5dda3967"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_monitor_v1/gpu_monitor.py": {
+      "original": "candidates/ig_monitor_v1/gpu_monitor.py",
+      "sha256": "5e4fd37bf28866d7bf604c0d816bff3c819ae84f496fe5f4ff33b44bd5a180fa"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_monitor_v1/monitor_control.py": {
+      "original": "candidates/ig_monitor_v1/monitor_control.py",
+      "sha256": "77e4526b809f19ba069bdfce91fe86a27902f118aee289b2c717ed236da1aa5a"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_monitor_v1/protocol.json": {
+      "original": "candidates/ig_monitor_v1/protocol.json",
+      "sha256": "11444909c8f7dd02974eb3d400df5c406fa734d43ee3171d0164817723e87672"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_monitor_v1/review.py": {
+      "original": "candidates/ig_monitor_v1/review.py",
+      "sha256": "f6d3ff0792902bb5027b95f3d075d98a8aaca7dfa78857a235705ec20013c625"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_monitor_v1/review_tests.py": {
+      "original": "candidates/ig_monitor_v1/review_tests.py",
+      "sha256": "56527e9dd2522568e3ed83986cf0635e3a7a92af1dd00f2811bc6c8cf1273586"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_monitor_v1/tests.py": {
+      "original": "candidates/ig_monitor_v1/tests.py",
+      "sha256": "3fe24ffd640d8e284aeefb5b2324e081dbcb8127c448027885eed968a57c4964"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/admission.py": {
+      "original": "candidates/ig_perf_v5/admission.py",
+      "sha256": "0312761f6e38bb8ab5841375b1863138056c2dd02ade29b231d13f11b1f34cb2"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/check.py": {
+      "original": "candidates/ig_perf_v5/check.py",
+      "sha256": "7dd63aae0907002efaab821bedcd5bda2ac03d6b98ec779157f46e7321247bd5"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/common.py": {
+      "original": "candidates/ig_perf_v5/common.py",
+      "sha256": "32682249d1506f9cbc3d508b474f2da0d5c492c853afb76a3bb6ba21baea5087"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/controller.py": {
+      "original": "candidates/ig_perf_v5/controller.py",
+      "sha256": "3e8259938ce7aeca5f354ce63ff2c18ae6ff4000069e43947bfef8944aad1ba7"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/cuda_checks.py": {
+      "original": "candidates/ig_perf_v5/cuda_checks.py",
+      "sha256": "eee0157f8b610e5cfa47680c56c757cd10e61ac3bfcf23633274f67f979702d9"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/features.py": {
+      "original": "candidates/ig_perf_v5/features.py",
+      "sha256": "e4af1b2fbdd8ce7f78ef57c19343fad7ae090580fb0b8505c125a075ae04d74d"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/freeze.py": {
+      "original": "candidates/ig_perf_v5/freeze.py",
+      "sha256": "8a3d00019f8c25e78ad40bd30b3aa79a7ab4a9b4a7795d155f6f3d34632c220f"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/inputs.py": {
+      "original": "candidates/ig_perf_v5/inputs.py",
+      "sha256": "649bf4b7a5bcb967f780f7c3d4eb14d28e0fd66764c6a584ddba9ca2c864c32a"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/manifest.json": {
+      "original": "candidates/ig_perf_v5/manifest.json",
+      "sha256": "99d29f94b8724f2dc95f1e22c394e8c3dd6e2b65d0547f6473a103234b81f5ee"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/memory_checks.py": {
+      "original": "candidates/ig_perf_v5/memory_checks.py",
+      "sha256": "6a6e64b4a7b98e43eccecd4b1e93d02fdab78df29820ffe6f0732e66d1639714"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/model.py": {
+      "original": "candidates/ig_perf_v5/model.py",
+      "sha256": "32c2e3ef079a54becf0854ae40d1c449b5ed7a60c6b3d83b019c54faee5e9188"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/native/admission_helpers.cuh": {
+      "original": "candidates/ig_perf_v5/native/admission_helpers.cuh",
+      "sha256": "ec73481db922ab31c85d7e47047133981fc8efa1fac57efd9fab476b1c7be363"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/native/gids_kernel.cu": {
+      "original": "candidates/ig_perf_v5/native/gids_kernel.cu",
+      "sha256": "700a20fa1b25e0ae0285afaafd095cb995c36595fb251e059e81edb06845d2fd"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/native/gids_nvme.cu": {
+      "original": "candidates/ig_perf_v5/native/gids_nvme.cu",
+      "sha256": "5a5c2bfc204969444cfedba1c317c8c3abf90016222bc15a52b2967f4e93fa99"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/native/short_helpers.cuh": {
+      "original": "candidates/ig_perf_v5/native/short_helpers.cuh",
+      "sha256": "8c77867154976d15ccb8370032181bc759232a46018430290a465ddb72da8390"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/native/transfer_plan.h": {
+      "original": "candidates/ig_perf_v5/native/transfer_plan.h",
+      "sha256": "3609ccf37b74d73e408099b29412fae49389024c5b6e53fbfb035454078063a8"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/protocol.json": {
+      "original": "candidates/ig_perf_v5/protocol.json",
+      "sha256": "7b12f4f35369d49b9913c8bfcb321bee3b01190c80b404d5f74d498a31d061bb"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/review.py": {
+      "original": "candidates/ig_perf_v5/review.py",
+      "sha256": "7bb02ba82403a5ae4cb070197794ad4a2662ad787721f391a70e0fafdbd7e9bf"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/summarize.py": {
+      "original": "candidates/ig_perf_v5/summarize.py",
+      "sha256": "0309405e6a4facbadee8f5e835faa45ba6a07d9d15058df36b7f5f4e9006cd03"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/tests.py": {
+      "original": "candidates/ig_perf_v5/tests.py",
+      "sha256": "5178ec9186e277c2b68f308b6ab18cedcc2afa3b6f31f0f0936fea7993e0dd2b"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/validation.py": {
+      "original": "candidates/ig_perf_v5/validation.py",
+      "sha256": "daab535d9b8e053942c8302abbe45cdc7f6bcbc51d62d290cf6a3c05d74fcd39"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/windows.py": {
+      "original": "candidates/ig_perf_v5/windows.py",
+      "sha256": "0a6b46d22259a421f814a0a1a840b56cc0ca0271d4451a357b098e960aeaf7e3"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_v5/worker.py": {
+      "original": "candidates/ig_perf_v5/worker.py",
+      "sha256": "1267a42fcd8a006bf979e3f54295837ee88657fdcc27eff529437b2c661194b1"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/admission.py": {
+      "original": "candidates/ig_perf_window300_v1/admission.py",
+      "sha256": "3f63142844b05280e69b57d6e43889b2b438b401232e4920e27f21e9080e6860"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/common.py": {
+      "original": "candidates/ig_perf_window300_v1/common.py",
+      "sha256": "ca97e2a090a969da1f87838fc7f5e2fb2a3d1940eaddcd03469e685ed5d3a0ff"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/controller.py": {
+      "original": "candidates/ig_perf_window300_v1/controller.py",
+      "sha256": "5b366f92848eb8b2742b6f6502d452f4eba7d6a3d9fc0a19c9e7e0b91ba00c4b"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/extent_checks.py": {
+      "original": "candidates/ig_perf_window300_v1/extent_checks.py",
+      "sha256": "c149619e44cc1801c720e05fb37dab76755d91748cd558ee66913b974815c847"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/features.py": {
+      "original": "candidates/ig_perf_window300_v1/features.py",
+      "sha256": "8fb17839f2cba4f701397ed096d822ff6ebe4ca7182bcf0f65583f64265c108a"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/freeze.py": {
+      "original": "candidates/ig_perf_window300_v1/freeze.py",
+      "sha256": "4c4b55143b315d1e8c530c979ef4253f1bb67aefd39886d36b720773778d8c6c"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/inputs.py": {
+      "original": "candidates/ig_perf_window300_v1/inputs.py",
+      "sha256": "9b37d3e94ae15cedab248a6a8d3456519839a5a2afab35190b94a2434a5adb8f"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/launcher_checks.py": {
+      "original": "candidates/ig_perf_window300_v1/launcher_checks.py",
+      "sha256": "f0dfd0bbffc01e106ef0540cbfa041160e78c16539471fb69d6cf77c2e9bd9c6"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/manifest.json": {
+      "original": "candidates/ig_perf_window300_v1/manifest.json",
+      "sha256": "cab778971d77b7cb8001e3311b2f2e1ffb3ba343b0652e4ad896eadc1351841f"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/model.py": {
+      "original": "candidates/ig_perf_window300_v1/model.py",
+      "sha256": "7f87808b2fb6fa5cc0dae43b7cd050d366c94352f14279e5a434ef3791f07c46"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/protocol.json": {
+      "original": "candidates/ig_perf_window300_v1/protocol.json",
+      "sha256": "81e99d69c6a4755d40cd2c812d932baff5d11edc7546d1c54dbe9a98a245f5b1"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/review.py": {
+      "original": "candidates/ig_perf_window300_v1/review.py",
+      "sha256": "b2faca8548074844533ac622b8eb2d5ed53ab1e5431b4f00c9071e7db6c00636"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/start.py": {
+      "original": "candidates/ig_perf_window300_v1/start.py",
+      "sha256": "197d498c5b86ad42bc05866e0b9d4aa0693c8295ef868d27a09552acf165bada"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/summarize.py": {
+      "original": "candidates/ig_perf_window300_v1/summarize.py",
+      "sha256": "65522edd8ee23f7726f2d0adc92c6672d59c42d6104d4a8e6062756e186024c4"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/tests.py": {
+      "original": "candidates/ig_perf_window300_v1/tests.py",
+      "sha256": "6854b17279f650c5637136b0755c63276934c02000a429f051941076c6751e16"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/validation.py": {
+      "original": "candidates/ig_perf_window300_v1/validation.py",
+      "sha256": "6d8814035d0cfbf9e058cb3495138becc081ac9d8fa068cf22f786b9824fba5c"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/windows.py": {
+      "original": "candidates/ig_perf_window300_v1/windows.py",
+      "sha256": "683537d69ed22b17e73b99591b34847f56d3605588b8b53fbf91654a74b984e6"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_perf_window300_v1/worker.py": {
+      "original": "candidates/ig_perf_window300_v1/worker.py",
+      "sha256": "e66033605eee5798350b24de017b1218ecd7edbcaba3c2c834416d9e7e403b2a"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/admission.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/admission.py",
+      "sha256": "e31b6adf117e5844fc6c188411f85fcbd4b036a932406808ad1bc4946d5d8592"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/affinity.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/affinity.py",
+      "sha256": "e9880327531e818ca34e3ec9c30754e5da936aad2f97e6125b78042cf0fc6d7c"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/common.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/common.py",
+      "sha256": "a1d0566ad38c6b1798f6e88a1066d0baeddd89c78875fb45c9d7c0dca9602f1e"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/controller.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/controller.py",
+      "sha256": "9a7cd94327959638b97760d4779abcaa47d73fe4fcd0c7774830c4a6215d923c"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/features.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/features.py",
+      "sha256": "41758cd64fdbefd15b927bdca4365e204840d8913a8e556e97cd2084f072f597"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/freeze.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/freeze.py",
+      "sha256": "f6785cc54621c61e4f6e64b683d7c033d228d19ab7327dfbe8b6eb518e68bfd5"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/inputs.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/inputs.py",
+      "sha256": "34d21ddf8fe30f93f2e223da3ad55d5981d41b2d96ac31fb31a94c0b8c6797a5"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/launcher_checks.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/launcher_checks.py",
+      "sha256": "a5b843ed0fd42a7654bad7bb2aa9e2c627d86930e804824e1008d9f83bd3ea45"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/manifest.json": {
+      "original": "candidates/ig_sage_affinity_pair_v1/manifest.json",
+      "sha256": "64f861d639361408a5e892ecd5acf57478a3fb5d1b269b770a3d8f46f611f25b"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/model.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/model.py",
+      "sha256": "b62abbb04af1ebe25c4e122e20d54a72902444208d443bf63bddcf9a32363465"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/optimization_protocol.json": {
+      "original": "candidates/ig_sage_affinity_pair_v1/optimization_protocol.json",
+      "sha256": "b761c70cbbf0fbb1ec5311f0545710295ca1f67c0cf09ab4d210107e51625860"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/profile.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/profile.py",
+      "sha256": "fbfeb8fe18df2a4bd42ea3430962598a33d183af8924a20b52a8f52ae15e5d3f"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/protocol.json": {
+      "original": "candidates/ig_sage_affinity_pair_v1/protocol.json",
+      "sha256": "81e99d69c6a4755d40cd2c812d932baff5d11edc7546d1c54dbe9a98a245f5b1"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/review.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/review.py",
+      "sha256": "f4e36732254f75f0819e2bcf6f5727504ccf7e0c231001c7cddeac60704627c3"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/start.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/start.py",
+      "sha256": "561d8bf18202c9b997471a844afccea109496009d05de44204c25f6025eee7c9"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/summarize.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/summarize.py",
+      "sha256": "faef452769c4b5834730db5024293bb3a2f1885dfc8afdda194f965c5c52bf4f"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/tests.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/tests.py",
+      "sha256": "688506ed1d171b126e6b60af8656bd433d7d0d0d944587e3ef1138ba822ad4bb"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/validation.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/validation.py",
+      "sha256": "a7e3713f54dbf15e114da1961d67fccf94a1885a8b5d96824cc49191050c4691"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/windows.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/windows.py",
+      "sha256": "71d6b5094ae6eec057aa2edd89c8ac146fe5e9af33911dea53029e9436600621"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_affinity_pair_v1/worker.py": {
+      "original": "candidates/ig_sage_affinity_pair_v1/worker.py",
+      "sha256": "080cd5bc0984be7f0acba870bdba84421989b7dbbb4fbd970e050e0e06e66a57"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/admission.py": {
+      "original": "candidates/ig_sage_host_opt_v1/admission.py",
+      "sha256": "213b9a1d27eb81966c97a76642bc8aa64946a33b85f2faac4eb12fbdc7b06c91"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/affinity.py": {
+      "original": "candidates/ig_sage_host_opt_v1/affinity.py",
+      "sha256": "aaef27fc402d402a0c1c7fe8e1276bb9ebdd2037dc5185bab14c0cc082b7f500"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/common.py": {
+      "original": "candidates/ig_sage_host_opt_v1/common.py",
+      "sha256": "7e64279a871e37b5c1d1ea77c719e43066d3de019e66c7f391803f500acdec64"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/controller.py": {
+      "original": "candidates/ig_sage_host_opt_v1/controller.py",
+      "sha256": "ca76c16b373523e6a2e0ad8766c13f894aaab42543a3ad6f4d18a3eeb9a3b18b"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/features.py": {
+      "original": "candidates/ig_sage_host_opt_v1/features.py",
+      "sha256": "81eb1ed80ed0fca527428c904d86385e227db2ec1087e07b0a9cf55a24c7b0d8"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/freeze.py": {
+      "original": "candidates/ig_sage_host_opt_v1/freeze.py",
+      "sha256": "829fc4a2afaf1e04a88c32be79a73d050d126c188f52a0833aea2996d1dec43e"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/gpu_checks.py": {
+      "original": "candidates/ig_sage_host_opt_v1/gpu_checks.py",
+      "sha256": "4fa4d830e862ec07791ccad5a09b461997dbcd8abbe8a694973bd414e9f55c8c"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/inputs.py": {
+      "original": "candidates/ig_sage_host_opt_v1/inputs.py",
+      "sha256": "3ecda46909685bce398bd87bbea79efd6e23507113acd45cc4c325aae104f6c4"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/launcher_checks.py": {
+      "original": "candidates/ig_sage_host_opt_v1/launcher_checks.py",
+      "sha256": "6cc1ab5ee10458d8849f5761864164e26be0f1879cc082ba678f1628358e9e5d"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/manifest.json": {
+      "original": "candidates/ig_sage_host_opt_v1/manifest.json",
+      "sha256": "cec77a5bff14382e89f7ee7fd30660f5802f44265ae74a01b4c70e2d7e123160"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/model.py": {
+      "original": "candidates/ig_sage_host_opt_v1/model.py",
+      "sha256": "5c83f33cce6972344cf6e2f16ad34fc0877a33c660147d6b6f71f59fedc6a6c1"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/optimization_protocol.json": {
+      "original": "candidates/ig_sage_host_opt_v1/optimization_protocol.json",
+      "sha256": "495c6db3fa3a65a231912162f0f54ab437e486daf2ae20531360a8056174bb5d"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/profile.py": {
+      "original": "candidates/ig_sage_host_opt_v1/profile.py",
+      "sha256": "fbfeb8fe18df2a4bd42ea3430962598a33d183af8924a20b52a8f52ae15e5d3f"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/protocol.json": {
+      "original": "candidates/ig_sage_host_opt_v1/protocol.json",
+      "sha256": "81e99d69c6a4755d40cd2c812d932baff5d11edc7546d1c54dbe9a98a245f5b1"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/review.py": {
+      "original": "candidates/ig_sage_host_opt_v1/review.py",
+      "sha256": "b3b8baed6007e1dae1b27a3f9f119a7f7b7f1d93461cad2e5460826adc615e88"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/sampler.py": {
+      "original": "candidates/ig_sage_host_opt_v1/sampler.py",
+      "sha256": "31b9ab6f55b346331009b2e6267f7c31fcd993777bd6de35fb411a6af83121ed"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/sampling_probe.py": {
+      "original": "candidates/ig_sage_host_opt_v1/sampling_probe.py",
+      "sha256": "5895bdfcd52f7ea04b644d1295e1f90af841a3834050a4a4f11ed2b328d3ffd2"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/start.py": {
+      "original": "candidates/ig_sage_host_opt_v1/start.py",
+      "sha256": "95eeca52a732f60ea06cc440e508ee503c870b193bff2d0e2a0b6e854956bf9b"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/summarize.py": {
+      "original": "candidates/ig_sage_host_opt_v1/summarize.py",
+      "sha256": "06e4924cfd5deba1b8f6709fb0b10e641c9d26a257d5f6064eb5180f920acf7c"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/tests.py": {
+      "original": "candidates/ig_sage_host_opt_v1/tests.py",
+      "sha256": "9e19cccc2cdbd2d971287595c464510cb5f3207b655bf17eb57d37ea6eea3053"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/validation.py": {
+      "original": "candidates/ig_sage_host_opt_v1/validation.py",
+      "sha256": "4ca21ac7a6e6111718556b11edfde52c52299f587e75302ede7db11ca3f621f7"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/windows.py": {
+      "original": "candidates/ig_sage_host_opt_v1/windows.py",
+      "sha256": "8b1845a6cb20b4cdfdd9a6e323ea88543f57e1991a74d9146d5bf5a45b6acf66"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_opt_v1/worker.py": {
+      "original": "candidates/ig_sage_host_opt_v1/worker.py",
+      "sha256": "1f9017323ab980d2a24d32530a774dbc2ec925a3b905bfa6ec8dfb195aeac900"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/admission.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/admission.py",
+      "sha256": "77a70038037fe627ce64eafcab07126fa778b39f954af56ddbf52681a7d3f1fa"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/affinity.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/affinity.py",
+      "sha256": "e9880327531e818ca34e3ec9c30754e5da936aad2f97e6125b78042cf0fc6d7c"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/common.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/common.py",
+      "sha256": "a6adf0ac8f2bc0d79e99ca0a311df36164fd5bc427f88da03b19ce16512eb370"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/controller.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/controller.py",
+      "sha256": "6f19649754474d4383ef4910516466d42e44b60c1c14c794d900509d3c384032"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/features.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/features.py",
+      "sha256": "737a9c4594b7f9fc16e614f30c4d2ee04545b04ed3cf868131856af51ed7e19f"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/freeze.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/freeze.py",
+      "sha256": "c595e1521c53e1ac0d6eaa3a9480cf0255c1494639ded15e50f3fb3a88082a46"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/inputs.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/inputs.py",
+      "sha256": "a5d2eb8be9436ab49d1423a392a1f99b8f702d2dab1e5bb010bda31df6978200"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/launcher_checks.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/launcher_checks.py",
+      "sha256": "eef52bada662fc70862b7d005ea453ec45e980754da757a3a4549e5e99a99785"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/manifest.json": {
+      "original": "candidates/ig_sage_host_telemetry_v1/manifest.json",
+      "sha256": "f3651dec530fe91f18798c4cd9735f4200f07e4c7400ae801182760b4bb91827"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/model.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/model.py",
+      "sha256": "4a74d60a8d190110194aebe8fc41f0d0d6c4dcfc5520d80e56d454e493829111"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/optimization_protocol.json": {
+      "original": "candidates/ig_sage_host_telemetry_v1/optimization_protocol.json",
+      "sha256": "35714cc09d47a95b89b6bd7ddff91a538079b6a6a11269dc5b8e224f2dc1ab8a"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/profile.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/profile.py",
+      "sha256": "fbfeb8fe18df2a4bd42ea3430962598a33d183af8924a20b52a8f52ae15e5d3f"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/profile_checks.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/profile_checks.py",
+      "sha256": "cfa4bc3f034a9182ddae9ca2d587b6b91adf0c8c8e9e191611401792d47c10a0"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/protocol.json": {
+      "original": "candidates/ig_sage_host_telemetry_v1/protocol.json",
+      "sha256": "81e99d69c6a4755d40cd2c812d932baff5d11edc7546d1c54dbe9a98a245f5b1"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/review.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/review.py",
+      "sha256": "9d3d4a6f77fd2191fc9063a9986b768bb1867d1d24538907cf3f03a22a0aa946"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/smoke_evidence.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/smoke_evidence.py",
+      "sha256": "278acdc03ab13d429a0bee20f80f246efec162aef41e00c5959fe8cd8cf8c3d4"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/start.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/start.py",
+      "sha256": "21fc2492b553594bf9c4383bc4b46852fed64b8f8d1e0f2485f6f6259e6b9e27"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/summarize.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/summarize.py",
+      "sha256": "bd14959fb413b6f34873a775250f16f83a20e2a79eae880fec3ce4b1b3819393"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/telemetry.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/telemetry.py",
+      "sha256": "7d2326768c6c3e2e784a22485a6a873dceda12f15d48b429198a061522e197e2"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/telemetry_probe.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/telemetry_probe.py",
+      "sha256": "a496995dd3ac903ef3bb64b6bbfc3c7ce35fc41b1e3e59d02aa891c5e470e892"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/telemetry_review.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/telemetry_review.py",
+      "sha256": "427dac86cd54766a0f9d53aca4262da5aa8ce8228f907cbebdc8791706adeced"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/telemetry_tests.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/telemetry_tests.py",
+      "sha256": "ed6f5718d85a245bd1a8eb501a46766e4225e6f3aeaed2fc7a928add16ce30be"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/tests.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/tests.py",
+      "sha256": "85abcbc2cb34eac3f38cd035563d5ffe8a57d48a921eaf8968f8b395c9004118"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/validation.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/validation.py",
+      "sha256": "c97aa08e979958ce6caa971a34fe1eb9a6df9965a3e8f8d7fabb110781e97670"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/windows.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/windows.py",
+      "sha256": "ff1de3737ed1de255d612042ddacb66a01725e8866c45bd340abeb8451aad264"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_host_telemetry_v1/worker.py": {
+      "original": "candidates/ig_sage_host_telemetry_v1/worker.py",
+      "sha256": "50b36997e0948ca3109b7afc0bb4c696bbc0f27c2dafb2a6a9870104ac181b35"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_pair_max5_v1/__init__.py": {
+      "original": "candidates/ig_sage_pair_max5_v1/__init__.py",
+      "sha256": "87e24901ca963d527d9e2ae5b47ffce56480196906ba2d35d2f8aea01a04f69e"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_pair_max5_v1/common.py": {
+      "original": "candidates/ig_sage_pair_max5_v1/common.py",
+      "sha256": "dc9cf5a42fa07f5ef35ba73116683a8c60897257bc79f4d66209c1a6c9a41492"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_pair_max5_v1/controller.py": {
+      "original": "candidates/ig_sage_pair_max5_v1/controller.py",
+      "sha256": "a4567306ac2c075da9f3744e6bd2514467316126772c661ae003071cd482eb83"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_pair_max5_v1/manifest.json": {
+      "original": "candidates/ig_sage_pair_max5_v1/manifest.json",
+      "sha256": "220a06621898639512817abe87f3aef3b87c8323bea5ed21892bde79b2836f8b"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_pair_max5_v1/protocol.json": {
+      "original": "candidates/ig_sage_pair_max5_v1/protocol.json",
+      "sha256": "55e07bfae6759a2f86822b2327cb83c157797eae18a79273cbc77cf26c825cb7"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_pair_max5_v1/start.py": {
+      "original": "candidates/ig_sage_pair_max5_v1/start.py",
+      "sha256": "8907a2863eb3fc095a3d3dddd713c85e13811a619a98a22cfda35da964969f59"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_pair_max5_v1/tests.py": {
+      "original": "candidates/ig_sage_pair_max5_v1/tests.py",
+      "sha256": "7fb18911f8bb1e9f79c89ebaf08e65d0e77e0c2b3812639252a59b19562283ba"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/admission.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/admission.py",
+      "sha256": "a7f1b28982d3e0df7411f16dc504056e407819977348dffc83290d40ba604980"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/common.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/common.py",
+      "sha256": "7cf0abf623924bfa8460c59ac862f8d4e93512d0c05433a1c54820f22eb9284e"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/controller.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/controller.py",
+      "sha256": "ef32731fed7838888e116562647eefa6ab91abc7819c4ae03343f6d155a52307"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/features.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/features.py",
+      "sha256": "b2eee1528a2222df99d780d6b487a072f38b8acef1464d93ce236b935806c58c"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/freeze.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/freeze.py",
+      "sha256": "13d7584bfb61d0f92501c63fcdbe38bef19d9784d559139efb580abd4385ef8e"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/inputs.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/inputs.py",
+      "sha256": "97eb5a16290331f7759325544c1eecedeb1081c3c5b30f787b7d0f3a1a7b98ba"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/launcher_checks.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/launcher_checks.py",
+      "sha256": "cf1efce6028fd82ba5fb15ecfdb66daa50fc1fd54ad445872d24d8740dee06a8"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/manifest.json": {
+      "original": "candidates/ig_sage_stage_profile_v1/manifest.json",
+      "sha256": "ed33ba3ac8c181def7fdd68a8dcce27d5be3454b325dd6b7079f18dccc260f26"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/model.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/model.py",
+      "sha256": "f8afbbba2dbcfdc36025a3dd5b72c90fd3d95281c5b79b23e6b8631470091d82"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/profile.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/profile.py",
+      "sha256": "fbfeb8fe18df2a4bd42ea3430962598a33d183af8924a20b52a8f52ae15e5d3f"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/profile_protocol.json": {
+      "original": "candidates/ig_sage_stage_profile_v1/profile_protocol.json",
+      "sha256": "828966348916aff3b2f18583fd7ce44f6261fd131193369066b6eeb8786e1ece"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/protocol.json": {
+      "original": "candidates/ig_sage_stage_profile_v1/protocol.json",
+      "sha256": "81e99d69c6a4755d40cd2c812d932baff5d11edc7546d1c54dbe9a98a245f5b1"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/review.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/review.py",
+      "sha256": "267d3a2b8d0d26e3d5218c610a77320a239cd2f712b0236550b743c11c3c734d"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/start.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/start.py",
+      "sha256": "b5e092e533ff4859646e3dc3f64bb967add0f834df5b61dec97891fa66e9cbdf"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/summarize.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/summarize.py",
+      "sha256": "e1125e529c04c85d2f1da1b5db3c869e37c559fea902c442a0af07a320b5df90"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/tests.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/tests.py",
+      "sha256": "8d64053d521a86c5134ce6505b0ba56fc106dc80fa5d565aaaa6b7fe5fc1a6da"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/validation.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/validation.py",
+      "sha256": "74bca1e79aced2d20dd7975a293141d9a77083d085ee7e184d09bd12eaeddaed"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/windows.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/windows.py",
+      "sha256": "ec9d65606f963fae7fde5eb3b5c99c2fb0bd7484d751612c7c1e437cc5a49cb0"
+    },
+    "tools/ig_performance/runtime_sources/candidates/ig_sage_stage_profile_v1/worker.py": {
+      "original": "candidates/ig_sage_stage_profile_v1/worker.py",
+      "sha256": "b4ec64997aa65f1ac609920ab68acd29a0af8d56b4984b4066e240d692af4159"
+    }
+  },
+  "candidate_sha256": "220a06621898639512817abe87f3aef3b87c8323bea5ed21892bde79b2836f8b",
+  "native_ae_replay_accepted": false
+}

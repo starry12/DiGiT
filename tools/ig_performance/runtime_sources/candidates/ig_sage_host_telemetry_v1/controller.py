@@ -1,0 +1,120 @@
+"""Verified inherited smokes, then fresh host-profile ABBA with training telemetry."""
+import argparse,fcntl,os,signal,subprocess,sys,time
+from pathlib import Path
+from candidates.ig_sage_host_telemetry_v1.common import *
+from candidates.ig_sage_host_telemetry_v1.review import review_worker
+from candidates.ig_sage_host_telemetry_v1.inputs import bind as input_binding
+from candidates.ig_sage_host_telemetry_v1.worker import check_inputs
+from candidates.ig_sage_host_telemetry_v1.validation import report_check
+from ae.common import check_device
+from candidates.ig_monitor_v1.monitor_control import ExternalMonitor
+
+def plan(mode='representative',model='sage'):
+    require(mode=='representative' and model=='sage','Only IG/SAGE paired performance')
+    return [dict(mode=j['mode'],smoke=j['smoke'],arm=j['arm'],model='sage',profile_mode='host')
+            for j in read(HERE/'optimization_protocol.json')['schedule']]
+
+
+def worker_command(job,output):
+    cmd=[sys.executable,'-u','-m','candidates.ig_sage_host_telemetry_v1.worker','--arm',job['arm'],
+         '--model',job['model'],'--profile-mode',job['profile_mode'],
+         '--output',str(output/job['mode']/job['arm']),'--binding',str(output/'inputs.json')]
+    return cmd+(['--smoke'] if job['smoke'] else [])
+
+
+def arm_evidence(output,job):
+    folder=output/job['mode']/job['arm'];monitor=output/(job['mode']+'_monitor_'+job['arm'])
+    files=[p for d in (folder,monitor) for p in d.rglob('*') if p.is_file()]
+    files.append(output/(job['mode']+'_'+job['arm']+'.log'))
+    return {str(p.relative_to(output)):sha(p) for p in sorted(files)}
+
+def run_worker(output,job,state,binding,save,gpu):
+    check_device();folder=output/job['mode']/job['arm'];folder.parent.mkdir(exist_ok=True)
+    mon_dir=output/(job['mode']+'_monitor_'+job['arm']);mon_dir.mkdir()
+    monitor=ExternalMonitor(mon_dir/'external_gpu');child=None;w=None
+    try:
+        ready=monitor.start();cmd=worker_command(job,output)
+        w=dict(job,command=cmd,monitor_ready=ready,started_unix=time.time(),status='running');state['workers'].append(w)
+        save(stage=job['mode']+'_'+job['arm'])
+        with (output/(job['mode']+'_'+job['arm']+'.log')).open('x') as log:
+            child=subprocess.Popen(cmd,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,env=environment(gpu));w['pid']=child.pid;save();released=False;deadline=None
+            while child.poll() is None:
+                if monitor is not None:require(monitor.process.poll() is None,'External NVML monitor exited during worker; inspect monitor log and summary')
+                receipt=folder/'worker_ready.json'
+                if receipt.exists() and not released:
+                    require(read(receipt)['passed'],'Worker not ready for acceptance')
+                    mon_code=monitor.stop();monitor=None
+                    write(folder/'release_worker.json',dict(monitor_stopped=True,monitor_returncode=mon_code));released=True;deadline=time.monotonic()+180
+                if deadline is not None:require(time.monotonic()<deadline,'Worker teardown timed out')
+                time.sleep(.5)
+            code=child.wait();child=None
+        w.update(status='complete' if code==0 else 'failed',returncode=code,finished_unix=time.time());save()
+        require(code==0 and released,'Worker did not finish normally: '+job['mode']+' '+job['arm'])
+        require(mon_code==0,'Monitor process did not finish normally')
+        r=review_worker(output,w,state['pid'],binding,gpu)
+        accepted=output/(job['mode']+'_'+job['arm']+'_accepted.json');write(accepted,r)
+        receipt=dict(passed=True,job=job,report_sha256=sha(folder/'report.json'),accepted_sha256=sha(accepted),files=arm_evidence(output,job))
+        write(output/(job['mode']+'_'+job['arm']+'_receipt.json'),receipt)
+        return r
+    finally:
+        try:
+            if monitor is not None:monitor.stop()
+        finally:
+            if child is not None and child.poll() is None:
+                child.terminate()
+                try:child.wait(timeout=60)
+                except subprocess.TimeoutExpired:child.kill();child.wait()
+                if w is not None:
+                    w.update(status='terminated',returncode=child.returncode,finished_unix=time.time());save()
+
+
+def execute(mode,output,gpu,model='sage'):
+    from .summarize import comparisons
+    from .validation import pair_check
+    execution=verify();output=output_path(output);output.mkdir(parents=True)
+    jobs=plan(mode,model)
+    state=dict(schema='digit-ig-host-telemetry-run-v1',mode=mode,dataset='IG',model=model,seed=0,gpu=gpu,
+        passed=False,complete=False,pid=os.getpid(),candidate_sha256=execution,workers=[],
+        stage='binding_inputs',raw_ssd_writes=False,started_unix=time.time())
+    def save(**kw):state.update(kw,updated_unix=time.time());write(output/'status.json',state)
+    def stop(signum,frame):raise KeyboardInterrupt('Controller signaled')
+    signal.signal(signal.SIGTERM,stop);save()
+    try:
+        binding=input_binding(output,execution)
+        write(output/'launch.json',dict(schema='digit-ig-host-telemetry-launch-v1',mode=mode,dataset='IG',model=model,seed=0,gpu=gpu,
+            candidate_sha256=execution,protocol_sha256=sha(P),optimization_protocol_sha256=sha(HERE/'optimization_protocol.json'),
+            input_binding_sha256=sha(output/'inputs.json'),plan=jobs,monitor_policy=POLICY,raw_ssd_writes=False))
+        from .smoke_evidence import review as review_smokes
+        inherited=review_smokes()
+        require(inherited==read(OUT/'inherited_smokes.json'),'Inherited smoke review changed')
+        write(output/'inherited_smokes.json',inherited)
+        reports={}
+        for job in jobs:
+            r=run_worker(output,job,state,binding,save,gpu)
+            reports[job['mode']]=r
+            save(stage=job['mode']+'_accepted')
+        write(output/'comparisons.json',comparisons(reports,output))
+        require(verify()==execution,'Source changed');check_inputs(binding);check_device()
+        strict=all(r['external_monitor']['strict_monitor_passed'] for r in reports.values())
+        diagnostics=all(r['training_telemetry']['diagnostic_complete'] for r in reports.values())
+        save(stage='complete' if strict and diagnostics else 'complete_with_diagnostic_gaps',passed=True,complete=True,
+            strict_resource_acceptance=strict,diagnostic_complete=diagnostics,training_performance_io_passed=True,finished_unix=time.time())
+    except BaseException as exc:
+        save(stage='failed',passed=False,complete=False,error=type(exc).__name__+': '+str(exc));raise
+    try:
+        from .summarize import load_formal,emit
+        value=load_formal(output);emit(value,output/'profile_summary');save(summary_exported=True)
+    except BaseException as exc:
+        save(stage='summary_failed',passed=False,complete=False,error=type(exc).__name__+': '+str(exc));raise
+    return state
+
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--mode',choices=['representative'],required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--gpu',type=int,required=True);p.add_argument('--model',choices=['sage'],required=True);a=p.parse_args()
+    require(__debug__ and os.geteuid()==0 and os.environ.get('TMUX'),'Run in real tmux with local sudo')
+    os.environ.update(environment(a.gpu))
+    with open('/tmp/digit-pa-bidir-controller.lock','a+') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);execute(a.mode,a.output,a.gpu,a.model)
+
+
+if __name__=='__main__':main()

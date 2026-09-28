@@ -1,0 +1,33 @@
+{
+  "schema": "digit-ig-symmetric-stage-profile-v1",
+  "model": "sage",
+  "parent_candidate_sha256": "cab778971d77b7cb8001e3311b2f2e1ffb3ba343b0652e4ad896eadc1351841f",
+  "protocol": "Byte-identical parent protocol.json and existing train_order.npy",
+  "schedule": [
+    ["smoke", "gids", "host", 2],
+    ["smoke", "digit_full", "host", 2],
+    ["control", "gids", "off", 320],
+    ["control", "digit_full", "off", 320],
+    ["profile", "digit_full", "host", 320],
+    ["profile", "gids", "host", 320]
+  ],
+  "timed_batches_per_formal_worker": 300,
+  "warmup_batches_per_formal_worker": 20,
+  "independent_repeats_per_arm_per_mode": 1,
+  "gpu": 2,
+  "cpu_binding": "unchanged: unbound",
+  "continuous_monitor": "unchanged IG v5 persistent NVML",
+  "added_cuda_synchronization": false,
+  "cuda_events": false,
+  "top_level_stages": ["roots_transfer", "sampling", "feature_fetch", "labels_transfer", "forward", "loss", "zero_grad", "backward", "adam", "bookkeeping", "window_drain"],
+  "sampling_children": ["dgl_neighbors", "to_block", "DiGiT outer_frontier/uva_sample_existing_waits", "DiGiT storage_annotation/uva_address_gather_existing_waits"],
+  "feature_children": ["address_mapping_d2h", "feature_allocation", "chunk_fetch_copy/request_validation", "chunk_fetch_copy/request_h2d_allocation", "chunk_fetch_copy/native_read"],
+  "semantics": "Host wall spans include waits at their existing sites. Child spans are already included in their parents. They are not pure CUDA kernel time. Only top-level spans plus uninstrumented residual reconcile with synchronized E2E.",
+  "overhead": "Compare fresh host vs off processes for each system; report all windows. This difference also includes machine/order variability and is not an exact removable timing tax.",
+  "parity": "Require unchanged source AST after stripping timing scopes, unchanged native binaries, model/optimizer, roots and initial parameters. Report same-arm sampled shape, all losses and final-parameter comparisons; retain any GPU nondeterminism without concealing differences.",
+  "ae_changed": false,
+  "raw_ssd_writes": false,
+  "validation_calls": 0,
+  "test_calls": 0,
+  "epoch_time_claim": false
+}

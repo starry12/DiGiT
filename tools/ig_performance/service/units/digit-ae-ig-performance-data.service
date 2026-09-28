@@ -1,0 +1,8 @@
+[Unit]
+Description=DiGiT IG performance fixed read-only prepared data
+Requires=digit-ae-data.service
+After=digit-ae-data.service
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I -B /srv/digit-ae/admin/ig_performance_v1/mount_data.py
+RemainAfterExit=yes

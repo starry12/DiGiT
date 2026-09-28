@@ -1,0 +1,22 @@
+[
+  {
+    "source": "/home/embed/digit/data/igb",
+    "destination": "/srv/digit-ae/releases/ig_sage_performance_20260928_v1/data/igb"
+  },
+  {
+    "source": "/home/embed/digit/data/ig_window_v2",
+    "destination": "/srv/digit-ae/releases/ig_sage_performance_20260928_v1/data/ig_window_v2"
+  },
+  {
+    "source": "/home/embed/digit/data/papers_g2_random_v2",
+    "destination": "/srv/digit-ae/releases/ig_sage_performance_20260928_v1/data/papers_g2_random_v2"
+  },
+  {
+    "source": "/home/embed/digit/configs/igb",
+    "destination": "/srv/digit-ae/releases/ig_sage_performance_20260928_v1/configs/igb"
+  },
+  {
+    "source": "/home/embed/digit/ssd_state",
+    "destination": "/srv/digit-ae/releases/ig_sage_performance_20260928_v1/ssd_state"
+  }
+]

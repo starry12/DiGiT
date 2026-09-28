@@ -1,0 +1,36 @@
+{
+  "schema": "digit-ig-sage-host-optimization-v1",
+  "parent_candidate_sha256": "ed33ba3ac8c181def7fdd68a8dcce27d5be3454b325dd6b7079f18dccc260f26",
+  "system": "digit_full",
+  "model": "sage",
+  "gids_changed": false,
+  "ae_changed": false,
+  "variants": {
+    "legacy": {"cpu_binding": "unchanged", "frontier": "original boolean indexing"},
+    "affinity": {"cpu_binding": "all worker threads on logical CPU2", "frontier": "original boolean indexing"},
+    "compact": {"cpu_binding": "unchanged", "frontier": "reuse one increasing valid-slot index"},
+    "combined": {"cpu_binding": "all worker threads on logical CPU2", "frontier": "reuse one increasing valid-slot index"}
+  },
+  "schedule": [
+    {"mode": "smoke_combined", "variant": "combined", "smoke": true, "updates": 2},
+    {"mode": "legacy", "variant": "legacy", "smoke": false, "updates": 320},
+    {"mode": "affinity", "variant": "affinity", "smoke": false, "updates": 320},
+    {"mode": "combined", "variant": "combined", "smoke": false, "updates": 320},
+    {"mode": "compact", "variant": "compact", "smoke": false, "updates": 320}
+  ],
+  "fresh_smoke_gate": "Combined exercises both changes; CPU/CUDA native tiny-graph exact equivalence plus inherited accepted legacy smoke bound before launch.",
+  "formal_extent": "Each fresh process: 20 warmup + 3x100 timed batches, batch1024, original fixed root order, same model/Adam and seeds.",
+  "profile_mode": "host for all variants; same existing symmetric spans and no new synchronization/event instrumentation in formal workers",
+  "separate_sampling_probe": "After all formal workers: original DiGiT sampler on full IG, logical CPU2, 20 warmup samples plus 8 CUDA-event samples splitting group selection and EID lookup. No model updates or feature reads; excluded from E2E comparisons.",
+  "native_backend_changed": false,
+  "graph_or_feature_layout_changed": false,
+  "cpu_cache_or_gpu_cache_changed": false,
+  "model_or_optimizer_changed": false,
+  "raw_ssd_writes": false,
+  "continuous_monitor": "unchanged IG persistent NVML",
+  "host_admission_gib": 320,
+  "gpu": 2,
+  "one_independent_run_per_variant": true,
+  "accuracy_or_epoch_claim": false,
+  "acceptance": "Full source/feature routing and sampled-edge smoke; every variant's roots, sample shape, losses, model parameters and Adam state compared against fresh legacy; retain negative results and machine variability."
+}

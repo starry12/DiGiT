@@ -21,7 +21,7 @@ The provided AE server includes the Python/CUDA environment, compiled native com
 source /srv/digit-ae/activate.sh
 ```
 
-**Run one request at a time:** main models, ablation and the layout grid share GPU 2 and the SSD. Wait for the current request to finish and release resources before starting the next; busy requests are rejected rather than queued. Each launch creates fresh results and continues after SSH disconnects. No local build or data preparation is needed on this server.
+**Run one request at a time:** main models, ablation, the layout grid and IG share GPU 2 and the SSD. Wait for the current request to finish and release resources before starting the next; busy requests are rejected rather than queued. Each launch creates fresh results and continues after SSH disconnects. No local build or data preparation is needed on this server.
 
 ### Main experiments: PA × GraphSAGE / GCN / GAT
 
@@ -53,7 +53,7 @@ digit-ae results PA sage --action ablation
 digit-ae logs PA sage --action ablation
 ```
 
-Expect a four-row table of training seconds and speedup versus GIDS after acceptance. The existing AE run has passed; [protocol and evidence](docs/ABLATION.md) describe the cache settings and component boundaries.
+After installation of the concise result display, accepted results show the final DiGiT/GIDS speedup. The existing AE run has passed; [protocol and evidence](docs/ABLATION.md) describe the cache settings and component boundaries.
 
 ### Grouping and replication grid: PA / GraphSAGE
 
@@ -66,7 +66,7 @@ digit-ae results PA sage --action layout
 digit-ae logs PA sage --action layout
 ```
 
-The service reuses the 15 prepared layouts and shared proxy-feature SSD region, with real sampling, I/O and model updates. It runs a fresh g2/r20 smoke before the full grid; the other 14 points retain the declared runtime checks. It does not regenerate large layouts. Status reports completion out of 15; accepted results list training seconds and speedup relative to g2/r20.
+The service reuses the 15 prepared layouts and shared proxy-feature SSD region, with real sampling, I/O and model updates. It runs a fresh g2/r20 smoke before the full grid; the other 14 points retain the declared runtime checks. It does not regenerate large layouts. Status reports completion out of 15; accepted results show the best layout speedup relative to g2/r20.
 
 The published author grid is accepted and the AE extension is installed; a fresh AE grid replay has not yet been accepted. To view the author measurements without starting a run:
 
@@ -76,9 +76,29 @@ digit-ae results PA sage --action layout --reference
 
 This explicitly prints `AUTHOR_REFERENCE`, separate from a new AE request's `PASS`. See [grid protocol and evidence](docs/LAYOUT_GRID.md) for proxy-feature calibration and verification scope.
 
+### IG / GraphSAGE performance: five paired rounds
+
+The IG extension adds a performance-only comparison: **five paired rounds**, each
+with **20 warmup and 300 timed mini-batches** per system. After administrator
+installation, use:
+
+```bash
+digit-ae performance IG sage
+digit-ae status IG sage --action performance
+digit-ae results IG sage --action performance
+digit-ae logs IG sage --action performance
+```
+
+Results show the **maximum same-round GIDS/DiGiT speedup across five rounds**.
+This is a short-window performance measurement, not an accuracy or full-epoch run.
+To inspect the accepted author result without running a request:
+`digit-ae results IG sage --action performance --reference`.
+Installation and fresh reviewer replay acceptance are tracked separately.
+[IG protocol and source](docs/IG_PERFORMANCE.md).
+
 ### Completion, stopping and result files
 
-`status`, `logs` and `results` only inspect records. Use the matching `--action run`, `--action ablation` or `--action layout` above to select the experiment. They select the latest request for that action, including a failed one. Final **`PASS` requires accepted reports and successful service completion**; a launch acknowledgement or running/provisional table is not final acceptance. The printed output path contains the logs, reports and summaries and can be downloaded with SFTP/SCP through the supplied SSH route.
+`status`, `logs` and `results` only inspect records. Use the matching `--action run`, `--action ablation` `--action layout` or `--action performance` above to select the experiment. They select the latest request for that action, including a failed one. Final **`PASS` requires accepted reports and successful service completion**; a launch acknowledgement or running/provisional table is not final acceptance. The printed output path contains the logs, reports and summaries and can be downloaded with SFTP/SCP through the supplied SSH route.
 
 To cancel a request, use its matching command and wait for inactive status and resource release:
 
@@ -87,6 +107,7 @@ To cancel a request, use its matching command and wait for inactive status and r
 | Main comparison | `digit-ae stop PA sage` (substitute `gcn` or `gat`) |
 | Four-arm ablation | `digit-ae stop PA sage --action ablation` |
 | Layout grid | `digit-ae stop PA sage --action layout` |
+| IG performance | `digit-ae stop IG sage --action performance` |
 
 The main SAGE full workflow previously took about **2 h 25 min**, and four-arm ablation about **59 min**, including smoke and setup. These are observed wall times, not estimates from the per-epoch result tables; server load can change them. [Reviewer instructions](docs/REVIEWER.md) provide additional troubleshooting and environment details.
 
@@ -94,51 +115,32 @@ The main experiments execute the preserved, accepted server release; the supplem
 
 ## Current evaluation scope
 
-The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation and grouping/replication grid use one complete epoch per setting and report performance only. This is a reconstruction of the paper implementation.
+The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation and grouping/replication grid use one complete epoch per setting and report performance only. The supplementary IG/SAGE comparison uses five paired short performance windows. This is a reconstruction of the paper implementation.
 
 The source tree contains one selected implementation per model. It excludes research Git history, intermediate implementations, training logs, checkpoints, compiled binaries and datasets.
 
 ## Results and boundaries
 
-| Model | Selected training speedup | GIDS test accuracy | DiGiT test accuracy | Evidence |
-|---|---:|---:|---:|---|
-| GraphSAGE | 1.8027× | 62.8531% | 62.9552% | Fresh reviewer full pair; strict monitoring passed |
-| GCN | 1.8584× | 53.7422% | 53.3634% | Fresh reviewer full pair; strict monitoring passed |
-| GAT | 1.7266× | 48.6204% | 47.9574% | Fresh reviewer full pair; strict monitoring passed |
+| Experiment | Final speedup |
+|---|---:|
+| PA / GraphSAGE main comparison | 1.80× |
+| PA / GCN main comparison | 1.86× |
+| PA / GAT main comparison | 1.73× |
+| PA / GraphSAGE component ablation, final DiGiT vs GIDS | 1.88× |
+| PA / GraphSAGE best layout vs g2/r20 | 1.16× |
+| IG / GraphSAGE, maximum paired speedup across five rounds | 2.02× |
 
-These selected measurements are [fresh reviewer full results](reference/results.json) from the sealed server release. GCN and GAT completed through the reviewer-account workflow on 2026-09-24: each arm ran 20 epochs, 20 full validations and one final test; all workers exited normally and strict monitors had zero query errors. The [full acceptance receipt](reference/reviewer_full.json) binds 202 independently checked evidence hashes. DiGiT test accuracy is lower by 0.3788 percentage points for GCN and 0.6630 for GAT. One seed does not establish statistical accuracy equivalence or the paper's absolute accuracy. The [previous index](reference/results_before_reviewer_full_20260924.json) preserves original GCN/GAT results, including four GCN GIDS monitor timeouts. [Earlier reviewer smoke](reference/reviewer_smoke.json) and rebuilt-source acceptance remain separate. See [metric definitions](docs/RESULTS.md).
+PA main results are accepted reviewer comparisons over 20 training epochs.
+The accepted PA ablation uses one full epoch per arm. The layout result selects
+g4/r80 from the accepted author grid, relative to g2/r20, rather than GIDS.
+IG is an accepted author short-window result: five paired rounds, each with
+20 warmup and 300 timed mini-batches. Its maximum observed speedup does not
+establish average or stable performance. Fresh AE layout/IG replay acceptance
+remains separate from publication and installation.
 
-### PA/SAGE component ablation
-
-Accepted AE self-service measurements, completed 2026-09-25: one full seed-0 training epoch per arm, without validation/test.
-
-| Stage | Training time (s) | Speedup vs GIDS |
-|---|---:|---:|
-| GIDS | 194.63 | 1.0000× |
-| +GR (adjacency only) | 196.12 | 0.9924× |
-| ++NS | 160.38 | 1.2136× |
-| DiGiT | 103.69 | 1.8770× |
-
-Four-arm smoke and full acceptance passed with normal exits and zero monitor query errors. All arms use a 4 GiB GPU feature cache; the first three share the main RevPR CPU hot set. +GR changes adjacency order only; GR→NS also changes feature layout. Training excludes preparation and setup.
-
-[Full results and protocol](docs/ABLATION.md) · [Download CSV](reference/pa_sage_ablation_perf.csv) · [AE acceptance evidence](reference/pa_sage_ablation_perf.json) · [Earlier author results](reference/pa_sage_ablation_author_20260924.json)
-
-The [validation receipt](provenance/validation.json) records 22 model/budget checks, eight entry/counter boundary checks, a three-model CPU example, exact environment checks, and source/configuration parity checks. A subsequent [fresh-install and native-build receipt](provenance/native_build_validation.json) records successful locked environment installation, the three-model CPU example, compilation and module imports. After restoring the omitted `GIDS.breakdown` dependency, GPU/SSD preflight and paired smoke passed for all three models: six workers exited normally, strict monitors reported zero query errors, and 130 evidence hashes matched. Each arm performed four training updates and two limited validation calls, with no final test. The [rebuilt-source receipt](reference/rebuilt_native_smoke.json) records the accepted package identity and binary reuse; this does not claim new full experiments or reviewer-account workflow acceptance. Earlier validation receipts retain their original scope.
-
-### PA/SAGE grouping and replication
-
-Accepted author measurements: one complete first epoch per point, using shared proxy
-features and real sampling/I/O/model computation. Training seconds:
-
-| Group size | 0% | 10% | 20% | 40% | 80% |
-|---|---:|---:|---:|---:|---:|
-| g = 1 | 120.09 | 119.79 | 120.61 | 122.11 | 122.33 |
-| g = 2 | 105.27 | 104.18 | 104.34 | 104.56 | 104.49 |
-| g = 4 | 92.58 | 91.18 | 92.58 | 92.09 | 90.21 |
-
-[Protocol, verification scope and AE replay commands](docs/LAYOUT_GRID.md) ·
-[JSON](reference/pa_sage_layout_grid.json) · [CSV](reference/pa_sage_layout_grid.csv).
-The author grid is accepted; a fresh AE extension replay remains separately verifiable.
+[Metric definitions](docs/RESULTS.md) · [Ablation protocol](docs/ABLATION.md) ·
+[Layout protocol](docs/LAYOUT_GRID.md) · [IG protocol](docs/IG_PERFORMANCE.md).
+Default presentation shows final speedups; machine-readable audit evidence is retained.
 
 ## Set up from source
 
@@ -168,4 +170,4 @@ The CPU example runs three updates with each selected model and optimizer. It ne
 - `environment/`, `configs/`, `scripts/`: dependency locks, data contracts and build/binding helpers.
 - `reference/`: selected result summaries and the necessary deterministic SAGE correctness oracle.
 
-[Data](docs/DATA.md) and [native build instructions](docs/NATIVE_BUILD.md) describe the prepared-input contract. A fresh end-to-end dataset download/preparation pipeline and a container deployment have not been validated. The current prepared server supports the PA main experiments and the supplementary PA/SAGE ablation and layout grid above. IG, the web graphs and the remaining sensitivity/scalability experiments are outside this evaluation. The submitted `ae-pa-v1` remains the frozen initial PA snapshot; these supplementary updates are on `main`. Project licensing is recorded in [LICENSE_STATUS.md](LICENSE_STATUS.md).
+[Data](docs/DATA.md) and [native build instructions](docs/NATIVE_BUILD.md) describe the prepared-input contract. A fresh end-to-end dataset download/preparation pipeline and a container deployment have not been validated. The current prepared server supports the PA main experiments and the supplementary PA/SAGE ablation and layout grid above. IG/SAGE has the supplementary short-window performance protocol above; web graphs and the remaining sensitivity/scalability experiments are outside this evaluation. The submitted `ae-pa-v1` remains the frozen initial PA snapshot; these supplementary updates are on `main`. Project licensing is recorded in [LICENSE_STATUS.md](LICENSE_STATUS.md).

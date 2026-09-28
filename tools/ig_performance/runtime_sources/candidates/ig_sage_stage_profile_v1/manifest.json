@@ -1,0 +1,33 @@
+{
+  "schema": "digit-ig-symmetric-stage-candidate-v1",
+  "parent_candidate_sha256": "cab778971d77b7cb8001e3311b2f2e1ffb3ba343b0652e4ad896eadc1351841f",
+  "files": {
+    "README.md": "6401b9a343b8df0fc684e8c35b1bb0f2ed0986c930f344c813b9321cfb77ef73",
+    "admission.py": "a7f1b28982d3e0df7411f16dc504056e407819977348dffc83290d40ba604980",
+    "common.py": "7cf0abf623924bfa8460c59ac862f8d4e93512d0c05433a1c54820f22eb9284e",
+    "controller.py": "ef32731fed7838888e116562647eefa6ab91abc7819c4ae03343f6d155a52307",
+    "features.py": "b2eee1528a2222df99d780d6b487a072f38b8acef1464d93ce236b935806c58c",
+    "freeze.py": "13d7584bfb61d0f92501c63fcdbe38bef19d9784d559139efb580abd4385ef8e",
+    "inputs.py": "97eb5a16290331f7759325544c1eecedeb1081c3c5b30f787b7d0f3a1a7b98ba",
+    "launcher_checks.py": "cf1efce6028fd82ba5fb15ecfdb66daa50fc1fd54ad445872d24d8740dee06a8",
+    "model.py": "f8afbbba2dbcfdc36025a3dd5b72c90fd3d95281c5b79b23e6b8631470091d82",
+    "profile.py": "fbfeb8fe18df2a4bd42ea3430962598a33d183af8924a20b52a8f52ae15e5d3f",
+    "profile_protocol.json": "828966348916aff3b2f18583fd7ce44f6261fd131193369066b6eeb8786e1ece",
+    "protocol.json": "81e99d69c6a4755d40cd2c812d932baff5d11edc7546d1c54dbe9a98a245f5b1",
+    "review.py": "267d3a2b8d0d26e3d5218c610a77320a239cd2f712b0236550b743c11c3c734d",
+    "runtime/IGPerfNative.so": "6a9a708b9456908bf6e6f1412f42cce2d7d608869da08c49ac5c4e44e569db9d",
+    "start.py": "b5e092e533ff4859646e3dc3f64bb967add0f834df5b61dec97891fa66e9cbdf",
+    "summarize.py": "e1125e529c04c85d2f1da1b5db3c869e37c559fea902c442a0af07a320b5df90",
+    "tests.py": "8d64053d521a86c5134ce6505b0ba56fc106dc80fa5d565aaaa6b7fe5fc1a6da",
+    "validation.py": "74bca1e79aced2d20dd7975a293141d9a77083d085ee7e184d09bd12eaeddaed",
+    "windows.py": "ec9d65606f963fae7fde5eb3b5c99c2fb0bd7484d751612c7c1e437cc5a49cb0",
+    "worker.py": "b4ec64997aa65f1ac609920ab68acd29a0af8d56b4984b4066e240d692af4159"
+  },
+  "protocol_sha256": "81e99d69c6a4755d40cd2c812d932baff5d11edc7546d1c54dbe9a98a245f5b1",
+  "profile_protocol_sha256": "828966348916aff3b2f18583fd7ce44f6261fd131193369066b6eeb8786e1ece",
+  "cpu_checks_sha256": "8e4b0ac3624cc6a057c7f87c418167c8292316c4b391fb0e7fa9a8a146bd151e",
+  "native_backend_changed": false,
+  "added_cuda_synchronization": false,
+  "scope": "IG/SAGE: paired host smoke followed by fresh off/host workers per arm; 20 warmup plus 300 timed batches each",
+  "native_acceptance": "pending fresh paired smoke and off/host comparison"
+}
