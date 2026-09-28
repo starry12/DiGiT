@@ -125,11 +125,13 @@ The source tree contains one selected implementation per model. It excludes rese
 
 Accepted reviewer comparisons over 20 training epochs per system. Speedup is GIDS training time divided by DiGiT training time.
 
-| Model | Training speedup vs GIDS |
-|---|---:|
-| GraphSAGE | 1.80× |
-| GCN | 1.86× |
-| GAT | 1.73× |
+| Model | Training speedup vs GIDS | GIDS test accuracy | DiGiT test accuracy |
+|---|---:|---:|---:|
+| GraphSAGE | 1.80× | 62.85% | 62.96% |
+| GCN | 1.86× | 53.74% | 53.36% |
+| GAT | 1.73× | 48.62% | 47.96% |
+
+Test accuracy is measured once using each system’s epoch-20 checkpoint (seed 0). These single-seed results do not establish statistical accuracy equivalence.
 
 [Main results and metric definitions](docs/RESULTS.md).
 
