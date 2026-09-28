@@ -670,5 +670,14 @@
     }
   },
   "candidate_sha256": "220a06621898639512817abe87f3aef3b87c8323bea5ed21892bde79b2836f8b",
-  "native_ae_replay_accepted": false
+  "native_ae_replay_accepted": true,
+  "service_files": {
+    "tools/ig_performance/service/mount_data.py": "84a4f297c0f3cdb2b3b8de619f7875b2f379def29b5332d64dd807b4b2b55b71",
+    "tools/ig_performance/service/mounts.json": "4ffe6108cabe765b749da34c5c8cfb4aade2b8f0650862039bff3c31c5bc1dd1",
+    "tools/ig_performance/service/cli.py": "404792a6aa2c16d86d4c61c0b0e5a917eaf9d0f3168370ff47b6ac0a68cda605",
+    "tools/ig_performance/installation_repairs/check_dependencies.py": "39f4bd9b0d7742ff278c19c35afaa3de4b1918e3eab759490bc03ccc79929204",
+    "tools/ig_performance/installation_repairs/snapshot_checks.py": "78f86d080697b3fe5a7a357cc1847765cd3518c5bbcc93e2b583ca9c2182d540",
+    "tools/ig_performance/installation_repairs/test_snapshot_checks.py": "ff17cacd2719b4055e4f1830e2fe528112e1e3741364a051969a6a82e9337acb",
+    "tools/ig_performance/installation_repairs/README.md": "a8a18b963dd54b6143383bb4051482af9e0e63cedacd0ef821f35d59532f0281"
+  }
 }

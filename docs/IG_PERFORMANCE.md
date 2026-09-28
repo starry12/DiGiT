@@ -1,12 +1,13 @@
 # IG/SAGE performance comparison
 
-Final speedup: **2.02×**, the **maximum observed paired speedup across five rounds**.
-This is an accepted author result. Installation and a fresh AE replay are separately
-verified; no fresh AE replay is claimed here.
+Final speedup: **1.46×**, the **maximum observed paired speedup across five rounds**.
+The AE reviewer workflow completed successfully on 2026-09-28. All ten workers
+passed, all 285 worker evidence hashes were rechecked, and GPU2 was released.
+See the [AE acceptance receipt](../reference/ig_sage_reviewer_acceptance.json).
 
 ## Reproduction on the prepared server
 
-After the administrator installs the IG extension:
+The extension is installed; to start a new independent five-round request:
 
 ```bash
 source /srv/digit-ae/activate.sh
@@ -17,9 +18,9 @@ digit-ae logs IG sage --action performance
 digit-ae stop IG sage --action performance
 ```
 
-To inspect the author reference without running training:
+To inspect the accepted AE reference without running training:
 `digit-ae results IG sage --action performance --reference`.
-It is labeled `AUTHOR_REFERENCE`, never a fresh `PASS`.
+It is labeled `AE_REFERENCE`, never a fresh `PASS`.
 
 Each request runs five paired rounds, ten fresh processes, ordered
 G1,D1,D2,G2,G3,D3,D4,G4,G5,D5. Each process warms up for 20 mini-batches
@@ -47,3 +48,15 @@ runtime with read-only input mounts. This is not a claim of an independently
 validated from-scratch IG build from the concise checkout. The installer performs
 CPU/import checks without launching training. The PA release and submitted
 `ae-pa-v1` remain unchanged.
+
+## Installed corrections
+
+The source-order provenance directory `data/ig_perf_v2` is mounted read-only.
+Mounted inputs retain their original owner and inode; same-file, read-only and
+content-hash checks remain required. Executable snapshot files still require root
+ownership and safe permissions.
+
+For completed services, systemd may clear its live InvocationID. The result CLI
+permits that empty live field while still requiring successful service exit, matching
+persistent request/result InvocationIDs and valid completion hashes. A nonempty
+mismatched ID remains a failure. These corrections change no training code or results.

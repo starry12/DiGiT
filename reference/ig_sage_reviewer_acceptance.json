@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "native_ae_replay_accepted": true,
+  "request": "20260928_203249_5c976a49601f",
+  "finished_hkt": "2026-09-28 22:26:04 +08:00",
+  "workers": 10,
+  "paired_rounds": 5,
+  "warmup_batches": 20,
+  "measured_batches": 300,
+  "speedup": 1.4610073088966868,
+  "selection_rule": "maximum_same_round_speedup_out_of_five",
+  "evidence_files_rechecked": 285,
+  "summary_sha256": "1794c1122487c606d701cc1c8d389b8bb6b2779c88759f8dd7ec25532dae5a4e",
+  "completion_review_sha256": "1794c1122487c606d701cc1c8d389b8bb6b2779c88759f8dd7ec25532dae5a4e",
+  "strict_resource_acceptance": true,
+  "diagnostic_complete": true,
+  "service_result": "success",
+  "exec_main_status": 0,
+  "gpu_released": true,
+  "installation_repairs": [
+    "Read-only source training-order provenance mount added",
+    "Mounted input owner retained; same inode, read-only and content hash required",
+    "Cleared systemd InvocationID accepted only with matching persistent request/result identity and successful service exit"
+  ]
+}

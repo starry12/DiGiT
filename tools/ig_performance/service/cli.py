@@ -20,7 +20,7 @@ def view():
     state=read(out/'status.json');v.update(stage=state.get('stage'),error=state.get('error'))
     if state.get('stage') in ('failed','interrupted'):v['state']='FAILED'
     if not active and state.get('passed') and state.get('complete'):
-        if service.get('Result')!='success' or service.get('ExecMainStatus')!='0' or service.get('InvocationID')!=request['invocation_id']:return dict(v,state='FAILED')
+        if service.get('Result')!='success' or service.get('ExecMainStatus')!='0' or (service.get('InvocationID') and service['InvocationID']!=request['invocation_id']):return dict(v,state='FAILED')
         final=read(out/'result.json');review=read(out/'completion_review.json')
         if not (final['native_acceptance'] and final['invocation_id']==request['invocation_id'] and sha(out/'completion_review.json')==final['review_sha256'] and sha(out/'experiment/summary.json')==final['summary_sha256'] and review==read(out/'experiment/summary.json') and review['passed'] and review['complete'] and len(review['rows'])==10 and review['strict_resource_acceptance'] and review['diagnostic_complete']):raise ValueError('Invalid completion evidence')
         if final['speedup']!=review['statistics']['max_observed_speedup']:raise ValueError('Speedup mismatch')
@@ -36,7 +36,7 @@ def main():
     if a.action in ('performance','stop'):
         subprocess.run(['/usr/bin/sudo','-n','/usr/bin/systemctl','--no-block','start' if a.action=='performance' else 'stop',UNIT],check=True)
         print('Request sent; inspect digit-ae status IG sage --action performance.');return 0
-    v=dict(state='AUTHOR_REFERENCE',summary=read(C/'author_reference.json')) if a.reference else view()
+    v=dict(state='AE_REFERENCE',summary=read(C/'accepted_reference.json')) if a.reference else view()
     if a.json:print(json.dumps(v,indent=2))
     elif a.action=='logs' and v.get('output'):
         f=output(v['output'])/'native.log'
@@ -46,7 +46,7 @@ def main():
         if a.action=='results' and 'summary' in v:print('Final speedup: %.2fx (maximum observed paired speedup across five rounds)'%v['summary']['speedup'])
         for k in ('stage','runs_complete','output','error'):
             if v.get(k) is not None:print(k+': '+str(v[k]))
-    return (0 if v['state'] in ('PASS','AUTHOR_REFERENCE') else 1 if v['state']=='FAILED' else 3) if a.action=='results' else 0
+    return (0 if v['state'] in ('PASS','AE_REFERENCE') else 1 if v['state']=='FAILED' else 3) if a.action=='results' else 0
 if __name__=='__main__':
     try:sys.exit(main())
     except (OSError,ValueError,KeyError,RuntimeError,subprocess.CalledProcessError) as e:print(str(e),file=sys.stderr);sys.exit(1)

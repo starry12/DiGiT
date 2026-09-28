@@ -3,7 +3,7 @@ import json, os, subprocess
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
 PREFIX = Path('/srv/digit-ae/releases/ig_sage_performance_20260928_v1')
-ALLOWED = {'data/igb', 'ssd_state', 'configs/igb', 'data/ig_window_v2', 'data/papers_g2_random_v2'}
+ALLOWED = {'data/igb', 'data/ig_window_v2', 'data/ig_perf_v2', 'data/papers_g2_random_v2', 'configs/igb', 'ssd_state'}
 def main():
     assert os.geteuid() == 0
     mounts = json.loads((HERE / 'mounts.json').read_text())
@@ -18,5 +18,5 @@ def main():
             subprocess.run(['/usr/bin/mount', '-o', 'remount,bind,ro', str(dst)], check=True)
         assert os.path.samefile(src, dst), 'Unexpected mounted source'
         assert os.statvfs(dst).f_flag & os.ST_RDONLY, 'Data is not read-only'
-    print('Five fixed read-only mounts verified')
+    print('Six fixed read-only mounts verified')
 if __name__ == '__main__': main()

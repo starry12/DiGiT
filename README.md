@@ -79,8 +79,8 @@ This explicitly prints `AUTHOR_REFERENCE`, separate from a new AE request's `PAS
 ### IG / GraphSAGE performance: five paired rounds
 
 The IG extension adds a performance-only comparison: **five paired rounds**, each
-with **20 warmup and 300 timed mini-batches** per system. After administrator
-installation, use:
+with **20 warmup and 300 timed mini-batches** per system. The extension is installed and the AE five-round replay has passed:
+
 
 ```bash
 digit-ae performance IG sage
@@ -91,9 +91,9 @@ digit-ae logs IG sage --action performance
 
 Results show the **maximum same-round GIDS/DiGiT speedup across five rounds**.
 This is a short-window performance measurement, not an accuracy or full-epoch run.
-To inspect the accepted author result without running a request:
+To inspect the accepted AE reference without running a request:
 `digit-ae results IG sage --action performance --reference`.
-Installation and fresh reviewer replay acceptance are tracked separately.
+The reference is labeled `AE_REFERENCE`; default results inspect the latest request.
 [IG protocol and source](docs/IG_PERFORMANCE.md).
 
 ### Completion, stopping and result files
@@ -163,15 +163,15 @@ Accepted author grid: one complete first epoch per point, with shared proxy feat
 
 ### IG/SAGE performance comparison
 
-Accepted author short-window comparison: five paired rounds, each with 20 warmup and 300 timed mini-batches per system.
+Accepted AE reviewer short-window comparison: five paired rounds, each with 20 warmup and 300 timed mini-batches per system.
 
 | Model | Maximum paired speedup vs GIDS (five rounds) |
 |---|---:|
-| GraphSAGE | 2.02× |
+| GraphSAGE | 1.46× |
 
-The reported value is the maximum same-round GIDS/DiGiT ratio, not average or stable performance. GIDS uses default CPU scheduling; DiGiT binds to CPU2 after imports. No accuracy or full-epoch claim is made. Fresh AE replay acceptance remains separate from installation.
+The reported value is the maximum same-round GIDS/DiGiT ratio, not average or stable performance. GIDS uses default CPU scheduling; DiGiT binds to CPU2 after imports. No accuracy or full-epoch claim is made. All ten workers passed; the service completed successfully on 2026-09-28.
 
-[IG protocol and evidence](docs/IG_PERFORMANCE.md).
+[IG protocol and evidence](docs/IG_PERFORMANCE.md) · [AE acceptance receipt](reference/ig_sage_reviewer_acceptance.json).
 
 All displayed ratios are rounded to two decimal places; full-precision audit evidence is retained.
 

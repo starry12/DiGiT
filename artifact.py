@@ -308,7 +308,7 @@ def main(argv=None):
         print('Selected reference speedups (not a new execution):')
         print('PA/SAGE: 1.80x; PA/GCN: 1.86x; PA/GAT: 1.73x')
         print('PA/SAGE ablation: 1.88x; best layout vs g2/r20: 1.16x')
-        print('IG/SAGE: 2.02x (maximum paired speedup across five rounds)')
+        print('IG/SAGE: 1.46x (maximum paired speedup across five rounds)')
         print('Full audit records: reference/results.json and reference/ig_sage_performance.json')
         return 0
     if args.action == 'matrix':

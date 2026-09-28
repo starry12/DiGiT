@@ -753,8 +753,10 @@
     "ig_sage_performance": {
       "reference": "reference/ig_sage_performance.json",
       "protocol": "docs/IG_PERFORMANCE.md",
-      "speedup": 2.0220372097077006,
-      "selection_rule": "maximum_same_round_speedup_out_of_five"
+      "speedup": 1.4610073088966868,
+      "selection_rule": "maximum_same_round_speedup_out_of_five",
+      "origin": "accepted AE reviewer workflow",
+      "native_ae_replay_accepted": true
     }
   }
 }
