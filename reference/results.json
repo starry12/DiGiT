@@ -748,7 +748,11 @@
       "native_author_acceptance": true,
       "ae_replay_acceptance": false,
       "submitted_main_matrix": false,
-      "points": 15
+      "points": 15,
+      "origin": "accepted AE reviewer replay, second complete run",
+      "native_ae_replay_accepted": true,
+      "selected_request": "20260929_085654_340f2d36cff5",
+      "selection_policy": "Use this complete second AE grid at user request; no cross-run point selection"
     },
     "ig_sage_performance": {
       "reference": "reference/ig_sage_performance.json",

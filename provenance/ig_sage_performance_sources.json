@@ -678,6 +678,7 @@
     "tools/ig_performance/installation_repairs/check_dependencies.py": "39f4bd9b0d7742ff278c19c35afaa3de4b1918e3eab759490bc03ccc79929204",
     "tools/ig_performance/installation_repairs/snapshot_checks.py": "78f86d080697b3fe5a7a357cc1847765cd3518c5bbcc93e2b583ca9c2182d540",
     "tools/ig_performance/installation_repairs/test_snapshot_checks.py": "ff17cacd2719b4055e4f1830e2fe528112e1e3741364a051969a6a82e9337acb",
-    "tools/ig_performance/installation_repairs/README.md": "a8a18b963dd54b6143383bb4051482af9e0e63cedacd0ef821f35d59532f0281"
+    "tools/ig_performance/installation_repairs/README.md": "a8a18b963dd54b6143383bb4051482af9e0e63cedacd0ef821f35d59532f0281",
+    "tools/ig_performance/service/digit-ae": "dc4a06b25ba6c242d81a2b55549e6d12fd47d11692c2a1935df1e85a07d5001b"
   }
 }

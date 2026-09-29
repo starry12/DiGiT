@@ -68,13 +68,13 @@ digit-ae logs PA sage --action layout
 
 The service reuses the 15 prepared layouts and shared proxy-feature SSD region, with real sampling, I/O and model updates. It runs a fresh g2/r20 smoke before the full grid; the other 14 points retain the declared runtime checks. It does not regenerate large layouts. Status reports completion out of 15; accepted results show the best layout speedup relative to g2/r20.
 
-The published author grid is accepted and the AE extension is installed; a fresh AE grid replay has not yet been accepted. To view the author measurements without starting a run:
+The second complete AE grid replay passed on 2026-09-29 and is the selected reference. To inspect it without starting a run:
 
 ```bash
 digit-ae results PA sage --action layout --reference
 ```
 
-This explicitly prints `AUTHOR_REFERENCE`, separate from a new AE request's `PASS`. See [grid protocol and evidence](docs/LAYOUT_GRID.md) for proxy-feature calibration and verification scope.
+This explicitly prints `AE_REFERENCE`, separate from the latest AE request's `PASS`. See [grid protocol and evidence](docs/LAYOUT_GRID.md) for proxy-feature calibration and verification scope.
 
 ### IG / GraphSAGE performance: five paired rounds
 
@@ -151,15 +151,15 @@ Accepted AE measurements: one complete training epoch per arm, without validatio
 
 ### PA/SAGE grouping and replication
 
-Accepted author grid: one complete first epoch per point, with shared proxy features and real sampling, I/O and model computation. Speedups are relative to **g2/r20**, not GIDS.
+Accepted AE grid (second complete run, 2026-09-29): one complete first epoch per point, with shared proxy features and real sampling, I/O and model computation. Speedups are relative to **g2/r20**, not GIDS.
 
 | Group size | 0% | 10% | 20% | 40% | 80% |
 |---|---:|---:|---:|---:|---:|
-| g = 1 | 0.87× | 0.87× | 0.87× | 0.85× | 0.85× |
-| g = 2 | 0.99× | 1.00× | 1.00× | 1.00× | 1.00× |
-| g = 4 | 1.13× | 1.14× | 1.13× | 1.13× | 1.16× |
+| g = 1 | 0.88× | 0.88× | 0.88× | 0.87× | 0.86× |
+| g = 2 | 0.99× | 1.00× | 1.00× | 1.01× | 1.00× |
+| g = 4 | 1.14× | 1.16× | 1.15× | 1.15× | 1.16× |
 
-[Grid protocol and evidence](docs/LAYOUT_GRID.md). Fresh AE grid replay acceptance remains separate from the author results.
+[Grid protocol and evidence](docs/LAYOUT_GRID.md). All 15 points passed. The entire second run is selected; no points are mixed across runs.
 
 ### IG/SAGE performance comparison
 

@@ -66,8 +66,8 @@ def main(argv=None):
         print('Start requested; fresh AE acceptance pending.' if a.action=='layout' else 'Stop requested; wait for resource release.')
         print('digit-ae status PA sage --action layout');return 0
     if a.reference:
-        r=read(CONTROL/'author_reference.json');v=dict(state='AUTHOR_REFERENCE',summary=r,
-            note='Accepted author run; not a fresh AE-account replay')
+        r=read(CONTROL/'accepted_reference.json');v=dict(state='AE_REFERENCE',summary=r,
+            note='Selected accepted AE run; not a new execution')
     else:v=view()
     if a.action=='logs' and 'output' in v:
         out=checked_output(v['output']);files=['status.json']
@@ -88,7 +88,7 @@ def main(argv=None):
             print('point       epoch(s)   speedup vs g2/r20')
             for r in v['summary']['points']:
                 print('%-10s %8.2f %8.2fx'%(r['point']['id'],r['mean_training_epoch_seconds'],r['speedup_vs_fresh_g2_r20']))
-    return (0 if v['state'] in ('PASS','AUTHOR_REFERENCE') else 1 if v['state']=='FAILED' else 3) if a.action=='results' else 0
+    return (0 if v['state'] in ('PASS','AE_REFERENCE') else 1 if v['state']=='FAILED' else 3) if a.action=='results' else 0
 
 if __name__=='__main__':
     try:sys.exit(main())

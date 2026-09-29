@@ -11,10 +11,10 @@
 
 PA main results are accepted reviewer comparisons over 20 training epochs.
 The accepted PA ablation uses one full epoch per arm. The layout result selects
-g4/r80 from the accepted author grid, relative to g2/r20, rather than GIDS.
+g4/r80 from the accepted second AE grid, relative to g2/r20, rather than GIDS.
 IG is an accepted AE reviewer short-window result: five paired rounds, each with
 20 warmup and 300 timed mini-batches. Its maximum observed speedup does not
-establish average or stable performance. The IG AE replay has passed; fresh AE layout replay remains pending.
+establish average or stable performance. The IG AE replay has passed; the second complete AE layout replay has passed.
 
 [Metric definitions](RESULTS.md) · [Ablation protocol](ABLATION.md) ·
 [Layout protocol](LAYOUT_GRID.md) · [IG protocol](IG_PERFORMANCE.md).

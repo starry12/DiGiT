@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "complete": true,
+  "request": "20260929_085654_340f2d36cff5",
+  "finished_hkt": "2026-09-29 09:57:49 +08:00",
+  "points": 15,
+  "epochs_per_point": 1,
+  "updates_per_point": 1179,
+  "summary_sha256": "fc69a17dbd2554f4935dbc94256f5fde40b57180bbccfc24e833c5d2444e5655",
+  "accepted_report_sha256": {
+    "g1_r00": "7b24b5c8073b0bab65767f22e2feaa5e9d88992747502d432354384183044721",
+    "g1_r10": "aab9a362dee6ea599d761b2806a45bb0f9682bd2da473c1b4e4d78f219d0e05d",
+    "g1_r20": "aad28008c26f3a10a9f88701fd56a568b41cb485594d5ceb9c47dc96e160ec15",
+    "g1_r40": "c19ada991e0e09ee49a6b7d36cc058a23d8a9781704239ab838ec62676aa1cde",
+    "g1_r80": "bebb2f7b4732cd9d3d3221dc93d51290cac7db8a2e8f9b4984a4b7e1ffed6aa2",
+    "g2_r00": "b4ffbf5edb24ee61391f9e804da8394a1af0c26dbf16ab691f737afda2c04be0",
+    "g2_r10": "235a83e8dfc05efe5cf121f167640f48dc25722224d17cc769055e60beeced1b",
+    "g2_r20": "c775932d5cff314238692bf157a2a473411b560af38926ee0b9f13134ca84c0b",
+    "g2_r40": "141234056c691ac3ab5def0b56d4bfa80753701b952f8f3a0a538452cacc7e4d",
+    "g2_r80": "1984437db9cbe67397c573ed924bf4d0015a08912c0f62e179d57b24598ba98f",
+    "g4_r00": "b1d1a3aa62394968e27ff59181afc700498b5993d64a310a8da85cc816aa715b",
+    "g4_r10": "b72b7656d086139bcd557ae4e600f2939071beb6c3941d2bc72d04a332a338b3",
+    "g4_r20": "d3dd487e86c11a8e34a4568ce56651de03be9f522e67449f825a601d46ab07d5",
+    "g4_r40": "054bebc8cc178d23f4280f081a78034cf2ecc2047bd150e57e3d5a961a78744f",
+    "g4_r80": "7a2e36e0e1a1205e967fc1774f89e705bb89a81c9097b3b1017ed41b7c18b485"
+  },
+  "service_result": "success",
+  "exec_main_status": 0,
+  "earlier_request_preserved": "20260928_230340_4232260b8624",
+  "selection_policy": "Use this complete second AE grid at user request; no cross-run point selection"
+}

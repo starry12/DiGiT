@@ -201,7 +201,7 @@
     "ae/papers",
     "third_party/bam"
   ],
-  "deployment_native_acceptance": false,
+  "deployment_native_acceptance": true,
   "point_runner_adaptation": {
     "source": "candidates/pa_sage_layout_shared_resume_v3/run.py",
     "source_sha256": "f7341555711f32fcd2332368334ab642b752e56187aed299d287f42a021c8697",
@@ -213,7 +213,12 @@
     "training_worker_changed": false
   },
   "calibration_review_sha256": "0566051a73d4d761878f90c8102f82a2a5c4081d3b3fd62506ab12f9367d936a",
-  "evidence_sha256": {
+  "source_scope": "Exact supplementary adapter/preparation/controller sources; fixed prepared-server deployment supplies original hash-bound runtime and private data bindings",
+  "native_ae_replay_accepted": true,
+  "selected_request": "20260929_085654_340f2d36cff5",
+  "accepted_summary_sha256": "fc69a17dbd2554f4935dbc94256f5fde40b57180bbccfc24e833c5d2444e5655",
+  "published_cli_sha256": "d45e1c7e5eef5f850790446a1ac33174a20a64f0611f91f3fc39cafc65f5837d",
+  "historical_author_evidence_sha256": {
     "grid/status.json": "b89fcc34f1c54fd31017e7787fd8a2715e612360897ce10fe369c8aab0b6f4de",
     "grid/summary.json": "49770f13f9afa4babdcc876aacda7a750c8151a6b81f9e4eaa52803bde53f162",
     "grid/summary.csv": "78e7e7830f04117cbd4a7bd6511a5ba2dbcc4ad3229213ae34d28f8806dfe16a",
@@ -281,5 +286,22 @@
     "g4_r80/full_monitor.json": "8c138cce7a7fef0ce95bbf1e4676490354782a48d311014d51c06ced75019b91",
     "g4_r80/full_report.json": "dcf6f7dbf064286f867431e64e9b9844b710d54655ec5baf641674f8c424ed38"
   },
-  "source_scope": "Exact supplementary adapter/preparation/controller sources; fixed prepared-server deployment supplies original hash-bound runtime and private data bindings"
+  "evidence_sha256": {
+    "summary.json": "fc69a17dbd2554f4935dbc94256f5fde40b57180bbccfc24e833c5d2444e5655",
+    "native/g1_r00/full_digit_full_accepted.json": "7b24b5c8073b0bab65767f22e2feaa5e9d88992747502d432354384183044721",
+    "native/g1_r10/full_digit_full_accepted.json": "aab9a362dee6ea599d761b2806a45bb0f9682bd2da473c1b4e4d78f219d0e05d",
+    "native/g1_r20/full_digit_full_accepted.json": "aad28008c26f3a10a9f88701fd56a568b41cb485594d5ceb9c47dc96e160ec15",
+    "native/g1_r40/full_digit_full_accepted.json": "c19ada991e0e09ee49a6b7d36cc058a23d8a9781704239ab838ec62676aa1cde",
+    "native/g1_r80/full_digit_full_accepted.json": "bebb2f7b4732cd9d3d3221dc93d51290cac7db8a2e8f9b4984a4b7e1ffed6aa2",
+    "native/g2_r00/full_digit_full_accepted.json": "b4ffbf5edb24ee61391f9e804da8394a1af0c26dbf16ab691f737afda2c04be0",
+    "native/g2_r10/full_digit_full_accepted.json": "235a83e8dfc05efe5cf121f167640f48dc25722224d17cc769055e60beeced1b",
+    "native/g2_r20/full_digit_full_accepted.json": "c775932d5cff314238692bf157a2a473411b560af38926ee0b9f13134ca84c0b",
+    "native/g2_r40/full_digit_full_accepted.json": "141234056c691ac3ab5def0b56d4bfa80753701b952f8f3a0a538452cacc7e4d",
+    "native/g2_r80/full_digit_full_accepted.json": "1984437db9cbe67397c573ed924bf4d0015a08912c0f62e179d57b24598ba98f",
+    "native/g4_r00/full_digit_full_accepted.json": "b1d1a3aa62394968e27ff59181afc700498b5993d64a310a8da85cc816aa715b",
+    "native/g4_r10/full_digit_full_accepted.json": "b72b7656d086139bcd557ae4e600f2939071beb6c3941d2bc72d04a332a338b3",
+    "native/g4_r20/full_digit_full_accepted.json": "d3dd487e86c11a8e34a4568ce56651de03be9f522e67449f825a601d46ab07d5",
+    "native/g4_r40/full_digit_full_accepted.json": "054bebc8cc178d23f4280f081a78034cf2ecc2047bd150e57e3d5a961a78744f",
+    "native/g4_r80/full_digit_full_accepted.json": "7a2e36e0e1a1205e967fc1774f89e705bb89a81c9097b3b1017ed41b7c18b485"
+  }
 }
