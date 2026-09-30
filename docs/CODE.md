@@ -18,6 +18,3 @@ The selected model protocol files are byte-identical to the preserved release. P
 
 No research Git history or old implementation snapshots are included. Data contract names and receipt schemas remain stable for compatibility. Source reorganization has CPU/static validation; native source rebuild and a fresh native pair from this tree remain separate acceptance work. The prepared service stays on its preserved release during ongoing experiments.
 
-## Supplementary layout grid — 2026-09-26
-
-The accepted author 15-point grid and exact supplementary code are now indexed in [LAYOUT_GRID](LAYOUT_GRID.md). The prepared-server command is `digit-ae layout PA sage` after extension installation. It produces fresh evidence; publication of the author result is not AE replay acceptance. The main experiments and immutable `ae-pa-v1` are unchanged.
