@@ -1,0 +1,11 @@
+{
+  "schema": "ae-gpu-transport-v1",
+  "files": {
+    "check_cpu.py": "9ae07966481f9959f4dfa13c88298c4b9a985f326dac41e6cfec6621195c5509",
+    "gpu_selection.py": "ac909e1bffa63775d40cc2c580ba1c055a38ccd8316e7e5ea5fe0c12332af0ae",
+    "ig_controller.py": "5ab0ef01a73048214188155a53db1e0dad1cd3c606019eb6745d678be59cd755",
+    "ig_telemetry.py": "25afbbe5be850695c88575607d75f9873c75e27912e5133dcd0fa078a1439328",
+    "ig_telemetry_review.py": "e60166b1e973a35279e6d60c85137de2db3b0bcc4bd4effe5fab9a3b658ee461",
+    "ig_worker.py": "aeabfe97b13037cbc2c96d3abd86f17d54f939b82d664b862bc9eb4cde0518a5"
+  }
+}

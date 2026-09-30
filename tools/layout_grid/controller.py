@@ -7,6 +7,10 @@ import importlib
 import json
 import os
 from pathlib import Path
+import contextlib,sys
+sys.path.insert(0,'/srv/digit-ae/admin/gpu_selection_v1')
+import gpu_selection as auto_gpu
+
 import signal
 import subprocess
 import sys
@@ -59,13 +63,13 @@ def validate_point(directory,point):
     require(summary['passed'] and summary['report_sha256']['digit_full']==sha(directory/'full_digit_full_accepted.json'),
             'Accepted report changed')
     for mode,_,_ in expected:
+        auto_gpu.verify_monitor(directory/(mode+'_monitor_digit_full')/'external_gpu')
         monitor=read(directory/(mode+'_monitor_digit_full')/'external_gpu/summary.json')
         require(monitor['passed'] and monitor['complete'] and monitor['errors']==[],'Monitor failed')
     return sha(directory/'full_digit_full_accepted.json')
 
 def execute(selftest=False):
     require(os.geteuid()==0 and __debug__,'Fixed root service required')
-    require(os.environ.get('CUDA_VISIBLE_DEVICES')==('' if selftest else '2'),'Wrong device visibility')
     os.umask(0o022)
     output=OUTPUTS/(time.strftime('%Y%m%d_%H%M%S')+'_'+uuid.uuid4().hex[:12]);output.mkdir()
     state=dict(schema='digit-ae-layout-request-v1',passed=False,complete=False,stage='admission',
@@ -76,12 +80,15 @@ def execute(selftest=False):
     save();write(CONTROL/'state'/('selftest.json' if selftest else 'latest.json'),dict(output=str(output),
         authorized_account='atc27_ae',request_origin='fixed systemd service; no caller identity inferred',
         started_unix=state['started_unix']))
-    locks=[];child=None
+    locks=[];child=None;gpu_stack=contextlib.ExitStack()
     def stop(*args):raise KeyboardInterrupt('Stop requested')
     signal.signal(signal.SIGTERM,stop);signal.signal(signal.SIGINT,stop)
     try:
         for path in ('/run/digit-ae-selfservice/exclusive.lock','/tmp/digit-pa-bidir-controller.lock'):
             handle=open(path,'a+');fcntl.flock(handle,fcntl.LOCK_EX|fcntl.LOCK_NB);locks.append(handle)
+        if not selftest:
+            selection=auto_gpu.activate(gpu_stack);write(output/'gpu_selection.json',selection)
+            save(gpu=auto_gpu.assignment()['index'],gpu_uuid=auto_gpu.assignment()['uuid'],gpu_selection=selection)
         save(stage='verifying_snapshot_and_prepared_inputs');identity=verify_snapshot();save(snapshot_sha256=identity)
         with (output/'imports.log').open('x') as log:
             subprocess.run([sys.executable,'-I','-B',str(CONTROL/'check_imports.py')],cwd=ROOT,
@@ -89,9 +96,7 @@ def execute(selftest=False):
         if selftest:
             save(stage='complete',complete=True,passed=True,native_acceptance=False,finished_unix=time.time());return
         # No device initialization until occupancy and immutable snapshot checks pass.
-        gpu=subprocess.check_output(['nvidia-smi','-i','2','--query-gpu=uuid','--format=csv,noheader'],text=True).strip()
-        apps=subprocess.check_output(['nvidia-smi','--query-compute-apps=gpu_uuid,pid','--format=csv,noheader'],text=True)
-        require(gpu=='GPU-927ce617-743a-4bfe-6a60-8a8311cfc703' and gpu not in apps,'GPU 2 changed or occupied')
+        auto_gpu.idle()
         (output/'native').mkdir()
         for point in ORDER:
             save(stage='native_'+point)
@@ -123,6 +128,7 @@ def execute(selftest=False):
             child.terminate()
             try:child.wait(timeout=60)
             except subprocess.TimeoutExpired:child.kill();child.wait()
+        gpu_stack.close()
         for handle in locks:handle.close()
 
 if __name__=='__main__':

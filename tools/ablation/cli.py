@@ -39,7 +39,7 @@ def view():
     elif state.get('complete') and state.get('passed'):
         kind = 'FINALIZING' if active else ('PASS' if service.get('Result') == 'success' and service.get('ExecMainStatus') == '0' else 'FAILED')
     result = dict(state=kind, output=str(output), stage=state.get('stage'), service=service,
-        workers=state.get('workers', []), error=state.get('error'), request=request)
+        gpu=state.get('gpu'),gpu_uuid=state.get('gpu_uuid'),workers=state.get('workers', []), error=state.get('error'), request=request)
     if kind == 'PASS':
         summary = read(output / 'full_summary.json')
         if not summary.get('passed') or sha(output / 'full_summary.json') != state.get('summary_sha256'):
@@ -69,7 +69,7 @@ def main(argv=None):
     elif a.json: print(json.dumps(v, indent=2))
     else:
         print('PA / SAGE ablation | ' + v['state'])
-        for k in ('stage', 'output', 'error', 'progress'):
+        for k in ('gpu', 'stage', 'output', 'error', 'progress'):
             if v.get(k): print(k + ': ' + str(v[k]))
         if a.action == 'results' and 'summary' in v:
             for arm, row in v['summary']['arms'].items():

@@ -1,9 +1,12 @@
 """Bounded CPU tests of privileged command boundaries and acceptance decisions."""
-import contextlib,copy,importlib.util,io,json,os,tempfile,unittest
+import contextlib,copy,importlib.util,io,json,os,tempfile,unittest,sys
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 H=Path(__file__).resolve().parent
+# Load the published selector, even on a host without /srv/digit-ae.
+sys.path.insert(0,str(H.parent/'gpu_selection/control'))
+import gpu_selection
 def module(name):
     spec=importlib.util.spec_from_file_location('layout_test_'+name,H/(name+'.py'))
     value=importlib.util.module_from_spec(spec);spec.loader.exec_module(value);return value
@@ -12,6 +15,7 @@ cli=module('cli');controller=module('controller')
 class Tests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory(prefix='ae-layout-cpu-');self.addCleanup(self.tmp.cleanup)
+        env=patch.dict(os.environ,{'CUDA_VISIBLE_DEVICES':'3','DIGIT_AE_GPU_ASSIGNMENT':json.dumps(dict(index=3,uuid='GPU-test-3',name='NVIDIA L40'))});env.start();self.addCleanup(env.stop)
         self.root=Path(self.tmp.name);self.control=self.root/'control';self.outputs=self.root/'outputs'
         (self.control/'state').mkdir(parents=True);self.outputs.mkdir()
         for name,val in [('CONTROL',self.control),('OUTPUTS',self.outputs)]:
@@ -46,13 +50,13 @@ class Tests(unittest.TestCase):
         self.assertEqual(r.call_args.args[0],['/usr/bin/sudo','-n','/usr/bin/systemctl','--no-block','start',cli.UNIT])
 
     def test_reference_is_explicit_and_does_not_launch(self):
-        self.write(self.control/'author_reference.json',dict(points=[],passed=True))
+        self.write(self.control/'accepted_reference.json',dict(points=[],passed=True))
         with patch.object(cli.subprocess,'run') as r,contextlib.redirect_stdout(io.StringIO()) as out:
             self.assertEqual(cli.main(['results','PA','sage','--action','layout','--reference','--json']),0)
-        self.assertEqual(json.loads(out.getvalue())['state'],'AUTHOR_REFERENCE');r.assert_not_called()
+        self.assertEqual(json.loads(out.getvalue())['state'],'AE_REFERENCE');r.assert_not_called()
 
     def test_not_started_does_not_substitute_author_result(self):
-        self.write(self.control/'author_reference.json',dict(passed=True))
+        self.write(self.control/'accepted_reference.json',dict(passed=True))
         self.assertEqual(cli.view()['state'],'NOT_STARTED')
 
     def test_path_traversal_and_symlinks(self):
@@ -90,7 +94,7 @@ class Tests(unittest.TestCase):
         r=dict(passed=True,smoke=False,source_only=False,updates=1179,epochs=[{}],test=None,point=dict(id=key),candidate_sha256=controller.NATIVE_SHA)
         self.write(out/'status.json',s);self.write(out/'full_digit_full_accepted.json',r)
         self.write(out/'full_summary.json',dict(passed=True,report_sha256=dict(digit_full=controller.sha(out/'full_digit_full_accepted.json'))))
-        for mode in modes:self.write(out/(mode+'_monitor_digit_full')/'external_gpu/summary.json',dict(passed=True,complete=True,errors=[]))
+        for mode in modes:self.write(out/(mode+'_monitor_digit_full')/'external_gpu/summary.json',dict(passed=True,complete=True,errors=[],gpu="3"))
         return out,s,r
 
     def test_point_requires_full_epoch_and_native_identity(self):
@@ -105,8 +109,13 @@ class Tests(unittest.TestCase):
         with self.assertRaises(RuntimeError):controller.validate_point(out,'g2_r20')
 
     def test_monitor_error_blocks_acceptance(self):
-        out,s,r=self.point();self.write(out/'full_monitor_digit_full/external_gpu/summary.json',dict(passed=True,complete=True,errors=['timeout']))
+        out,s,r=self.point();self.write(out/'full_monitor_digit_full/external_gpu/summary.json',dict(passed=True,complete=True,errors=['timeout'],gpu='3'))
         with self.assertRaises(RuntimeError):controller.validate_point(out,'g1_r00')
+
+    def test_monitor_wrong_gpu_blocks_acceptance(self):
+        out,s,r=self.point()
+        self.write(out/'full_monitor_digit_full/external_gpu/summary.json',dict(passed=True,complete=True,errors=[],gpu='2'))
+        with self.assertRaisesRegex(RuntimeError,'another GPU'):controller.validate_point(out,'g1_r00')
 
     def test_point_runner_keeps_exact_native_flow_except_locks(self):
         # Native source lives in the sibling private snapshot for deployment tests.
@@ -116,7 +125,10 @@ class Tests(unittest.TestCase):
         text=source.read_text();lock="    global_lock=open('/run/digit-ae-selfservice/exclusive.lock','a+')\n    fcntl.flock(global_lock,fcntl.LOCK_EX|fcntl.LOCK_NB)\n    lock=open('/tmp/digit-pa-bidir-controller.lock','a+');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)\n"
         text=text.replace(lock,"    require(str(os.getppid())==os.environ.get('DIGIT_LAYOUT_CONTROLLER_PID'),'Grid controller must own the shared locks')\n")
         text=text.replace('from candidates.pa_sage_layout_shared_resume_v3.common import *',"sys.path.insert(0,'/home/embed/digit')\nfrom candidates.pa_sage_layout_shared_resume_v3.common import *",1)
-        self.assertEqual(text,(H/'point_runner.py').read_text())
+        current=(H/'point_runner.py').read_text()
+        current=current.replace("\nsys.path.insert(0,'/srv/digit-ae/admin/gpu_selection_v1')\nimport gpu_selection as auto_gpu\n",'')
+        current=current.replace("    auto_gpu.assignment();auto_gpu.transport();auto_gpu.idle()", "    require(os.environ.get('CUDA_VISIBLE_DEVICES')=='2','Only physical GPU 2 is authorized')")
+        self.assertEqual(text,current)
 
 if __name__=='__main__':
     os.sched_setaffinity(0,{max(os.sched_getaffinity(0))});os.nice(19-os.nice(0))

@@ -24,3 +24,5 @@ python3 -B tools/layout_grid/tests.py
 Those tests mock services and results; they do not start systemd, nvidia-smi, CUDA or SSD I/O.
 The read-only namespace/import selftest is an additional administrator installation check.
 A fresh full AE request still requires its own native acceptance.
+
+[Automatic GPU selection and installed source mapping](../gpu_selection/README.md).

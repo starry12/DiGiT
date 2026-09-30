@@ -45,7 +45,7 @@ def view():
     elif s.get('complete') and s.get('passed'):
         same=not service.get('InvocationID') or service['InvocationID']==s.get('invocation_id')
         kind='FINALIZING' if active else ('PASS' if same and service.get('Result')=='success' and service.get('ExecMainStatus')=='0' else 'FAILED')
-    v=dict(state=kind,stage=s.get('stage'),output=str(out),completed=s.get('completed',[]),
+    v=dict(gpu=s.get('gpu'),gpu_uuid=s.get('gpu_uuid'),state=kind,stage=s.get('stage'),output=str(out),completed=s.get('completed',[]),
         service=service,steps=s.get('steps',[]),error=s.get('error'))
     if kind=='PASS':
         f=checked_file(out,'summary.json');summary=read(f)
@@ -81,7 +81,7 @@ def main(argv=None):
     elif a.json:print(json.dumps(v,indent=2))
     else:
         print('PA / SAGE layout | '+v['state'])
-        for key in ('stage','output','error','note'):
+        for key in ('gpu','stage','output','error','note'):
             if v.get(key):print(key+': '+str(v[key]))
         if 'completed' in v:print('Completed: %d/15'%len(v['completed']))
         if a.action=='results' and 'summary' in v:

@@ -1,6 +1,10 @@
 """Fixed AE transport for the immutable five-pair IG controller; no training changes."""
 import argparse,fcntl,json,os,signal,subprocess,sys,time,uuid,hashlib
 from pathlib import Path
+import contextlib
+sys.path.insert(0,'/srv/digit-ae/admin/gpu_selection_v1')
+import gpu_selection as auto_gpu
+
 ROOT=Path('/home/embed/digit');CONTROL=Path('/srv/digit-ae/admin/ig_performance_v1')
 OUT=Path('/srv/digit-ae/ig-performance-results');PY='/srv/digit-ae/env/bin/python'
 sys.path.insert(0,str(ROOT))
@@ -15,9 +19,12 @@ def identities():
     for n,d in read(CONTROL/'snapshot_manifest.json')['files'].items():
         require(not (ROOT/n).is_symlink() and sha(ROOT/n)==d,'Snapshot drift: '+n)
     from candidates.ig_sage_pair_max5_v1.common import verify
-    return dict(snapshot_sha256=sha(CONTROL/'snapshot_manifest.json'),candidate_sha256=verify(),python=PY)
+    return dict(snapshot_sha256=sha(CONTROL/'snapshot_manifest.json'),candidate_sha256=verify(),python=PY,gpu_transport_sha256=auto_gpu.transport())
 def controller():
-    from candidates.ig_sage_pair_max5_v1 import controller as c
+    import ig_controller as c
+    from candidates.ig_sage_host_telemetry_v1 import telemetry_review
+    import ig_telemetry_review
+    telemetry_review.review=ig_telemetry_review.review
     c.PY=PY # Fixed trusted interpreter only; source/model/monitor/protocol remain identical.
     return c
 
@@ -62,7 +69,19 @@ def main():
         folder=OUT/'native'/(time.strftime('%Y%m%d_%H%M%S')+'_'+uuid.uuid4().hex[:12])
         write(CONTROL/'state/latest.json',dict(output=str(folder),invocation_id=os.environ.get('INVOCATION_ID')))
         inherited.OUT=OUT;inherited.PY=PY;inherited.SCRIPT=CONTROL/'runner.py';inherited.identities=identities
-        rc=inherited.supervise(folder)
+        original_environment=inherited.environment
+        inherited.environment=lambda gpu=None:original_environment(auto_gpu.assignment()['index'])
+        inherited.admission=auto_gpu.ig_admission
+        with contextlib.ExitStack() as gpu_stack:
+            try:
+                selection=auto_gpu.activate(gpu_stack)
+            except BaseException as exc:
+                folder.mkdir(parents=True)
+                write(folder/'status.json',dict(passed=False,complete=False,stage='failed',error=str(exc)))
+                raise
+            write(CONTROL/'state/latest.json',dict(output=str(folder),invocation_id=os.environ.get('INVOCATION_ID'),gpu_selection=selection))
+            rc=inherited.supervise(folder)
+            write(folder/'gpu_selection.json',selection)
         if rc==0:
             result=read(folder/'completion_review.json')
             display=dict(passed=True,complete=True,speedup=result['statistics']['max_observed_speedup'],

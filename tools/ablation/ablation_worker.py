@@ -1,5 +1,8 @@
 """Fixed AE launcher for a sealed candidate plus explicit host192 policy."""
 import importlib, json, os, sys
+
+sys.path.insert(0,'/srv/digit-ae/admin/gpu_selection_v1')
+import gpu_selection as auto_gpu
 from pathlib import Path
 ROOT=Path('/home/embed/digit')
 sys.path.insert(0,str(ROOT));sys.path.insert(0,str(Path(__file__).resolve().parent))
@@ -12,7 +15,7 @@ def execute():
         admission.require(not torch.cuda.is_initialized(),'Admission selftest initialized CUDA')
         print(json.dumps(dict(report,cuda_initialized=False,training_started=False)));return
     admission.require(os.geteuid()==0 and __debug__,'Root service without Python optimization required')
-    admission.require(os.environ.get('CUDA_VISIBLE_DEVICES')=='2','GPU 2 only')
+    auto_gpu.assignment();auto_gpu.transport();auto_gpu.idle()
     import argparse
     parser=argparse.ArgumentParser();parser.add_argument('--arm',choices=('gids','gr','ns','digit_full'),required=True)
     parser.add_argument('--output',type=Path,required=True);parser.add_argument('--binding',type=Path,required=True);parser.add_argument('--smoke',action='store_true')

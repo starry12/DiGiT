@@ -54,8 +54,8 @@ digit-ae results PA sage --action layout --reference
 
 Reference output is labelled AE_REFERENCE, never fresh AE PASS. Without --reference,
 the command reads only the latest AE request, including failure. PASS requires all 15
-accepted reports, zero monitor errors and successful service exit. GPU 2 and data paths
-are fixed. The whole request owns the existing AE/NVMe exclusion locks. Services survive
+accepted reports, zero monitor errors and successful service exit. Each request selects an idle GPU from cards 0–3 and keeps
+it throughout all 15 points; data paths are fixed. The whole request owns the existing AE/NVMe exclusion locks. Services survive
 SSH disconnects; other experiments must wait. Both complete AE runs are preserved; the second is the current published reference.
 
 The original nvidia-smi monitor retains a 5-second individual-query timeout and 0.5-second

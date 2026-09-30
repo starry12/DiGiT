@@ -32,8 +32,9 @@ No accuracy or full-epoch claim is made. Sampling, feature access and model upda
 are real. Preparation and warmup are outside the measured interval.
 
 GIDS retains default CPU scheduling; original DiGiT binds to logical CPU2 after
-imports. GPU2, cache settings, host-stage timing, CPU/GPU telemetry and the inherited
-NVML monitor remain fixed. Available host memory admission is 320 GiB.
+imports. Each request automatically selects an idle GPU from cards 0–3 and keeps
+it throughout all five rounds. Cache settings, host-stage timing, CPU/GPU telemetry
+and the inherited NVML monitor remain unchanged. Available host memory admission is 320 GiB.
 A request takes exclusive AE/author resource locks, rejects busy devices, and never
 writes the prepared raw SSD region. There are no automatic retries.
 

@@ -1,5 +1,8 @@
 """One independently bound layout: smoke gate, then a fresh one-epoch worker."""
 import argparse,fcntl,signal,subprocess,sys,os,time
+
+sys.path.insert(0,'/srv/digit-ae/admin/gpu_selection_v1')
+import gpu_selection as auto_gpu
 sys.path.insert(0,'/home/embed/digit')
 from candidates.pa_sage_layout_shared_resume_v3.common import *
 from ae.common import check_device,check_payload
@@ -16,7 +19,7 @@ def worker_modes(p):return ('smoke','full') if p['verification_policy']['indepen
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=ROOT/'results/pa_sage_layout_shared_resume_20260925_v3/native'/cfg()['point']['id']);a=parser.parse_args()
     require(__debug__ and os.geteuid()==0,'Native controller requires root without Python optimization')
-    require(os.environ.get('CUDA_VISIBLE_DEVICES')=='2','Only physical GPU 2 is authorized')
+    auto_gpu.assignment();auto_gpu.transport();auto_gpu.idle()
     require(str(os.getppid())==os.environ.get('DIGIT_LAYOUT_CONTROLLER_PID'),'Grid controller must own the shared locks')
     execution=verify();a.output.mkdir(parents=True,exist_ok=False);state=dict(schema='digit-pa-sage-layout-point-run-v1',point=cfg()['point'],passed=False,complete=False,pid=os.getpid(),candidate_sha256=execution,stage='waiting_preparation',workers=[],started_unix=time.time(),raw_ssd_writes=False)
     monitor=None;child=None

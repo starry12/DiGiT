@@ -7,7 +7,7 @@ source /srv/digit-ae/activate.sh
 digit-ae smoke PA sage
 ```
 
-The service first validates the model/data/resource contract and then runs the short GIDS/DiGiT pair. It uses fixed GPU 2 and an exclusive GPU/SSD lock. A busy device is rejected; requests are not queued by the service. Do not start another model until the current one finishes.
+The service first validates the model/data/resource contract and then runs the short GIDS/DiGiT pair. It automatically selects an idle GPU from cards 0–3 for the whole request and holds an exclusive GPU/SSD lock. A busy device is rejected; requests are not queued by the service. Do not start another model until the current one finishes.
 
 ```bash
 digit-ae status PA sage
@@ -48,7 +48,7 @@ digit-ae logs PA sage --action ablation
 digit-ae stop PA sage --action ablation
 ```
 
-A new request runs fresh GIDS → adjacency-only +GR → ++NS → DiGiT smoke workers, then one full training epoch per arm. GPU 2, data paths and protocol are fixed. Requests share the main AE GPU/NVMe exclusion lock and reject busy resources. The service survives SSH disconnects. `PASS` requires closed accepted reports and successful service exit; the CLI never substitutes an earlier success for a later failure.
+A new request runs fresh GIDS → adjacency-only +GR → ++NS → DiGiT smoke workers, then one full training epoch per arm. The request automatically selects one idle GPU from cards 0–3; data paths and protocol are fixed. Requests share the main AE GPU/NVMe exclusion lock and reject busy resources. The service survives SSH disconnects. `PASS` requires closed accepted reports and successful service exit; the CLI never substitutes an earlier success for a later failure.
 
 The extension source is in `tools/ablation/` and targets a separately provisioned runtime snapshot with read-only data mounts. It does not provide a standalone four-arm run from the concise checkout. The main two-arm `run.sh` interface and submitted `ae-pa-v1` remain separate.
 

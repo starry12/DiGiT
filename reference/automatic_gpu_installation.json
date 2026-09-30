@@ -1,0 +1,73 @@
+{
+  "installed": true,
+  "workflows": [
+    "PA main models",
+    "PA/SAGE ablation",
+    "PA/SAGE layout grid",
+    "IG/SAGE performance"
+  ],
+  "gpu_candidates": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "transport_sha256": "3acbca69e3e3f4db1c4c6af2def5d6452090cf6035412d19d14d72bcaedc075b",
+  "server_installation_sha256": "8bf3aaeb2b0daee5f24e4006a0a477f4b59716070296f35253c4436da0316fba",
+  "cpu_checks": {
+    "pa": {
+      "passed": true,
+      "workflow": "pa",
+      "simulated_gpus": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cuda_initialized": false,
+      "training_started": false,
+      "transport_sha256": "3acbca69e3e3f4db1c4c6af2def5d6452090cf6035412d19d14d72bcaedc075b"
+    },
+    "ablation": {
+      "passed": true,
+      "workflow": "ablation",
+      "simulated_gpus": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cuda_initialized": false,
+      "training_started": false,
+      "transport_sha256": "3acbca69e3e3f4db1c4c6af2def5d6452090cf6035412d19d14d72bcaedc075b"
+    },
+    "layout": {
+      "passed": true,
+      "workflow": "layout",
+      "simulated_gpus": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cuda_initialized": false,
+      "training_started": false,
+      "transport_sha256": "3acbca69e3e3f4db1c4c6af2def5d6452090cf6035412d19d14d72bcaedc075b"
+    },
+    "ig": {
+      "passed": true,
+      "workflow": "ig",
+      "simulated_gpus": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "cuda_initialized": false,
+      "training_started": false,
+      "transport_sha256": "3acbca69e3e3f4db1c4c6af2def5d6452090cf6035412d19d14d72bcaedc075b"
+    }
+  },
+  "new_transport_native_acceptance": false,
+  "source_mapping": "tools/gpu_selection/deployment.json"
+}

@@ -17,7 +17,7 @@ def view():
     if not (C/'state/latest.json').exists():return dict(state='STARTING' if active else 'NOT_STARTED')
     request=read(C/'state/latest.json');out=output(request['output']);v=dict(state='RUNNING' if active else 'INCOMPLETE',output=str(out))
     if not (out/'status.json').exists():return v
-    state=read(out/'status.json');v.update(stage=state.get('stage'),error=state.get('error'))
+    state=read(out/'status.json');v.update(gpu=request.get('gpu_selection',{}).get('selected',{}).get('index'),gpu_uuid=request.get('gpu_selection',{}).get('selected',{}).get('uuid'),stage=state.get('stage'),error=state.get('error'))
     if state.get('stage') in ('failed','interrupted'):v['state']='FAILED'
     if not active and state.get('passed') and state.get('complete'):
         if service.get('Result')!='success' or service.get('ExecMainStatus')!='0' or (service.get('InvocationID') and service['InvocationID']!=request['invocation_id']):return dict(v,state='FAILED')
@@ -44,7 +44,7 @@ def main():
     else:
         print('IG / SAGE | '+v['state'])
         if a.action=='results' and 'summary' in v:print('Final speedup: %.2fx (maximum observed paired speedup across five rounds)'%v['summary']['speedup'])
-        for k in ('stage','runs_complete','output','error'):
+        for k in ('gpu','stage','runs_complete','output','error'):
             if v.get(k) is not None:print(k+': '+str(v[k]))
     return (0 if v['state'] in ('PASS','AE_REFERENCE') else 1 if v['state']=='FAILED' else 3) if a.action=='results' else 0
 if __name__=='__main__':

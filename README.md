@@ -21,7 +21,7 @@ The provided AE server includes the Python/CUDA environment, compiled native com
 source /srv/digit-ae/activate.sh
 ```
 
-**Run one request at a time:** PA main models, ablation, the layout grid, IG and UKS automatically select an idle GPU from cards 0–3 and keep it throughout each request. All requests share the SSD and exclusive experiment locks. Wait for the current request to finish and release resources before starting the next; busy requests are rejected rather than queued. Each launch creates fresh results and continues after SSH disconnects. No local build or data preparation is needed on this server.
+**Run one request at a time:** PA main models, ablation, the layout grid, IG and UKS automatically select an idle GPU from cards 0–3 and keep it throughout each request. All requests share the SSD and exclusive experiment locks. Wait for the current request to finish and release resources before starting the next; busy requests are rejected rather than queued. Each launch creates fresh results and continues after SSH disconnects. No local build or data preparation is needed on this server. [Automatic GPU selection source and installation checks](tools/gpu_selection/README.md).
 
 ### Main experiments: PA × GraphSAGE / GCN / GAT
 

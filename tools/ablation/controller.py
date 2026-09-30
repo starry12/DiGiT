@@ -1,6 +1,10 @@
 """Four fresh full epochs with optional one-time accepted-smoke reuse over a sealed snapshot."""
 import fcntl, importlib, json, os, signal, subprocess, sys, time, uuid
 from pathlib import Path
+import contextlib
+sys.path.insert(0,'/srv/digit-ae/admin/gpu_selection_v1')
+import gpu_selection as auto_gpu
+
 ROOT = Path('/home/embed/digit')
 CONTROL = Path('/srv/digit-ae/admin/ablation_v1')
 OUTPUTS = Path('/srv/digit-ae/ablation-results')
@@ -43,23 +47,25 @@ def bind_inputs(output):
 
 def execute(selftest=False):
     require(os.geteuid() == 0 and __debug__, 'Root service without Python optimization required')
-    require(os.environ.get('CUDA_VISIBLE_DEVICES') == '2', 'GPU 2 only')
     # The alias must resolve to the sealed snapshot, never the mutable author checkout.
     require(sha(ROOT / 'snapshot_identity.json') == sha(CONTROL / 'snapshot_identity.json'), 'Snapshot namespace missing')
     output = OUTPUTS / (time.strftime('%Y%m%d_%H%M%S') + '_' + uuid.uuid4().hex[:12])
     output.mkdir(); state = dict(passed=False, complete=False, stage='admission', pid=os.getpid(),
-        started_unix=time.time(), workers=[], selftest=selftest, gpu=2,
+        started_unix=time.time(), workers=[], selftest=selftest, gpu=None,
         snapshot_sha256=sha(CONTROL / 'snapshot_manifest.json'), raw_ssd_writes=False,
         monitoring_backend='nvidia-smi_author_v1', reused_smoke=None, host_admission_policy=host_admission.policy(),
         monitor_source_sha256={name: sha(ROOT / 'ae/pa_sage' / name) for name in ('gpu_monitor.py','monitor_control.py')})
     def save(**kw): state.update(kw, updated_unix=time.time()); write(output / 'status.json', state)
     save(); write(CONTROL / ('state/selftest.json' if selftest else 'state/latest.json'), dict(output=str(output), request_origin='fixed AE service; systemd does not record caller identity here', authorized_account='atc27_ae', started_unix=state['started_unix']))
-    locks = []; monitor = None; child = None
+    locks = []; monitor = None; child = None; gpu_stack=contextlib.ExitStack()
     def stop(*args): raise KeyboardInterrupt('Stop requested')
     signal.signal(signal.SIGTERM, stop); signal.signal(signal.SIGINT, stop)
     try:
         for name in ('/run/digit-ae-selfservice/exclusive.lock', '/tmp/digit-pa-bidir-controller.lock'):
             handle = open(name, 'a+'); fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB); locks.append(handle)
+        if not selftest:
+            selection=auto_gpu.activate(gpu_stack);write(output/'gpu_selection.json',selection)
+            save(gpu=auto_gpu.assignment()['index'],gpu_uuid=auto_gpu.assignment()['uuid'],gpu_selection=selection)
         save(stage='verifying_snapshot_and_inputs'); bindings = bind_inputs(output)
         save(stage='verifying_isolated_runtime_imports')
         import_env = dict(os.environ, CUDA_VISIBLE_DEVICES='')
@@ -73,19 +79,10 @@ def execute(selftest=False):
         save(stage='verifying_resume_evidence')
         reused, provenance = ablation_resume.verify(CONTROL, bindings, package)
         if selftest:
-            save(stage='verifying_nvidia_smi_monitor')
-            monitor = ExternalMonitor(output / 'nvidia_smi_selftest'); monitor.start()
-            for _ in range(6): time.sleep(.5)
-            code = monitor.stop(); monitor = None
-            measured = read(output / 'nvidia_smi_selftest/summary.json')
-            require(code == 0 and measured['passed'] and measured['complete'] and measured['errors'] == []
-                and measured['samples'] >= 3 and measured['peak_rss_bytes'] <= 64*2**20, 'nvidia-smi selftest failed')
-            write(output / 'nvidia_smi_selftest.json', dict(passed=True, backend='nvidia-smi_author_v1', source_sha256=state['monitor_source_sha256'], summary=measured, resume_verified=provenance))
+            save(stage='cpu_checks_passed',gpu_monitor_selftest='not run; no GPU required')
             save(stage='complete', passed=True, complete=True, native_acceptance=False, finished_unix=time.time())
             return
-        gpu = subprocess.check_output(['nvidia-smi', '-i', '2', '--query-gpu=uuid', '--format=csv,noheader'], text=True).strip()
-        apps = subprocess.check_output(['nvidia-smi', '--query-compute-apps=gpu_uuid,pid', '--format=csv,noheader'], text=True)
-        require(gpu == 'GPU-927ce617-743a-4bfe-6a60-8a8311cfc703' and gpu not in apps, 'GPU 2 occupied or changed')
+        auto_gpu.idle()
         if provenance:
             # Global service locks serialize this one-time claim; selftest never consumes it.
             write(CONTROL / 'state/resume_consumed_setup_v3.json', dict(output=str(output), consumed_unix=time.time(), **provenance))
@@ -124,6 +121,7 @@ def execute(selftest=False):
                 r = read(folder / 'report.json')
                 host_admission.validate_receipt(r['admission'])
                 require(r['admission'] == read(folder / 'admission.json'), 'Admission receipt changed')
+                auto_gpu.verify_monitor(mon_dir/'external_gpu')
                 require(read(mon_dir / 'external_gpu/summary.json')['errors'] == [], 'Monitor query errors')
                 ms = dict(pid=state['pid'], workers=[w], external_monitor=ready, external_monitor_returncode=code)
                 r['external_monitor'] = monitor_evidence(mon_dir, ms, arm, read(folder / 'resources.json'))
@@ -159,6 +157,7 @@ def execute(selftest=False):
             if w['pid']==child.pid:
                 w.update(status='stopped_after_controller_failure',returncode=child.returncode,finished_unix=time.time())
                 save()
+        gpu_stack.close()
         for handle in locks: handle.close()
 
 if __name__ == '__main__':

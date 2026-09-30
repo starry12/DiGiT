@@ -1,0 +1,107 @@
+{
+  "schema": "ae-auto-gpu-public-source-v1",
+  "files": [
+    {
+      "source": "tools/gpu_selection/service/selfservice_controller.py",
+      "installed_path": "/srv/digit-ae/admin/selfservice_v2/controller.py",
+      "sha256": "71f0a2b7f3e58d42d8a63cd9ae489b05af8f27381c559b14f9e2cfd49456804a"
+    },
+    {
+      "source": "tools/ablation/controller.py",
+      "installed_path": "/srv/digit-ae/admin/ablation_v1/controller.py",
+      "sha256": "1ef9535de496bf9a122a9a11f13dc022688c8a4772969b41eb6b42416cd59176"
+    },
+    {
+      "source": "tools/ablation/ablation_worker.py",
+      "installed_path": "/srv/digit-ae/admin/ablation_v1/ablation_worker.py",
+      "sha256": "15751787be45856613863818679dc0936d83977eeb2a15f032c980630eee355d"
+    },
+    {
+      "source": "tools/ablation/cli.py",
+      "installed_path": "/srv/digit-ae/admin/ablation_v1/cli.py",
+      "sha256": "dab8c4e81afd9e9bc5ce0bf2b65970cd6711f846bc29bc528cc73d9ac39549f2"
+    },
+    {
+      "source": "tools/ablation/legacy_cli.py",
+      "installed_path": "/srv/digit-ae/admin/ablation_v1/legacy_cli.py",
+      "sha256": "4505ce0b256e9afaf607cd7ff7931ba65986b08c1e0d8812fe9ac4a6819cf615"
+    },
+    {
+      "source": "tools/layout_grid/controller.py",
+      "installed_path": "/srv/digit-ae/admin/layout_v1/controller.py",
+      "sha256": "97b1880907d4e375b508d192a0c53a5120c52a7318939a46c2d7d320008ad461"
+    },
+    {
+      "source": "tools/layout_grid/point_runner.py",
+      "installed_path": "/srv/digit-ae/admin/layout_v1/point_runner.py",
+      "sha256": "113072ec0b475ff1c5a5d1442f2a023b1deb97a24e080a443c70205273769a84"
+    },
+    {
+      "source": "tools/layout_grid/cli.py",
+      "installed_path": "/srv/digit-ae/admin/layout_v1/cli.py",
+      "sha256": "2d08065743fe1c210acd364252621fb4985a460418485c1fcc7109c3793f5839"
+    },
+    {
+      "source": "tools/ig_performance/service/runner.py",
+      "installed_path": "/srv/digit-ae/admin/ig_performance_v1/runner.py",
+      "sha256": "1658d7fbebcf73efdca466574c3766c996f68094c7266d112947616fdb81f620"
+    },
+    {
+      "source": "tools/ig_performance/service/cli.py",
+      "installed_path": "/srv/digit-ae/admin/ig_performance_v1/cli.py",
+      "sha256": "46c2aca78a43cd310f4d86207bd74d6468f83e725a468fc7dc7fc9ac188b5b58"
+    },
+    {
+      "source": "tools/gpu_selection/units/digit-ae-pa-sage-ablation.service",
+      "installed_path": "/etc/systemd/system/digit-ae-pa-sage-ablation.service",
+      "sha256": "65492b3fbcd025dd0e125ee4706c291a17c92f48275fa3d1ab95c93d71d09086"
+    },
+    {
+      "source": "tools/gpu_selection/units/digit-ae-pa-sage-layout.service",
+      "installed_path": "/etc/systemd/system/digit-ae-pa-sage-layout.service",
+      "sha256": "7b2e23bec79c456cb32eafc816aeede7446a23684b5fe8d2918035f304e0bff1"
+    },
+    {
+      "source": "tools/gpu_selection/units/digit-ae-ig-sage-performance.service",
+      "installed_path": "/etc/systemd/system/digit-ae-ig-sage-performance.service",
+      "sha256": "c5d831400598f4a645248856f9cc261954e904aedfa39cda201117319060ed44"
+    },
+    {
+      "source": "tools/gpu_selection/control/check_cpu.py",
+      "installed_path": "/srv/digit-ae/admin/gpu_selection_v1/check_cpu.py",
+      "sha256": "9ae07966481f9959f4dfa13c88298c4b9a985f326dac41e6cfec6621195c5509"
+    },
+    {
+      "source": "tools/gpu_selection/control/gpu_selection.py",
+      "installed_path": "/srv/digit-ae/admin/gpu_selection_v1/gpu_selection.py",
+      "sha256": "ac909e1bffa63775d40cc2c580ba1c055a38ccd8316e7e5ea5fe0c12332af0ae"
+    },
+    {
+      "source": "tools/gpu_selection/control/ig_controller.py",
+      "installed_path": "/srv/digit-ae/admin/gpu_selection_v1/ig_controller.py",
+      "sha256": "5ab0ef01a73048214188155a53db1e0dad1cd3c606019eb6745d678be59cd755"
+    },
+    {
+      "source": "tools/gpu_selection/control/ig_telemetry.py",
+      "installed_path": "/srv/digit-ae/admin/gpu_selection_v1/ig_telemetry.py",
+      "sha256": "25afbbe5be850695c88575607d75f9873c75e27912e5133dcd0fa078a1439328"
+    },
+    {
+      "source": "tools/gpu_selection/control/ig_telemetry_review.py",
+      "installed_path": "/srv/digit-ae/admin/gpu_selection_v1/ig_telemetry_review.py",
+      "sha256": "e60166b1e973a35279e6d60c85137de2db3b0bcc4bd4effe5fab9a3b658ee461"
+    },
+    {
+      "source": "tools/gpu_selection/control/ig_worker.py",
+      "installed_path": "/srv/digit-ae/admin/gpu_selection_v1/ig_worker.py",
+      "sha256": "aeabfe97b13037cbc2c96d3abd86f17d54f939b82d664b862bc9eb4cde0518a5"
+    },
+    {
+      "source": "tools/gpu_selection/control/manifest.json",
+      "installed_path": "/srv/digit-ae/admin/gpu_selection_v1/manifest.json",
+      "sha256": "3acbca69e3e3f4db1c4c6af2def5d6452090cf6035412d19d14d72bcaedc075b"
+    }
+  ],
+  "transport_sha256": "3acbca69e3e3f4db1c4c6af2def5d6452090cf6035412d19d14d72bcaedc075b",
+  "prepared_server_only": true
+}
