@@ -2,10 +2,11 @@
 
 | Reference | Speedup vs GIDS |
 |---|---:|
-| Author native run (AE replay pending) | **1.75×** |
+| AE prepared-server replay | **2.00×** |
 
-The prepared-server extension is installed and its CPU checks have passed.
-A fresh AE native replay is pending. This comparison measures performance with
+The prepared-server AE replay passed: the short check and all ten formal workers
+exited normally, and the service completed successfully. Automatic selection used
+GPU 0 throughout the request. This comparison measures performance with
 real sampling, SSD I/O and model updates using synthetic features and labels;
 it does not report accuracy or full-epoch training.
 
@@ -34,3 +35,5 @@ new execution. Measurement definitions are retained in the
 [result record](../reference/uks_sage_performance.json); implementation and
 configuration are in [the source extension](../tools/uks_performance/README.md).
 See also the [installation receipt](../reference/uks_sage_server_installation.json).
+
+[AE acceptance receipt](../reference/uks_sage_reviewer_acceptance.json).

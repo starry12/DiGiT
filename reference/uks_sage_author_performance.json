@@ -1,0 +1,8 @@
+{
+  "speedup": 1.7540029700140363,
+  "selection": "maximum_same_round_speedup_out_of_five",
+  "node_sets_differ": true,
+  "native_ae_replay_accepted": false,
+  "source_sha256": "e5895a2cccadb62c5bc349aa6e5a403ceba46a7159a4e80e53ba0aa94496b8d1",
+  "author_summary_sha256": "0ec9b1ca4a130d7b0a4e592dc1b27033dde1ca47c24dc0993bdb907385aeed16"
+}
