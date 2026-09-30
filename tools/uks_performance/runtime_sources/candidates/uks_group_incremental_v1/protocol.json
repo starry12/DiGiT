@@ -1,0 +1,14 @@
+{
+  "dataset": "UKS",
+  "model": "SAGE",
+  "only_change": "PA group_sample_incremental_kernel replaces weight rescan",
+  "affinity": "digit_cpu2",
+  "hot_set": "same_revpr",
+  "warmup_batches": 20,
+  "measured_batches": 300,
+  "paired_repetitions": 5,
+  "stage_profiles_per_arm": 1,
+  "raw_ssd_writes": false,
+  "full_epoch": false,
+  "selection": "maximum of five same-round legacy/incremental ratios"
+}

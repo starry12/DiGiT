@@ -1,0 +1,86 @@
+{
+  "schema": "digit-uks-sage-preparation-v2",
+  "dataset": "UKS",
+  "upstream": "uk-union-2006-06-2007-05-underlying",
+  "nodes": 133633040,
+  "source_edges": 5507679822,
+  "feature_dim": 256,
+  "feature_dtype": "<f4",
+  "classes": 19,
+  "model": "sage",
+  "hidden": 128,
+  "layers": 3,
+  "dropout": 0.2,
+  "optimizer": {
+    "name": "Adam",
+    "lr": 0.001,
+    "weight_decay": 0.001
+  },
+  "batch_size": 1024,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "seed": 0,
+  "systems": [
+    "gids",
+    "digit_full"
+  ],
+  "gpu_cache_bytes": 4294967296,
+  "cpu_cache_rows": 13363304,
+  "group_size": 2,
+  "replication_ratio": 0.2,
+  "bfs_enabled": false,
+  "graph_policy": "Retain directed source nonself multiedges, remove existing self loops and append exactly one per node; no reverse-edge insertion.",
+  "normalized_edges": null,
+  "synthetic": {
+    "feature_distribution": "uniform[-1,1) float32",
+    "feature_seed": 20260922,
+    "label_seed": 20260923,
+    "generator": "numpy.PCG64 with SeedSequence([seed, block_index]); fixed 65536-node blocks",
+    "block_rows": 65536,
+    "labels_dtype": "<i8",
+    "numpy_version": "1.24.4"
+  },
+  "training": {
+    "train_nodes": 13363304,
+    "split_seed": 0,
+    "order_seed": 0,
+    "split": "uniform sample without replacement, sorted; independent permutation for benchmark order"
+  },
+  "measurement": {
+    "kind": "bounded_training_windows",
+    "warmup_batches": 20,
+    "window_batches": 30,
+    "windows": 3,
+    "total_batches": 110,
+    "validation_batches": 0,
+    "test_calls": 0,
+    "epoch_time_claim": false,
+    "stability_relative_spread": 0.05,
+    "stability_is_heuristic": true,
+    "graph_and_feature_checks_outside_timing": true
+  },
+  "paths": {
+    "source_env": "DIGIT_UKS_SOURCE",
+    "source_default": "/mnt/n3/ukunion",
+    "data": "/mnt/n0/digit_ae_data/uks_sage_v2",
+    "active_ig": "results/ig_sage_perf_20260922_v2/status.json",
+    "data_env": "DIGIT_UKS_DATA_ROOT"
+  },
+  "host_required_bytes": 343597383680,
+  "heavy_stage_free_disk_bytes": 644245094400,
+  "ssd_offsets": null,
+  "cache_selection": {
+    "gids": "graph-based baseline selection pending, same 10% row budget",
+    "digit": "independent profile frequency selection pending; do not fit to measured windows"
+  },
+  "reconstruction_choices": [
+    "19 classes, Adam lr=.001/weight_decay=.001/dropout=.2 are explicit untuned reconstruction choices, not paper-specified UKS settings.",
+    "Synthetic generator algorithm/seeds fixed here; old local labels/splits are not accepted.",
+    "Short windows measure real train steps including backward/optimizer; no accuracy, epoch-time, steady-state or convergence claim.",
+    "Final g2 count, graph edge count, GPU admission, cache selection and SSD map require actual preparation/validation.",
+    "UKS/UKL/CL have no supplied node features; local deterministic synthetic features are intentional dataset preparation. Generated data may use /mnt/n0; original graphs remain in /mnt/n3."
+  ]
+}

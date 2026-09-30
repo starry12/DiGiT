@@ -1,0 +1,1 @@
+"""Standalone artifact entry points."""

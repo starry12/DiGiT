@@ -1,0 +1,21 @@
+{
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bfs.cpp": "485a95a6de20c363dac735e369fac62f3b2e98d0b431a1fdfdb3cb8a8f72696b",
+    "bin/bfs": "3d240dd21e83a8e5698ae65180544b28322ef4c4c908e01fd0e87b5f44010095",
+    "common.py": "842f424478594bc85c218fe8484214e35e0d87c4eeca537b979ba672477966dc",
+    "controller.py": "9a679bd78262fd70cc9386539240fe7b2b4783fe70c99b95a346d3e1343c26ed",
+    "prepare.py": "add5d18088931dda3a0d8d94ff40f80a142a9e320e87309fc4c484b7893ed73a",
+    "protocol.json": "81992d82337e0194f92cc4bcc0f35d3cc0b7165c82157191f291e9ea174d0f2a",
+    "smoke.py": "058ba317231396fe5ec2a4c600a1912a9288ac5de311ed8398be9b7ebf1a882f",
+    "start.py": "a0b69ff19ad9f44e13c832f53d944f8be1005cdf4c9cbc624e84670b857d736d",
+    "worker.py": "b2a77c718d6db15d33b645209a28ba05eee092e77615bccbb32a0d23126ceebd"
+  },
+  "evidence": {
+    "results/uks_native_20260929_v1/profile/accepted.json": "afcaed05c71995b361657ce735dc549af84b0f073df96ecbae27bb30e1643d3e",
+    "results/uks_native_20260929_v1/profile/report.json": "57202b9607324e078878e1c1e8b7ef2eff69708f061b0249f75e64067e3188b1",
+    "results/uks_native_20260929_v1/profile/exit.json": "5da4ae333f307a3a5450fc6afc2f6b8607c6c12dc4ff3988394e1618f8af46bc",
+    "results/uks_freq_bfs_20260930_v1/start.py": "07dd51bc64b5dfa34f08bb2d325fa30ee251abe9b5f29b8871cdc5a6262e44a1"
+  },
+  "parent_sha256": "823f59eb24034fa3e2232759991001e20ac9b574001a6008f9eef22d31ada072"
+}

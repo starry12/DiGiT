@@ -1,0 +1,30 @@
+{
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "common.py": "3a9c1446287faf6fecd0a3da55585ddb7ab0d3efb67f84fd9ec0a0b3551b4d5a",
+    "controller.py": "520a11835c0c1c0adbec6b434c93f406599a711db70befac6cf4e91cc1b89427",
+    "protocol.json": "764ed44da27769a13616dc26588eeb50429acbeaee5c8b25c3911d41e58162c6",
+    "start.py": "bf47c58d933c8f118485ff027f922eb8d6038412218ceb75a953841ede229cca",
+    "statistics.py": "5ad8e97b07ccfa15bcaed037f8cfb28d4b21db37513f57537f1d4449c0cafca3",
+    "tests.py": "edf1ecf8766035381f21859853303c102641dc2a921ac3850048064ccff66918",
+    "timing.py": "77346426c08f9c8b264a02c0c71a09e2e28e5413eecd7bfbcd59318a7f183785",
+    "worker.py": "3184cfe3f0d8dbec0dcce60de66ffb7a07b689ea4295e95df3db502dd09b00f8"
+  },
+  "dependencies": {
+    "candidates/ig_sage_affinity_pair_v1/affinity.py": "e9880327531e818ca34e3ec9c30754e5da936aad2f97e6125b78042cf0fc6d7c",
+    "candidates/ig_sage_affinity_pair_v1/common.py": "a1d0566ad38c6b1798f6e88a1066d0baeddd89c78875fb45c9d7c0dca9602f1e",
+    "candidates/ig_sage_host_opt_v1/affinity.py": "aaef27fc402d402a0c1c7fe8e1276bb9ebdd2037dc5185bab14c0cc082b7f500",
+    "candidates/ig_sage_pair_max5_v1/protocol.json": "55e07bfae6759a2f86822b2327cb83c157797eae18a79273cbc77cf26c825cb7",
+    "results/uks_native_20260929_v1/retry1/summary.json": "d9e59b8443aaa49c4ae98acc41065f2ee50dffffd6147ab8b828ab4b277d40b9",
+    "results/uks_native_20260929_v1/retry1/smoke_gids/accepted.json": "20e98aa9b96e62658c5a78ab1bb4f8ad64306887d54988f65d867df0ff5969dc",
+    "results/uks_native_20260929_v1/retry1/smoke_gids/report.json": "39c578aa8af0e892badbe5507f688560c6e515fa95d5795d3b7542d1be326be6",
+    "results/uks_native_20260929_v1/retry1/smoke_gids/exit.json": "c2bf1b698c7dd23aaea2cc185f6019ba5fc159bb4db8e14657564c4cec407881",
+    "results/uks_native_20260929_v1/retry1/smoke_digit/accepted.json": "1860b4750fb992ec4a0b29468b24c829eacb5af7c6e36e00aa53afbe97b14ead",
+    "results/uks_native_20260929_v1/retry1/smoke_digit/report.json": "150132a23f0ac3c9260bced43ae1333701f1bcb0a818a056df19cd6a74d3c674",
+    "results/uks_native_20260929_v1/retry1/smoke_digit/exit.json": "6562f3097ade39af515a20172b529812b2daa2c5d3b4846c4e0926a7d28067af",
+    "results/uks_revpr_diagnostic_20260929_v1/start.py": "ec9ad346ff8ac0d26a7041733ca02744c4dc128326c041b1a3fe3fc7b8b1eb65",
+    "candidates/uks_sage_pair_max5_v1/manifest.json": "fb1cd8a13d1f050680140c7baa9c0fbdb6b6d4e4c46ce4624491833a916ddc6d",
+    "results/uks_sage_pair_max5_20260929_v1/summary.json": "cf28f30e9e167f86e4aac6e105feaad0f845ab5004238b558b16dca79284b616"
+  },
+  "repair_sha256": "1d1f34e6fd1a41592841ee8f952c37b0d2f242084613a588e8c2acb1d0fd9299"
+}

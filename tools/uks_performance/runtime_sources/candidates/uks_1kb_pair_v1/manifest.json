@@ -1,0 +1,31 @@
+{
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend.py": "43b1ac6a45b692600716923fbb39322543d290876e5e0bd5a7d5c7617968af4f",
+    "build.py": "4b542c617fea0bf4b59c14af9b02a9023bd2f91136fee75b53953bda8ba73496",
+    "common.py": "5cdc40220909cbe5521ae81eae57239b9f06eb3161c598fadee878fddb55f58e",
+    "controller.py": "cf50fb5a321adae79483eccefc0c7b7c47c29d604cac5a767d05d118949434b0",
+    "counters.py": "b160d1d918eeb52415ff04314138f5318ba116a40884ae8d41037bc1255e5644",
+    "native/bam/include/legacy_geometry.h": "9a2fc31e3d50085695010dcbecf4e92fa0e2f3c0b9faeedbfad49992dcc0e12b",
+    "native/bam/include/page_cache.h": "b392a13c0121e45ef98e921e3a8a67815d64d8e7d4003013d645c4a282682528",
+    "native/gids_module/cache_policy_host.cuh": "62015d712fcc9007743be250f32a0ada9d020b19e15f1f350323768fce42d368",
+    "native/gids_module/cache_policy_kernel.cuh": "ea412694dda929ea1d9afc1b9e7ce8f25c611b8d911fbb6556a0015c7711a293",
+    "native/gids_module/gids_kernel.cu": "250e577af7f4871fc27d935774a7cad8ba08c7430db7e6c29857818f17494756",
+    "native/gids_module/gids_nvme.cu": "8a54ff840c7fde7b9f009f57594e1adf6eba73d50e41804bbe1cfee7251e2fae",
+    "native/gids_module/include/bam_nvme.h": "267223a6ee64cc817d15c485c0b965fff9e0cd329346a17b712661f1ca835950",
+    "native/gids_module/include/policy_math.h": "ff22a1ad011b99ceb5f8425d5d2e4724dd2561f1b929c3bdc635c642295f2b6d",
+    "native/policy_math_test.cpp": "4006922eb6d2c5dece1d8987f09470c21324a153a965e7849e11329ca96bde08",
+    "protocol.json": "19e207e5339dc12a0631f8d66eeaa1148b7b44d956dc20abfa1cbd9ce9b9358c",
+    "runtime.py": "db7344e53096d34929f413b5bbce320db434768e4643477fdb831278fd374d4c",
+    "smoke.py": "896efac042d9d1d109b28f4259398df7c82cdb30727ada44af4217326203f02a",
+    "start.py": "f1aa055f052a69e9d8dbef5b21e7b286f0e28b0bb984fce63ae7633148f53aee",
+    "tests.py": "42c3f473787ba40b5ccbc215be706d188c61866ae38e12c0b5fb270e3d3d62bf",
+    "worker.py": "158bffa38ee53cde63b36d690b63b4e223e1395e696ba9e534dc323271497904"
+  },
+  "dependencies": {
+    "results/uks_1kb_pair_20260930_v1/start.py": "3d8abfa90c8216be238438a954baf4cd4c557abc36ec93a6f76ca3bb20614aa4",
+    "candidates/pa_sage_512b_pair_v3/native/bam/include/page_cache.h": "44401f7537a5cefdb530f4153fe91f235285ddf920d68d155f2211a21326c4df",
+    "candidates/pa_sage_512b_pair_v3/native/bam/include/legacy_geometry.h": "9a2fc31e3d50085695010dcbecf4e92fa0e2f3c0b9faeedbfad49992dcc0e12b"
+  },
+  "sampler_parent_sha256": "e7500be3f3470d81f6fca24cff3a414d06ffe8d8e7c17b7d367e795240c678d5"
+}

@@ -1,0 +1,23 @@
+{
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build.py": "548ae2db7f8d6196722d36b8674aef462308aae52e1eed3d81ba3ec37e05db7c",
+    "common.py": "8fc65116da046c09ed4c2a7453e2fc3a48d75120a6e107ca7a99b47b4bd58a51",
+    "controller.py": "b0d6086c84592482eabd225eff7b13e5658164ae509925f6ad3c8e2f557f043b",
+    "gpu_check.py": "12f48b811c18a2623e9463737004e638b345dbe3a970f311775f88823ff6703d",
+    "host_profile.py": "21ba4693b2bf48d09d549568b519b975f4dc99f8829301f4105ab0ea2af6f7f0",
+    "instrument.py": "1ac68bd52f7e6f22b59418f88ba71ceb80db15104b9fdfbaf0751add43fe532c",
+    "native/profile_events.h": "8f81a148d64b2e49cedd8fe0217d252e7392d096583b28fe4ece7239d2f8abb4",
+    "native/sampler.cu": "f6983c85288fc544e41fbd9fb542f8243bb50391462199accb71dfad1d857718",
+    "protocol.json": "5dfe2aecbbeb77f64ffeac58e9adfe145856a6363fb732c5b6a3cd28a684fff3",
+    "sampler.py": "e9ca43a658c350131516a65e4535b26f7ff01d39d9521136622dfd7a735f5698",
+    "start.py": "4552c710684d3fc4b295a8714935d11ae4f8994c3d572e1708374f24f080cb0e",
+    "tests.py": "ba4763d5874429352c0eb23afd58230a93d31d79a7c532a4f8743e46acb5cc9b",
+    "worker.py": "87ca912954522ee3763cc33f289637f6d54a4c4d01f3d8c6a5a9933eab8e9304"
+  },
+  "dependencies": {
+    "candidates/pa_sage_group_incremental_v1/native/digit_group_incremental_cuda.cu": "c8756467a53645071c2b0dbaedec9d74aadd29d099f6937f004fbf75d3d74ce4",
+    "results/uks_group_incremental_20260930_v1/start.py": "af6d976100ed79c44cf06c42eda14a37451f3471d8695f8ecb0b0e653a0e2e26"
+  },
+  "parent_sha256": "c9c087cb6588b08dd31a730482d9ed72d7e79eb3a2cd5debb13ea337176b988d"
+}

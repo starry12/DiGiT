@@ -1,0 +1,27 @@
+{
+  "schema": "digit-uks-preparation-manifest-v1",
+  "scope": "source preparation and bounded-window timing helper only; no native acceptance",
+  "files": {
+    "README.md": "8294c7c4fc5b36943cab2060c75e070f2eb45ec9cb49c6632dad615527fb313d",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "benchmark_core.py": "b74dc374eaf2e06e81fc4a84f53c7f09d2f5b51c8b65369da362693757a48e77",
+    "common.py": "fe6bc5cdce211f7b3976d754723fbc881252bac36b788834df2ee34dc9f30022",
+    "freeze.py": "2963a25b5a7ab54806493b61b246833522d3609ec16c3cac9bc0693f46eaf806",
+    "inventory.py": "e369c32bb46a75185b5d950a2f5a213a90a4517b9f1587e8758dce18e22613d2",
+    "model.py": "f35de41633c6b9fefa23fb299a25af4eebc96ce88c14ba394b9bfd0383f97a4f",
+    "protocol.json": "a6a0f2c314f6a2d544e6c06bfc51dfd44d96e7604f062ef8dde76cb605f6f676",
+    "run.py": "aa1732cb7d0d04c334ee81cd214e1e37e437e772ae194abe211937d37a881930",
+    "run.sh": "1404aceecf532dd87af091e562655c4e70baab0d18b9ce10a28db997d2b8a47c",
+    "safety.py": "a31ffa7a1297ed209f9499cb7c0586bcac0016d7f55f61860191e676098aa8c7",
+    "synthetic.py": "fd89d7c6d400ed8b5c3eea8401002ceff5eee3daa1d7118315b72c7ebde4976a",
+    "tests.py": "4fa5d514902e58338b8413bb7e0d5889d31a7684ca47c33a97f39804dd2bdf4f"
+  },
+  "dependencies": {
+    "evaluation/digit/normalized_csc.py": "c5c39cfcc4eb7890a6f8c5e2f20df16c804889d9d7b8a2ae72ebf881f637e3de",
+    "evaluation/digit/large_preprocess.py": "0601c1b2e7635671ca6433b086e1e6b323983506d7a7fcb809883fddf5fd6b0b",
+    "evaluation/digit/retiring_job.py": "c67ae47f2655e6a7a4ca44a61f27eb9a25c28f061138e215da30bc5969c9838c",
+    "evaluation/digit/graph_source.py": "cdd0f39137cc36694e08cba28aeec2527a50ba490f3105c619e5becdf0657562",
+    "digit_paths.py": "7e165cce992ef031d342666db95ac0bd6b847aa79971bff543450758496a1829",
+    "ae/igb/models.py": "8deaac7daa7d25fd6e0141724797ff26a266a76db76fc70ac421e5d80b0c77ec"
+  }
+}

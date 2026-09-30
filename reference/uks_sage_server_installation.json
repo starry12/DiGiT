@@ -1,0 +1,14 @@
+{
+  "installed": true,
+  "cpu_namespace_selftest_passed": true,
+  "native_ae_replay_accepted": false,
+  "training_started": false,
+  "automatic_gpu_selection": true,
+  "identity": {
+    "snapshot_sha256": "f6d95f2458cd2c9078fd3975512507e98e71994a1ebc23f98493fb2f49319ef0",
+    "source_sha256": "e5895a2cccadb62c5bc349aa6e5a403ceba46a7159a4e80e53ba0aa94496b8d1",
+    "transport_sha256": "a5ed189710e47353537430a3a525ae6502e52e911b7ade54b77a577eb8f19d43"
+  },
+  "installation_receipt_sha256": "db729c1da8df5401de9cad575d09010a91f02cba25f8a5c0bbd1a313982a4142",
+  "selftest_receipt_sha256": "deb609de03d6f8b62f2f80c076c2f07308feb923a0adc8b959c35f7092f03b51"
+}

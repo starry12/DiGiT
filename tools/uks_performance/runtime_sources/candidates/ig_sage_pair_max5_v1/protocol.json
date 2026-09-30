@@ -1,0 +1,105 @@
+{
+  "schema": "ig-sage-pair-max5-v1",
+  "systems": [
+    "gids",
+    "digit_full"
+  ],
+  "schedule": [
+    {
+      "mode": "gids_1",
+      "arm": "gids",
+      "repetition": 1
+    },
+    {
+      "mode": "digit_1",
+      "arm": "digit_full",
+      "repetition": 1
+    },
+    {
+      "mode": "digit_2",
+      "arm": "digit_full",
+      "repetition": 2
+    },
+    {
+      "mode": "gids_2",
+      "arm": "gids",
+      "repetition": 2
+    },
+    {
+      "mode": "gids_3",
+      "arm": "gids",
+      "repetition": 3
+    },
+    {
+      "mode": "digit_3",
+      "arm": "digit_full",
+      "repetition": 3
+    },
+    {
+      "mode": "digit_4",
+      "arm": "digit_full",
+      "repetition": 4
+    },
+    {
+      "mode": "gids_4",
+      "arm": "gids",
+      "repetition": 4
+    },
+    {
+      "mode": "gids_5",
+      "arm": "gids",
+      "repetition": 5
+    },
+    {
+      "mode": "digit_5",
+      "arm": "digit_full",
+      "repetition": 5
+    }
+  ],
+  "model": "sage",
+  "repetitions_per_arm": 5,
+  "gpu": 2,
+  "cpu_binding": {
+    "gids": "Unchanged baseline default scheduling",
+    "digit_full": "Original all-worker-thread CPU2 binding after imports"
+  },
+  "warmup_batches": 20,
+  "measured_batches": 300,
+  "windows": 3,
+  "batches_per_window": 100,
+  "seed": 0,
+  "fresh_process_per_run": true,
+  "timing": "Sum of the three original synchronized 100-batch windows, excluding initialization, warmup and between-window records",
+  "primary_statistic": "Maximum of five same-round ratios: GIDS complete 300-batch time / DiGiT complete 300-batch time. Select on raw precision; earliest round wins an exact tie.",
+  "retain": [
+    "All ten fresh runs",
+    "All five paired ratios",
+    "Selected round and both run identities",
+    "Every timing window",
+    "Per-arm distributions",
+    "Existing host stages and I/O counters"
+  ],
+  "performance_cutoff_seconds": null,
+  "automatic_retries": 0,
+  "reuse_historical_formal_times": false,
+  "perf": false,
+  "cupti": false,
+  "new_native_smokes": 0,
+  "monitoring": "Original host-stage timing, CPU/GPU telemetry and external NVML for both arms",
+  "host_admission_gib": 320,
+  "raw_ssd_writes": false,
+  "native_worker_changed": false,
+  "gids_changed": false,
+  "ae_changed": false,
+  "limits": [
+    "The displayed result is the maximum observed paired speedup out of five rounds, not a typical, mean or interference-free speedup.",
+    "Both selected times come from the same round. Never combine the slowest GIDS from one round with the fastest DiGiT from another.",
+    "This selection rule differs from the previous ratio of per-system minima; preserve the old three-run result separately.",
+    "Five fixed rounds, ten fresh processes: G-D / D-G / G-D / D-G / G-D. Retain all rounds, including slow or negative results, without retries.",
+    "GIDS retains default CPU scheduling; DiGiT retains original CPU2 binding. The system comparison includes this difference.",
+    "Both retain original host timing and lightweight telemetry; no perf/CUPTI, new native smoke, or model/backend changes.",
+    "A failed or incomplete round stops the series with preserved partial evidence; do not select from fewer than five complete rounds.",
+    "Every worker uses 20 warmup plus 300 measured batches. No accuracy, full epoch, long-term stability or causal claim."
+  ],
+  "paired_rounds": 5
+}

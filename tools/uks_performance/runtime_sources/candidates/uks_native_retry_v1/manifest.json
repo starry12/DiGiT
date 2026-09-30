@@ -1,0 +1,39 @@
+{
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "common.py": "b69734653b6af50657f680caec8a562312ef0815fd666c1a83fe570d5581e625",
+    "controller.py": "04adf1d0a453cca921d147aac5c9fbc8e47d0928c0af925251eed3e28fc9b410",
+    "receipts.py": "22f7568ab46ca9d448bba759f9ffc2da34ce4ae3955558e29047e73253d90d50",
+    "start.py": "9a236546dfa2a56f20539c851aef8a5438c1d7bfbcec52a49aad95dfaeccb5a8",
+    "tests.py": "5c67b984ede890a69d7ed5e96f74dcfcd68bf0f7553a8e848c0a26d4851294ac",
+    "worker.py": "67f4e46de5f0d23276234198cd1f2aa57c6e199c47659e71c40203b0dd1bb926"
+  },
+  "evidence": {
+    "results/uks_native_20260929_v1/profile/accepted.json": "afcaed05c71995b361657ce735dc549af84b0f073df96ecbae27bb30e1643d3e",
+    "results/uks_native_20260929_v1/profile/report.json": "57202b9607324e078878e1c1e8b7ef2eff69708f061b0249f75e64067e3188b1",
+    "results/uks_native_20260929_v1/profile/exit.json": "5da4ae333f307a3a5450fc6afc2f6b8607c6c12dc4ff3988394e1618f8af46bc",
+    "results/uks_native_20260929_v1/write_gids/accepted.json": "cd34b1b693a1fcfc984bcc89d6bcd1c81fd5f0b368d881e0c8f36e01d434a1c9",
+    "results/uks_native_20260929_v1/write_gids/report.json": "9991cc2c62e093d1f991744143ffbce81804eb90bd23733ee905a56f122491b3",
+    "results/uks_native_20260929_v1/write_gids/exit.json": "eabc5064cc54170fbdb18dd0f5c7c38199bd7a79372cdc7eca2bbbd622fa5cfc",
+    "results/uks_native_20260929_v1/verify_gids/accepted.json": "76c01d5e12d9bc6315aec44282081225604485fd9848fe2bc9bb67869dc22258",
+    "results/uks_native_20260929_v1/verify_gids/report.json": "fdc40b3929cad83820d9034a98ce0332901113b81a7cd587d705fe964800ee04",
+    "results/uks_native_20260929_v1/verify_gids/exit.json": "5ddf3c44aff304849c55c3f2f1f40a062a9f24b856b452d1f78a330969243727",
+    "results/uks_native_20260929_v1/write_digit/accepted.json": "8b751ed8a8ca5f483b565d2da51b58b2aaf1268f1a938e9ab779997edba54fbb",
+    "results/uks_native_20260929_v1/write_digit/report.json": "109404eaaa5ba1284d64bd3ac883fd0dea083398444f8892a49c84efeb231b63",
+    "results/uks_native_20260929_v1/write_digit/exit.json": "7e65f7c08c4f20e0a6c2d076d007fd1a026a9497f1b438997fbf4d13e0ce0b7a",
+    "results/uks_native_20260929_v1/verify_digit/accepted.json": "f6dae3b7d0782fd5ca021ea81017ec1f0a46547f4766bb419d498dbfa6459b96",
+    "results/uks_native_20260929_v1/verify_digit/report.json": "540bb0047130c0b7d4dc4593dd3de6d88f143d9c637f6922d662dc06f73b7421",
+    "results/uks_native_20260929_v1/verify_digit/exit.json": "76b36e50809d18b9aeb14de3f1e0f573550558e51df1baafa2e17dbfdb8a416a",
+    "results/uks_native_20260929_v1/storage_gids/write_plan.json": "12108579bb6c05bbc86e8d317e3fa6030f92db62442f0e6ce9c95ca459660e56",
+    "results/uks_native_20260929_v1/storage_gids/ssd_verify_receipt.json": "7b6f9d63d699b8f797a9e595336ca966ceec753c88ec20744a22b8125c98f982",
+    "results/uks_native_20260929_v1/storage_gids/ssd_write_receipt.json": "f5f36f8c89aef05207d449022d8fbab46220abe7dcaff1747543f9fb0a324f25",
+    "results/uks_native_20260929_v1/storage_digit/write_plan.json": "8427f2dd1b5d748eff2feeb7e566e1f6aac5c6a9276b86aa07bbeb21dcd5158c",
+    "results/uks_native_20260929_v1/storage_digit/ssd_verify_receipt.json": "7de461d96193ae6837fe2064294ce92978cc98bb8d54072a3f2147ec45af2aea",
+    "results/uks_native_20260929_v1/storage_digit/ssd_write_receipt.json": "d6fa6b2b97164d947f649db16c6e53c16ebb4c2afcd577353a1804b16da4395a",
+    "results/uks_native_20260929_v1/status.json": "12e98738af8e34186d6fad4543205eedb897f941d16f900ab8e38310a79b0756",
+    "results/uks_native_20260929_v1/binding.json": "d41ac93d92f70eef541220aab60ec5702d4aa280ac01b54ff9a35fee434a8064",
+    "results/uks_native_20260929_v1/protocol.json": "82ea978a43534f15966effde550b04d3c9350407c9397d05e4a715454411196b",
+    "results/uks_native_20260929_v1/retry1/start.py": "e02bf4ca6e874322d8953cad4dc9d92b2c4044d280f5d63ebf7a4e0a5e98f39e"
+  },
+  "parent_source_sha256": "91e0451ba077634b2ca24bb7aa76d6343a324542398d0f38283e1760aec30b78"
+}

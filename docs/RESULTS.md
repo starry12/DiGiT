@@ -29,3 +29,12 @@ not interchangeable. No multi-seed accuracy equivalence is claimed.
 Existing reference JSON/CSV and acceptance receipts retain the complete audit
 record, including historical failures. Default human-readable summaries omit
 per-run timing details; PA main test accuracy remains in the README. Use explicit JSON/evidence inspection when needed.
+
+## UKS/SAGE Freq + BFS supplement
+
+| Reference | Speedup vs GIDS |
+|---|---:|
+| Author native run; AE replay pending | **1.75×** |
+
+The performance supplement uses real sampling, SSD I/O and model updates with
+synthetic features and labels. [Protocol and reproduction](UKS_PERFORMANCE.md).

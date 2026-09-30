@@ -1,0 +1,1 @@
+atc27_ae ALL=(root) NOPASSWD: /usr/bin/systemctl --no-block start digit-ae-uks-sage-performance.service, /usr/bin/systemctl --no-block stop digit-ae-uks-sage-performance.service

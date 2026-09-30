@@ -21,7 +21,7 @@ The provided AE server includes the Python/CUDA environment, compiled native com
 source /srv/digit-ae/activate.sh
 ```
 
-**Run one request at a time:** main models, ablation, the layout grid and IG share GPU 2 and the SSD. Wait for the current request to finish and release resources before starting the next; busy requests are rejected rather than queued. Each launch creates fresh results and continues after SSH disconnects. No local build or data preparation is needed on this server.
+**Run one request at a time:** main models, ablation, the layout grid and IG use GPU 2; UKS selects an idle GPU. All requests share the SSD and exclusive experiment locks. Wait for the current request to finish and release resources before starting the next; busy requests are rejected rather than queued. Each launch creates fresh results and continues after SSH disconnects. No local build or data preparation is needed on this server.
 
 ### Main experiments: PA × GraphSAGE / GCN / GAT
 
@@ -68,7 +68,7 @@ digit-ae logs PA sage --action layout
 
 The service reuses the 15 prepared layouts and shared proxy-feature SSD region, with real sampling, I/O and model updates. It runs a fresh g2/r20 smoke before the full grid; the other 14 points retain the declared runtime checks. It does not regenerate large layouts. Status reports completion out of 15; accepted results show the best layout speedup relative to g2/r20.
 
-The second complete AE grid replay passed on 2026-09-29 and is the selected reference. To inspect it without starting a run:
+The second complete AE grid replay passed and is the selected reference. To inspect it without starting a run:
 
 ```bash
 digit-ae results PA sage --action layout --reference
@@ -96,6 +96,24 @@ To inspect the accepted AE reference without running a request:
 The reference is labeled `AE_REFERENCE`; default results inspect the latest request.
 [IG protocol and source](docs/IG_PERFORMANCE.md).
 
+### UKS / GraphSAGE performance
+
+The UKS extension is installed and its CPU namespace/import checks have passed.
+A fresh AE native replay is pending. To start a request when a GPU is available:
+
+```bash
+digit-ae performance UKS sage
+digit-ae status UKS sage --action performance
+digit-ae results UKS sage --action performance
+digit-ae logs UKS sage --action performance
+```
+
+The service automatically selects an idle GPU from cards **0–3** and uses that same
+card throughout the request. If none is available, it exits without starting training.
+Use `digit-ae results UKS sage --action performance --reference` to inspect the
+author reference, or `digit-ae stop UKS sage --action performance` to cancel.
+[Protocol and implementation](docs/UKS_PERFORMANCE.md).
+
 ### Completion, stopping and result files
 
 `status`, `logs` and `results` only inspect records. Use the matching `--action run`, `--action ablation` `--action layout` or `--action performance` above to select the experiment. They select the latest request for that action, including a failed one. Final **`PASS` requires accepted reports and successful service completion**; a launch acknowledgement or running/provisional table is not final acceptance. The printed output path contains the logs, reports and summaries and can be downloaded with SFTP/SCP through the supplied SSH route.
@@ -115,7 +133,7 @@ The main experiments execute the preserved, accepted server release; the supplem
 
 ## Current evaluation scope
 
-The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation and grouping/replication grid use one complete epoch per setting and report performance only. The supplementary IG/SAGE comparison uses five paired short performance windows. This is a reconstruction of the paper implementation.
+The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation and grouping/replication grid use one complete epoch per setting and report performance only. The supplementary IG/SAGE comparison uses five paired short performance windows. The UKS/SAGE Freq+BFS supplement adds an author reference and prepared-server entry, with fresh AE acceptance pending. This is a reconstruction of the paper implementation.
 
 The source tree contains one selected implementation per model. It excludes research Git history, intermediate implementations, training logs, checkpoints, compiled binaries and datasets.
 
@@ -151,7 +169,7 @@ Accepted AE measurements: one complete training epoch per arm, without validatio
 
 ### PA/SAGE grouping and replication
 
-Accepted AE grid (second complete run, 2026-09-29): one complete first epoch per point, with shared proxy features and real sampling, I/O and model computation. Speedups are relative to **g2/r20**, not GIDS.
+Accepted AE grid (second complete run): one complete first epoch per point, with shared proxy features and real sampling, I/O and model computation. Speedups are relative to **g2/r20**, not GIDS.
 
 | Group size | 0% | 10% | 20% | 40% | 80% |
 |---|---:|---:|---:|---:|---:|
@@ -169,9 +187,17 @@ Accepted AE reviewer short-window comparison: five paired rounds, each with 20 w
 |---|---:|
 | GraphSAGE | 1.46× |
 
-The reported value is the maximum same-round GIDS/DiGiT ratio, not average or stable performance. GIDS uses default CPU scheduling; DiGiT binds to CPU2 after imports. No accuracy or full-epoch claim is made. All ten workers passed; the service completed successfully on 2026-09-28.
+The reported value is the maximum same-round GIDS/DiGiT ratio, not average or stable performance. GIDS uses default CPU scheduling; DiGiT binds to CPU2 after imports. No accuracy or full-epoch claim is made. All ten workers passed; the service completed successfully.
 
 [IG protocol and evidence](docs/IG_PERFORMANCE.md) · [AE acceptance receipt](reference/ig_sage_reviewer_acceptance.json).
+
+### UKS/SAGE Freq + BFS
+
+| Reference | Speedup vs GIDS |
+|---|---:|
+| Author native run (AE replay pending) | **1.75×** |
+
+[Protocol and implementation](docs/UKS_PERFORMANCE.md).
 
 All displayed ratios are rounded to two decimal places; full-precision audit evidence is retained.
 
@@ -203,4 +229,4 @@ The CPU example runs three updates with each selected model and optimizer. It ne
 - `environment/`, `configs/`, `scripts/`: dependency locks, data contracts and build/binding helpers.
 - `reference/`: selected result summaries and the necessary deterministic SAGE correctness oracle.
 
-[Data](docs/DATA.md) and [native build instructions](docs/NATIVE_BUILD.md) describe the prepared-input contract. A fresh end-to-end dataset download/preparation pipeline and a container deployment have not been validated. The current prepared server supports the PA main experiments and the supplementary PA/SAGE ablation and layout grid above. IG/SAGE has the supplementary short-window performance protocol above; web graphs and the remaining sensitivity/scalability experiments are outside this evaluation. The submitted `ae-pa-v1` remains the frozen initial PA snapshot; these supplementary updates are on `main`. Project licensing is recorded in [LICENSE_STATUS.md](LICENSE_STATUS.md).
+[Data](docs/DATA.md) and [native build instructions](docs/NATIVE_BUILD.md) describe the prepared-input contract. A fresh end-to-end dataset download/preparation pipeline and a container deployment have not been validated. The current prepared server supports the PA main experiments and the supplementary PA/SAGE ablation and layout grid above. IG/SAGE has the supplementary short-window performance protocol above; UKS/SAGE is packaged as a performance supplement with AE replay pending. UKL/CL and the remaining sensitivity/scalability experiments are outside this evaluation. The submitted `ae-pa-v1` remains the frozen initial PA snapshot; these supplementary updates are on `main`. Project licensing is recorded in [LICENSE_STATUS.md](LICENSE_STATUS.md).

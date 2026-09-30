@@ -1,0 +1,27 @@
+{
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "common.py": "a00d94c233dc8e29d28f94de8278d3f7641651ce1376cf23906040122245909b",
+    "controller.py": "9ac5da9e39b01780242f8f4246ca270493f31025e3236e1be2db14c774d482d0",
+    "protocol.json": "b75139624730a517f9297780a2016be4ee2c05e38d5396d9d883650badac6996",
+    "start.py": "21a29105da152ec411783484641a640c581c5cef31cfa23d2a2c637057d8dba9",
+    "statistics.py": "08f76432107fbb9de7118da02404349758cf02aa03dcff3f5ca2be9aa1a52edd",
+    "tests.py": "26b3c10129a46412775fcde071846484b430ee87d406300cb28635858abe9ba0",
+    "worker.py": "79daf66beae8f819af1787eed428fc8df37cdbdc9eff708ea8d68105ca727f9b"
+  },
+  "dependencies": {
+    "candidates/ig_sage_affinity_pair_v1/affinity.py": "e9880327531e818ca34e3ec9c30754e5da936aad2f97e6125b78042cf0fc6d7c",
+    "candidates/ig_sage_affinity_pair_v1/common.py": "a1d0566ad38c6b1798f6e88a1066d0baeddd89c78875fb45c9d7c0dca9602f1e",
+    "candidates/ig_sage_host_opt_v1/affinity.py": "aaef27fc402d402a0c1c7fe8e1276bb9ebdd2037dc5185bab14c0cc082b7f500",
+    "candidates/ig_sage_pair_max5_v1/protocol.json": "55e07bfae6759a2f86822b2327cb83c157797eae18a79273cbc77cf26c825cb7",
+    "results/uks_sage_pair_max5_20260929_v1/start.py": "bfdb3c65e884105178a11b56555eb9730688c47050935de67e4b1e094962f880",
+    "results/uks_native_20260929_v1/retry1/summary.json": "d9e59b8443aaa49c4ae98acc41065f2ee50dffffd6147ab8b828ab4b277d40b9",
+    "results/uks_native_20260929_v1/retry1/smoke_gids/accepted.json": "20e98aa9b96e62658c5a78ab1bb4f8ad64306887d54988f65d867df0ff5969dc",
+    "results/uks_native_20260929_v1/retry1/smoke_gids/report.json": "39c578aa8af0e892badbe5507f688560c6e515fa95d5795d3b7542d1be326be6",
+    "results/uks_native_20260929_v1/retry1/smoke_gids/exit.json": "c2bf1b698c7dd23aaea2cc185f6019ba5fc159bb4db8e14657564c4cec407881",
+    "results/uks_native_20260929_v1/retry1/smoke_digit/accepted.json": "1860b4750fb992ec4a0b29468b24c829eacb5af7c6e36e00aa53afbe97b14ead",
+    "results/uks_native_20260929_v1/retry1/smoke_digit/report.json": "150132a23f0ac3c9260bced43ae1333701f1bcb0a818a056df19cd6a74d3c674",
+    "results/uks_native_20260929_v1/retry1/smoke_digit/exit.json": "6562f3097ade39af515a20172b529812b2daa2c5d3b4846c4e0926a7d28067af"
+  },
+  "repair_sha256": "1d1f34e6fd1a41592841ee8f952c37b0d2f242084613a588e8c2acb1d0fd9299"
+}

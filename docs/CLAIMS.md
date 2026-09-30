@@ -18,3 +18,12 @@ IG/web graphs, ablations, sensitivity, scalability, other systems and multi-seed
 The excluded-submission list above describes the frozen AE scope. The later [PA/SAGE four-arm ablation](ABLATION.md) passed prepared-server AE self-service reproduction on 2026-09-25. It supports the stated single-configuration, single-epoch performance table, with adjacency-only GR, aligned first-three-arm RevPR hot sets and fresh workers. It does not establish every paper ablation, isolated NS/FIFO attribution, multi-seed accuracy or standalone native reproduction from this concise checkout.
 
 The later [IG/SAGE supplement](IG_PERFORMANCE.md) reports five paired short-window performance runs and their maximum same-round speedup. Its fresh AE replay passed on 2026-09-28; it makes no full-epoch, accuracy or stability claim.
+
+## UKS/SAGE Freq + BFS supplement
+
+| Reference | Speedup vs GIDS |
+|---|---:|
+| Author native run; AE replay pending | **1.75×** |
+
+The performance supplement uses real sampling, SSD I/O and model updates with
+synthetic features and labels. [Protocol and reproduction](UKS_PERFORMANCE.md).

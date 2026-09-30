@@ -1,0 +1,29 @@
+{
+  "cache_line_bytes": 1024,
+  "ssd_primary_read_bytes": [
+    1024,
+    2048
+  ],
+  "cpu_row_bytes": 1024,
+  "gpu_cache_bytes": 4294967296,
+  "cache_entries": 4194304,
+  "physical_layout": "unchanged g2/r20 with existing padding and replicas; fetched rows only",
+  "io_rows_per_cache_line": 1,
+  "graph_group_size": 2,
+  "hot_policy": "same_revpr",
+  "gids_policy": "legacy",
+  "digit_policy": "fifo",
+  "digit_sampler": "incremental",
+  "cpu_affinity": {
+    "gids": "default",
+    "digit": "CPU2"
+  },
+  "warmup": 20,
+  "measured": 300,
+  "pairs": 5,
+  "short_acceptance_updates_per_arm": 4,
+  "raw_ssd_writes": false,
+  "pair_dma_staging_bytes_per_arm": 16777216,
+  "merge_condition": "both requested adjacent g2 members, neither CPU-hot, both GPU-missing; single miss uses 1 KiB",
+  "pair_hash": "GPU input-index hash; duplicate eligible rows fail acceptance"
+}
