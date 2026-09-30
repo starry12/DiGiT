@@ -30,7 +30,7 @@ Existing reference JSON/CSV and acceptance receipts retain the complete audit
 record, including historical failures. Default human-readable summaries omit
 per-run timing details; PA main test accuracy remains in the README. Use explicit JSON/evidence inspection when needed.
 
-## UKS/SAGE Freq + BFS supplement
+## UKS/SAGE performance comparison
 
 | Reference | Speedup vs GIDS |
 |---|---:|

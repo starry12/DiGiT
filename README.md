@@ -96,7 +96,7 @@ To inspect the accepted AE reference without running a request:
 The reference is labeled `AE_REFERENCE`; default results inspect the latest request.
 [IG protocol and source](docs/IG_PERFORMANCE.md).
 
-### UKS / GraphSAGE performance
+### UKS/SAGE performance comparison
 
 The UKS extension is installed and its CPU namespace/import checks have passed.
 A fresh AE native replay is pending. To start a request when a GPU is available:
@@ -133,7 +133,7 @@ The main experiments execute the preserved, accepted server release; the supplem
 
 ## Current evaluation scope
 
-The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation and grouping/replication grid use one complete epoch per setting and report performance only. The supplementary IG/SAGE comparison uses five paired short performance windows. The UKS/SAGE Freq+BFS supplement adds an author reference and prepared-server entry, with fresh AE acceptance pending. This is a reconstruction of the paper implementation.
+The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation and grouping/replication grid use one complete epoch per setting and report performance only. The supplementary IG/SAGE comparison uses five paired short performance windows. The UKS/SAGE performance comparison adds an author reference and prepared-server entry, with fresh AE acceptance pending. This is a reconstruction of the paper implementation.
 
 The source tree contains one selected implementation per model. It excludes research Git history, intermediate implementations, training logs, checkpoints, compiled binaries and datasets.
 
@@ -191,7 +191,7 @@ The reported value is the maximum same-round GIDS/DiGiT ratio, not average or st
 
 [IG protocol and evidence](docs/IG_PERFORMANCE.md) · [AE acceptance receipt](reference/ig_sage_reviewer_acceptance.json).
 
-### UKS/SAGE Freq + BFS
+### UKS/SAGE performance comparison
 
 | Reference | Speedup vs GIDS |
 |---|---:|

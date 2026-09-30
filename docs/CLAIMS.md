@@ -19,7 +19,7 @@ The excluded-submission list above describes the frozen AE scope. The later [PA/
 
 The later [IG/SAGE supplement](IG_PERFORMANCE.md) reports five paired short-window performance runs and their maximum same-round speedup. Its fresh AE replay passed on 2026-09-28; it makes no full-epoch, accuracy or stability claim.
 
-## UKS/SAGE Freq + BFS supplement
+## UKS/SAGE performance comparison
 
 | Reference | Speedup vs GIDS |
 |---|---:|
