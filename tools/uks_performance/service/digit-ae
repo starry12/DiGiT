@@ -1,5 +1,0 @@
-#!/usr/bin/python3 -I
-import os,sys
-a=sys.argv[1:]
-script='/srv/digit-ae/admin/uks_performance_v2/'+('cli.py' if len(a)>1 and a[1]=='UKS' else 'legacy_cli.py')
-os.execv('/usr/bin/python3',['/usr/bin/python3','-I','-B',script,*a])

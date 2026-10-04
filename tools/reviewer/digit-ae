@@ -1,0 +1,3 @@
+#!/usr/bin/python3 -I
+import os,sys
+os.execv('/usr/bin/python3',['/usr/bin/python3','-I','-B','/srv/digit-ae/reviewer-current/tools/reviewer/cli.py',*sys.argv[1:]])

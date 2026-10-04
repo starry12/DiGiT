@@ -1,20 +1,25 @@
-# Code map
+# Source map
 
-| Component | Location |
+| Component | Entry / source |
 |---|---|
-| Single public entry, package/deployment guards | `artifact.py`, `run.sh`, `artifact_integrity.py` |
-| GraphSAGE training, selected protocol, native sampler | `training/sage/` |
-| GCN and GAT math, budgets, workers | `training/gcn/`, `training/gat/` |
-| SAGE orchestration, independent monitoring and acceptance | `evaluation/sage/`, `ae/pa_sage/` |
-| GCN/GAT entry binding | `evaluation/gcn/`, `evaluation/gat/` |
-| DiGiT layout and sampler support | `training/sage/runtime/digit/` |
-| GIDS loader and common model definitions | `ae/papers/runtime/` |
-| Effective I/O counters and native feature store | `runtime/io/` |
+| Prepared-server reviewer commands | `tools/reviewer/cli.py` |
+| Main source-build interface and integrity | `artifact.py`, `run.sh`, `artifact_integrity.py` |
+| PA GraphSAGE training and sampler | `training/sage/` |
+| PA GCN / GAT training | `training/gcn/`, `training/gat/` |
+| Main evaluation and monitoring | `evaluation/`, `ae/pa_sage/` |
+| GIDS loader and model definitions | `ae/papers/runtime/` |
+| I/O accounting and native feature store | `runtime/io/` |
+| PA ablation service | `tools/ablation/` |
+| PA layout-grid service and dependencies | `tools/layout_grid/` |
+| IG comparison service and dependencies | `tools/ig_performance/` |
+| UKS comparison service and dependencies | `tools/uks_performance/` |
+| Automatic GPU selection | `tools/gpu_selection/` |
 | BaM dependency | `third_party/bam/` |
 
-The selected model protocol files are byte-identical to the preserved release. Python imports and filesystem paths were updated to this tree; the nested versioned dispatch layers were replaced by one direct entry. Native math and kernel source are unchanged apart from required paths. The instrumented BaM `page_cache.h` is retained in `runtime/io/native/include/` and takes precedence over the shared vendor headers.
+Use the [reviewer commands](REVIEWER.md) on the prepared server. The frontend dispatches directly to the selected experiment handler; service controllers enforce fixed protocols, data bindings and resource ownership. Reviewers do not execute the administrator scripts or research launchers.
 
-`provenance/source_map.json` records source hashes, new file hashes and adaptations. `provenance/preparation_hashes.json` retains the identities bound by existing prepared-data receipts without carrying old preparation implementations. `reference/sage_correctness.json` contains only the values used by the live SAGE deterministic equivalence check.
+The main source-build path has passed a clean native build and paired smoke for SAGE, GCN and GAT: [receipt](../reference/rebuilt_native_smoke.json). The supplementary service source targets separately provisioned read-only runtime snapshots; it is not a standalone supplementary build recipe for a new machine.
 
-No research Git history or old implementation snapshots are included. Data contract names and receipt schemas remain stable for compatibility. Source reorganization has CPU/static validation; native source rebuild and a fresh native pair from this tree remain separate acceptance work. The prepared service stays on its preserved release during ongoing experiments.
+Supplementary `runtime_sources` directories preserve imported modules and source identities needed by the accepted runtime. Version-bearing dependency names are internal compatibility identifiers, not selectable alternative reviewer implementations. Their hash-bound verification chains must remain intact. Prepared data, native binaries and raw experiment logs are supplied separately on the server.
 
+`reference/` contains selected accepted result records and required correctness constants. `provenance/` records source/data identities. Source mappings and preparation hashes support verification; reviewers can reproduce through the frontend without navigating those files.

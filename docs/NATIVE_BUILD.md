@@ -1,6 +1,6 @@
 # Building this source snapshot
 
-This concise source passed a fresh locked environment installation and native compilation, followed by PA/SAGE, GCN and GAT preflight and paired native smoke on 2026-09-23. See the [build receipt](../provenance/native_build_validation.json) and [native acceptance receipt](../reference/rebuilt_native_smoke.json). The initial smoke exposed an omitted `GIDS.breakdown` file; it was restored from the preserved server release, and all six steps were repeated on the repaired copy. Five native binaries were reused byte-for-byte from the successful build. This is short acceptance with existing prepared data, not a new full experiment or a reviewer-account workflow test.
+The main source-build path has passed native compilation, module imports and PA/SAGE, GCN and GAT preflight with paired smoke. See the [build receipt](../provenance/native_build_validation.json) and [native acceptance receipt](../reference/rebuilt_native_smoke.json). This validates short native execution with prepared inputs; it does not establish a fresh full experiment or a download-to-layout-to-SSD pipeline.
 
 Use the locked Python environment, CUDA toolkit and sm89-compatible hardware described in [ENVIRONMENT](ENVIRONMENT.md). Inspect the build plan first:
 

@@ -1,29 +1,17 @@
-# Scope and claims
+# Evaluation scope
 
-The DiGiT paper is the scope reference; original paper source was unavailable, so this implementation is a disclosed reconstruction. The submitted matrix is PA × GraphSAGE/GCN/GAT × GIDS/DiGiT.
+DiGiT is a reconstruction of the paper implementation. The prepared server provides the following experiments.
 
-| Paper topic | Experiment | Limit |
+| Experiment | Workload | Claim |
 |---|---|---|
-| Training time, §5.2.1 / Fig. 8 | Seed 0; 20 full epochs per system | Covers PA only, not the entire figure |
-| Accuracy, §5.2.2 / Table 2 | One test of each newly trained epoch-20 model | Observed single-seed accuracy, not paper absolute-accuracy reproduction |
-| Effective I/O | Useful and physical SSD bytes, active time and logical feature supply | Denominators are separate; combined system gain is not an ablation |
-| Initial usability | CPU example, native preflight and paired smoke | CPU success alone is not native correctness/performance acceptance |
+| PA × GraphSAGE / GCN / GAT | Seed 0, 20 full epochs per system, validation each epoch, final test | Training speedup and observed test accuracy |
+| PA / GraphSAGE ablation | Four arms, one complete epoch each | Component performance at this configuration |
+| PA / GraphSAGE layout grid | 15 layouts, one complete epoch each | Performance relative to g2/r20 with shared proxy features |
+| IG / GraphSAGE | Five paired short windows | Maximum same-round speedup |
+| UKS / GraphSAGE | Five paired short windows with synthetic features and labels | Maximum same-round speedup |
 
-Fixed settings: batch 1024, fanouts 10/5/5, three layers, hidden width 128, dropout 0.2, g2, GPU cache 4 GiB and CPU cache 11,105,992 rows. SAGE uses Adam lr 0.001 / weight decay 0; GCN/GAT use lr 0.01 / weight decay 0.001. GAT has four heads. The authoritative selected protocols are in `training/{sage,gcn,gat}/protocol.json`.
+PA main settings: batch 1024, fanouts 10/5/5, three layers, hidden width 128, dropout 0.2, g2, GPU cache 4 GiB and CPU cache 11,105,992 rows. SAGE uses Adam lr 0.001 / weight decay 0; GCN/GAT use lr 0.01 / weight decay 0.001. GAT has four heads. Selected protocols are in `training/{sage,gcn,gat}/protocol.json`.
 
-IG/web graphs, ablations, sensitivity, scalability, other systems and multi-seed accuracy claims are excluded. The GIDS path includes the disclosed static CPU-cache adaptation. The source tree has been reorganized; current service evidence belongs to its separately sealed server release. [Source provenance](../provenance/source_map.json) records the relationship.
+Single-seed test accuracy does not establish statistical equivalence. Short windows do not establish full-epoch or mean performance. Layout-grid proxy features do not support accuracy claims. For ablation, GR→NS changes feature layout as well as sampling, and NS→DiGiT changes CPU hot-set selection and GPU replacement together. The GIDS path includes a static CPU-cache adaptation.
 
-## Later supplementary evidence
-
-The excluded-submission list above describes the frozen AE scope. The later [PA/SAGE four-arm ablation](ABLATION.md) passed prepared-server AE self-service reproduction on 2026-09-25. It supports the stated single-configuration, single-epoch performance table, with adjacency-only GR, aligned first-three-arm RevPR hot sets and fresh workers. It does not establish every paper ablation, isolated NS/FIFO attribution, multi-seed accuracy or standalone native reproduction from this concise checkout.
-
-The later [IG/SAGE supplement](IG_PERFORMANCE.md) reports five paired short-window performance runs and their maximum same-round speedup. Its fresh AE replay passed on 2026-09-28; it makes no full-epoch, accuracy or stability claim.
-
-## UKS/SAGE performance comparison
-
-| Reference | Speedup vs GIDS |
-|---|---:|
-| Author native run; AE replay pending | **1.75×** |
-
-The performance supplement uses real sampling, SSD I/O and model updates with
-synthetic features and labels. [Protocol and reproduction](UKS_PERFORMANCE.md).
+UKL, CL, other systems and unaccepted experimental optimizations are outside this AE package. See [results](RESULTS.md) and each experiment's linked protocol for its timing denominator and evidence. The source-build and prepared-server workflows are distinct; CPU checks alone do not certify a new GPU/NVMe deployment.

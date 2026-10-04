@@ -22,7 +22,7 @@
       "sha256": "dab8c4e81afd9e9bc5ce0bf2b65970cd6711f846bc29bc528cc73d9ac39549f2"
     },
     {
-      "source": "tools/ablation/legacy_cli.py",
+      "source": "tools/reviewer/pa_cli.py",
       "installed_path": "/srv/digit-ae/admin/ablation_v1/legacy_cli.py",
       "sha256": "4505ce0b256e9afaf607cd7ff7931ba65986b08c1e0d8812fe9ac4a6819cf615"
     },

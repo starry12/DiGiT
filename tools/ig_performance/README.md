@@ -1,5 +1,7 @@
-# IG performance sources
+# IG/SAGE performance comparison
 
-See [protocol and commands](../../docs/IG_PERFORMANCE.md). `runtime_sources` preserves exact original source paths and hashes; `service` contains the independent fixed AE transport and concise result display. The private snapshot also carries inherited hash-bound dependencies and prepared-input receipts; native binaries and private evidence are not public. Deployment substitutes only the trusted Python executable; sampling/model/monitor algorithms are unchanged.
+Use the [prepared-server commands](../../docs/IG_PERFORMANCE.md) to reproduce the accepted experiment.
 
-[Automatic GPU selection and installed source mapping](../gpu_selection/README.md).
+The service entry is `service/runner.py`. Controller, worker and review modules enforce the selected protocol and require successful worker exits and accepted result records. Supplementary runtime dependencies retain their internal import paths and identities; they are not alternative reviewer commands. The server supplies compiled components, input receipts and read-only datasets.
+
+[Source map](../../docs/CODE.md) · [Reviewer workflow](../../docs/REVIEWER.md).

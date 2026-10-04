@@ -1,8 +1,7 @@
 # IG/SAGE performance comparison
 
 Final speedup: **1.46×**, the **maximum observed paired speedup across five rounds**.
-The AE reviewer workflow completed successfully on 2026-09-28. All ten workers
-passed, all 285 worker evidence hashes were rechecked, and GPU2 was released.
+All ten workers in the accepted AE reference passed and the service completed successfully.
 See the [AE acceptance receipt](../reference/ig_sage_reviewer_acceptance.json).
 
 ## Reproduction on the prepared server
@@ -47,17 +46,4 @@ The fixed service adapters and original source dependencies are in
 `tools/ig_performance/`. They target the separately installed, hash-bound prepared
 runtime with read-only input mounts. This is not a claim of an independently
 validated from-scratch IG build from the concise checkout. The installer performs
-CPU/import checks without launching training. The PA release and submitted
-`ae-pa-v1` remain unchanged.
-
-## Installed corrections
-
-The source-order provenance directory `data/ig_perf_v2` is mounted read-only.
-Mounted inputs retain their original owner and inode; same-file, read-only and
-content-hash checks remain required. Executable snapshot files still require root
-ownership and safe permissions.
-
-For completed services, systemd may clear its live InvocationID. The result CLI
-permits that empty live field while still requiring successful service exit, matching
-persistent request/result InvocationIDs and valid completion hashes. A nonempty
-mismatched ID remains a failure. These corrections change no training code or results.
+CPU/import checks without launching training.

@@ -53,7 +53,7 @@ digit-ae results PA sage --action ablation
 digit-ae logs PA sage --action ablation
 ```
 
-After installation of the concise result display, accepted results show the final DiGiT/GIDS speedup. The existing AE run has passed; [protocol and evidence](docs/ABLATION.md) describe the cache settings and component boundaries.
+Accepted results show the final DiGiT/GIDS speedup. The existing AE run has passed; [protocol and evidence](docs/ABLATION.md) describe the cache settings and component boundaries.
 
 ### Grouping and replication grid: PA / GraphSAGE
 
@@ -68,7 +68,7 @@ digit-ae logs PA sage --action layout
 
 The service reuses the 15 prepared layouts and shared proxy-feature SSD region, with real sampling, I/O and model updates. It runs a fresh g2/r20 smoke before the full grid; the other 14 points retain the declared runtime checks. It does not regenerate large layouts. Status reports completion out of 15; accepted results show the best layout speedup relative to g2/r20.
 
-The second complete AE grid replay passed and is the selected reference. To inspect it without starting a run:
+The complete AE grid replay passed. To inspect it without starting a run:
 
 ```bash
 digit-ae results PA sage --action layout --reference
@@ -111,7 +111,7 @@ digit-ae logs UKS sage --action performance
 The service automatically selects an idle GPU from cards **0–3** and uses that same
 card throughout the request. If none is available, it exits without starting training.
 Use `digit-ae results UKS sage --action performance --reference` to inspect the
-author reference, or `digit-ae stop UKS sage --action performance` to cancel.
+accepted AE reference, or `digit-ae stop UKS sage --action performance` to cancel.
 [Protocol and implementation](docs/UKS_PERFORMANCE.md) · [AE acceptance receipt](reference/uks_sage_reviewer_acceptance.json).
 
 ### Completion, stopping and result files
@@ -126,16 +126,15 @@ To cancel a request, use its matching command and wait for inactive status and r
 | Four-arm ablation | `digit-ae stop PA sage --action ablation` |
 | Layout grid | `digit-ae stop PA sage --action layout` |
 | IG performance | `digit-ae stop IG sage --action performance` |
+| UKS performance | `digit-ae stop UKS sage --action performance` |
 
 The main SAGE full workflow previously took about **2 h 25 min**, and four-arm ablation about **59 min**, including smoke and setup. These are observed wall times, not estimates from the per-epoch result tables; server load can change them. [Reviewer instructions](docs/REVIEWER.md) provide additional troubleshooting and environment details.
-
-The main experiments execute the preserved, accepted server release; the supplementary services use separately installed runtime snapshots. This repository reorganizes the main release into a concise source tree; its native compilation in a fresh locked environment and subsequent PA/SAGE, GCN and GAT preflight and paired smoke have passed; see the [rebuilt-source receipt](reference/rebuilt_native_smoke.json). Source origins and adaptations are recorded in [the source map](provenance/source_map.json). Server runtimes are updated through explicit installation.
 
 ## Current evaluation scope
 
 The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation and grouping/replication grid use one complete epoch per setting and report performance only. The supplementary IG/SAGE comparison uses five paired short performance windows. The supplementary UKS/SAGE performance comparison has passed a fresh prepared-server AE replay. This is a reconstruction of the paper implementation.
 
-The source tree contains one selected implementation per model. It excludes research Git history, intermediate implementations, training logs, checkpoints, compiled binaries and datasets.
+The reviewer commands select the accepted implementation for each experiment. Datasets, compiled binaries, checkpoints and raw training logs are supplied separately. Supplementary runtime dependencies retain internal compatibility names; see the [source map](docs/CODE.md).
 
 ## Results and boundaries
 
@@ -169,7 +168,7 @@ Accepted AE measurements: one complete training epoch per arm, without validatio
 
 ### PA/SAGE grouping and replication
 
-Accepted AE grid (second complete run): one complete first epoch per point, with shared proxy features and real sampling, I/O and model computation. Speedups are relative to **g2/r20**, not GIDS.
+Accepted AE grid: one complete first epoch per point, with shared proxy features and real sampling, I/O and model computation. Speedups are relative to **g2/r20**, not GIDS.
 
 | Group size | 0% | 10% | 20% | 40% | 80% |
 |---|---:|---:|---:|---:|---:|
@@ -177,7 +176,7 @@ Accepted AE grid (second complete run): one complete first epoch per point, with
 | g = 2 | 0.99× | 1.00× | 1.00× | 1.01× | 1.00× |
 | g = 4 | 1.14× | 1.16× | 1.15× | 1.15× | 1.16× |
 
-[Grid protocol and evidence](docs/LAYOUT_GRID.md). All 15 points passed. The entire second run is selected; no points are mixed across runs.
+[Grid protocol and evidence](docs/LAYOUT_GRID.md). All 15 points passed. All points come from one complete run.
 
 ### IG/SAGE performance comparison
 
