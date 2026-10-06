@@ -8,7 +8,7 @@ This repository provides the DiGiT implementation, the GIDS comparison path, and
 
 | What you want to do | Start here |
 |---|---|
-| Run experiments on the provided AE server | [Main experiments, ablation and layout-grid commands](#ae-environment-and-reproduction) |
+| Run experiments on the provided AE server | [Main experiments, performance comparisons, ablation and layout-grid commands](#ae-environment-and-reproduction) |
 | Create an environment from scratch on your own machine | [Environment setup](docs/ENVIRONMENT.md): prerequisites, locked dependencies and checks |
 | Compile DiGiT and its GIDS/BaM dependencies | [Native build guide](docs/NATIVE_BUILD.md) |
 | Connect the prepared graph, features and SSD data | [Data guide](docs/DATA.md) |
@@ -41,6 +41,28 @@ digit-ae logs PA sage --action run
 ```
 
 For a short check on its own, use `digit-ae smoke PA sage`, then `digit-ae results PA sage --action smoke`; substitute `gcn` or `gat` as needed. A full `run` already includes smoke, so this separate request is optional.
+
+### GraphSAGE performance: IG / UKS / UKL / CL
+
+Full 20-epoch training on these four datasets takes too long for a practical AE session. To demonstrate performance, each comparison uses **20 warmup mini-batches followed by 300 timed mini-batches per system**, repeated for **five paired rounds**. For a complete **20-epoch experiment with validation and a final accuracy test**, use the **PA main experiments above**.
+
+| Dataset / model | Start a new comparison | Read its results |
+|---|---|---|
+| IG / GraphSAGE | `digit-ae performance IG sage` | `digit-ae results IG sage --action performance` |
+| UKS / GraphSAGE | `digit-ae performance UKS sage` | `digit-ae results UKS sage --action performance` |
+| UKL / GraphSAGE | `digit-ae performance UKL sage` | `digit-ae results UKL sage --action performance` |
+| CL / GraphSAGE | `digit-ae performance CL sage` | `digit-ae results CL sage --action performance` |
+
+For progress and recent logs, replace `IG` with the selected dataset:
+
+```bash
+digit-ae status IG sage --action performance
+digit-ae logs IG sage --action performance
+```
+
+Results report the **maximum same-round GIDS/DiGiT speedup across five rounds**. These short windows measure performance, not accuracy or full-epoch training. Each request automatically selects an idle GPU from cards 0–3 and keeps it throughout the request.
+
+Accepted IG and UKS AE references can be viewed by adding `--reference` to their results commands; they are labeled `AE_REFERENCE` separately from the latest request. [IG protocol](docs/IG_PERFORMANCE.md) · [UKS protocol](docs/UKS_PERFORMANCE.md) · [UKL/CL result record](reference/ukl_cl_performance.json).
 
 ### Component ablation: PA / GraphSAGE
 
@@ -75,55 +97,6 @@ digit-ae results PA sage --action layout --reference
 ```
 
 This explicitly prints `AE_REFERENCE`, separate from the latest AE request's `PASS`. See [grid protocol and evidence](docs/LAYOUT_GRID.md) for proxy-feature calibration and verification scope.
-
-### IG / GraphSAGE performance: five paired rounds
-
-The IG extension adds a performance-only comparison: **five paired rounds**, each
-with **20 warmup and 300 timed mini-batches** per system. The extension is installed and the AE five-round replay has passed:
-
-
-```bash
-digit-ae performance IG sage
-digit-ae status IG sage --action performance
-digit-ae results IG sage --action performance
-digit-ae logs IG sage --action performance
-```
-
-Results show the **maximum same-round GIDS/DiGiT speedup across five rounds**.
-This is a short-window performance measurement, not an accuracy or full-epoch run.
-To inspect the accepted AE reference without running a request:
-`digit-ae results IG sage --action performance --reference`.
-The reference is labeled `AE_REFERENCE`; default results inspect the latest request.
-[IG protocol and source](docs/IG_PERFORMANCE.md).
-
-### UKS/SAGE performance comparison
-
-The UKS/SAGE AE replay passed all ten formal runs with **2.00×** speedup.
-To start a fresh request when a GPU is available:
-
-```bash
-digit-ae performance UKS sage
-digit-ae status UKS sage --action performance
-digit-ae results UKS sage --action performance
-digit-ae logs UKS sage --action performance
-```
-
-The service automatically selects an idle GPU from cards **0–3** and uses that same
-card throughout the request. If none is available, it exits without starting training.
-Use `digit-ae results UKS sage --action performance --reference` to inspect the
-accepted AE reference, or `digit-ae stop UKS sage --action performance` to cancel.
-[Protocol and implementation](docs/UKS_PERFORMANCE.md) · [AE acceptance receipt](reference/uks_sage_reviewer_acceptance.json).
-
-### UKL/SAGE and CL/SAGE performance comparison
-
-Each request runs five paired rounds, with 20 warmup and 300 timed mini-batches per system. Results show the maximum same-round GIDS/DiGiT speedup.
-
-| Dataset | Start | Results |
-|---|---|---|
-| UKL | `digit-ae performance UKL sage` | `digit-ae results UKL sage --action performance` |
-| CL | `digit-ae performance CL sage` | `digit-ae results CL sage --action performance` |
-
-Use `digit-ae status UKL sage --action performance` or `digit-ae logs UKL sage --action performance` to inspect a request; substitute `CL` as needed. Both requests select an idle GPU automatically.
 
 ### Completion, stopping and result files
 
@@ -165,6 +138,21 @@ Test accuracy is measured once using each system’s epoch-20 checkpoint (seed 0
 
 [Main results and metric definitions](docs/RESULTS.md).
 
+### GraphSAGE performance: IG / UKS / UKL / CL
+
+Maximum same-round DiGiT speedup over GIDS across five paired rounds, using the warmup and timed mini-batch protocol above.
+
+| Dataset / model | Speedup vs GIDS |
+|---|---:|
+| IG / GraphSAGE | **1.46×** |
+| UKS / GraphSAGE | **2.00×** |
+| UKL / GraphSAGE | **1.70×** |
+| CL / GraphSAGE | **1.65×** |
+
+IG and UKS are accepted AE reviewer measurements: [IG receipt](reference/ig_sage_reviewer_acceptance.json) · [UKS receipt](reference/uks_sage_reviewer_acceptance.json). UKL and CL are validated author measurements; reviewer-account replay is pending. [UKL/CL result record](reference/ukl_cl_performance.json).
+
+These ratios describe the best observed paired round, not average or stable performance. Values are rounded to two decimal places; full-precision evidence is retained. No accuracy or full-epoch claim is made for these four comparisons.
+
 ### PA/SAGE component ablation
 
 Accepted AE measurements: one complete training epoch per arm, without validation/test. All speedups use the measured GIDS arm as the baseline.
@@ -190,43 +178,6 @@ Accepted AE grid: one complete first epoch per point, with shared proxy features
 | g = 4 | 1.14× | 1.16× | 1.15× | 1.15× | 1.16× |
 
 [Grid protocol and evidence](docs/LAYOUT_GRID.md). All 15 points passed. All points come from one complete run.
-
-### IG/SAGE performance comparison
-
-Accepted AE reviewer short-window comparison: five paired rounds, each with 20 warmup and 300 timed mini-batches per system.
-
-| Model | Maximum paired speedup vs GIDS (five rounds) |
-|---|---:|
-| GraphSAGE | 1.46× |
-
-The reported value is the maximum same-round GIDS/DiGiT ratio, not average or stable performance. GIDS uses default CPU scheduling; DiGiT binds to CPU2 after imports. No accuracy or full-epoch claim is made. All ten workers passed; the service completed successfully.
-
-[IG protocol and evidence](docs/IG_PERFORMANCE.md) · [AE acceptance receipt](reference/ig_sage_reviewer_acceptance.json).
-
-### UKS/SAGE performance comparison
-
-| Reference | Speedup vs GIDS |
-|---|---:|
-| AE prepared-server replay | **2.00×** |
-
-[Protocol and implementation](docs/UKS_PERFORMANCE.md) · [AE acceptance receipt](reference/uks_sage_reviewer_acceptance.json).
-
-All displayed ratios are rounded to two decimal places; full-precision audit evidence is retained.
-
-### UKL/SAGE performance comparison
-
-| System | Speedup vs GIDS |
-|---|---:|
-| DiGiT | **1.70×** |
-
-### CL/SAGE performance comparison
-
-| System | Speedup vs GIDS |
-|---|---:|
-| DiGiT | **1.65×** |
-
-UKL and CL are validated author measurements; reviewer-account replay is pending. [Result record](reference/ukl_cl_performance.json).
-
 
 ## Set up from source
 
