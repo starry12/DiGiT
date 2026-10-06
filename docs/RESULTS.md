@@ -25,8 +25,10 @@ Ablation and layout use one full epoch per point. The layout table comes from on
 |---|---:|
 | IG / GraphSAGE | 1.46× |
 | UKS / GraphSAGE | 2.00× |
+| UKL / GraphSAGE | 1.70× |
+| CL / GraphSAGE | 1.65× |
 
-Each comparison uses five paired rounds, 20 warmup and 300 timed mini-batches per system. The reported statistic is the maximum same-round GIDS/DiGiT ratio, computed before rounding; it is not mean performance. UKS uses synthetic features and labels and makes no accuracy claim.
+Each comparison uses five paired rounds, 20 warmup and 300 timed mini-batches per system. The reported statistic is the maximum same-round GIDS/DiGiT ratio, computed before rounding; it is not mean performance. UKS, UKL and CL use synthetic features and labels and make no accuracy claim. UKL/CL are validated author results; reviewer-account replay is pending.
 
 Full tables and commands are on the [homepage](../README.md). Current acceptance records are retained in `reference/`; raw timing and I/O records remain available in each server result directory. Ratios are displayed to two decimal places.
 

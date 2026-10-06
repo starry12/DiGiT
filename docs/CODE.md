@@ -13,6 +13,8 @@
 | PA layout-grid service and dependencies | `tools/layout_grid/` |
 | IG comparison service and dependencies | `tools/ig_performance/` |
 | UKS comparison service and dependencies | `tools/uks_performance/` |
+| UKL / CL comparisons | `tools/ukl_performance/`, `tools/cl_performance/` |
+| Shared large-graph runtime | `tools/large_graph/runtime_sources/` |
 | Automatic GPU selection | `tools/gpu_selection/` |
 | BaM dependency | `third_party/bam/` |
 

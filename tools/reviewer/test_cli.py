@@ -23,7 +23,7 @@ class ReviewerCLI(unittest.TestCase):
                 self.assertEqual(cli.parse(args.split()).route,expected)
                 route = cli.HANDLERS[expected]
                 self.assertNotIn('legacy_cli',str(route))
-        for dataset in ('IG','UKS'):
+        for dataset in ('IG','UKS','UKL','CL'):
             for command in cli.INSPECT:
                 self.assertEqual(cli.parse(f'{command} {dataset} sage --action performance'.split()).route,dataset)
 

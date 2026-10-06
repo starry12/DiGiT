@@ -1,0 +1,32 @@
+[Unit]
+Description=DiGiT AE UKL SAGE performance comparison
+[Service]
+Type=exec
+User=root
+Group=root
+WorkingDirectory=/home/embed/digit
+ExecStart=/srv/digit-ae/env/bin/python -I -B -u /srv/digit-ae/admin/ukl_performance_v2/runner.py
+Environment=PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 UKL_V27_VARIANT=gpu
+Environment=LD_LIBRARY_PATH=/home/embed/digit/bam/build/lib
+Environment=PATH=/srv/digit-ae/env/bin:/usr/local/cuda/bin:/usr/bin:/bin:/usr/sbin:/sbin
+UnsetEnvironment=PYTHONPATH PYTHONHOME PYTHONOPTIMIZE LD_PRELOAD CUDA_VISIBLE_DEVICES DIGIT_AE_GPU_ASSIGNMENT
+UMask=0022
+KillMode=control-group
+TimeoutStopSec=330
+TimeoutStartSec=600
+RuntimeMaxSec=60000
+Restart=no
+MemoryMax=2G
+MemorySwapMax=0
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=tmpfs
+PrivateTmp=no
+BindReadOnlyPaths=/srv/digit-ae/releases/ukl_sage_performance_v27_20261006:/home/embed/digit
+BindReadOnlyPaths=/home/embed/digit/ssd_state:/home/embed/digit/ssd_state
+BindPaths=/home/embed/digit/ssd_state/libnvm0.prepare.lock:/home/embed/digit/ssd_state/libnvm0.prepare.lock
+BindPaths=/home/embed/digit/results/ukl_runtime_prepare_20261001_v6/smoke.lock:/home/embed/digit/results/ukl_runtime_prepare_20261001_v6/smoke.lock
+ReadOnlyPaths=/mnt
+ReadWritePaths=/home/embed/digit/ssd_state/libnvm0.prepare.lock /home/embed/digit/results/ukl_runtime_prepare_20261001_v6/smoke.lock /srv/digit-ae/ukl-performance-results-v2 /srv/digit-ae/admin/ukl_performance_v2/state /run/digit-ae-selfservice /tmp /mnt/n0/digit/ae_ukl_probes
+StandardOutput=journal
+StandardError=journal

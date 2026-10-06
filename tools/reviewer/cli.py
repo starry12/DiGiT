@@ -17,6 +17,8 @@ HANDLERS = {
     'layout': ADMIN / 'layout_v1/cli.py',
     'IG': ADMIN / 'ig_performance_v1/cli.py',
     'UKS': ADMIN / 'uks_performance_v2/cli.py',
+    'UKL': ADMIN / 'ukl_performance_v2/cli.py',
+    'CL': ADMIN / 'cl_performance_v1/cli.py',
 }
 INSPECT = ('status', 'results', 'logs', 'stop')
 
@@ -24,7 +26,7 @@ INSPECT = ('status', 'results', 'logs', 'stop')
 def parse(argv):
     p = argparse.ArgumentParser(description=__doc__, epilog='Activate with: source /srv/digit-ae/activate.sh')
     p.add_argument('command', choices=('check', 'smoke', 'run', 'ablation', 'layout', 'performance') + INSPECT)
-    p.add_argument('dataset', choices=('PA', 'IG', 'UKS'))
+    p.add_argument('dataset', choices=('PA', 'IG', 'UKS', 'UKL', 'CL'))
     p.add_argument('model', choices=('sage', 'gcn', 'gat'))
     p.add_argument('--action', choices=('check', 'smoke', 'run', 'ablation', 'layout', 'performance'))
     p.add_argument('--json', action='store_true')
@@ -44,7 +46,7 @@ def parse(argv):
             a.route = 'main'
     else:
         if a.model != 'sage' or selected != 'performance':
-            p.error('IG/UKS use performance <dataset> sage; inspection requires --action performance')
+            p.error('IG/UKS/UKL/CL use performance <dataset> sage; inspection requires --action performance')
         a.route = a.dataset
     if a.reference and (a.command != 'results' or a.route not in ('layout', 'IG', 'UKS')):
         p.error('--reference is available for layout, IG and UKS results')

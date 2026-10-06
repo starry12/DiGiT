@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "validation": "author",
+  "native_ae_replay_accepted": false,
+  "rounds": 5,
+  "warmup_batches": 20,
+  "measured_batches": 300,
+  "selection": "maximum same-round GIDS / DiGiT speedup",
+  "results": {
+    "UKL": {
+      "speedup": 1.6994315187706872
+    },
+    "CL": {
+      "speedup": 1.6514589774002217
+    }
+  }
+}
