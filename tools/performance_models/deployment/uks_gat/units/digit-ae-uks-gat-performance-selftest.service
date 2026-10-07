@@ -1,0 +1,27 @@
+[Unit]
+Description=DiGiT AE UKS GAT Freq BFS five paired windows
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/home/embed/digit
+ExecStart=/srv/digit-ae/env/bin/python -I -B -u /srv/digit-ae/admin/multimodel_v2/uks_gat/runner.py --selftest
+Environment=PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=16 MKL_NUM_THREADS=16 OPENBLAS_NUM_THREADS=1
+Environment=LD_LIBRARY_PATH=/home/embed/digit/bam/build/lib
+UnsetEnvironment=PYTHONPATH PYTHONHOME PYTHONOPTIMIZE LD_PRELOAD CUDA_VISIBLE_DEVICES DIGIT_AE_GPU_ASSIGNMENT CUDA_VISIBLE_DEVICES DIGIT_AE_GPU_ASSIGNMENT CUDA_VISIBLE_DEVICES DIGIT_AE_GPU_ASSIGNMENT
+UMask=0022
+KillMode=control-group
+TimeoutStopSec=90
+TimeoutStartSec=600
+LimitMEMLOCK=infinity
+Restart=no
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=tmpfs
+PrivateTmp=no
+BindReadOnlyPaths=/srv/digit-ae/releases/uks_sage_performance_20260930_v2:/home/embed/digit
+BindReadOnlyPaths=/home/embed/digit/ssd_state:/home/embed/digit/ssd_state
+ReadOnlyPaths=/mnt
+ReadWritePaths=/srv/digit-ae/uks-gat-performance-results /srv/digit-ae/admin/multimodel_v2/uks_gat/state /run/digit-ae-selfservice /tmp
+StandardOutput=journal
+StandardError=journal

@@ -20,6 +20,8 @@ HANDLERS = {
     'UKL': ADMIN / 'ukl_performance_v2/cli.py',
     'CL': ADMIN / 'cl_performance_v1/cli.py',
 }
+HANDLERS.update({dataset + '_' + model: ADMIN / 'multimodel_v2' / (dataset.lower() + '_' + model) / 'cli.py'
+                 for dataset in ('IG', 'UKS', 'UKL', 'CL') for model in ('gcn', 'gat')})
 INSPECT = ('status', 'results', 'logs', 'stop')
 
 
@@ -45,9 +47,9 @@ def parse(argv):
         else:
             a.route = 'main'
     else:
-        if a.model != 'sage' or selected != 'performance':
-            p.error('IG/UKS/UKL/CL use performance <dataset> sage; inspection requires --action performance')
-        a.route = a.dataset
+        if selected != 'performance':
+            p.error('IG/UKS/UKL/CL use performance <dataset> <sage|gcn|gat>; inspection requires --action performance')
+        a.route = a.dataset if a.model == 'sage' else a.dataset + '_' + a.model
     if a.reference and (a.command != 'results' or a.route not in ('layout', 'IG', 'UKS')):
         p.error('--reference is available for layout, IG and UKS results')
     if a.json and a.command not in ('status', 'results'):
@@ -106,6 +108,8 @@ def main(argv=None):
         value = uks_reference()
         print(json.dumps(value, indent=2)) if a.json else display(a, value)
         return 0
+    if not HANDLERS[a.route].is_file():
+        raise RuntimeError('This model service is not installed on the prepared server yet: ' + a.route)
     command = ['/usr/bin/python3', '-I', '-B', str(HANDLERS[a.route]), *argv]
     if a.command == 'results' and not a.json:
         result = subprocess.run(command + ['--json'], capture_output=True, text=True, timeout=120)

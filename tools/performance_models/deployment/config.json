@@ -1,0 +1,77 @@
+{
+  "adapter_sha256": "f615fd751b4c24b2993aa9f383f5ef1da9bf87cfa9c54059d6318c2ae6d03dd0",
+  "services": [
+    {
+      "control": "/srv/digit-ae/admin/multimodel_v2/ig_gcn",
+      "dataset": "IG",
+      "key": "ig_gcn",
+      "model": "gcn",
+      "output": "/srv/digit-ae/ig-gcn-performance-results",
+      "selftest": "digit-ae-ig-gcn-performance-selftest.service",
+      "unit": "digit-ae-ig-gcn-performance.service"
+    },
+    {
+      "control": "/srv/digit-ae/admin/multimodel_v2/ig_gat",
+      "dataset": "IG",
+      "key": "ig_gat",
+      "model": "gat",
+      "output": "/srv/digit-ae/ig-gat-performance-results",
+      "selftest": "digit-ae-ig-gat-performance-selftest.service",
+      "unit": "digit-ae-ig-gat-performance.service"
+    },
+    {
+      "control": "/srv/digit-ae/admin/multimodel_v2/uks_gcn",
+      "dataset": "UKS",
+      "key": "uks_gcn",
+      "model": "gcn",
+      "output": "/srv/digit-ae/uks-gcn-performance-results",
+      "selftest": "digit-ae-uks-gcn-performance-selftest.service",
+      "unit": "digit-ae-uks-gcn-performance.service"
+    },
+    {
+      "control": "/srv/digit-ae/admin/multimodel_v2/uks_gat",
+      "dataset": "UKS",
+      "key": "uks_gat",
+      "model": "gat",
+      "output": "/srv/digit-ae/uks-gat-performance-results",
+      "selftest": "digit-ae-uks-gat-performance-selftest.service",
+      "unit": "digit-ae-uks-gat-performance.service"
+    },
+    {
+      "control": "/srv/digit-ae/admin/multimodel_v2/ukl_gcn",
+      "dataset": "UKL",
+      "key": "ukl_gcn",
+      "model": "gcn",
+      "output": "/srv/digit-ae/ukl-gcn-performance-results",
+      "selftest": "digit-ae-ukl-gcn-performance-selftest.service",
+      "unit": "digit-ae-ukl-gcn-performance.service"
+    },
+    {
+      "control": "/srv/digit-ae/admin/multimodel_v2/ukl_gat",
+      "dataset": "UKL",
+      "key": "ukl_gat",
+      "model": "gat",
+      "output": "/srv/digit-ae/ukl-gat-performance-results",
+      "selftest": "digit-ae-ukl-gat-performance-selftest.service",
+      "unit": "digit-ae-ukl-gat-performance.service"
+    },
+    {
+      "control": "/srv/digit-ae/admin/multimodel_v2/cl_gcn",
+      "dataset": "CL",
+      "key": "cl_gcn",
+      "model": "gcn",
+      "output": "/srv/digit-ae/cl-gcn-performance-results",
+      "selftest": "digit-ae-cl-gcn-performance-selftest.service",
+      "unit": "digit-ae-cl-gcn-performance.service"
+    },
+    {
+      "control": "/srv/digit-ae/admin/multimodel_v2/cl_gat",
+      "dataset": "CL",
+      "key": "cl_gat",
+      "model": "gat",
+      "output": "/srv/digit-ae/cl-gat-performance-results",
+      "selftest": "digit-ae-cl-gat-performance-selftest.service",
+      "unit": "digit-ae-cl-gat-performance.service"
+    }
+  ]
+}

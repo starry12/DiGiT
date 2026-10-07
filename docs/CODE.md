@@ -15,6 +15,7 @@
 | UKS comparison service and dependencies | `tools/uks_performance/` |
 | UKL / CL comparisons | `tools/ukl_performance/`, `tools/cl_performance/` |
 | Shared large-graph runtime | `tools/large_graph/runtime_sources/` |
+| IG/UKS/UKL/CL GCN and GAT adapters | `tools/performance_models/` |
 | Automatic GPU selection | `tools/gpu_selection/` |
 | BaM dependency | `third_party/bam/` |
 

@@ -13,6 +13,11 @@ cli = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cli)
 
 class ReviewerCLI(unittest.TestCase):
+    def setUp(self):
+        mock = patch.object(Path, 'is_file', return_value=True)
+        mock.start()
+        self.addCleanup(mock.stop)
+
     def test_routes(self):
         cases = [('run PA sage','main'),('run PA gcn','main'),('run PA gat','main'),
                  ('ablation PA sage','ablation'),('layout PA sage','layout'),
@@ -27,8 +32,17 @@ class ReviewerCLI(unittest.TestCase):
             for command in cli.INSPECT:
                 self.assertEqual(cli.parse(f'{command} {dataset} sage --action performance'.split()).route,dataset)
 
+    def test_new_model_routes_and_reference_isolation(self):
+        for dataset in ('IG','UKS','UKL','CL'):
+            for model in ('gcn','gat'):
+                for command in ('performance', *cli.INSPECT):
+                    argv = [command,dataset,model] + ([] if command == 'performance' else ['--action','performance'])
+                    self.assertEqual(cli.parse(argv).route,dataset+'_'+model)
+                with contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):
+                    cli.parse(['results',dataset,model,'--action','performance','--reference'])
+
     def test_rejects_unpublished_or_ambiguous_workloads(self):
-        cases=['run IG sage','run UKL sage','performance PA sage','performance UKS gat',
+        cases=['run IG sage','run UKL sage','performance PA sage','performance UKS other',
                'layout PA gat','run PA sage --action run','results PA sage --reference',
                'status IG sage','performance IG sage --json','stop UKS sage --action performance --reference']
         for args in cases:

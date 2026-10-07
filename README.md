@@ -42,16 +42,20 @@ digit-ae logs PA sage --action run
 
 For a short check on its own, use `digit-ae smoke PA sage`, then `digit-ae results PA sage --action smoke`; substitute `gcn` or `gat` as needed. A full `run` already includes smoke, so this separate request is optional.
 
-### GraphSAGE performance: IG / UKS / UKL / CL
+### Model performance: IG / UKS / UKL / CL
 
 Full 20-epoch training on these four datasets takes too long for a practical AE session. To demonstrate performance, each comparison uses **20 warmup mini-batches followed by 300 timed mini-batches per system**, repeated for **five paired rounds**. For a complete **20-epoch experiment with validation and a final accuracy test**, use the **PA main experiments above**.
 
-| Dataset / model | Start a new comparison | Read its results |
-|---|---|---|
-| IG / GraphSAGE | `digit-ae performance IG sage` | `digit-ae results IG sage --action performance` |
-| UKS / GraphSAGE | `digit-ae performance UKS sage` | `digit-ae results UKS sage --action performance` |
-| UKL / GraphSAGE | `digit-ae performance UKL sage` | `digit-ae results UKL sage --action performance` |
-| CL / GraphSAGE | `digit-ae performance CL sage` | `digit-ae results CL sage --action performance` |
+| Dataset | GraphSAGE | GCN | GAT |
+|---|---|---|---|
+| IG | `digit-ae performance IG sage` | `digit-ae performance IG gcn` | `digit-ae performance IG gat` |
+| UKS | `digit-ae performance UKS sage` | `digit-ae performance UKS gcn` | `digit-ae performance UKS gat` |
+| UKL | `digit-ae performance UKL sage` | `digit-ae performance UKL gcn` | `digit-ae performance UKL gat` |
+| CL | `digit-ae performance CL sage` | `digit-ae performance CL gcn` | `digit-ae performance CL gat` |
+
+GCN/GAT commands are active on the prepared server. All eight combinations passed CPU, synthetic CUDA and service namespace checks; native performance validation is pending. These models have no reference speedups yet. [Model protocol and installation](tools/performance_models/README.md).
+
+Inspect the selected dataset and model with `digit-ae results IG gcn --action performance`; substitute the dataset/model for other comparisons.
 
 For progress and recent logs, replace `IG` with the selected dataset:
 
