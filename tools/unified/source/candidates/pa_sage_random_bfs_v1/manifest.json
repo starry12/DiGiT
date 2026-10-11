@@ -1,0 +1,22 @@
+{
+  "parent_sha256": "6fbbb9258f4d502dac2fe53225f6799b1ae5ed2b761a483a9fd26042f781f20d",
+  "files": {
+    "INTERFACE.txt": "f4e68e178bab7f89034d7a22640a44de85f0f5469604cf7709ecaab83d4b81b0",
+    "__init__.py": "da2a7bf813f3a1f34759d84ab7f95dfe9419c3493962da673e2145ff6245943a",
+    "common.py": "518807f7318f8f8aaf3f0d16f0632cfb4f343288d11d14596c2131870ed2b2b8",
+    "controller.py": "57918d8bfab3b7aee8cb080aa2c15614543242100d31fee88b9336886d9dbacd",
+    "dataset.py": "6ed52f644fbcfe4de12159e48d556db532c87a2b7de5b0bdb5efa5a83ebbae3b",
+    "engine.py": "773800e550a4fed237ddeb8b33ced5f65d1d4ca4dfe793be2b73d339cd2f555c",
+    "freeze.py": "d54dc4f33ccacf41e69b839cf1596f95a35db2a4312573e59d817fc9859d795f",
+    "scheduling.py": "81acea342fad3e1fca7b1c3aadfbdd6ea731a2e05038078e117a38d552a94bc4",
+    "start.py": "78f4d064012b76e13209e69ed98e441c64a46f44c7ffbbcd9fbeb4b17640266f",
+    "tests.py": "dbfd7b726ed86f2ed2c648dc0c58b63866233b48fa5f4aab36514c4bac64a194",
+    "worker.py": "bc9cfcc5c08ce4ea25e7e6b8b9c519db5f673482a1bc671cbf68c052dd310632"
+  },
+  "random_inputs": {
+    "/home/embed/digit/configs/papers/protocol.json": "2f88fdeb6a0549204f5d94aef9622fa2597c0743fe1c95b7c98f043d0d5be3cf",
+    "/home/embed/digit/data/papers_g2_random_v2/orders.json": "56811ef9425f9ddd5e07b0136d1ab335289d432c5eb7fecef5af21583a64b0b7",
+    "/mnt/n3/papers100M/ogbn_papers100M/split/time/train.csv.gz": "6e0da901d3c9b9c570d4266b130b500a93583c0452dc7f333b5ca259bc9d9ab4"
+  },
+  "created_unix": 1791690689.7980947
+}

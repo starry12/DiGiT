@@ -1,0 +1,10 @@
+{
+  "valid": {
+    "path": "results/pa_sage_direction_20260921_v2/bidirectional/valid_trace",
+    "sha256": "1e2d9b579a176bf44efa241e8f4c78dcdc837c5f35855249330edf0b5d867426"
+  },
+  "test": {
+    "path": "results/pa_sage_direction_20260921_v2/bidirectional/test_trace",
+    "sha256": "aca2faa1c24012bd2f500593ab060478aa153c690d1b06831940c3e0571f6c2f"
+  }
+}

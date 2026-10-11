@@ -1,0 +1,52 @@
+{
+  "PA": {
+    "feature_dim": 128,
+    "row_bytes": 512,
+    "classes": 172,
+    "weight_decay": 0.0,
+    "graph": "preserve_PA_bidirectional_multigraph_one_self_loop",
+    "features": "real",
+    "labels": "real",
+    "reference": "candidates/pa_sage_uks_style_v1/protocol.json"
+  },
+  "IG": {
+    "feature_dim": 1024,
+    "row_bytes": 4096,
+    "classes": 19,
+    "weight_decay": 0.0,
+    "graph": "preserve_IG_directed_multigraph_one_self_loop",
+    "features": "real",
+    "labels": "real",
+    "reference": "candidates/group_cache_migration_v1/ig/protocol.json"
+  },
+  "UKS": {
+    "feature_dim": 256,
+    "row_bytes": 1024,
+    "classes": 19,
+    "weight_decay": 0.0,
+    "graph": "preserve_UKS_normalized_graph_no_added_reverse_edges",
+    "features": "synthetic",
+    "labels": "synthetic",
+    "reference": "candidates/uks_pa_fast_v1/README.md"
+  },
+  "UKL": {
+    "feature_dim": 128,
+    "row_bytes": 512,
+    "classes": 19,
+    "weight_decay": 0.0,
+    "graph": "preserve_accepted_UKL_graph",
+    "features": "synthetic",
+    "labels": "synthetic",
+    "reference": "candidates/group_cache_migration_v1/ukl/inputs.py"
+  },
+  "CL": {
+    "feature_dim": 128,
+    "row_bytes": 512,
+    "classes": 19,
+    "weight_decay": 0.0,
+    "graph": "preserve_accepted_CL_graph",
+    "features": "synthetic",
+    "labels": "synthetic",
+    "reference": "candidates/group_cache_migration_v1/cl/inputs.py"
+  }
+}

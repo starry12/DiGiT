@@ -1,0 +1,55 @@
+{
+  "version": "ae-20261011-v2",
+  "datasets": {
+    "PA": {
+      "validation_status": "historical_full20_pair_passed",
+      "reason": "PA BFS256 full20 pair passed with accuracy; new server entry has not been rerun.",
+      "reference": "reference/PA_full20.json"
+    },
+    "UKS": {
+      "validation_status": "historical_short1_pair_passed",
+      "reason": "UKS short1 pair passed; short5/full20 are available modes, not prevalidated results.",
+      "reference": "reference/UKS_short1.json"
+    },
+    "IG": {
+      "validation_status": "native_run_with_offline_counter_correction",
+      "reason": "IG native run completed; counter report corrected offline, without another GPU run.",
+      "reference": "reference/IG_corrected.json"
+    },
+    "UKL": {
+      "validation_status": "pending_paired_validation",
+      "reason": "PENDING: DiGiT short1 passed; previous GIDS computed but exited unsuccessfully. No complete paired acceptance.",
+      "reference": "reference/UKL_digit_only.json"
+    },
+    "CL": {
+      "validation_status": "pending_full_validation",
+      "reason": "PENDING: preparation and complete paired validation are not finished. Prepared inputs are required before training.",
+      "reference": null
+    }
+  },
+  "current_global_entry_rerun": false,
+  "open_for_reviewer_validation": true,
+  "opening_is_not_acceptance": true,
+  "reference_sources": {
+    "PA_full20.json": {
+      "original_sha256": "44fac57072c78b4ef26efb2d4ea4ca898055d1e7958ccae8b2f9b835a4fd2c7d",
+      "archived_sha256": "2556558a6911051b48b872b11d8ea3fbabef72d17cd77b6b17fa14832a904e19"
+    },
+    "UKS_short1.json": {
+      "original_sha256": "0a6acf0e56df78784686f9796ac8f4cbd91346465c32d618270b00b2f893f930",
+      "archived_sha256": "d0f6f1f6b202a9e0a10dba7a04ba683cc16214adf9fefdae3ad442c1842322f2"
+    },
+    "IG_corrected.json": {
+      "original_sha256": "9f7c2f7d2e4ed61cc76cfebba1a86b350ac34e8ff34b66d7a7b16a45f4569e4b",
+      "archived_sha256": "4b095718476d8936412d285f4758c063fa4754743b183ec3150b5c93332f0f74"
+    },
+    "IG_correction_checks.json": {
+      "original_sha256": "09e8ac0240bfee7dfc4dc224ca1ba8b754619eaf9446b7a9a49aed3ba365cb7a",
+      "archived_sha256": "0ea8819a8370bcd577fc1d7489c6dcbcbda59ca026f326c0135b914f90eaee35"
+    },
+    "UKL_digit_only.json": {
+      "original_sha256": "97dbcf3cc900293e09d2e750982c882892266867a8637997f886e8a69b175022",
+      "archived_sha256": "e632a23664f95ba64e26c4e726eb5ab543736754f857750a7bdef7f90f85d188"
+    }
+  }
+}

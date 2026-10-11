@@ -1,0 +1,20 @@
+{
+  "scope": "UKS additional existing-group references through bounded local matching",
+  "group_size": 2,
+  "new_groups": false,
+  "new_feature_replicas": false,
+  "feature_layout_changed": false,
+  "raw_ssd_writes": false,
+  "preserve_original_group_references": true,
+  "initial_selection": "exact v1 ascending-group-ID greedy selection on original raw occurrences",
+  "improvement": "replace one added group reference with two unused existing groups when remaining occurrence capacities permit",
+  "constraints": "at most one reference per group per owner; original references locked; preserve exact expanded neighbor multiset",
+  "limits_per_owner": {"candidate_checks": 50000, "successful_swaps": 64},
+  "guarantee": "each owner's number of group references is at least the v1 greedy count; no maximum matching claim",
+  "retained_unit_order": "original units except consumed earliest raw occurrences, followed by added groups in ascending ID",
+  "validation": "full independent multigraph validation, original reference retention and per-owner v1 count lower bound",
+  "sampler_changed": false,
+  "full_graph_prepared": false,
+  "native_training_accepted": false,
+  "accuracy_claim": false
+}

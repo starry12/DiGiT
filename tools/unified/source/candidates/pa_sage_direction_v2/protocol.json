@@ -1,0 +1,50 @@
+{
+  "schema": "digit-pa-sage-direction-control-v2",
+  "dataset": "ogbn-papers100M",
+  "model": "GraphSAGE",
+  "arms": [
+    "directed",
+    "bidirectional"
+  ],
+  "seed": 0,
+  "epochs": 20,
+  "batch_size": 1024,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "hidden": 128,
+  "classes": 172,
+  "layers": 3,
+  "dropout": 0.2,
+  "optimizer": {
+    "lr": 0.01,
+    "weight_decay": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08
+  },
+  "graph_policy": "Preserve original nonself multiedges; bidirectional appends reversed edges without dedup; exactly one self loop per node in both arms.",
+  "graph_storage": "int64 CSC in pinned host memory; native DGL UVA sampling",
+  "feature_path": "All raw NPY float32 features copied into pinned host tensor; DGL UVA gather, no BaM/cache/reordered payload.",
+  "paired_order": "PCG64(SeedSequence([0,epoch])) official train IDs",
+  "evaluation": "Directed: byte-for-byte reuse of validated frozen uniform CPU traces; bidirectional: graph-specific uniform CPU trace generated once with seed0 and frozen by content hash. Validation once per epoch, final test once epoch20, restore training RNG. CPU trace regeneration is not guaranteed bitwise across processes.",
+  "smoke": "2 epochs x 2 train batches + 2 validation batches/epoch; fresh model and RNG for full run",
+  "host_admission_gib": 320,
+  "gpu_admission_gib": 8,
+  "disk_admission_gib": 32,
+  "training_release_sha256": "78232545f843de9094db592b23f9bcc26966aeae5c0794ca78a747cd45c960c4",
+  "timing_claim": "Accuracy diagnosis only; not SSD or GIDS-DiGiT performance",
+  "bfs_enabled": false,
+  "raw_ssd_io": false,
+  "raw_writes": false,
+  "reference_bindings": {
+    "data/papers_g2_random_v2/valid_trace/manifest.json": "cdc230b434b254dda488cda52f6d5c144a689084cde33b8758b5f96c49a4fb45",
+    "data/papers_g2_random_v2/test_trace/manifest.json": "0686a986be66a3f8e38d8d25306555efebee61ef4086f2491c29b4ce0b908444",
+    "data/papers_g2_random_v2/orders.json": "56811ef9425f9ddd5e07b0136d1ab335289d432c5eb7fecef5af21583a64b0b7",
+    "results/pa_sage_cache_20260921_v1/cpu10/seed0_repeat0_gids/report.json": "f5c34be47e46364dcdde6d8b8fbed9e6ca7f8b2d43e2bc080198091684a013d4"
+  }
+}

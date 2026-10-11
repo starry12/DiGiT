@@ -1,0 +1,24 @@
+{
+  "files": {
+    "freeze.py": "190aa86baae7bb16212f39447024253bc778f7e51123d61e0d29ef49f90f03e5",
+    "gpu_check.py": "661ae5aa5255c155f6c5e60ffcf7c9296ec17be7cd335aa9df76bba032bcaaee",
+    "build.py": "736123e09bd6978ea54901f616ea4edfda85bca6e627c33ec15032735d36e69f",
+    "tests.py": "22b6c6e41982289a0ee0259afaf2e946325987c215b137b0e079a8d45933fc45",
+    "resources.py": "e0b4beac60301460abfc061b92043888509b2d6a790a0cee338b00c54bb1e159",
+    "common.py": "fe9fbc037690126771acd9da2e117d2c770e4186b3b5118ef7a2f9af4e34d136",
+    "__init__.py": "f8a9ba0fdf19fb7248d802975da958a5007c882100a8f860991870ac2f963e3a",
+    "policy.py": "232734308f2cf96fc04683ebc36bbde4539043d2fdd2e03a58ad5bd34afed3b7",
+    "sampling.py": "eb25e90ee428b512b84896d6483a02b3ac92e826faee06ed25e62519a15cbe98",
+    "worker.py": "e569cad2f76294469214813294acd385f7ed935867ae6f78685ee2277ba5a3ff",
+    "native/sampler.cu": "03d8e250f2329547e7267627fded408a0e49f9c3c8da44f72247b772031a3a24",
+    "native/priority.h": "55cce9630c32f4f02209f77ac45ed886c2ae8681f0da727dcfd912abe9c29e65",
+    "native/profile_events.h": "8f81a148d64b2e49cedd8fe0217d252e7392d096583b28fe4ece7239d2f8abb4",
+    "README.md": "a64420cb98678c58134765ddf7f017442a550bdb4cb0611a6fdf8fdec18a4f8e"
+  },
+  "dependencies": {
+    "candidates/uks_group_compare_v2/manifest.json": "9f5ca6edb63535c4905e30b0b01a9109c863f8389fbb5077f0142141b58d44a5",
+    "candidates/uks_group_incremental_v1/native/sampler.cu": "f6983c85288fc544e41fbd9fb542f8243bb50391462199accb71dfad1d857718",
+    "candidates/pa_sage_bidir_native_v2/runtime/digit/sampler.py": "0aac0e872bed6616001ea66b348e760d706912f5838796115f8c811b5afb0738",
+    "candidates/pa_sage_bidir_native_v2/runtime/digit/outer_selection.py": "b81da8967ab831a4b4aa79ab4c130393d2d722494321c2547f7abd8b2299eaeb"
+  }
+}

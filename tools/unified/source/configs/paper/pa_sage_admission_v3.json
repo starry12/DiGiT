@@ -1,0 +1,23 @@
+{
+  "schema": "digit-pa-sage-admission-profile-v3",
+  "protocol_sha256": "1412207fc6d35565b1b214bdd9997534ca182fa18c6c87b6a0af9c58b06453df",
+  "manifest_sha256": "d080d95333cdf49bae01d38f324d9080fbf80461a12cb4043e6ede0274753802",
+  "implementation_sha256": {
+    "ae/papers/runtime/BAM_Feature_Store/BAM_Feature_Store.so": "64e669766ac46a65f1cd53832ba161a6e2c0bf2eb58ac815377a4cd223054c48",
+    "ae/native/papers/gids_module/gids_nvme.cu": "89dd1f54d0d65e72c3b1eacc155959c6822df9cdb69234d93887a3e1a2ab3e10",
+    "ae/native/papers/bam/include/page_cache.h": "75581fb294d88a5ccad30e5617d39b90f363e665c2265af2e6b96541b541ae58",
+    "ae/native/papers/bam/include/buffer.h": "b0736601979da4ba14c86e3727750820c0eeca587e5de664beac3aa384e8b47a",
+    "ae/pa_sage/training_loop.py": "b7372bdb94f851669e916814ca5356328c7dccbceaa5f4cb6ff8bb0bce063c60",
+    "ae/papers/runtime/GIDS/GIDS.py": "cf4c9cb287010afd813c60c7f949e5fceb2d2b24ea86f728ff3ff71666994f26",
+    "ae/papers/runner.py": "be52ac84ecd4114b96effe4305e5ed72c619f54d309a4e2c299e3e31ddbc65f9",
+    "ae/papers/runtime/models.py": "8deaac7daa7d25fd6e0141724797ff26a266a76db76fc70ac421e5d80b0c77ec",
+    "ae/papers/runtime/digit/gpu_admission.py": "daaf9c779320d0a76e08808bf62239e1a1e990bd09e1b8c5bd4f1ae03eff9f10",
+    "configs/papers/protocol.json": "2f88fdeb6a0549204f5d94aef9622fa2597c0743fe1c95b7c98f043d0d5be3cf"
+  },
+  "data_page_bytes": 32,
+  "labels_reserve_bytes": 67108864,
+  "expected_required_bytes": 45928055064,
+  "expected_host_required_bytes": 277243891962,
+  "audit_summary_sha256": "bbb6ba26fc81c499b19dc42a105c9706ebc1bd8067851586e2715a5e371b8112",
+  "basis": "PA g2 memory audit: deployed data_page_t is 32 bytes; full labels and masks remain on host. Unchanged 4 GiB GPU cache, 1 GiB cache metadata allowance, 4 GiB runtime reserve and 1.2 safety multiplier. Real native paired smoke is required separately."
+}

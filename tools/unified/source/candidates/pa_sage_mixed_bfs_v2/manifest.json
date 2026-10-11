@@ -1,0 +1,36 @@
+{
+  "reference_sha256": "bee5b771c3a1ee9ef5258aca371f9d8807605dd6cd2dc54d1925a014ef8bb293",
+  "files": {
+    "start.py": "f523061f164f75699f9ea511d1376770939409656a6c23a6a39f4cdcd7a7794d",
+    "freeze.py": "529220190613dda75fe7f99c32090db3423b9bab8b069eb613951e4c81c1b484",
+    "gpu_check.py": "5c2bee4d5ceee586b616e783667e0e9af2a8f3a57898a02c07e3c2fe1e971442",
+    "check.py": "7961e74c52eb6c33cca90d0b715b7a011af861929202e8644126b7ccc2782c52",
+    "gids_worker.py": "f6de5e3186d11f5d951397a0bc05fdee21417f1df4da6dc81b2836ff7bbfeded",
+    "order.py": "c5bc686d584795bb3e69d419e6d895d123451ada9c9bb15d5308f6c39b3e992e",
+    "tests.py": "fcf7084a78374b5abff0c74158f4d07a0273250b4d4445b72759cfe61144d487",
+    "control.py": "abb98116d08d99312f342249eb670f7da3f07b78a2fdd13b589f6164574d730f",
+    "loader.py": "36f1509b1c5dc32c940df0e36f2672475ea65b5c31e70e0e02a3a23a724f124e",
+    "common.py": "1d0b0f482518c49c82286e544e464deabfb1911a753bf7c639a0beb30331c76b",
+    "namespace.py": "39d79af3abb958cf6d8d5da62bb9b752950a690e800d1422ed37a4b8222903cf",
+    "evaluation.py": "d9926d353c4a7508aea98ea5781d32ddeb7bf9be9b37becab3914d9cd6ef4d4f",
+    "worker.py": "a21e7938daa724a8cf1f215504c7d95fd423a58431cbf8f10a33e554932d79ca",
+    "training.py": "965fe8f2ae20063849149736acf34ffa4c510f4a3e8391a6fd6175a7c2a954c2",
+    "protocol.json": "9469757739faaba4bce8a8d5763ad28dbb7535221e301a4f77796c2933b61830",
+    "provenance.json": "93b2cb8ca682444983af7786ffbfecc92df8f0205a2cd8b480f157b24b66a3f1",
+    "README.md": "17ca558e896e40f5c73b6e978c93586a6a37ea68559d93ba93a1d5507b6ca955"
+  },
+  "dependencies": {
+    "/home/embed/digit/candidates/pa_sage_bfs_decay_v1/mixing.py": "d2271ca5e5752fd7dddc672bdd21e453d9b8945bcdd7d782ea86a6bb8700a88a",
+    "/home/embed/digit/ae/pa_sage/trace_cache.py": "48fb4adda0aca26c7c2ce2191674d5aca23faa4c0fe5aef6b71b6c66b3de1f90",
+    "/home/embed/digit/evaluation/digit/eval_trace.py": "0a4c8985ff0dae03097834b4665b2d2ef69015e111c08b3da72b5c5b4c26d052",
+    "/home/embed/digit/results/pa_sage_bfs_decay_20261009_v1/runs/20261009-232414-4187589/orders/canonical.npy": "ee24e945342cf7285540d97cc1ef94a26195d04a25ee96e3b3371c73dbff591a",
+    "/home/embed/digit/results/pa_sage_bfs_decay_20261009_v1/runs/20261009-232414-4187589/bfs_preparation.json": "6e3432e0c3407656a37fae34219481977d5f3549c1c5e86cdb295cdb3b4cf75e",
+    "/home/embed/digit/results/pa_sage_bfs_decay_20261009_v1/runs/20261009-232414-4187589/full_summary.json": "34a7f577aa546739e823204bf7fb8c2d599540b3677ed437b07658903891c13e",
+    "/home/embed/digit/results/pa_sage_mixed_group_20261010_v1/runs/20261010-043706-130722/summary.json": "af129f9e31e9a2dc5dc8488bfdc71341d629baf757b4975e0ff45ee55df46f67",
+    "/home/embed/digit/candidates/pa_sage_512b_pair_v4/manifest.json": "30fd306e784908fed75744d23a85787508942c5702acd4c56343f761882d413f",
+    "/home/embed/digit/results/pa_sage_512b_pair_20260926_v4/native/20260926-141410-2926144/full_gids/report.json": "54859a3811d7b720617ff0488166db9eb7a991bd7aa833765d390c58fd70b70c",
+    "/home/embed/digit/candidates/pa_sage_512b_pair_v3/runtime/BAM_Feature_Store/BAM_Feature_Store.so": "88cd048d65662dae867160be9beaf250eb2efbe40b0f70212c9913066d126bc9",
+    "/home/embed/digit/results/pa_sage_direction_20260921_v2/directed/valid_trace/manifest.json": "cdc230b434b254dda488cda52f6d5c144a689084cde33b8758b5f96c49a4fb45",
+    "/home/embed/digit/results/pa_sage_direction_20260921_v2/directed/test_trace/manifest.json": "0686a986be66a3f8e38d8d25306555efebee61ef4086f2491c29b4ce0b908444"
+  }
+}

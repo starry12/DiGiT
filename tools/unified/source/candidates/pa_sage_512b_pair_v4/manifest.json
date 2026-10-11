@@ -1,0 +1,25 @@
+{
+  "schema": "pa-sage-bounded-accumulator-v4",
+  "files": {
+    "candidates/pa_sage_512b_pair_v4/gpu_tests.py": "057fc352a0eddba7e8cc331ecd1fef07457b50594492e192b8e7084dda63e933",
+    "candidates/pa_sage_512b_pair_v4/start.py": "cbe6bf3c5a6d7c769c8f77fc42b068fdffe6245ee787e19ff12678db2221c79c",
+    "candidates/pa_sage_512b_pair_v4/freeze.py": "065099fc91c7d6a2ba4b5abc8f3e3d1e04f01d8be28642a662b719e67684f207",
+    "candidates/pa_sage_512b_pair_v4/tests.py": "ee4e697164f28649d4fcb1613395e8ddaab57b8968ffbc14e114095342b9266b",
+    "candidates/pa_sage_512b_pair_v4/window.py": "0342eace500f8e5d4a9451ce9b35e9cebc9aff89ee798ab8d0f9b7cee905c2ff",
+    "candidates/pa_sage_512b_pair_v4/control.py": "5c66208ca1cf9349e7145e1e4f9ee8f04bfaac8a0de23a0b10dfa7cbfc22f630",
+    "candidates/pa_sage_512b_pair_v4/payload.py": "fe7602444ee4f02bb89e8c588e41b6d59456280e852a48a4b59c88cccbd6b117",
+    "candidates/pa_sage_512b_pair_v4/loader.py": "72158d55a9294e136c841f4c65961edafef5f5a2d9bcb3c4f6c7e7d5cf028254",
+    "candidates/pa_sage_512b_pair_v4/common.py": "21876b1edcfd864300f0726214edc4dc8b4b65ca45bdee65c8956172f1995579",
+    "candidates/pa_sage_512b_pair_v4/protocol.json": "83c4cd46e1c7aec1dd0d097e3e88cccfaaffe35a3745db695ee59d14e60fd894",
+    "candidates/pa_sage_512b_pair_v4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "candidates/pa_sage_512b_pair_v4/worker.py": "93134cf826b0d7d7c05e3542b26f40cf1866cd2763f61b7dd8e62ebd9a758dea",
+    "candidates/pa_sage_512b_pair_v4/README.md": "addf08f03e5cfa2691c1bd7d4d2067ac762f8965926304d1a138d9a724c8890f"
+  },
+  "parent_sha256": "0682e1026cf0bba4c33a92cd1c6e2632129632b8b0946df283fea16adb156015",
+  "created_unix": 1790402817.700309,
+  "evidence_sha256": {
+    "inputs.json": "117d95c2d70a6e9e33d55ddec0748cbd2ff5aeab349f205daeaab36df730b97c",
+    "cpu_checks.json": "c30c40860ec6842b32a65beea21381c04f453c8e5d876b264034866ca5267e93",
+    "gpu_checks.json": "21113181991b031440d4b7615c2008ffa1c4616e9910be57b766352a8db7705f"
+  }
+}

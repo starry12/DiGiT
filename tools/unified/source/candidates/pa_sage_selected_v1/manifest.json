@@ -1,0 +1,15 @@
+{
+  "schema": "digit-selected-checkpoint-freeze-v1",
+  "files": {
+    "README.md": "fc6c0bf5cd93cafe469d7bd7c045ff8b20a597b4f1b39767bcdd3c9641e0075c",
+    "common.py": "937395908d4e3de7024ba1613b841c331ad3b544cd07e10f0dc15aebabd44ba5",
+    "config.json": "341d619dea12dde95e049e6e8601455e8bbe8dea0cf3d54ff56fdd1b595f4f19",
+    "final_model_epoch20.pt": "30af8dd84b6fdd64ce36a8381acb186ed1440e8f99772dfaa2c93e3e4cb8597e",
+    "freeze_provenance.json": "e7943ac7fe8bf2c39849e47977f48e25feeceab3fc25cd0e820e02137c6f9229",
+    "run_test.py": "efd6b85ad0ace92d889f57f813be605ff7644c62b608d86fc9aaf23e22ae5980",
+    "selected_training_report.json": "2c29418bae15f1f5cd35d6f441cd3ac18f5aed6a0fdccbc4fc21b86e917ea171",
+    "test_trace_manifest.json": "aca2faa1c24012bd2f500593ab060478aa153c690d1b06831940c3e0571f6c2f",
+    "test_worker.py": "f272a32e6595b23dd739f04ca52080e8d62bdb0f5840a7e0b0e499cd18242252",
+    "validation_selection.json": "f1a7c323f3a0c4b9b6d1b1f6ace5fd70fce165b6fb7f92b0a637b79f2f2a8d09"
+  }
+}

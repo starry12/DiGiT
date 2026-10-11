@@ -1,0 +1,41 @@
+{
+  "schema": "digit-pa-sage-bfs-decay-sources-v1",
+  "files": {
+    "README.md": "ddff3db91119dfc17bf6a8263089bb07b8dd018b90e3dad2b25147bdadc76c38",
+    "__init__.py": "a41113e2f37d85441f6e7da94fc730b657cae22b9bceb56e2b185c794efcb817",
+    "admission.py": "b698a3ee2ba8fc29c244e9a2f3a8aa7c7d6911f37bbd11f36f181a1f52b4b505",
+    "cache.py": "4de2e58e412121a1c087c2d35ac90d8d289cbbf348641d4320d0a6fd51014545",
+    "check.py": "33e7fd7cc0182042934e45952221457d4c85d87127762df357b3c0a4a471dd8a",
+    "common.py": "e42f0cfe898944581d8ede94291e17daaf9147189c74614962959429b181f8aa",
+    "controller.py": "8cd33b7ad091cdbe44ca20531bb4bcfe2db8524a6047e1e0eae37e52e5c4fb09",
+    "evaluation.py": "16ba4f00aaaa29a9bc6e2dd5f8b46d3f24c4deaaa1f24722d8006f5adfd9ab7a",
+    "mixing.py": "d2271ca5e5752fd7dddc672bdd21e453d9b8945bcdd7d782ea86a6bb8700a88a",
+    "order.py": "fe8ca63a637afcc0c7c581cb1082b077955aecb7b9cb587115559deb51343804",
+    "prepare.py": "448ece183964fe386516a0af4d7d73ffd33ac06c41e9c24fcd67da466c5873e1",
+    "protocol.json": "001d825a0a84bee8487256cbf584f41f8d3a21795c836e80c188048c196f00a3",
+    "schedule.py": "0ecd105bc14caf422381ccf349ccd0d97eec83b180cb29a7d3daa114518c7bd8",
+    "start.py": "2593e714a788ffceea54bcd21cabc302892c4f50b09e440ce2c50b3986a0d0d6",
+    "status.py": "5d522e6bb3d17c2218b6df65e0d0a4b42e729dc6257a5acddfc68fb401529b56",
+    "tests.py": "330ce522b2a4b908b37f416e06f8e4a98ad2fe21dce7a03ac93c7a0e0b343839",
+    "training_loop.py": "e0787534e1c523567636a499f2b504611619bfa00ee55fc19dbb5f601f62aab3",
+    "validation.py": "41911341eef9814b37702cd7b289d50048ad2fd532398847af992d4fd809415c",
+    "watch.py": "eb7bc05ad0b9bfd1fcc3721d1f8d823d7e4eb20b552116c646f01b5191ff97de",
+    "worker.py": "ca3ddaebd623ae47ae22982e3ea8c8672f691e6e753a2b3723d7d0791123fa32"
+  },
+  "dependencies": {
+    "ae/pa_sage/common.py": "03a0207c43483afbb0bc47b13fbc4b9ece27a44fc5e5d96bf98f95338afe8562",
+    "ae/pa_sage/evaluation.py": "897a7b4ff05ef0da5d4059233daa558de9673541cf384699056ba47d5eb99561",
+    "ae/pa_sage/full_validation.py": "f719f898a74d1d1b2ee7a5db80dc9743dd521f5f36db182d340512ec36515805",
+    "ae/pa_sage/gpu_monitor.py": "203e555a95a5520f9b718b56c0ace652c14bdab6b0c6e21caa7679016759889a",
+    "ae/pa_sage/monitor_control.py": "5e5643f330cdfcba421f5672292dbec4f99be7fd7753815ab3c66a0f7fe3e8a0",
+    "ae/pa_sage/observations.py": "aca2d6dfe4dcc713fb09173401556e643ca52e8f03aa13c0094381eb71ebda54",
+    "ae/pa_sage/trace_cache.py": "48fb4adda0aca26c7c2ce2191674d5aca23faa4c0fe5aef6b71b6c66b3de1f90",
+    "candidates/pa_sage_cache_v1/selection.py": "78fc0b20af08a3a408638591174fbff497f5b373af3df033c929aa17f912b567",
+    "candidates/pa_sage_revpr_node_v1/protocol.json": "fe8f4475e100938b51f7264167b7d3788730bfb31ce36af98d25b37c10dbee42",
+    "submission/v2/common.py": "ddd01971c13876c0c28643460ad6faf4a2cee55749caa1797c75ee0450275471",
+    "submission/v2/monitor_policy.json": "7b1d682d385693871041e7f895941547a45468d4125c55f6d4ad4bf92575af23",
+    "submission/v2/review.py": "4c7fafe6fc86819247dc52d09c866baba9a0846100533a0e668ccbea60be3e31"
+  },
+  "parent_candidate_sha256": "a6049d5c8a7580a923cc156400edcee58686196de83e325e6b1ea533102fefe2",
+  "exact_candidate_sha256": "2fa25aaa0d34ec77c46fe1bfe169577d546b152aac1d18acc9cf8325337d7a6c"
+}

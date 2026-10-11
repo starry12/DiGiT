@@ -1,0 +1,27 @@
+{
+  "schema": "digit-uks-preparation-manifest-v1",
+  "scope": "source preparation and bounded-window timing helper only; no native acceptance",
+  "files": {
+    "README.md": "a0a194fd645e7c9504e8dae53e28274033751666d73824e73d925609fa15372b",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "benchmark_core.py": "b74dc374eaf2e06e81fc4a84f53c7f09d2f5b51c8b65369da362693757a48e77",
+    "common.py": "b1713fc83f118c90b73c976786d224939c536190265d944e7804803ca7810eb2",
+    "freeze.py": "2963a25b5a7ab54806493b61b246833522d3609ec16c3cac9bc0693f46eaf806",
+    "inventory.py": "e369c32bb46a75185b5d950a2f5a213a90a4517b9f1587e8758dce18e22613d2",
+    "model.py": "f35de41633c6b9fefa23fb299a25af4eebc96ce88c14ba394b9bfd0383f97a4f",
+    "protocol.json": "c1203d8ddd9f14482931e95b4955567feae426170b8d88a7859bc3ce9c0eb765",
+    "run.py": "3b68093c5d2d4b0ea5ea440353ddb2fbba35c8e7f1a931b1b236e62cd436f6fa",
+    "run.sh": "88d402249ce40d1528d7a9b9ac7284c1703e48c917300977ea2d2970af067017",
+    "safety.py": "a31ffa7a1297ed209f9499cb7c0586bcac0016d7f55f61860191e676098aa8c7",
+    "synthetic.py": "fd89d7c6d400ed8b5c3eea8401002ceff5eee3daa1d7118315b72c7ebde4976a",
+    "tests.py": "7e839a80b6fa0e63406df4ca661392c8afe6972ec8a73404101d64cb6c6ce229"
+  },
+  "dependencies": {
+    "evaluation/digit/normalized_csc.py": "c5c39cfcc4eb7890a6f8c5e2f20df16c804889d9d7b8a2ae72ebf881f637e3de",
+    "evaluation/digit/large_preprocess.py": "0601c1b2e7635671ca6433b086e1e6b323983506d7a7fcb809883fddf5fd6b0b",
+    "evaluation/digit/retiring_job.py": "c67ae47f2655e6a7a4ca44a61f27eb9a25c28f061138e215da30bc5969c9838c",
+    "evaluation/digit/graph_source.py": "cdd0f39137cc36694e08cba28aeec2527a50ba490f3105c619e5becdf0657562",
+    "digit_paths.py": "7e165cce992ef031d342666db95ac0bd6b847aa79971bff543450758496a1829",
+    "ae/igb/models.py": "8deaac7daa7d25fd6e0141724797ff26a266a76db76fc70ac421e5d80b0c77ec"
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "passed": true,
+  "complete": true,
+  "dataset": "IG",
+  "mode": "short1",
+  "config_sha256": "9c7f8faae31f3b92da3902d85db22ea84096478b92d9ddf06687205e5b1196dc",
+  "paired_rounds": [
+    {
+      "round": 1,
+      "gids_seconds": 36.653743391041644,
+      "digit_seconds": 21.915961143095046,
+      "speedup": 1.6724679858537692,
+      "per_epoch_speedups": [
+        1.6724679858537692
+      ]
+    }
+  ],
+  "speedup": 1.6724679858537692,
+  "aggregation": "single_pair_ratio_of_total_training_time",
+  "migration_acceptance_passed": true,
+  "evidence_scope": "native",
+  "stable_speedup_established": false,
+  "full_epoch_training": false,
+  "matched_root_order": false,
+  "matched_short_window_examples": false,
+  "matched_full_training_set": true,
+  "root_order_by_arm": {
+    "gids": {
+      "policy": "random",
+      "block_nodes": 1,
+      "seed": 0,
+      "base": "verified_canonical_roots",
+      "tail": "retain"
+    },
+    "digit": {
+      "policy": "bfs_chunk_shuffle",
+      "block_nodes": 256,
+      "seed": 0,
+      "base": "verified_canonical_roots",
+      "tail": "retain"
+    }
+  },
+  "accuracy_evaluated": false,
+  "schema": "digit-unified-results-v2",
+  "row_bytes": 4096,
+  "root_order_comparison": "GIDS_random_DiGiT_BFS256",
+  "feature_kind": "real",
+  "label_kind": "real",
+  "profile_order": {
+    "policy": "bfs_block_shuffle",
+    "block_nodes": 256,
+    "seed": 0
+  },
+  "cache_profile": {
+    "scope": "short_window",
+    "batches": 320,
+    "seed": 23,
+    "order_block_nodes": 256,
+    "fallback": "existing_RevPR_set_then_logical_ID"
+  },
+  "short_profile_functional_only": true,
+  "arms": {
+    "gids": {
+      "per_round_seconds": [
+        36.653743391041644
+      ],
+      "training_seconds": 36.653743391041644,
+      "mean_training_epoch_seconds": 36.653743391041644,
+      "measured_counters": {
+        "logical_rows": 41644235,
+        "cpu_rows": 26085712,
+        "gpu_rows": 369565,
+        "ssd_rows": 15188958,
+        "primary_single_commands": 15188958,
+        "primary_pair_commands": 0,
+        "primary_bytes": 62213971968,
+        "replay_commands": 42513,
+        "replay_bytes": 21766656,
+        "completed_commands": 15231471,
+        "completed_bytes": 62235738624,
+        "sampled_group_edges": 0,
+        "sampled_outer_edges": 42940376
+      },
+      "including_warmup_counters": {
+        "logical_rows": 44417301,
+        "cpu_rows": 27824928,
+        "gpu_rows": 381339,
+        "ssd_rows": 16211034,
+        "primary_single_commands": 16211034,
+        "primary_pair_commands": 0,
+        "primary_bytes": 66400395264,
+        "replay_commands": 45343,
+        "replay_bytes": 23215616,
+        "completed_commands": 16256377,
+        "completed_bytes": 66423610880,
+        "sampled_group_edges": 0,
+        "sampled_outer_edges": 45801374
+      },
+      "weighted_metrics": {
+        "cpu_service_fraction": 0.6263943136426927,
+        "gpu_service_fraction": 0.008874337588384082,
+        "ssd_service_fraction": 0.3647313487689232,
+        "pair_command_fraction": 0.0,
+        "sampled_group_edge_fraction": 0.0
+      },
+      "cpu_feature_bytes": 110324191232,
+      "gpu_feature_bytes": 4294967296
+    },
+    "digit": {
+      "per_round_seconds": [
+        21.915961143095046
+      ],
+      "training_seconds": 21.915961143095046,
+      "mean_training_epoch_seconds": 21.915961143095046,
+      "measured_counters": {
+        "logical_rows": 33154591,
+        "cpu_rows": 19995990,
+        "gpu_rows": 1883972,
+        "ssd_rows": 11274629,
+        "primary_single_commands": 9715099,
+        "primary_pair_commands": 1559530,
+        "primary_bytes": 52568715264,
+        "replay_commands": 34934,
+        "replay_bytes": 17886208,
+        "completed_commands": 11309563,
+        "completed_bytes": 52586601472,
+        "sampled_group_edges": 7892224,
+        "sampled_outer_edges": 36945508
+      },
+      "including_warmup_counters": {
+        "logical_rows": 35612160,
+        "cpu_rows": 21493728,
+        "gpu_rows": 2009028,
+        "ssd_rows": 12109404,
+        "primary_single_commands": 10438081,
+        "primary_pair_commands": 1671323,
+        "primary_bytes": 56445857792,
+        "replay_commands": 37491,
+        "replay_bytes": 19195392,
+        "completed_commands": 12146895,
+        "completed_bytes": 56465053184,
+        "sampled_group_edges": 8463724,
+        "sampled_outer_edges": 39630448
+      },
+      "weighted_metrics": {
+        "cpu_service_fraction": 0.6031137588154835,
+        "gpu_service_fraction": 0.056823864906069874,
+        "ssd_service_fraction": 0.3400623762784466,
+        "pair_command_fraction": 0.13832206806982297,
+        "sampled_group_edge_fraction": 0.21361795864330788
+      },
+      "cpu_feature_bytes": 110324191232,
+      "gpu_feature_bytes": 4294967296
+    }
+  },
+  "epochs": [
+    {
+      "arm": "gids",
+      "round": 1,
+      "epoch": 1,
+      "seconds": 36.653743391041644,
+      "training_wall_seconds": 252.34575573692564,
+      "warmup_seconds": 5.355610999977216,
+      "measured_batches": 300,
+      "measured_roots": 307200,
+      "counters": {
+        "logical_rows": 41644235,
+        "cpu_rows": 26085712,
+        "gpu_rows": 369565,
+        "ssd_rows": 15188958,
+        "primary_single_commands": 15188958,
+        "primary_pair_commands": 0,
+        "primary_bytes": 62213971968,
+        "replay_commands": 42513,
+        "replay_bytes": 21766656,
+        "completed_commands": 15231471,
+        "completed_bytes": 62235738624,
+        "sampled_group_edges": 0,
+        "sampled_outer_edges": 42940376
+      },
+      "metrics": {
+        "cpu_service_fraction": 0.6263943136426927,
+        "gpu_service_fraction": 0.008874337588384082,
+        "ssd_service_fraction": 0.3647313487689232,
+        "pair_command_fraction": 0.0,
+        "sampled_group_edge_fraction": 0.0
+      },
+      "auxiliary": {
+        "evaluated": false,
+        "checkpoint": "[server-local path omitted]",
+        "scope": "training_only_no_accuracy_claim"
+      }
+    },
+    {
+      "arm": "digit",
+      "round": 1,
+      "epoch": 1,
+      "seconds": 21.915961143095046,
+      "training_wall_seconds": 28.083595698000863,
+      "warmup_seconds": 4.210460267029703,
+      "measured_batches": 300,
+      "measured_roots": 307200,
+      "counters": {
+        "logical_rows": 33154591,
+        "cpu_rows": 19995990,
+        "gpu_rows": 1883972,
+        "ssd_rows": 11274629,
+        "primary_single_commands": 9715099,
+        "primary_pair_commands": 1559530,
+        "primary_bytes": 52568715264,
+        "replay_commands": 34934,
+        "replay_bytes": 17886208,
+        "completed_commands": 11309563,
+        "completed_bytes": 52586601472,
+        "sampled_group_edges": 7892224,
+        "sampled_outer_edges": 36945508
+      },
+      "metrics": {
+        "cpu_service_fraction": 0.6031137588154835,
+        "gpu_service_fraction": 0.056823864906069874,
+        "ssd_service_fraction": 0.3400623762784466,
+        "pair_command_fraction": 0.13832206806982297,
+        "sampled_group_edge_fraction": 0.21361795864330788
+      },
+      "auxiliary": {
+        "evaluated": false,
+        "checkpoint": "[server-local path omitted]",
+        "scope": "training_only_no_accuracy_claim"
+      }
+    }
+  ],
+  "source_sha256": "2c4ac53b414fde35ccda3d64e4c0a43b4a1e2bf0243d7e46b0cca4ed7a08ac5c",
+  "ssd_primary_bytes_reduction_fraction": 0.15503361060054288,
+  "notes": [
+    "All requested rounds retained; five-round speedup is median of paired ratios, not ratio of medians.",
+    "Service fractions use sums of requests, not averages of percentages. Warmup counters are separate.",
+    "Sampled group edges, primary pair-command fraction and physical bytes are distinct metrics.",
+    "Training times exclude preparation and evaluation; overlapped stage times are not added.",
+    "One full20 pair uses ratio of 20-epoch time totals, not median epoch ratio.",
+    "320-batch profiling; RevPR-set fallback preserves capacity. Functional check, not full-epoch cache effectiveness evidence.",
+    "Native request-time cache hits; includes a later request hitting a group companion loaded earlier in the same batch."
+  ],
+  "accounting_correction": {
+    "type": "offline_accounting_correction",
+    "new_gpu_execution": false,
+    "original_run": "[server-local path omitted]",
+    "original_files_sha256": {
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/config.json": "001400302466177806c51ce00eff74ea71c6a309c923c9fd0874014046e893ca",
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/series.json": "0adc84d1bc927f9c9d32e1377d8efe9faef541be242713b75d4177df2cb8a453",
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/summary.json": "15083fd750cd34120a723b1d53722af1e061636d982f08ba7077bfc52c9486d4",
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/status.json": "29de03557eb7e179169287930d0f8bf231d1ce6527649f92e94ddaf1a0b805f0",
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/round1_gids/gids/report.json": "918db49ac6cbb18c6563779ce7c05d7889a9b5445f55bbdadf1d2b439f8e793b",
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/round1_gids/gids/events.jsonl": "cc6fc0658c874f7e0b16532c73c4dc4a3f10ce980ffab177431ca3ca811e4245",
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/round1_gids/gids/io_windows.jsonl": "fd51b310dd5979a018d81ef873beddfeecdbd43e7c9c2a37b4487fdde19e5533",
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/round1_digit_full/digit_full/report.json": "d879b7bd07b55443a1d835e109745f5652c0e5f75a7d4fddf7f3c1545221bd22",
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/round1_digit_full/digit_full/events.jsonl": "63359e41028ca8a5675f65c766c1174bb881877fe8f52f94eb2d98ef004594d9",
+      "/home/embed/digit/results/ig_unified_20261011_v2/runs/20261011-164302-1505346/experiment/round1_digit_full/digit_full/io_windows.jsonl": "b36b546e7027926952e3b7304b8570043509e1737e160a9bc6768d5c4bd194f2"
+    },
+    "accounting_sha256": "6e3a88643da61b1b657b43713989dcf83fea4959851e4433732c67a6791133cd",
+    "corrected_fields": [
+      "gpu_rows",
+      "ssd_rows",
+      "gpu_service_fraction",
+      "ssd_service_fraction"
+    ],
+    "gpu_rows_definition": "Native request-time cache hits; includes a later request hitting a group companion loaded earlier in the same batch.",
+    "ssd_rows_definition": "Native cache requests requiring an insertion or partial fill; distinct from physical rows transferred by paired I/O.",
+    "window_checks": [
+      {
+        "arm": "gids",
+        "windows": 4,
+        "original_report_sha256": "918db49ac6cbb18c6563779ce7c05d7889a9b5445f55bbdadf1d2b439f8e793b"
+      },
+      {
+        "arm": "digit",
+        "windows": 4,
+        "original_report_sha256": "d879b7bd07b55443a1d835e109745f5652c0e5f75a7d4fddf7f3c1545221bd22"
+      }
+    ]
+  },
+  "archive_projection": "Selected reference summary; server-local paths and runtime identities omitted."
+}

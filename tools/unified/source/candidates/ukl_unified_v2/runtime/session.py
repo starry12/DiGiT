@@ -1,0 +1,155 @@
+"""Production lifecycle callable by the subsequent bounded smoke controller.
+
+This module deliberately supplies no unguarded full-graph execute CLI. The
+factory verifies effective cgroup limits and accepted SSD before GPU use.
+"""
+import gc,os,time
+from pathlib import Path
+import numpy as np
+from . import dataset as U
+from .inputs import accepted_inputs,arm_inputs,load_window
+from . import sampling as S
+from candidates.ukl_compact_cover_v1 import owned_guard as H
+from candidates.ukl_compact_cover_v1.owned_memory import Arena,Registration
+from candidates.ukl_native_sampling_v10r4.worker import progress_callback
+from .storage import accepted_storage
+from .protocol import verify_manifest,require_admitted_worker
+from .backend import prepare_dependencies,Provider
+from .training import prepare_gpu_model
+from . import protocol as P
+from .gpu import verify_cuda_uuid
+from .lifecycle import record_failure,cleanup_failed,raise_failures
+from .numa import bind_fresh,placement
+from .loading import load_checked
+
+
+def run_arm(arm,mode,*,check,event=lambda *a,**kw:None):
+    if mode != 'performance':raise ValueError('Unknown training mode')
+    b=require_admitted_worker(arm);digest=verify_manifest();storage=accepted_storage()
+    # Controller holds shared AE/author locks; identity check happens before
+    # ownership because the legacy identify helper spawns a short process.
+    from ae.common import check_device
+    check_device();accepted=accepted_inputs();inputs=arm_inputs(accepted,arm);roots,labels=load_window(inputs)
+    from candidates.ukl_runtime_prepare_v11r1.data import labels as logical_labels
+    if not np.array_equal(labels,logical_labels(roots)):raise RuntimeError('UKL prepared label mismatch')
+    module=prepare_dependencies();model,opt=prepare_gpu_model()
+    verify_cuda_uuid(P.SELECTED[1])
+    import torch
+    from .gpu_budget import admit_initialized
+    gpu_budget = admit_initialized(b, *torch.cuda.mem_get_info())
+    event('gpu_memory_admitted', budget=gpu_budget)
+    from .io_probe import run as io_probe
+    io_check=io_probe(module,storage,arm,accepted,check,event)
+    from .host_budget import HostAdmission
+    admit=HostAdmission(check,b['host_reserve'])
+    admit(b['host_min']-b['host_reserve'],force=True)
+    from .training_imports import preload
+    imported=preload()
+    from candidates.ukl_unified_v2.prepared_guard import PreparedGuard
+    prepared_guard=PreparedGuard()
+    specs=U.BASE.binding()
+    from candidates.ukl_unified_v2.integration import prepare_roots
+    canonical=prepare_roots(accepted,U.N,check,event)
+    event('training_imports_ready',modules=list(imported))
+    # Move once after initialization; kernel memory charges remain in init.
+    from .phase import create_probe,await_phase,verify_charge_handoff
+    out_dir=Path(os.environ['UKL_V27_OUTPUT'])
+    init_probe=create_probe(out_dir)
+    event('initialization_ready')
+    phase_ack=await_phase(out_dir,'data',check)
+    require_admitted_worker(arm)
+    phase_evidence=verify_charge_handoff(out_dir,phase_ack,init_probe)
+    event('data_accounting_ready',phase=phase_evidence)
+    admit(b['host_min']-b['host_reserve'],force=True)
+    from . import numa_guard as G
+    G.ADAPTER_SHA = digest
+    G.CURRENT = G.Guard(out_dir, event, checkpoint=check) if arm == 'digit' else None
+    prepared_guard.check()
+    extra=b['host_cgroup_max']-b['host_components']['graph_arena']
+    guard=H.OwnershipGuard().enter();arena=aux=graph=registration=native=provider=engine=None;hot=inverse=None
+    result=None;failure=cleanup_failure=None
+    try:
+        arena=Arena(specs,admission_check=lambda rem:admit(rem+extra),max_bytes=b['host_components']['graph_arena'])
+        guard.track(arena);H.dontfork_arena(arena)
+        if arm=='digit':event('numa_policy_installed',**bind_fresh(arena,'graph'))
+        load_checked(arena,progress_callback(event,lambda:admit(arena.remaining_bytes+extra),P.APPLICATION_READ_RATE),arm,placement)
+        admit(arena.remaining_bytes+extra,force=True)
+        H.assert_dontfork(arena);graph=S.Graph(arena,U.METADATA)
+        sources={'hot':inputs['hot']}
+        if arm=='digit':sources['inverse']=accepted_inputs()['stages']['graph']['files']['storage_to_node.i32']
+        auxspec={k:dict(path=v['path'],offset=0,length=v['bytes'],identity=v['identity'],sha256=v['sha256']) for k,v in sources.items()}
+        from .host_budget import auxiliary_budget
+        aux_budget=auxiliary_budget(extra,auxspec)
+        event('auxiliary_memory_budget',**aux_budget)
+        extra_after_aux=aux_budget['after_aux_bytes']
+        admit(aux_budget['auxiliary_bytes']+extra_after_aux,force=True)
+        aux=Arena(auxspec,admission_check=lambda rem:admit(rem+extra_after_aux),max_bytes=8*2**30)
+        guard.track(aux);H.dontfork_arena(aux)
+        if arm=='digit':event('numa_policy_installed',**bind_fresh(aux,'auxiliary'))
+        load_checked(aux,progress_callback(event,lambda:admit(aux.remaining_bytes+extra_after_aux),P.APPLICATION_READ_RATE),arm,placement)
+        admit(aux.remaining_bytes+extra_after_aux,force=True);H.assert_dontfork(aux)
+        hot=np.frombuffer(aux.mm,np.int64,count=inputs['cpu_cache_rows'],offset=aux.offsets['hot']);hot.flags.writeable=False
+        if arm=='digit':inverse=np.frombuffer(aux.mm,np.int32,count=graph.storage_rows,offset=aux.offsets['inverse']);inverse.flags.writeable=False
+        event('graph_registration_begin',bytes=arena.size)
+        registration=Registration(arena)
+        event('graph_registration_complete',bytes=arena.size)
+        H.assert_dontfork(arena)
+        event('native_sampler_begin')
+        Native, _ = S.select(arm)
+        native=Native(graph,registration)
+        event('native_sampler_complete')
+        from candidates.ukl_unified_v2.profile import prepare_cache
+        admit(24*2**30,force=True)
+        replacement,cache_epoch = prepare_cache(arm,native,S,accepted,hot,out_dir,check,event)
+        if replacement is not None:hot=replacement
+        admit(16*2**30,force=True)
+        admit(b['host_components']['cpu_features']+b['host_components']['backend_page_initialization']+b['host_components']['logical_slot_lookup']+16*2**30,force=True)
+        provider=Provider(module,storage,arm,graph,hot,inverse,lambda:admit(16*2**30),event)
+        numa_placement=dict(policy='unchanged',regions=[])
+        if arm=='digit':
+            check()
+            placement(provider.external.pool, 'cache_preloaded')
+            numa_placement=dict(policy='interleave:0-1',regions=[placement(a) for a in (arena,aux,provider.external.pool)])
+            event('numa_placement_verified',**numa_placement)
+            check()
+        numa_checks = G.CURRENT.receipt() if arm == 'digit' else None
+        if arm == 'digit' and not G.valid(numa_checks):
+            raise RuntimeError('Incomplete staged NUMA evidence')
+        torch.manual_seed(0);torch.cuda.manual_seed_all(0)
+        from candidates.ukl_unified_v2.integration import train
+        admit(8*2**30,force=True)
+        result,feature_checks=train(arm,native,S,model,opt,provider,accepted,out_dir,lambda:admit(8*2**30),event,P.SCOPE,P.REPETITION,canonical=canonical)
+        result['group_reuse']=prepared_guard.check()['validation']
+        result.update(cache_epoch=cache_epoch,numa_admission=numa_checks,numa_placement=numa_placement,gpu_memory_admission=gpu_budget,io_probe=io_check,feature_value_checks=feature_checks,gpu_torch_peak_bytes=torch.cuda.max_memory_allocated(),cache=provider.cache,arm=arm,mode=mode,manifest_sha256=digest,storage_acceptance_sha256=storage['acceptance_sha256'])
+        result['execution_optimizations']=dict(reused_sampling_buffers=True,gpu_postprocessing=True)
+        from .sampler_build import OUT as sampling_build
+        import json
+        result['sampling_optimization']=(dict(enabled=True,uncovered_rank='single_binary_search',eid_resolution='warp_cooperative',cpu_group_validation='compiled_one_scan_per_owner',
+            cuda_sha256=json.loads((sampling_build/'libcompact_cuda.so.json').read_text())['sha256'],
+            validator_sha256=json.loads((sampling_build/'libvalidate.so.json').read_text())['sha256']) if arm=='digit' else dict(enabled=False,baseline='v21'))
+        # This is evidence of completed computation, never lifecycle acceptance.
+        event('training_window_complete',measurement=result,lifecycle_complete=False)
+    except BaseException as error:
+        failure=record_failure(error)
+    finally:
+        try:
+            if provider is not None:
+                provider.close()
+                if result is not None:result['external_cache_released']=provider.external.closed
+            # Never inspect locals() here: its frame snapshot retains hot/inverse
+            # exported views even after these fast local variables are cleared.
+            engine=provider=None;hot=inverse=None;replacement=None
+            if native is not None:native.close()
+            if registration is not None:registration.close()
+            if graph is not None:graph.close()
+            native=registration=graph=None;gc.collect()
+            for a in (aux,arena):
+                if a is not None:a.close();guard.confirm_released(a)
+            guard.release()
+        except BaseException as error:
+            cleanup_failure=record_failure(error)
+            cleanup_failed(event,failure,cleanup_failure)
+    raise_failures(failure,cleanup_failure)
+    if verify_manifest()!=digest:raise RuntimeError('Training source changed')
+    result.update(phase_accounting=phase_evidence,graph_and_aux_released=True,ownership=guard.receipt(),process_exit_acceptance_required=True)
+    return result

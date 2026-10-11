@@ -1,0 +1,21 @@
+{
+  "schema": "digit-pa-sage-ablation-freeze-v1",
+  "parent_candidate_sha256": "a6049d5c8a7580a923cc156400edcee58686196de83e325e6b1ea533102fefe2",
+  "files": {
+    "README.md": "e682ab4b48c7533e0e682e99d21e9737a1b77aaee16710e44248bb21337e6c86",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "admission.py": "d1c120171f21613ea00d632af3de8428aa3982953a488e1691ceb9faaf4943b3",
+    "common.py": "5118b511ad92f9433eec3f6144848b058aad89d882844bb7497c588656ef93cd",
+    "evaluation.py": "2da3ef80d0b30f27a124a8c8b07b7b826b884febfa59c7a2a3f5a5afe991dc35",
+    "protocol.json": "617c7900c5a76ab2893dabb152294f8e795160daf709591fe144780fbe4f0611",
+    "run.py": "e1e3b8818391459c56950431dc009d8647c92d4d934f5f31f42a393cf4267acf",
+    "sampling.py": "ccf654e7d8699e207aaeecf46b95519669285ecdc89703a3098c8b07b33e48aa",
+    "tests.py": "b6580495d67c79b81b661886bec9c40b08d59cadbeaf53e4c7930d435afd5c56",
+    "training_loop.py": "033de0e771d0b7499906c343303e0c2f178432252609b3baf3f1aa417c00ac32",
+    "validation.py": "34e27fd5a28c67bd7cfe9df5833baf9cb098adaf035dea0dd5dcb929d93cec8b",
+    "worker.py": "3d2e2376897172541ac9ee9ad5005da06759d2fb7977505ceb3eef726cdbda00"
+  },
+  "external_files": {
+    "results/pa_sage_ablation_20260924_v1/start.py": "5d9b50538bca6bca1a663edaf06c3b41fae9a14219dabbcdcd264f239bdeae17"
+  }
+}

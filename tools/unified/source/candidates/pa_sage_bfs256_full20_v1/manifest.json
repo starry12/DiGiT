@@ -1,0 +1,33 @@
+{
+  "parent_sha256": "afab748ee912c8f75f7b8f501a053facf797ed4e9f5d7e4e95da70e9f4f641af",
+  "files": {
+    "__init__.py": "da2a7bf813f3a1f34759d84ab7f95dfe9419c3493962da673e2145ff6245943a",
+    "checks.py": "0dab2538784cd9cfcc2fdd54751a8666943cbf4e101fb4aba09a9d627779ac16",
+    "common.py": "80b8254990103df12d40c760487146cfb2d88d79529b7efdbc36304cb7795f0c",
+    "controller.py": "e4c7524293a24d64c54161601e9526b58eb7374636b2f9fdcdab146bc4275861",
+    "dataset.py": "1cabc2082fee32423739a3dd8d750eb36ca8240e4bb6e9577919f763188f10e3",
+    "engine.py": "37c61a873cc44a0ab76cd317cd83b9c0923d7cab07927256656eb450704cf2e1",
+    "evaluate.py": "8ba2b020b721bf91d03710eb9d5361ecf6be5d5c3ac6c1b7f015784ef7f2f167",
+    "evaluation_inputs.json": "5bd0aa1b8bc5b190ab2c9841c321c27cb6bed248f691ddaa63ddef8ac49eab01",
+    "freeze.py": "291e2b0f479a4bedeb15a357b3666b0d33028bf82ddadb89238ae00c1877cfe8",
+    "scheduling.py": "ed7eea5fe6e981ea6611bc8f47c26852438dc133f214dbd6fdb671478e2a09d3",
+    "smoke_engine.py": "773800e550a4fed237ddeb8b33ced5f65d1d4ca4dfe793be2b73d339cd2f555c",
+    "start.py": "37251e9eb34b0a16a2d857fec3c091d46204d79cb178cce295ff1bd86f0af44f",
+    "tests.py": "ce02698433cb723cbff99279b0e074f9def5514347eeeda2c4e97d1223c3009f",
+    "worker.py": "d9a70f41f42393075d0f111db195488f6fd627e65752a2f841a3b524d2d31476",
+    "INTERFACE.txt": "5474feca71cd0f387b96a301683c5300f3b52fdf7162d6649640c68568efa82b"
+  },
+  "inputs": {
+    "/home/embed/digit/results/pa_sage_direction_20260921_v2/bidirectional/valid_trace/manifest.json": "1e2d9b579a176bf44efa241e8f4c78dcdc837c5f35855249330edf0b5d867426",
+    "/home/embed/digit/results/pa_sage_direction_20260921_v2/bidirectional/test_trace/manifest.json": "aca2faa1c24012bd2f500593ab060478aa153c690d1b06831940c3e0571f6c2f"
+  },
+  "dependencies": {
+    "ae/pa_sage/trace_cache.py": "48fb4adda0aca26c7c2ce2191674d5aca23faa4c0fe5aef6b71b6c66b3de1f90",
+    "ae/pa_sage/common.py": "03a0207c43483afbb0bc47b13fbc4b9ece27a44fc5e5d96bf98f95338afe8562",
+    "ae/igb/models.py": "8deaac7daa7d25fd6e0141724797ff26a266a76db76fc70ac421e5d80b0c77ec",
+    "ae/common.py": "cadeda7722cb7f7713898b2a8fa9d5a64d13eab32b03be32a2657d8100bb478c",
+    "candidates/pa_sage_bidir_native_v2/runtime/digit/eval_trace.py": "0a4c8985ff0dae03097834b4665b2d2ef69015e111c08b3da72b5c5b4c26d052",
+    "candidates/pa_sage_cache_policy_v1/training.py": "0f049a4d54c97dba0ceab04f05bce11ae695724a28bf8d709ade0716a4e3ed59"
+  },
+  "created_unix": 1791697587.6287262
+}

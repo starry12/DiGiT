@@ -1,0 +1,32 @@
+{
+  "schema": "pa-sage-group-incremental-v1",
+  "reference_sha256": "136e5dc81d0cd954d50f32e55f0d5c35da177dd732d6b906563048e1775e9537",
+  "created_unix": 1790417601.0644524,
+  "files": {
+    "candidates/pa_sage_group_incremental_v1/README.md": "878a34f739de79860a4e82bd06a2210199e81798f69522383afcfb633391a2d8",
+    "candidates/pa_sage_group_incremental_v1/analyze.py": "6235976ff5cda284aceb3d9cc8736dcaa5535523d724a7f3f5a25a2d4bae6c7c",
+    "candidates/pa_sage_group_incremental_v1/build.py": "c19bd5f1434dae5807974e56ae8b187edbc78f5754969cf3705edf58b77445f7",
+    "candidates/pa_sage_group_incremental_v1/common.py": "42936db0de37c3e7ba23c05513f92bd75609351257e258a7021a83df014382dd",
+    "candidates/pa_sage_group_incremental_v1/control.py": "3dcde56a1d07177ccc7159450968eeccf24361af3003fcef03d2ffa7625e959c",
+    "candidates/pa_sage_group_incremental_v1/freeze.py": "32047f2a2ca7b23f3b4fa3ced1935fb8e338ff64193224252f76088ed16493df",
+    "candidates/pa_sage_group_incremental_v1/gpu_tests.py": "15cd9aaa9975a1050353d5a6bc438af80f5a4859136a26eb1caeae5710f91516",
+    "candidates/pa_sage_group_incremental_v1/native/digit_group_incremental_cuda.cu": "c8756467a53645071c2b0dbaedec9d74aadd29d099f6937f004fbf75d3d74ce4",
+    "candidates/pa_sage_group_incremental_v1/native_tests.py": "4a45c0b16600cea1ade759d549bcfede9efc494e0b7dad447984af22aac0840b",
+    "candidates/pa_sage_group_incremental_v1/protocol.json": "83c4cd46e1c7aec1dd0d097e3e88cccfaaffe35a3745db695ee59d14e60fd894",
+    "candidates/pa_sage_group_incremental_v1/runtime/__init__.py": "5e301be4173670c8b362abbd9fab8f4bb26a3e57d274c51e7c984091eb489816",
+    "candidates/pa_sage_group_incremental_v1/runtime/build_receipt.json": "805258cf95c41cb2b2845c9c49eb04d4566e3717ddb331b3d52ac65eb6824e26",
+    "candidates/pa_sage_group_incremental_v1/sampler.py": "4afb7a8f9c885cb4c9667d6879635ba7cf03a009c435527baa2ba8cbb38cc72e",
+    "candidates/pa_sage_group_incremental_v1/start.py": "678143e705bc03324c04a2e6ea9f7bfbdef3171d26238ec6b550052183244d71",
+    "candidates/pa_sage_group_incremental_v1/tests.py": "90e518f1f26796f4f5ee62ef6514926c4eba89eb2d97bd1144334e883c6c8f64",
+    "candidates/pa_sage_group_incremental_v1/trace.py": "bcf0070d7b4e0a8fb827b3f694e133a321c2e4edfd813fc363147b3177c9675f",
+    "candidates/pa_sage_group_incremental_v1/worker.py": "8564c4e5c4d3bee6aa50337da610cb569374d0095b87398f88d80a48dd1f27c5"
+  },
+  "binary_sha256": "f2ddd720a2ae602aac2fa983c2a7a6351e4e7a274032a657d7d27b50759dcdc8",
+  "sampler_binary_sha256": "d24279766ecac0f5517efa8301478ffdaa1f14300593d2c12b8ea1f15b7f60e5",
+  "evidence_sha256": {
+    "inputs.json": "117d95c2d70a6e9e33d55ddec0748cbd2ff5aeab349f205daeaab36df730b97c",
+    "cpu_checks.json": "a373aa54b3dc30de188669e425d70333a6344ea1d01566b2d2bd4983263d8f14",
+    "gpu_checks.json": "a6c94ddd096a7fe13637154ecbecad0a459b6aea0f81721db44012631916321a",
+    "native_checks.json": "1f1dcebf54c471d901bb531e9085bccfa527c5e878dac8220251c679bf876759"
+  }
+}

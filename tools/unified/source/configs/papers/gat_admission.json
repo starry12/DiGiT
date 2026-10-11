@@ -1,0 +1,60 @@
+{
+  "schema": "papers-gat-formal-admission-v1",
+  "scope": "GAT clean native bridge and full-epoch formal GIDS/Full",
+  "components_bytes": {
+    "reordered_indptr": 964388264,
+    "reordered_indices": 6641303184,
+    "group_members": 303634432,
+    "group_storage_base": 37954304,
+    "supernode_to_group": 37954304,
+    "node_to_primary_row": 444239824,
+    "original_csc": 14702446280,
+    "cache_data": 536870912,
+    "cache_metadata_allowance": 134217728,
+    "bam_storage_range_allowance": 1066175552,
+    "sampled_edges_and_sort_scratch": 160169984,
+    "labels_masks_seed_indices": 3553918592,
+    "runtime_reserve": 4294967296,
+    "common_degree_counter": 444239824,
+    "measured_total_gat_envelope": 5777940480
+  },
+  "required_bytes": 46920505152,
+  "host_required_bytes": 276304253751,
+  "safety_multiplier": 1.2,
+  "formal_bound": true,
+  "reservation": false,
+  "allocator_cap_bytes": 34359738368,
+  "minimum_runtime_free_bytes": 4294967296,
+  "model": {
+    "in_feats": 128,
+    "h_feats": 128,
+    "num_classes": 172,
+    "num_layers": 3,
+    "dropout": 0.2,
+    "num_heads": 4
+  },
+  "frozen_original_admission": {
+    "sha256": "854fab63a290ab5683a534bbf99576dce76d7b1cf9e850ea4a35fc6fed619e3d",
+    "bytes": 3755
+  },
+  "basis": {
+    "sha256": "e8ab77c234fe7abe3832747148b7d60001c24c07bda923c4989ad5ca6a10e581",
+    "bytes": 34443
+  },
+  "source_native_short_enabled": true,
+  "formal_enabled": true,
+  "co_resident_admission": {
+    "sha256": "2c88510852c3fba3cc61752a676f82050982e860b19436f2e56650f4ee9a9b75",
+    "bytes": 1670
+  },
+  "co_resident_acceptance": {
+    "sha256": "525212c2e628ab2cbda2903070a7edca88b6ced40ebb3f9f3253eab5c655e493",
+    "bytes": 14610
+  },
+  "protocol_sha256": "5bdb0321c9afa73238b7f418058af5b34c4ecd588fdc1c74ec418c2c0e6f33a0",
+  "formal_stage_requires_accepted_bridge": true,
+  "short_admission": {
+    "sha256": "ac2a7a080ed1e77d0a12a50b57086eed86a726cf2408b86b6fdd09ecd579be75",
+    "bytes": 2226
+  }
+}

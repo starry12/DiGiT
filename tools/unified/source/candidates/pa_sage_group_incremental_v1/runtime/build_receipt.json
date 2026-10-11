@@ -1,0 +1,41 @@
+{
+  "binary_sha256": "d24279766ecac0f5517efa8301478ffdaa1f14300593d2c12b8ea1f15b7f60e5",
+  "command": [
+    "/usr/local/cuda-12.4/bin/nvcc",
+    "-std=c++14",
+    "-O3",
+    "-arch=sm_89",
+    "--default-stream",
+    "per-thread",
+    "-shared",
+    "-Xcompiler",
+    "-fPIC",
+    "-Xptxas=-v",
+    "-I/home/embed/miniconda3/envs/gids/include/python3.8",
+    "-I/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/pybind11/include",
+    "/home/embed/digit/candidates/pa_sage_group_incremental_v1/native/digit_group_incremental_cuda.cu",
+    "-o",
+    "/home/embed/digit/candidates/pa_sage_group_incremental_v1/runtime/DiGiTGroupIncrementalCUDA.partial.so"
+  ],
+  "finished_unix": 1790417117.0529516,
+  "gpu_or_ssd_access": false,
+  "incremental_fanout_range": [
+    1,
+    128
+  ],
+  "no_graph_sized_allocation": true,
+  "passed": true,
+  "preserved_kernels": {
+    "group_kernel_byte_identical": true,
+    "group_kernel_sha256": "b88cb835a9aa43134068c9274199fd03390dd20cc113ceb46b0d1a4ad2f0bf5e",
+    "legacy_eid_kernel_byte_identical": true,
+    "legacy_eid_kernel_sha256": "bf60624a7e9aa72bb39d3672921b5bfe74adc48f28773d99bbd5444c94764edf"
+  },
+  "source_sha256": {
+    "candidates/pa_sage_bidir_native_v2/native/digit_sampler_cuda.cu": "49beadf6d388388f08a803b4e73cfe9be4484ae8e36816c73bf372220f906c5f",
+    "candidates/pa_sage_group_incremental_v1/build.py": "c19bd5f1434dae5807974e56ae8b187edbc78f5754969cf3705edf58b77445f7",
+    "candidates/pa_sage_group_incremental_v1/native/digit_group_incremental_cuda.cu": "c8756467a53645071c2b0dbaedec9d74aadd29d099f6937f004fbf75d3d74ce4",
+    "candidates/pa_sage_group_incremental_v1/runtime/__init__.py": "5e301be4173670c8b362abbd9fab8f4bb26a3e57d274c51e7c984091eb489816"
+  },
+  "started_unix": 1790417106.5680552
+}

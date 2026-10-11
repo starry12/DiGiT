@@ -1,0 +1,108 @@
+{
+  "schema": "pa-sage-512b-gids-digit-pair-v1",
+  "scope": "AE-matched bidirectional graph, constant lr .001 and no weight decay; fresh GIDS and optimized mixed-read DiGiT random/BFS64",
+  "train_count": 1207179,
+  "epochs": 20,
+  "batch_size": 1024,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "nodes": 111059956,
+  "edges": 3342431700,
+  "graph": "AE bidirectional multigraph: append reverse edges, retain parallel edges, one self edge per node; explicit int64 CSC-position EIDs",
+  "graph_limit": "Adjacency hashes match AE; internal EID labels use CSC positions and no model edge features",
+  "layers": 3,
+  "hidden": 128,
+  "classes": 172,
+  "dropout": 0.2,
+  "seed": 0,
+  "root_order": "Explicit per-epoch permutation; random or 64-node BFS chunks rotated and reshuffled; no DGL reshuffle",
+  "seed_limit": "historical random state absent from user log; this run explicitly seeds 0",
+  "optimizer": {
+    "lr": 0.001,
+    "weight_decay": 0.0
+  },
+  "optimizer_origin": "AE selected optimizer; fixed for all three arms",
+  "feature_dim": 128,
+  "feature_dtype": "float32",
+  "page_bytes": 512,
+  "cache_mib": 4096,
+  "cpu_cache_rows": 11105995,
+  "pin_file": "/mnt/n3/papers100M-bin/processed/pr_papers100M.pt",
+  "window_buffer": true,
+  "wb_size": 2,
+  "accumulator": true,
+  "accumulator_parameters": {
+    "bw": 5.8,
+    "l_ssd": 11.0,
+    "l_system": 20.0,
+    "num_ssd": 1,
+    "p": 0.95
+  },
+  "expected_required_accesses": 6832.399999999994,
+  "smoke_examples": 3089,
+  "evaluation": "AE bidirectional validation/test traces; each epoch valid, epoch20 test once; CPU features outside training",
+  "host_admission_gib": 192,
+  "gpu_min_free_gib": 20,
+  "continuous_gpu_monitoring": false,
+  "raw_ssd_writes": false,
+  "primary_timing": "synchronized wall time around iterator creation and complete training loop; setup and post-run audits excluded; no sum of nested timers",
+  "legacy_timing_diagnostic": "sample + inclusive fetch + model host spans retained explicitly as overlapping, not as E2E",
+  "fixes": [
+    "drain window and merged results after upstream EOF",
+    "support sub-controller-page cache geometry and PRP offsets"
+  ],
+  "cpu_threads": 16,
+  "bound_logical_cpu": 2,
+  "block_index_bits": 32,
+  "affinity_scope": "Apply to all existing worker threads immediately before iteration; future threads inherit; setup uses inherited affinity in both arms",
+  "no_extra_training_cuda_synchronization": true,
+  "arms": [
+    "gids",
+    "digit"
+  ],
+  "continuous_cpu_frequency_observation": false,
+  "layout": "data/papers_g2_random_v2/final/bundle",
+  "digit_metadata_mode": "gpu_i32_uva_eid64",
+  "digit_cpu_hotset": "Unchanged directed-profile frequency hot set from mixed-read predecessor; held fixed to isolate graph and optimizer",
+  "group_size": 2,
+  "replication_ratio": 0.2,
+  "features": "original real float32 values; reordered physical rows for DiGiT",
+  "mixed_io": "per_variant",
+  "storage_layout_alignment_bytes": 4096,
+  "group_read_policy": "Pair two present CPU-cold g2 members within a batch; both GPU misses use one 1KiB DMA with scatter; partial miss uses 512B; unmatched/CPU-hot uses unchanged single-row path",
+  "gpu_policies": {
+    "gids": "legacy",
+    "digit": "fifo"
+  },
+  "feature_index_modes": {
+    "gids": "logical",
+    "digit": "explicit"
+  },
+  "cpu_rows": 11105995,
+  "extra_model_cuda_sync": false,
+  "gpu_admission": "Includes 32 bytes per 512-B physical range entry, exact CPU alias map, compact sampler metadata and retained window batches",
+  "accumulator_max_batches": 4,
+  "accumulator_max_rows": 262144,
+  "accumulator_bound_scope": "Same bounds for both arms; one oversized batch may run alone without splitting roots",
+  "variants": [
+    "gids_ae",
+    "random_ae",
+    "bfs64_ae"
+  ],
+  "full_order": [
+    "gids_ae",
+    "random_ae",
+    "bfs64_ae"
+  ],
+  "poll_seconds": 60,
+  "smoke_epochs": 2,
+  "lr_schedule": {
+    "milestones": [],
+    "gamma": 1.0
+  },
+  "bfs_chunk_size": 64,
+  "admission_policy": "Phase maximum plus explicit 4 GiB runtime reserve; stage checks; anonymous host CSC copies"
+}

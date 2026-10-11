@@ -1,0 +1,41 @@
+{
+  "schema": "digit-gpu-admission-v1",
+  "components_bytes": {
+    "reordered_indptr": 964388264,
+    "reordered_indices": 6641303184,
+    "group_members": 303634432,
+    "group_storage_base": 37954304,
+    "supernode_to_group": 37954304,
+    "node_to_primary_row": 444239824,
+    "original_csc": 14702446280,
+    "cache_data": 536870912,
+    "cache_metadata_allowance": 134217728,
+    "bam_storage_range_allowance": 1066175552,
+    "model_optimizer_grad": 3506176,
+    "batch_features_activations": 3686006784,
+    "sampled_edges_and_sort_scratch": 160169984,
+    "labels_masks_seed_indices": 3553918592,
+    "runtime_reserve": 4294967296,
+    "common_degree_counter": 444239824
+  },
+  "metadata_bytes": 23131920592,
+  "required_bytes": 44414392128,
+  "safety_multiplier": 1.2,
+  "formal_bound": false,
+  "backend": "gpu_i32",
+  "original_csc_gpu_bytes_avoided": 0,
+  "fanouts": [
+    16,
+    5,
+    5
+  ],
+  "batch_size": 1024,
+  "host_required_bytes": 276304253751,
+  "gpu_name": "NVIDIA L40",
+  "device": 0,
+  "free_bytes": 47109177344,
+  "total_bytes": 47576711168,
+  "passed": true,
+  "host_available_bytes": 471333453824,
+  "common_to_both_arms": true
+}

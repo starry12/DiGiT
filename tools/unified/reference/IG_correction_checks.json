@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "entry_source_sha256": "652e943d816b219c173e3772932bf1b5efb38fd73d901b2a297496dadf8ca026",
+  "versions": {
+    "entry": "652e943d816b219c173e3772932bf1b5efb38fd73d901b2a297496dadf8ca026",
+    "IG": "5830a30bf5a5e782e1b3709176b3345853d17c313fe69286cab5a22fa48248b5",
+    "UKL": "13269357049d15c9f410384982b58d36d41f29c1612c7cebd2df59f35f68a9f3",
+    "CL": "16bd867beca3e984c532042da26427addc97711f1fff637f2e28c6c82eb00108"
+  },
+  "unit_tests": 10,
+  "entry_tests": 7,
+  "queue_terminal_checks": 5,
+  "offline_reaggregation_passed": true,
+  "new_gpu_execution": false,
+  "original_evidence_preserved": true,
+  "updated_unix": 1791719130.5234528,
+  "files": {
+    "results/ig_accounting_fix_20261011_v1/rebuild.py": "d448194566444d896d9052d098b79bd466c6c96b1e2e92ba8a05cc271ea8aed7",
+    "results/ig_accounting_fix_20261011_v1/corrected/summary.json": "9f7c2f7d2e4ed61cc76cfebba1a86b350ac34e8ff34b66d7a7b16a45f4569e4b",
+    "results/ig_accounting_fix_20261011_v1/tests.log": "ba0a733529ec67622d1d47cc4868dd20d091cd1dae4b90cc8c2f70a93467b3d1",
+    "results/ig_accounting_fix_20261011_v1/entry_tests.log": "b94e08ca3e82610e8acc682961f45f4243b64bf1ccbbc8674837e1ea1e614ca2"
+  },
+  "archive_projection": "Selected reference summary; server-local paths and runtime identities omitted."
+}

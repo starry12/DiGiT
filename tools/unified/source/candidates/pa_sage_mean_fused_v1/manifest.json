@@ -1,0 +1,39 @@
+{
+  "schema": "pa-sage-mean-fused-v1",
+  "reference_sha256": "61daf090dd912b79241205406bca5f607bf654ac3ed67a674812f7ae35bd2db0",
+  "created_unix": 1790421937.5610251,
+  "files": {
+    "candidates/pa_sage_mean_fused_v1/README.md": "a4999930a8c2b1e64fd3a54b23399f884d6935d6d3020cbe52f6bbc0bb203164",
+    "candidates/pa_sage_mean_fused_v1/analyze.py": "ea2774f82f151b00385717c365c5ec24a4edb35b05432abe4b08136053f70565",
+    "candidates/pa_sage_mean_fused_v1/build.py": "a094bc1a4c109600269448c74c871b7ac713b9391492901c1c8143864c8fc92e",
+    "candidates/pa_sage_mean_fused_v1/common.py": "5ab2ee477589e4ab7d5ad0a8c0fe62656fbaf4ade1acc13dd6c4c241c28de208",
+    "candidates/pa_sage_mean_fused_v1/control.py": "763c6c4893160f26d0b192bc98d06c6bf1d85316ca8c96d9bc43de3751c491ad",
+    "candidates/pa_sage_mean_fused_v1/equivalence.py": "4d820950c75a502be16045bf7b8b2cb1bc806505b2ce3911b6f859a61404d263",
+    "candidates/pa_sage_mean_fused_v1/freeze.py": "03d4871a70beaf107f69e40543bc7d8926729ff4e74ba5680e13d59980cf2f04",
+    "candidates/pa_sage_mean_fused_v1/gpu_tests.py": "e8db4dd357455afce7a3919a610e3d281bb7d4ef8385cf57a6cdff40e8867238",
+    "candidates/pa_sage_mean_fused_v1/model.py": "cea35fe3523a3f4981bd6deb43f97c60e4a62675da010f50e56c2d810b0e5952",
+    "candidates/pa_sage_mean_fused_v1/native/mean_normalize.cu": "71e0b921a529c02ef9b68c586deece0a42edada580fef49aa06019ef10c5d4ca",
+    "candidates/pa_sage_mean_fused_v1/native_tests.py": "0ab0b03518e87230bb4efbd191a6ae21c2d5cc477fa28d4e6c03e35a6eba6ae6",
+    "candidates/pa_sage_mean_fused_v1/normalization.py": "acd3c6e1c598873a73b20b3370f92d6a72924a5d79e826b93efdc6c360c10413",
+    "candidates/pa_sage_mean_fused_v1/protocol.json": "83c4cd46e1c7aec1dd0d097e3e88cccfaaffe35a3745db695ee59d14e60fd894",
+    "candidates/pa_sage_mean_fused_v1/runtime/__init__.py": "6cf8e528abb671fddf0c3b050d37029533facfd62162979975523df0f19f1ac1",
+    "candidates/pa_sage_mean_fused_v1/runtime/build_receipt.json": "8bca057a9be5b92275ebaf217d4199b8f1aef2d589029c06b22a651753657a38",
+    "candidates/pa_sage_mean_fused_v1/start.py": "468335be8699491e2542aa221fdf822c9cafec09dd20b3575a68054184c9d175",
+    "candidates/pa_sage_mean_fused_v1/tests.py": "79b1e68f7a07fb99abfe966618432fa86b851a564b6714ea77632af3dda4da63",
+    "candidates/pa_sage_mean_fused_v1/trace.py": "fd8fc208d716ce2bfddf2d1c94189692d5ce586b36fcc41bdc958f3bdfe7faf4",
+    "candidates/pa_sage_mean_fused_v1/worker.py": "ed28e96dc1d4f9e5a7d66c6efe6048d8814bf79507a418f3281ef8ef85c5f51e"
+  },
+  "binary_sha256": "f2ddd720a2ae602aac2fa983c2a7a6351e4e7a274032a657d7d27b50759dcdc8",
+  "sampler_binary_sha256": "d24279766ecac0f5517efa8301478ffdaa1f14300593d2c12b8ea1f15b7f60e5",
+  "normalization_binary_sha256": "1bfd5271f772a2474c44630eb06cedbe129e37ba68d8ff4af2447813d895f29d",
+  "environment_files": {
+    "/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/torch/cuda/graphs.py": "51640f9f0cbef12e74cf08195e403cac8b2564e730b2c0e56b33a6bc839c9952",
+    "/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/dgl/ops/spmm.py": "a2a46766c12e5a3c395bb478a2ef4913d0a4218afd07a8506e5441adc92726bf"
+  },
+  "evidence_sha256": {
+    "inputs.json": "117d95c2d70a6e9e33d55ddec0748cbd2ff5aeab349f205daeaab36df730b97c",
+    "cpu_checks.json": "2abdd6b6a0393a1ba5923432ced45c955da181b774b595c5b6ecedbf4a4fc0ed",
+    "gpu_checks.json": "ca2dfb1b7c22136e7f926f0b4c6a7545768537841998bb05b4d0d6ec07a70243",
+    "native_checks.json": "812dd320dd0014566c3f1a75e1cfe46de1ea24b56b8b4b505eebc98b3b271001"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "digit-pa-gat-candidate-v1",
+  "parent_submission_sha256": "1fbc32c75ed7f4f59b38f3ed541b7cc7377408629a0343ebc4f963eee8a2a598",
+  "files": {
+    "README.md": "51f536b042c02d863a60f3f63dba70ce63e387deb0d2efe3cbe122292987aa99",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "admission.py": "0906dd4e921674d005aef9f795c172011281964d986ff476986169799f54088b",
+    "check.py": "29b2ac094b196bdc000f41697811373430d1074747d6365242e2f9e8ed311368",
+    "common.py": "51c9a2ad44800506fb2eda4b4b9ae7dde84420d8b898909b83d1b09636ac9217",
+    "controller.py": "3f9d6d17cb7b376f7ae3a94c87b8155394f4088e359a404c871d46313f010e82",
+    "cuda_checks.py": "82af20edef6dee7806b71d05f703312a8103779dd977448a94c65e1ed285d5ca",
+    "evaluation.py": "cc1b3590a61179c760ebb786be2348261db1e93efd1bfc0cb45c4b89c0c163ae",
+    "freeze.py": "b160e847c159687d2dac61d54a25bf316f43a32a550051efe2116bac22af7000",
+    "inputs.py": "7814cf2349222d79f7a988eb00b97b49c13f550958925395fe9a6cd345e4fbf9",
+    "memory_checks.py": "045e55376586ec7cf5d391921d383f6285f55d9c68018546a9d7528f18827efd",
+    "model.py": "bea1076b3aee22a33daff74c73eb28264bdaf8daaa03aac27a0bd8972107f964",
+    "protocol.json": "af37d21280df4142058a013472984fac7c81fc08a45a3d96dfbaf4cfd836e940",
+    "review.py": "2186d69e15a025d151132eb11093d3e8e70936c035ac30b3277cacc04e13d0c7",
+    "summarize.py": "d3297c8404689d9c9ccc82bc881641d416f166265dce9da118bb6ae2c30c7017",
+    "tests.py": "c35bdaaaee09943cb121f6a6be7cf98648e078be95fa4ef1dfbdf30b11442267",
+    "training_loop.py": "8e11cfea82b508345c00568317f5d0a4b87532e75f1ce7dc73b2ad24eba4fb81",
+    "validation.py": "a8c05786d2cccae84b04d78971d7fdf37269ffd158573ed7c9f0ba9dec0a0dee",
+    "worker.py": "897f319e52226358eef5cab4052f7f1b12f0bba9f5669b848b7fa2065f3d6a74"
+  },
+  "dependencies": {
+    "atc26-paper1508.pdf": "cd75c3a35b577d985a5258e8ad2871dcedeaffeeac8c0f03cd7f8bfec0d7caa5",
+    "configs/papers/contract.json": "9b97e3b703f313eea1fbfe28a34698a9c1ba2663e3ab5c3dc46d26cb60a482e5",
+    "ae/papers/runtime/models.py": "8deaac7daa7d25fd6e0141724797ff26a266a76db76fc70ac421e5d80b0c77ec"
+  },
+  "protocol_sha256": "af37d21280df4142058a013472984fac7c81fc08a45a3d96dfbaf4cfd836e940",
+  "classification": "paper reconstruction; model-specific historical optimizer; not tuned on test",
+  "native_acceptance": "requires separately verified preflight and fresh paired smoke"
+}

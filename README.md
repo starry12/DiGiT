@@ -21,7 +21,13 @@ The provided AE server includes the Python/CUDA environment, compiled native com
 source /srv/digit-ae/activate.sh
 ```
 
-**Run one request at a time:** PA main models and ablation automatically select an idle GPU from cards 0–3 and keep it throughout each request. All requests share the SSD and exclusive experiment locks. Wait for the current request to finish and release resources before starting the next; busy requests are rejected rather than queued. Each launch creates fresh results and continues after SSH disconnects. No local build or data preparation is needed on this server. [Automatic GPU selection source and installation checks](tools/gpu_selection/README.md).
+**For the original PA workflows below, run one request at a time:** PA main models and ablation automatically select an idle GPU from cards 0–3 and keep it throughout each request. All requests share the SSD and exclusive experiment locks. Wait for the current request to finish and release resources before starting the next; busy requests are rejected rather than queued. Each launch creates fresh results and continues after SSH disconnects. No local build or data preparation is needed on this server. [Automatic GPU selection source and installation checks](tools/gpu_selection/README.md).
+
+### Unified GraphSAGE: PA / IG / UKS / UKL / CL
+
+The new [unified entry and feature checklist](tools/unified/README.md) provides `short1`, `short5` (default, **median of five paired speedups**) and `full20` modes. Check installed readiness with `digit-ae unified`; for example, run `digit-ae performance UKS sage --mode short1`. Only PA `full20` reports accuracy. UKL has a successful DiGiT-only record and still needs complete paired validation; CL preparation and complete validation remain pending. These entries are open for reviewer validation after server installation, with that status displayed explicitly. Source publication is not a claim that every dataset or mode has passed.
+
+The original PA commands below are retained. Their GPU-selection and launch behavior is specific to those original entries; the unified entry uses GPU 2 and serialized requests. [Validation records and limitations](tools/unified/validation-status.json) accompany the new source snapshot.
 
 ### Main experiments: PA × GraphSAGE / GCN / GAT
 
@@ -70,9 +76,9 @@ The main SAGE full workflow previously took about **2 h 25 min**, and four-arm a
 
 ## Current evaluation scope
 
-The current artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation uses one complete epoch per setting and reports performance only. This is a reconstruction of the paper implementation.
+The original main artifact evaluates **Papers100M (PA)** with GraphSAGE, GCN and GAT, comparing GIDS and DiGiT. Each main comparison uses seed 0, 20 epochs, full validation and one final test. The supplementary PA/SAGE ablation uses one complete epoch per setting and reports performance only. This is a reconstruction of the paper implementation.
 
-The reviewer commands select the accepted implementation for each experiment. Datasets, compiled binaries, checkpoints and raw training logs are supplied separately. Supplementary runtime dependencies retain internal compatibility names; see the [source map](docs/CODE.md).
+The reviewer commands select the accepted implementation for each experiment. Datasets and checkpoints are supplied separately. The unified source addition excludes server binaries and historical runtime logs; it relies on the prepared server environment and is not a validated portable standalone build. Supplementary runtime dependencies retain internal compatibility names; see the [source map](docs/CODE.md).
 
 ## Results and boundaries
 

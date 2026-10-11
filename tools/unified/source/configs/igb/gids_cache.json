@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "path": "${PROJECT_ROOT}/data/igb/gids_cache.f32",
+  "sha256": "826d33c1f86e6254bd1ed210a03535fec9709c503f15128e95649d1b23d8343b",
+  "rows": 26934617,
+  "bytes": 110324191232,
+  "rows_binding": {
+    "path": "${PROJECT_ROOT}/data/igb/gids_cpu_rows.npy",
+    "sha256": "5160c3547eafc9c5d3316252aafc909a29ed6c30850f2617b1bf3c7c4fe1fddc",
+    "bytes": 215477064
+  },
+  "source_sha256": "934e718f98c708a8c6db91be9271ae17e0dab707fa73b10d1e5d56c6ab38af18"
+}

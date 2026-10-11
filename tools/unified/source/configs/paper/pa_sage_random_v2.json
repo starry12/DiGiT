@@ -1,0 +1,126 @@
+{
+  "schema": "digit-pa-sage-reconstruction-v1",
+  "protocol_id": "pa_sage_paper_reconstruction_random_20260920_v2",
+  "status": "preparing_random_order_g2_inputs",
+  "provenance": "Reconstruction authorized by the author; original paper implementation/configuration is unavailable.",
+  "paper": {
+    "path": "atc26-paper1508.pdf",
+    "sha256": "cd75c3a35b577d985a5258e8ad2871dcedeaffeeac8c0f03cd7f8bfec0d7caa5",
+    "targets": [
+      "Figure 8(a), PA: GIDS versus DiGiT",
+      "Table 2, PA/GraphSAGE: GIDS versus DiGiT"
+    ]
+  },
+  "paper_specified": {
+    "dataset": "ogbn-papers100M",
+    "model": "GraphSAGE",
+    "input_dim": 128,
+    "hidden_dim": 128,
+    "layers": 3,
+    "fanouts": [
+      10,
+      5,
+      5
+    ],
+    "batch_size": 1024,
+    "epochs": 20,
+    "group_size": 2,
+    "replication_ratio": 0.2,
+    "gpu_cache_printed": "4 GB",
+    "cpu_cache_fraction": 0.1,
+    "single_ssd": true,
+    "digit_training_locality": "BFS-based training traversal",
+    "digit_gpu_policy": "FIFO",
+    "sampling": "group-aware outermost layer only; inner layers unchanged",
+    "time_metric": "arithmetic mean of 20 complete training epoch wall times"
+  },
+  "paper_evidence": {
+    "training_and_hardware": "PDF page 8, section 5.1",
+    "group_size_and_replication": "PDF pages 6 and 8, sections 4.2 and 5.1",
+    "BFS_and_FIFO": "PDF page 7, section 4.4",
+    "epoch_timing": "PDF page 8, section 5.2.1"
+  },
+  "reconstruction_choices": {
+    "note": "These explicit engineering choices are not claimed to be historical paper settings. Revise protocol ID if changed.",
+    "fanout_order": "forward/model-layer order; sampling expands in reverse [5,5,10]",
+    "gpu_cache_bytes": 4294967296,
+    "gpu_cache_unit_reason": "Interpret 4 GB as 4096 MiB to match the existing GIDS API; PDF does not define GB versus GiB.",
+    "io_page_bytes": 4096,
+    "g2_payload_bytes": 1024,
+    "g2_padding_bytes": 3072,
+    "io_geometry_reason": "PA has 128 float32 values per row, so g2 has only 1024 useful bytes. Retain g2 and pad to existing 4 KiB I/O alignment; do not substitute g8. This geometry may change performance relative to the original implementation.",
+    "graph_policy": "directed OGB source, remove self loops then append one per node; same graph for both arms; inherited engineering choice, PDF normalization unspecified",
+    "num_classes": 172,
+    "aggregator": "mean",
+    "dropout": 0.2,
+    "dtype": "float32",
+    "amp": false,
+    "tf32": false,
+    "optimizer": {
+      "name": "Adam",
+      "kwargs": {
+        "lr": 0.01,
+        "weight_decay": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08
+      }
+    },
+    "optimizer_basis": "Inherited current implementation, not recovered from the paper; no accuracy matching by post-hoc selection.",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "repeats_per_seed": 2,
+    "paired_model_initialization": true,
+    "run_order": "seed-major; repeat0 GIDS then DiGiT, repeat1 DiGiT then GIDS; fresh process for every run",
+    "train_split": "official OGB time split; all 1207179 IDs once per epoch, keep final partial batch",
+    "cpu_cache_rows": 11105992,
+    "cpu_cache_rounding": "floor(floor(111059956*0.1)/8)*8; common whole-page budget, three fewer rows than integer 10 percent budget",
+    "gids_cpu_selection": "existing RevPR page-adapted static cache, explicitly disclosed adaptation, not unmodified upstream GIDS",
+    "digit_cpu_selection": "one seed0 dry-run epoch at target fanouts/group size/order on no-hot bootstrap; count unique logical feature inputs per batch; descending frequency then node ID; freeze hot set and rebuild once",
+    "gids_train_order": "PCG64(SeedSequence([seed,epoch])) permutation of official training IDs",
+    "digit_train_order": "PCG64(SeedSequence([seed,epoch])) permutation of official training IDs",
+    "evaluation": "common uniform logical [10,5,5] traces, seed0, full official validation each epoch and full test after epoch20; save/restore training RNG; final epoch checkpoint, no early stopping",
+    "cache_lifetime": "persistent across training and validation for all20 epochs; no cold-state reset or dropped warmup epoch",
+    "timing": "device-synchronized epoch boundaries; include root-order/dataloader and lazy first-batch initialization; exclude validation/test/setup/preprocessing from mean training epoch; report those separately",
+    "accuracy_reporting": "report each seed/repeat final-test accuracy and all paired differences; average repeats within seed; never force paper point values",
+    "preprocessing_implementation": "Candidate implementation captured in snapshot; full g2 build and semantic equivalence still need verification.",
+    "bfs_enabled": false,
+    "paired_root_order": true,
+    "grouping_owner_order": "descending normalized original degree, tie ascending node ID; exclude hot nodes from group candidates",
+    "replica_priority": "same fixed degree/ID order; eligible primary-owned, non-hot, uncovered neighbors; PCG64(0) state continues from primary pass",
+    "graph_eids": "retain existing normalized OGB EIDs; original CSC and graph construction validated against current source contract"
+  },
+  "paper_reference_only": {
+    "PA_SAGE_test_accuracy_percent": {
+      "GIDS": 65.29,
+      "DiGiT": 65.34
+    },
+    "use": "comparison labels only, never inputs to measured metrics"
+  },
+  "validation_sequence": [
+    "verify snapshot and current source hashes",
+    "official PA split/label identity and current-runner mismatch audit",
+    "small synthetic g2/128D GPU sampling and SAGE optimizer correctness",
+    "prepare target PA g2 layout/random-order/hot-cache/trace and compute live memory admission",
+    "verify new SSD payload then short paired real-data run",
+    "20 epoch paired runs and final test with all failures retained"
+  ],
+  "full_run_missing": [
+    "configuration-driven full PA training adapter",
+    "target g2/128D layout and matching CPU cache profile",
+    "random orders and validation/test traces at10/5/5",
+    "new GPU/host admission",
+    "new SSD payload plus full readback verification",
+    "clean native build provenance"
+  ],
+  "author_decision": {
+    "bfs_enabled": false,
+    "basis": "Explicit user instruction: exclude BFS from performance version because earlier BFS experiments performed poorly.",
+    "paper_difference": "Section4.4 BFS traversal is omitted; both arms use identical random permutations."
+  }
+}

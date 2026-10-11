@@ -1,0 +1,26 @@
+{
+  "canonical_order": {
+    "path": "/home/embed/digit/results/pa_sage_bfs_decay_20261009_v1/runs/20261009-232414-4187589/orders/canonical.npy",
+    "sha256": "ee24e945342cf7285540d97cc1ef94a26195d04a25ee96e3b3371c73dbff591a"
+  },
+  "bfs_source_edges_sha256": "360c510601bae6c5924400bf9ff34e63758d1838a96a46177a313eca72abebd6",
+  "traces": {
+    "valid": {
+      "path": "/home/embed/digit/results/pa_sage_direction_20260921_v2/directed/valid_trace",
+      "sha256": "cdc230b434b254dda488cda52f6d5c144a689084cde33b8758b5f96c49a4fb45"
+    },
+    "test": {
+      "path": "/home/embed/digit/results/pa_sage_direction_20260921_v2/directed/test_trace",
+      "sha256": "0686a986be66a3f8e38d8d25306555efebee61ef4086f2491c29b4ce0b908444"
+    }
+  },
+  "gids_reference": {
+    "report": "/home/embed/digit/results/pa_sage_512b_pair_20260926_v4/native/20260926-141410-2926144/full_gids/report.json",
+    "binary": "/home/embed/digit/candidates/pa_sage_512b_pair_v3/runtime/BAM_Feature_Store/BAM_Feature_Store.so",
+    "binary_sha256": "88cd048d65662dae867160be9beaf250eb2efbe40b0f70212c9913066d126bc9",
+    "historical_epoch_seconds": 18.708190465,
+    "path": "original SAGE, standard sampling, synchronous bounded 512B reads, RevPR"
+  },
+  "bfs_scope": "Canonical undirected training-induced BFS ranking from the same PA source; training remains directed",
+  "accuracy_scope": "Fixed directed standard-uniform traces; original CPU features; no training-cache effects"
+}

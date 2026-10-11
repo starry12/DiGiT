@@ -1,0 +1,40 @@
+{
+  "real": {
+    "source": "/mnt/n0/digit/pa_sage_layout_sweep_20260924_v1/g2_r20/final/bundle/reordered_features.npy",
+    "source_identity": {
+      "device": 66304,
+      "inode": 189333522,
+      "bytes": 211184763008,
+      "mtime_ns": 1790274366429765686,
+      "ctime_ns": 1790274366429765686
+    },
+    "state": "/home/embed/digit/ssd_state/libnvm0.offset3298534883328.json",
+    "state_sha256": "c39accb685a0c8978e10fe4b1a98c428ce8f95e172d967b6b43af8f214b7cdb5",
+    "offset": 3298534883328,
+    "capacity_bytes": 211184762880,
+    "verify_bytes": 211184762880,
+    "header_bytes": 128,
+    "source_full_sha256": "57bc6524d1710a33489969e88ba1b3a04571c02e1be48e8dbbe1cf981324337a",
+    "raw_ssd_writes": false,
+    "feature_semantics": "real logical node features"
+  },
+  "shared": {
+    "source": "/mnt/n3/IGBH/full/processed/paper/node_feat.npy",
+    "source_identity": {
+      "device": 66312,
+      "inode": 80871429,
+      "bytes": 1103241928704,
+      "mtime_ns": 1747904893000000000,
+      "ctime_ns": 1776457306504104276
+    },
+    "state": "/home/embed/digit/ssd_state/libnvm0.offset412316860416.json",
+    "state_sha256": "1950d63e8efc3adb9e7cf528b14e499a08a08516e52e47efa335858a3948a4f9",
+    "offset": 412316860416,
+    "capacity_bytes": 1103241928704,
+    "verify_bytes": 779018964992,
+    "header_bytes": 0,
+    "source_full_sha256": "934e718f98c708a8c6db91be9271ae17e0dab707fa73b10d1e5d56c6ab38af18",
+    "raw_ssd_writes": false,
+    "feature_semantics": "existing IG raw floats viewed as physical 128D rows; proxy features for PA performance only"
+  }
+}

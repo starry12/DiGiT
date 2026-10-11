@@ -1,0 +1,22 @@
+{
+  "schema": "pa-sage-512b-padding-fix-v2",
+  "parent_sha256": "5e3fdec1018d5d6eed76e273c51fc7aeee36e5a5abb0157a62ea39ff6edfd7b6",
+  "files": {
+    "candidates/pa_sage_512b_pair_v2/start.py": "a4e2305a9984a57c391ad6961af2260c3a90ec7f1703911383397a9c103fef99",
+    "candidates/pa_sage_512b_pair_v2/freeze.py": "2f7abaa3c9cd40db001285e3a3cdc077274d24021ec2913b48ee84c472a8ae06",
+    "candidates/pa_sage_512b_pair_v2/tests.py": "f6f6d77ff424283c66ea9da4cdcbc620ee421ac77b0b4b1798c9c31a569629f4",
+    "candidates/pa_sage_512b_pair_v2/control.py": "5c66208ca1cf9349e7145e1e4f9ee8f04bfaac8a0de23a0b10dfa7cbfc22f630",
+    "candidates/pa_sage_512b_pair_v2/payload.py": "fe7602444ee4f02bb89e8c588e41b6d59456280e852a48a4b59c88cccbd6b117",
+    "candidates/pa_sage_512b_pair_v2/common.py": "3466ba564f2b6be85514fd3ba09a72c5d2bf2e0a06822a2c5f0cdc9fae829648",
+    "candidates/pa_sage_512b_pair_v2/protocol.json": "b9cd7b246ce2e7de91960ddd775fc280a5a9e28920314fd4275f0e073126dfc7",
+    "candidates/pa_sage_512b_pair_v2/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "candidates/pa_sage_512b_pair_v2/worker.py": "c3bcafa42fcc5200cb524d128e01c94af444768aa323aaa59eead2c7d2034f02",
+    "candidates/pa_sage_512b_pair_v2/README.md": "c80650830286fad6a9232038d602081f03d3562d81b1ce21fd92cc45bc2a3073"
+  },
+  "evidence_sha256": {
+    "inputs.json": "117d95c2d70a6e9e33d55ddec0748cbd2ff5aeab349f205daeaab36df730b97c",
+    "cpu_checks.json": "6b5349852a25e6d595019fb7c31ffb4ff0464424ef904853cb2f4763b3b299cb",
+    "gpu_checks.json": "9b12fddd7633fde9c35770dc381e404fd386dc818f178c431bc46bd646c32e6b"
+  },
+  "created_unix": 1790400530.9058502
+}

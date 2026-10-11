@@ -1,0 +1,38 @@
+{
+  "dataset": {
+    "name": "IGB-HOM",
+    "size": "full",
+    "num_nodes": 269346174,
+    "source_edges": 3727095830,
+    "num_edges": 3996442004,
+    "classes": 19,
+    "feature_dim": 1024,
+    "feature": {
+      "path": "${IGB_SOURCE}/node_feat.npy",
+      "device": 66312,
+      "inode": 80871429,
+      "bytes": 1103241928704,
+      "mtime_ns": 1747904893000000000,
+      "ctime_ns": 1776457306504104276,
+      "format": "raw_row_major_fp32_offset0",
+      "shape": [
+        269346174,
+        1024
+      ],
+      "sha256": "934e718f98c708a8c6db91be9271ae17e0dab707fa73b10d1e5d56c6ab38af18"
+    },
+    "labels": {
+      "path": "${IGB_SOURCE}/node_label_19.npy",
+      "device": 66312,
+      "inode": 80871427,
+      "bytes": 1077384696,
+      "mtime_ns": 1747904894000000000,
+      "ctime_ns": 1776448175925358598,
+      "format": "raw_fp32_integral_offset0",
+      "shape": [
+        269346174
+      ],
+      "sha256": "7b91dab02e48aa3fe8cdc740cc04e9e0a249359c501ff5cf8b6003bcb82180cb"
+    }
+  }
+}

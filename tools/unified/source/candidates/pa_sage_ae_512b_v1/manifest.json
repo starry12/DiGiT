@@ -1,0 +1,33 @@
+{
+  "files": {
+    "candidates/pa_sage_ae_512b_v1/start.py": "a80423f78af90aa88710ed3d0c6f47d15f582c29751cc5d6c854b1f85dc1e663",
+    "candidates/pa_sage_ae_512b_v1/controller.py": "7af44898f756e18df79fe9c55b6a1233d642dc25c0697a53d6492120196c6abe",
+    "candidates/pa_sage_ae_512b_v1/freeze.py": "31cb25a3e0d0fc16c5a0706d1e4e7c2e365526caa875d8737ebfa49fef24cd1c",
+    "candidates/pa_sage_ae_512b_v1/tests.py": "b31f5f48958acb97dffed234d7e7a1a33c46b6bb7f6865f9f77493b3bdae488a",
+    "candidates/pa_sage_ae_512b_v1/validation.py": "d20974c1820fb5476b325912d690d5d746ae358c967c790201149505ca7abddf",
+    "candidates/pa_sage_ae_512b_v1/training_loop.py": "ee37cbf24d8f8e2d019fcda6088b2f42d87e2ecd86ccde92b6eefc5c41972f26",
+    "candidates/pa_sage_ae_512b_v1/admission.py": "2b06834bb6ee3f06e9ff12aecaac6d022655bb6ba6538eaf9863f656170cc632",
+    "candidates/pa_sage_ae_512b_v1/loader.py": "6e5bebde9c1d9389c5ca1b8946635f51a527b22bbf578983f164ad7747ebc492",
+    "candidates/pa_sage_ae_512b_v1/common.py": "97a6d79c34274ef38143ebdac5018a425ad276cd0f5b75fa1d6ecf624b57115d",
+    "candidates/pa_sage_ae_512b_v1/prepare.py": "f0edde1ce80dc2555b126b6ab3309973142e19f0d7c01ccc736575d1511583d2",
+    "candidates/pa_sage_ae_512b_v1/cache.py": "29e517d8b1500d52d06f6a62082f14243d8d4c19584b40eeaaee4f8b7800f4b7",
+    "candidates/pa_sage_ae_512b_v1/protocol.json": "58edf1fcb2b58a4707f0e2adb688f417e3dbc27bad133a292636218a17dffede",
+    "candidates/pa_sage_ae_512b_v1/__init__.py": "46f2d2f2947dc8e4c2a630ac23e49f2eddab8c9a4e9b50082f6d3294b49e2068",
+    "candidates/pa_sage_ae_512b_v1/graph_io.py": "c084cc996072e37b53c0fe3c12315acc2bac3350e3200b9d484e2953d6874937",
+    "candidates/pa_sage_ae_512b_v1/accounting.py": "0b016e48cc0eeca377c8b11918b30b1ac82dd1298231ad8476b4d90e8f7faa40",
+    "candidates/pa_sage_ae_512b_v1/worker.py": "11a63a49fd9142f14490d3453d27ee9e9a65a15de4aaf7b705dfcc215aafe2ea",
+    "candidates/pa_sage_ae_512b_v1/README.md": "cccfd2fd2f62d659d8a72b15529eaffeae3f313b760a188eaf83cfc55dab5c9a",
+    "candidates/pa_sage_512b_pair_v3/runtime/GIDS/GIDS.py": "f58f0b9c07e209bb3b98e3bb5c3b9466de9099ceb7a046aef38d19f91a83cd69",
+    "candidates/pa_sage_512b_pair_v3/runtime/GIDS/breakdown.py": "4181b70224bfc81be46ef044bcf88e76352a83fe831a577ab13e6bf162ad8b7d",
+    "candidates/pa_sage_512b_pair_v3/runtime/GIDS/cache_policy.py": "67576fb3165764f120e296bf1514c8a68ba2f33d97fd47ae63a23634b201752d",
+    "candidates/pa_sage_512b_pair_v3/runtime/GIDS/feature_rows.py": "50e9fc26024cdb2e90a75141d1a4a305bac4eabd2210a282d806013118e79d2e",
+    "candidates/pa_sage_512b_pair_v3/runtime/GIDS/__init__.py": "1db29dd4e06b72cfcea7b6319bc8f8e3a07606283c0db44516a20ac720bb8931",
+    "ae/igb/bounded_io.py": "23040e93b58f4f6ad26902b9a01abea95df7e181faf8cc210c5aa8d2d8a52ef5",
+    "candidates/pa_sage_revpr_node_v1/admission.py": "c147cd8e374455b7449544828d10812327c257456e8360c402b3faf84d3fd2cd",
+    "candidates/pa_sage_revpr_node_v1/common.py": "9b515dcbb9eeb2e3f6e899e1fe89294552a0d5e4f5759717fda016c0334b4137",
+    "candidates/pa_sage_mixed_bfs_v5/admission.py": "c5e6c62dc3438771c90af37d24870c640d4b0b5a21a320221d1658f92e424e85"
+  },
+  "ae_parent_sha256": "a6049d5c8a7580a923cc156400edcee58686196de83e325e6b1ea533102fefe2",
+  "mixed_backend_candidate_sha256": "bee5b771c3a1ee9ef5258aca371f9d8807605dd6cd2dc54d1925a014ef8bb293",
+  "deployed_protocol_sha256": "52adb154235ff4995d8d4d4793ebfac8000eb70bbc769cd262158645681eb471"
+}

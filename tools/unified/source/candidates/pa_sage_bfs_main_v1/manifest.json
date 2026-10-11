@@ -1,0 +1,38 @@
+{
+  "schema": "digit-pa-sage-revpr-bfs-main-sources-v1",
+  "files": {
+    "README.md": "2ac921322b37d45145dd5451f22b1a7730a2224ce0cb9b97f87c834860bd353e",
+    "__init__.py": "348fed1b71ec0599f274112252d6f5c9d50ee100f279506be0d3d460f1a84dd7",
+    "admission.py": "f5dbbb2356f5a958551838a2b70f87c53077948749f3383cb232b33dedae8b62",
+    "cache.py": "6c4cd172b5899526f2f497cb1f7238f750805f10c67dcccd132123a037022e77",
+    "check.py": "50bcc7a2490882065a699eabcb365e42b12cbac19ffea2b5ee17fb19bbf2172b",
+    "common.py": "ab0a5b7f2f08f3c7acf41bd98d38b3480078a96744abf17ec5cf80d5483aafd8",
+    "controller.py": "8d135f36ee284a06f079bdb9a4b885c782164dceb10ba6e0e7baa0364ad56d7e",
+    "evaluation.py": "ffe45ef2a764833c47c509a1df511eda3aa397f0922d065727c1f6e84678b941",
+    "order.py": "89277dd45d19bab719ad5566b0ccacc411126b5915c95dcf3468784a12f4b4b1",
+    "prepare.py": "ecc1f898cdbca27d8a09f422d50defb8cda86d8098428f955948c14c52bfa3f7",
+    "protocol.json": "b123f4cab5dc905f2c76cd700db0a1b1ed5c745e4f762a1448ba653560d72012",
+    "start.py": "38bf9009bbfb0e7e297e960659d13f7c4ae41ee6ee0329c3eec7f8b66f8f88ba",
+    "status.py": "ed66861582f19514daecb89514b1f4b8d7c0dbfe2a6ffb9630e6487f382fbfe4",
+    "tests.py": "c057ed95b07811e68bab5ac65d37bc852a44231385d08a7dd9dec4d9c3f6806b",
+    "training_loop.py": "846672f9f41c16d9dd7394fb398d1bb5394109a0875a6776e9dee3feaaccadaa",
+    "validation.py": "c653809ac1c1c422ed74ba36d03afb674c61d3c442613118cb0efb4689f7bd00",
+    "worker.py": "f6dd41681551f6f9de6c221cacbc7d287abc4ceef3ba5c887000686b063daff3"
+  },
+  "dependencies": {
+    "ae/pa_sage/common.py": "03a0207c43483afbb0bc47b13fbc4b9ece27a44fc5e5d96bf98f95338afe8562",
+    "ae/pa_sage/evaluation.py": "897a7b4ff05ef0da5d4059233daa558de9673541cf384699056ba47d5eb99561",
+    "ae/pa_sage/full_validation.py": "f719f898a74d1d1b2ee7a5db80dc9743dd521f5f36db182d340512ec36515805",
+    "ae/pa_sage/gpu_monitor.py": "203e555a95a5520f9b718b56c0ace652c14bdab6b0c6e21caa7679016759889a",
+    "ae/pa_sage/monitor_control.py": "5e5643f330cdfcba421f5672292dbec4f99be7fd7753815ab3c66a0f7fe3e8a0",
+    "ae/pa_sage/observations.py": "aca2d6dfe4dcc713fb09173401556e643ca52e8f03aa13c0094381eb71ebda54",
+    "ae/pa_sage/trace_cache.py": "48fb4adda0aca26c7c2ce2191674d5aca23faa4c0fe5aef6b71b6c66b3de1f90",
+    "candidates/pa_sage_cache_v1/selection.py": "78fc0b20af08a3a408638591174fbff497f5b373af3df033c929aa17f912b567",
+    "candidates/pa_sage_revpr_node_v1/protocol.json": "fe8f4475e100938b51f7264167b7d3788730bfb31ce36af98d25b37c10dbee42",
+    "submission/v2/common.py": "ddd01971c13876c0c28643460ad6faf4a2cee55749caa1797c75ee0450275471",
+    "submission/v2/monitor_policy.json": "7b1d682d385693871041e7f895941547a45468d4125c55f6d4ad4bf92575af23",
+    "submission/v2/review.py": "4c7fafe6fc86819247dc52d09c866baba9a0846100533a0e668ccbea60be3e31"
+  },
+  "parent_candidate_sha256": "a6049d5c8a7580a923cc156400edcee58686196de83e325e6b1ea533102fefe2",
+  "exact_candidate_sha256": "2fa25aaa0d34ec77c46fe1bfe169577d546b152aac1d18acc9cf8325337d7a6c"
+}

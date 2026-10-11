@@ -1,0 +1,24 @@
+{
+  "hot_sets": {
+    "gids": {
+      "path": "/mnt/n0/digit/uks_prepare_20260929_v3/rank/hot_nodes.npy",
+      "sha256": "71da4f76833dc1e5b316c85bb74a573cea53a4fba7e01f27904744ad16a71dbe"
+    },
+    "digit": {
+      "path": "/home/embed/digit/results/cache_epoch_20261010_v1/runs/20261010-145329-555883/uks_digit/full_epoch_hot.npy",
+      "sha256": "1a1e5884ee3ff5e099205710a9361a1f9d345fbaec224f7db8fb00d65a36a73b"
+    }
+  },
+  "canonical": {
+    "path": "/mnt/n0/digit/uks_freq_bfs_20260930_v1/canonical.npy",
+    "sha256": "30b25bb0729c0496739bfc65f596febbee0ebfaf3af0db8342ee1fe62205daf9"
+  },
+  "training": {
+    "path": "/mnt/n0/digit/uks_prepare_20260929_v3/synthetic/train.npy",
+    "sha256": "57037d506a771f2e393ecfb27eacc913cd77dc134ebe051dab06e048c5d0ee75"
+  },
+  "nodes": 133633040,
+  "train_count": 13363304,
+  "roots_sha256": "bf26342f02e50e7bd0a982a0a19ffa8c0472fb65cc9c3f279b03a357f81605a3",
+  "initial_model_sha256": "8b2cb1e98c44fa6e5444e12b9322386c1330aed23a395b94ac9712678bfe5679"
+}

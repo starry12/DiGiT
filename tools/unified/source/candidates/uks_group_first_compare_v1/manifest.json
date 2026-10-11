@@ -1,0 +1,24 @@
+{
+  "weighted_source": "9f5ca6edb63535c4905e30b0b01a9109c863f8389fbb5077f0142141b58d44a5",
+  "first_source": "5adb65ebd1d6c72952d59f1c2e47410fdb421341ceb36d3070c3407e8e65a659",
+  "files": {
+    "start.py": "3d7afce3d3a9a04934bfd80b5965c242b874d43bd148dc27ea2bc567f40f0029",
+    "freeze.py": "48bf2959adbb9561a18b319d6f64d58268400c0d01d51588c2344b4f8338b217",
+    "gpu_check.py": "314be7d59388dcb981bd5e602ec9024e7e6fd777ccff9bbb03cf98bbca91ac37",
+    "tests.py": "69bc17ebdda3c877a2e6124aa7becd9c76c904ac47046ae17bb3c288d67ec37e",
+    "checks.py": "40f31581a1dcb075b3a40095f445e803f6cd4b3ca27e57c11157380f085b681c",
+    "resources.py": "760fb7a64fdf36f250f7b1e3bb846b495463facfab1b07ec838071fad2dc35d9",
+    "common.py": "6acbaf384aab1bc8f3682302b1bbbd9208d6a73047e9ee836b047bd663e9d24d",
+    "__init__.py": "63e489e59ff731e1c4a60db26ae601da9256b1a51e2d11de8467f396b11b31a4",
+    "tests_extra.py": "4ada5ab1dc6346df4a8f1cdf5684a20f8a5c02f8988cad68d4aa0996e69d2e91",
+    "sampling.py": "97f45fdc28c7c4717372edd26ff6e6b34ee21c548b775936aecba522c1c5fab4",
+    "report.py": "aaa8e4be688fc6221b6c9fc15da1a10edc97f2ef67f65f6f5a8fe217e3af7e7f",
+    "worker.py": "630dadd59c36db3ccdfb7c6155f62fd9d071b9008ed3c5beb86a26b9b6457e24",
+    "README.md": "6516740241dcd36a886f790b400310ccdcde6bb68a146219b49338cef358d433"
+  },
+  "dependencies": {
+    "candidates/pa_sage_mixed_group_v1/queue.py": "4c98e64a7a24da592f643c233ef86fe405d8ef8bccda0f96ae15fb4e2ba516e5",
+    "candidates/uks_group_first_v1/runtime/UKSGroupFirstCUDA.so": "3d619ac77f6e87be87d500f3a3c859f40d269cda103870bd4508fc680ff3089f",
+    "candidates/uks_group_first_v1/runtime/build_receipt.json": "44936f5532c4b0488db88ad4f2053334e68df48956a2b666726a451826f21918"
+  }
+}

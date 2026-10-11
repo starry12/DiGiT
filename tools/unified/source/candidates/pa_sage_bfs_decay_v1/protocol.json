@@ -1,0 +1,181 @@
+{
+  "schema": "digit-pa-sage-bfs-decay-factorial-v1",
+  "selected_config": "candidates/pa_sage_selected_v1/config.json",
+  "seed": 0,
+  "epochs": 20,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "batch_size": 1024,
+  "optimizer": {
+    "name": "Adam",
+    "kwargs": {
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    }
+  },
+  "hidden": 128,
+  "classes": 172,
+  "layers": 3,
+  "dropout": 0.2,
+  "graph": {
+    "nodes": 111059956,
+    "edges": 3342431700,
+    "policy": "Preserve original nonself multiedges; bidirectional appends reversed edges without dedup; exactly one self loop per node in both arms.",
+    "arm": "bidirectional",
+    "csc_sha256": {
+      "indptr": "7d5e673666a047d439ffdbded926d637634f133fbc83d29af74bb7bac20b3b63",
+      "indices": "1276664d1cca1d5aa81924c39fb9f203f36519d1611753fc0b4df2cca7768c90",
+      "eids": "6bda924d3fb58aa9d40e97f8166ddfa2a6c20c24ad3201de1e21871deedd5ece"
+    }
+  },
+  "gpu_cache_bytes": 4294967296,
+  "cpu_cache_rows": 11105992,
+  "base_layout": "data/papers_g2_random_v2",
+  "data": "data/pa_sage_bidir_native_v1",
+  "metadata_mode": "gpu_i32_uva_eid64",
+  "bfs_enabled": "per_arm",
+  "layout_policy": "Retain frozen g2 groups, feature storage and CPU selection; append all reverse edges as raw neighbors. Verify exact expanded bidirectional multigraph.",
+  "model_policy": "Fresh identical seed-0 model and Adam for each arm; no checkpoint selection; test epoch20 exactly once",
+  "measurement": "Training and BFS preparation timed separately",
+  "smoke_epochs": 2,
+  "smoke_batches": 2,
+  "evaluation": "validation_each_epoch_final_test_once",
+  "warmup_batches": 0,
+  "scope": "Single seed-0 3x2 factorial: random / BFS chunks 64 / BFS chunks 16, each with constant / predeclared epoch-step LR; all six arms rerun for 20 epochs",
+  "ablation_order": [
+    "digit_random_constant",
+    "digit_mix64_constant",
+    "digit_mix16_constant",
+    "digit_random_decay",
+    "digit_mix64_decay",
+    "digit_mix16_decay"
+  ],
+  "arms": {
+    "digit_random_constant": {
+      "label": "digit_random_constant",
+      "layout": true,
+      "group_sampling": true,
+      "mixed_io": true,
+      "gpu_policy": "fifo",
+      "cpu_cache_rows": 11105992,
+      "cpu_mapping": "page",
+      "backend": "original",
+      "bfs_enabled": false,
+      "order_policy": "random",
+      "chunk_size": null,
+      "lr_schedule": "constant"
+    },
+    "digit_mix64_constant": {
+      "label": "digit_mix64_constant",
+      "layout": true,
+      "group_sampling": true,
+      "mixed_io": true,
+      "gpu_policy": "fifo",
+      "cpu_cache_rows": 11105992,
+      "cpu_mapping": "page",
+      "backend": "original",
+      "bfs_enabled": true,
+      "order_policy": "bfs_mixed_chunks",
+      "chunk_size": 64,
+      "lr_schedule": "constant"
+    },
+    "digit_mix16_constant": {
+      "label": "digit_mix16_constant",
+      "layout": true,
+      "group_sampling": true,
+      "mixed_io": true,
+      "gpu_policy": "fifo",
+      "cpu_cache_rows": 11105992,
+      "cpu_mapping": "page",
+      "backend": "original",
+      "bfs_enabled": true,
+      "order_policy": "bfs_mixed_chunks",
+      "chunk_size": 16,
+      "lr_schedule": "constant"
+    },
+    "digit_random_decay": {
+      "label": "digit_random_decay",
+      "layout": true,
+      "group_sampling": true,
+      "mixed_io": true,
+      "gpu_policy": "fifo",
+      "cpu_cache_rows": 11105992,
+      "cpu_mapping": "page",
+      "backend": "original",
+      "bfs_enabled": false,
+      "order_policy": "random",
+      "chunk_size": null,
+      "lr_schedule": "decay"
+    },
+    "digit_mix64_decay": {
+      "label": "digit_mix64_decay",
+      "layout": true,
+      "group_sampling": true,
+      "mixed_io": true,
+      "gpu_policy": "fifo",
+      "cpu_cache_rows": 11105992,
+      "cpu_mapping": "page",
+      "backend": "original",
+      "bfs_enabled": true,
+      "order_policy": "bfs_mixed_chunks",
+      "chunk_size": 64,
+      "lr_schedule": "decay"
+    },
+    "digit_mix16_decay": {
+      "label": "digit_mix16_decay",
+      "layout": true,
+      "group_sampling": true,
+      "mixed_io": true,
+      "gpu_policy": "fifo",
+      "cpu_cache_rows": 11105992,
+      "cpu_mapping": "page",
+      "backend": "original",
+      "bfs_enabled": true,
+      "order_policy": "bfs_mixed_chunks",
+      "chunk_size": 16,
+      "lr_schedule": "decay"
+    }
+  },
+  "page_bytes": 4096,
+  "window_buffer": false,
+  "accumulator": false,
+  "validation_trace": "results/pa_sage_direction_20260921_v2/bidirectional/valid_trace",
+  "test_trace": "results/pa_sage_direction_20260921_v2/bidirectional/test_trace",
+  "accuracy_reporting": "All epoch validation, final epoch20 validation and test, signed deltas; no best-checkpoint or test-driven selection",
+  "bfs_mixing": {
+    "chunk_sizes": [
+      64,
+      16
+    ],
+    "rotate_each_epoch": true
+  },
+  "lr_schedules": {
+    "constant": {
+      "milestones": [],
+      "gamma": 1.0
+    },
+    "decay": {
+      "milestones": [
+        10,
+        15
+      ],
+      "gamma": 0.5
+    }
+  },
+  "schedule_policy": "Apply initial_lr * gamma**completed_milestones before each epoch; decay starts at one-based epochs 11 and 16; no validation/test feedback",
+  "poll_seconds": 60
+}

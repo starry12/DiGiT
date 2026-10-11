@@ -1,0 +1,28 @@
+{
+  "files": {
+    "freeze.py": "408b9477f64c49f2cc88f0f9d125a103e9e225918170a69ae8ab6d06b1795d01",
+    "build.py": "0e0b333d141e4caa78ce74e7dc30b18dc0e4a1c6775fe6032b8a819ae4584d88",
+    "tests.py": "61712516d0ebc272d26e73c95b0c5aabb59fba5b1cfcf83a313f060437b76858",
+    "oracle.py": "9b6ac674c8e01d33518f61a42f83ce431395244533e6adc5d976b7dcb48c8d68",
+    "common.py": "6ea3e9994c83a0a147acd17111077d6c23f3819d52401fde49dd174aaf0db37c",
+    "prepare.py": "52a9ae1548815240a8c214d8e99c9cb7a96f2a41b9d972c8db4d0787cec728a5",
+    "__init__.py": "0a9d20b48ed276c1ddd81531d31c5b9fc57bf2b72d90682f53f9e12470df0fec",
+    "overlay.py": "4422c57f5e8fe0b80d4baf7202d1c30d6e00894063f9879636ba16f24c550b91",
+    "matching.h": "f0ef37d4deb680e40ce31914e0a6fd04bcd8a7e25e017630c1af54d0797b5a94",
+    "reuse.cpp": "8ec13eede07e5ebe3ec95cf69ecd350e8b83aba774ef0e837c461f923367b456",
+    "README.md": "a953e4b2b8c9509bb8e3bbb764c7eb3d67d46c7aea34b85356ccaaf39e549a3c",
+    "protocol.json": "ccc3959be081471ccb6853d2dd16848eafcdb838e800392066b22927da283fdc"
+  },
+  "dependencies": {
+    "/home/embed/digit/candidates/uks_group_reuse_v1/oracle.py": "c7b89b2c7f185843969230822ff790f292fc85e4f109a86e0a4f807f7025cb2a",
+    "/home/embed/digit/candidates/uks_freq_bfs_retry_v1/manifest.json": "e5895a2cccadb62c5bc349aa6e5a403ceba46a7159a4e80e53ba0aa94496b8d1",
+    "/home/embed/digit/candidates/uks_merge_audit_v1/audit.py": "afb33164d5dc59dd7cc8d59674ccaaba1aa29f88806e020904997d8d563b092d",
+    "/home/embed/digit/candidates/uks_mixed_1k2k_v1/manifest.json": "823f59eb24034fa3e2232759991001e20ac9b574001a6008f9eef22d31ada072",
+    "/home/embed/digit/candidates/uks_group_incremental_v1/manifest.json": "e7500be3f3470d81f6fca24cff3a414d06ffe8d8e7c17b7d367e795240c678d5",
+    "/home/embed/digit/results/uks_native_20260929_v1/binding.json": "d41ac93d92f70eef541220aab60ec5702d4aa280ac01b54ff9a35fee434a8064",
+    "/home/embed/digit/results/uks_freq_bfs_20260930_v1/bfs_receipt.json": "2b2838c30ce9bc77905c8bbcc04dcb61c07b507ee9d7d2e835cfe8cc2bc2d0d2",
+    "/srv/digit-ae/admin/identity_v1/stable_identity.py": "30a5f41669bb20128f3eab96336c842f6fbb37a79fd548adcce3f4f290481055",
+    "/srv/digit-ae/admin/identity_v1/registry.json": "e551309d1a002fecadc22490888d3392ecc36236f76a2bc8e0bdc17dbbcbf47a"
+  },
+  "builder_sha256": "303ed0fdcce34f0c4481a3fcae71245111016786d19826e3b26aba6cee3b518b"
+}

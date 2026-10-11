@@ -1,0 +1,46 @@
+{
+  "title": "DiGiT: Co-Designing GNN Algorithms and Storage I/O for Out-of-Core Training Acceleration — Artifact",
+  "upload_type": "software",
+  "version": "ae-20261011-v2",
+  "publication_date": "2026-10-11",
+  "creators": [
+    {
+      "name": "Qian Wei"
+    },
+    {
+      "name": "Yi Li"
+    },
+    {
+      "name": "Junchi Ren"
+    },
+    {
+      "name": "Zehao Chen"
+    },
+    {
+      "name": "Zhaoyan Shen"
+    },
+    {
+      "name": "Dongxiao Yu"
+    },
+    {
+      "name": "Bingzhe Li"
+    }
+  ],
+  "access_right": "open",
+  "license": "mit",
+  "keywords": [
+    "GNN",
+    "out-of-core training",
+    "storage I/O",
+    "artifact evaluation",
+    "ATC 2026"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/starry12/DiGiT/tree/ae-20261011-v2",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "description": "<p>Source artifact for DiGiT: Co-Designing GNN Algorithms and Storage I/O for Out-of-Core Training Acceleration.</p><p>This version adds the current unified GraphSAGE implementation and server entry points for PA, IG, UKS, UKL and CL. Modes include one short comparison, five short comparisons summarized by their median paired speedup, and 20 complete training epochs per arm. Only PA full20 reports validation and final test accuracy. The original PA main and ablation entries are retained.</p><p>Validation status is explicit: PA has a completed BFS256 full20 comparison; UKS has a completed short1 pair; IG has a completed native run with an offline accounting correction. UKL has a successful DiGiT-only run, while complete paired validation remains pending. CL preparation and complete paired validation are pending. Publishing code or opening a reviewer entry does not claim acceptance of every dataset or mode. Included reference records are historical evidence, not fresh validation of the new global entry.</p><p>The package includes source-file hashes, reviewer commands, and a feature checklist. Author-owned code is MIT licensed; retained third-party material and datasets remain under their respective terms. Raw graphs, feature payloads, checkpoints, server binaries, historical runtime logs and credentials are excluded from the new source addition. The unified snapshot retains server-specific paths and depends on the prepared server environment and inputs; a fresh standalone rebuild and full download-to-layout-to-SSD pipeline have not been validated.</p>"
+}

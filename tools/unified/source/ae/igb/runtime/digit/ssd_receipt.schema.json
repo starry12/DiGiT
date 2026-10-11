@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gids.local/schemas/digit-ssd-payload-receipt-v2.json",
+  "title": "DiGiT verified SSD payload receipt v2",
+  "type": "object",
+  "required": [
+    "receipt_schema_name",
+    "receipt_schema_version",
+    "status",
+    "artifact",
+    "artifact_schema_version",
+    "artifact_geometry_sha256",
+    "runtime_geometry",
+    "runtime_geometry_sha256",
+    "feature_file_sha256",
+    "payload_bytes",
+    "storage_rows",
+    "page_size",
+    "device",
+    "device_offset_bytes"
+  ],
+  "properties": {
+    "receipt_schema_name": {"const": "digit-ssd-payload-receipt"},
+    "receipt_schema_version": {"const": 2},
+    "status": {"enum": ["written_unverified", "verified"]},
+    "artifact": {"type": "string", "minLength": 1},
+    "artifact_schema_version": {"type": "integer", "minimum": 2},
+    "artifact_geometry_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "runtime_geometry": {"$ref": "io_geometry.schema.json"},
+    "runtime_geometry_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "feature_file_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "payload_bytes": {"type": "integer", "minimum": 1},
+    "storage_rows": {"type": "integer", "minimum": 1},
+    "page_size": {"type": "integer", "minimum": 1},
+    "device": {"type": "string", "minLength": 1},
+    "device_offset_bytes": {"type": "integer", "minimum": 0}
+  }
+}

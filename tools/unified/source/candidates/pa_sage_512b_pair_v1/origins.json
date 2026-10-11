@@ -1,0 +1,6 @@
+{
+  "page_geometry_parent": "/home/embed/digit/candidates/pa_sage_legacy_align_v1",
+  "row_alias_parent": "/home/embed/digit/candidates/pa_sage_ablation_cache_v3",
+  "sampler_parent": "candidates/pa_sage_bidir_native_v2",
+  "composition": "Legacy 512-byte PRP/cache geometry plus previously accepted exact logical CPU row mapping; both arms use the same newly compiled backend"
+}

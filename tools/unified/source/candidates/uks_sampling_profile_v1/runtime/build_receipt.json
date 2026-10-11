@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "source_sha256": "c9c087cb6588b08dd31a730482d9ed72d7e79eb3a2cd5debb13ea337176b988d",
+  "binary_sha256": "a288c466e43235f429212e4676045f11f2e1eba41440b91ba208d8dbe20968b1",
+  "kernel_bodies_unchanged": true,
+  "command": [
+    "/usr/local/cuda-12.4/bin/nvcc",
+    "-std=c++14",
+    "-O3",
+    "-arch=sm_89",
+    "-shared",
+    "-Xcompiler",
+    "-fPIC",
+    "-I/home/embed/miniconda3/envs/gids/include/python3.8",
+    "-I/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/pybind11/include",
+    "/home/embed/digit/candidates/uks_sampling_profile_v1/native/sampler.cu",
+    "-o",
+    "/home/embed/digit/candidates/uks_sampling_profile_v1/runtime/UKSSamplingProbeCUDA.partial.so"
+  ],
+  "finished_unix": 1790693504.9100962
+}

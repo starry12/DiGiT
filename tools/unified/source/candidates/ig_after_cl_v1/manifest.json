@@ -1,0 +1,11 @@
+{
+  "schema": "digit-ig-after-cl-queue-v1",
+  "ig_sha256": "1505dc4744a73d8959fba337bf2b8699a593469231c226eec3d7b91927733a4c",
+  "resume_sha256": "0763e75241836bea2d6289a4f9baf6e4b8c1017f6af9dfcd3d9811f687b1b728",
+  "files": {
+    "README.md": "a1aeabc4ed1b98d98763a47786ad4a278da9791205cfdde49d49f4e99adad005",
+    "__init__.py": "4174da077e8d6ec08fda4c56226b5fff61638010dcf81b1f3b36c4dfa9ba52b1",
+    "start.py": "ff0341ee622d2fefd502c7be1a1e0ec657da11c8d387402c9f866d900a803033",
+    "tests.py": "b4bc1675325cedde7db9a760b3e1aee7dd6a3dbe0e7c05d237dd783b3e644705"
+  }
+}

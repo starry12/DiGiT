@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gids.local/schemas/digit-artifact-bundle-v1-v2.json",
+  "title": "DiGiT artifact bundle manifest v1/v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_name",
+    "schema_version",
+    "created_at_utc",
+    "dataset",
+    "feature",
+    "grouping",
+    "io",
+    "graph",
+    "files",
+    "source",
+    "metadata"
+  ],
+  "properties": {
+    "schema_name": {"const": "digit-artifact-bundle"},
+    "schema_version": {"enum": [1, 2]},
+    "created_at_utc": {"type": "string", "format": "date-time"},
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "size", "num_nodes", "num_edges"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "size": {"type": "string", "minLength": 1},
+        "num_nodes": {"type": "integer", "minimum": 1},
+        "num_edges": {"type": "integer", "minimum": 0}
+      }
+    },
+    "feature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dim", "dtype", "row_bytes", "num_storage_rows", "padding_node_id"],
+      "properties": {
+        "dim": {"type": "integer", "minimum": 1},
+        "dtype": {"type": "string", "minLength": 1},
+        "row_bytes": {"type": "integer", "minimum": 1},
+        "num_storage_rows": {"type": "integer", "minimum": 1},
+        "padding_node_id": {"const": -1}
+      }
+    },
+    "grouping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "group_size",
+        "replication_ratio",
+        "num_groups",
+        "num_primary_groups",
+        "num_replica_groups",
+        "supernode_id_start"
+      ],
+      "properties": {
+        "group_size": {"type": "integer", "minimum": 1},
+        "replication_ratio": {"type": "number", "minimum": 0},
+        "num_groups": {"type": "integer", "minimum": 0},
+        "num_primary_groups": {"type": "integer", "minimum": 0},
+        "num_replica_groups": {"type": "integer", "minimum": 0},
+        "supernode_id_start": {"type": "integer", "minimum": 1}
+      }
+    },
+    "io": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["page_size", "alignment_rows"],
+      "properties": {
+        "page_size": {"type": "integer", "minimum": 1},
+        "alignment_rows": {"type": "integer", "minimum": 1}
+      }
+    },
+    "graph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["format", "num_logical_nodes", "num_supernodes", "num_graph_nodes"],
+      "properties": {
+        "format": {"const": "csc"},
+        "num_logical_nodes": {"type": "integer", "minimum": 1},
+        "num_supernodes": {"type": "integer", "minimum": 0},
+        "num_graph_nodes": {"type": "integer", "minimum": 1}
+      }
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "group_members",
+        "group_owner",
+        "group_storage_base",
+        "storage_to_node",
+        "node_to_primary_row",
+        "supernode_to_group",
+        "reordered_indptr",
+        "reordered_indices",
+        "reordered_features"
+      ],
+      "properties": {
+        "group_members": {"$ref": "#/$defs/file"},
+        "group_owner": {"$ref": "#/$defs/file"},
+        "group_storage_base": {"$ref": "#/$defs/file"},
+        "storage_to_node": {"$ref": "#/$defs/file"},
+        "node_to_primary_row": {"$ref": "#/$defs/file"},
+        "supernode_to_group": {"$ref": "#/$defs/file"},
+        "reordered_indptr": {"$ref": "#/$defs/file"},
+        "reordered_indices": {"$ref": "#/$defs/file"},
+        "reordered_features": {"$ref": "#/$defs/file"}
+      }
+    },
+    "source": {"type": "object"},
+    "metadata": {"type": "object"},
+    "io_geometry": {"$ref": "io_geometry.schema.json"},
+    "io_geometry_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"const": 2}}},
+      "then": {"required": ["io_geometry", "io_geometry_sha256"]}
+    }
+  ],
+  "$defs": {
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "dtype", "shape", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "dtype": {"type": "string", "minLength": 1},
+        "shape": {
+          "type": "array",
+          "items": {"type": "integer", "minimum": 0}
+        },
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}

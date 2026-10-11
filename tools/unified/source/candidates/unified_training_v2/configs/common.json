@@ -1,0 +1,44 @@
+{
+  "model": "sage",
+  "seed": 0,
+  "profile_seed": 23,
+  "profile_epochs": 1,
+  "profile_order": {"policy": "bfs_block_shuffle", "block_nodes": 1024, "seed": 0},
+  "batch_size": 1024,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "hidden": 128,
+  "layers": 3,
+  "dropout": 0.2,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "lr_schedule": "constant",
+  "order": {
+    "policy": "gids_random_digit_bfs_chunk_shuffle",
+    "block_nodes": 256,
+    "seed": 0,
+    "tail": "retain"
+  },
+  "group_size": 2,
+  "group_reuse": "v2",
+  "cpu_cache_fraction": 0.1,
+  "gpu_cache_bytes": 4294967296,
+  "gpu_initialization": "cold_after_cpu_preload",
+  "window_buffer": false,
+  "accumulator": false,
+  "cpu_affinity": [
+    2
+  ],
+  "threads": 1,
+  "measurement_window_batches": 100,
+  "validation": "PA full20 only; all other dataset/mode combinations are training-only",
+  "raw_ssd_writes": false,
+  "execution_capabilities": {
+    "digit_async_prefetch": true,
+    "digit_model_optimization": true,
+    "gpu_capture": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "candidates/ig_demand_pair_v1/features.py": "9b3ff0cb16fbf706863fcb166ef518a0609182d77612f4d38b6e321b6447fac1",
+  "candidates/ig_demand_pair_v1/preload.py": "50d1a3115902877192e05bb0db365efb9b742a33b8d3bc5545c7032485ef4b84",
+  "candidates/ig_demand_pair_v1/build.sh": "f8c475432f13c609aec6f0f02a7ce95313d6941195d3288daff2fb3b9f7efeb0",
+  "candidates/ig_demand_pair_v1/native/short_helpers.cuh": "8c77867154976d15ccb8370032181bc759232a46018430290a465ddb72da8390",
+  "candidates/ig_demand_pair_v1/native/demand_helpers.cuh": "8843ec524138ba1446eb2f20d0b6b60de7474ca263c190e1736ec6e373ba145b",
+  "candidates/ig_demand_pair_v1/native/admission_helpers.cuh": "ec73481db922ab31c85d7e47047133981fc8efa1fac57efd9fab476b1c7be363",
+  "candidates/ig_demand_pair_v1/native/gids_kernel.cu": "700a20fa1b25e0ae0285afaafd095cb995c36595fb251e059e81edb06845d2fd",
+  "candidates/ig_demand_pair_v1/native/gids_nvme.cu": "0691cb5f77cfadca59b70f40574dff0844de7ae8d2076371a4015ca5234a9dc7",
+  "candidates/ig_demand_pair_v1/native/demand_fixtures.cuh": "962f2d70779dfebcc92f9e73e46c67a9466d4ce621dbbf8aabd0f4e6915b1199",
+  "candidates/ig_demand_pair_v1/native/transfer_plan.h": "3609ccf37b74d73e408099b29412fae49389024c5b6e53fbfb035454078063a8",
+  "candidates/ig_demand_pair_v1/native/optimized_helpers.cuh": "21564a8b8146443619f9e5ebba0f2f6dd219db6e1a080f33be070db5b97428b6",
+  "candidates/ig_demand_pair_v1/native/include/page_cache.h": "7a6da56541b296983f408fb19614b0d4f86404223f81d8d23a7c0eecf14fb415"
+}

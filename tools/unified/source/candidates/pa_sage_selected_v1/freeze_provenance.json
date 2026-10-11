@@ -1,0 +1,12 @@
+{
+  "frozen_unix": 1789991725.4814243,
+  "source_case": "lower_lr_no_decay",
+  "source_checkpoint": "results/pa_sage_optimizer_20260921_v1/worker/lower_lr_no_decay/full/final_model.pt",
+  "epoch": 20,
+  "checkpoint_sha256": "30af8dd84b6fdd64ce36a8381acb186ed1440e8f99772dfaa2c93e3e4cb8597e",
+  "model_sha256": "be35b08cff3f47f3ab98ead2cdfcc103e8c145773522164839aecec2df2e1f88",
+  "selected_by": "Validation mean of epochs 16-20; tie break by epoch20 then declaration order",
+  "not_best_validation_epoch_checkpoint": true,
+  "test_evaluations_before_freeze": 0,
+  "test_scope": "One new full test inference for this selected checkpoint; existing historical models already have test results"
+}

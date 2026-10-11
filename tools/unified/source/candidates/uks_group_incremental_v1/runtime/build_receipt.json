@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "source_sha256": "e7500be3f3470d81f6fca24cff3a414d06ffe8d8e7c17b7d367e795240c678d5",
+  "binary_sha256": "3d98eca2c56ab1163cfb391491bb6d3f918b7cd855ada239158a42f3f01f821a",
+  "control_and_eid_unchanged": true,
+  "incremental_reused_from_pa": true,
+  "command": [
+    "/usr/local/cuda-12.4/bin/nvcc",
+    "-std=c++14",
+    "-O3",
+    "-arch=sm_89",
+    "-shared",
+    "-Xcompiler",
+    "-fPIC",
+    "-I/home/embed/miniconda3/envs/gids/include/python3.8",
+    "-I/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/pybind11/include",
+    "/home/embed/digit/candidates/uks_group_incremental_v1/native/sampler.cu",
+    "-o",
+    "/home/embed/digit/candidates/uks_group_incremental_v1/runtime/UKSGroupIncrementalCUDA.partial.so"
+  ],
+  "finished_unix": 1790734136.6520138
+}

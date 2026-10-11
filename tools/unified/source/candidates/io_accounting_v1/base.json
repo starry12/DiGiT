@@ -1,0 +1,8 @@
+{
+  "base_release_manifest_sha256": "78232545f843de9094db592b23f9bcc26966aeae5c0794ca78a747cd45c960c4",
+  "base_sources": {
+    "ae/native/papers/bam/include/page_cache.h": "75581fb294d88a5ccad30e5617d39b90f363e665c2265af2e6b96541b541ae58",
+    "ae/native/papers/gids_module/gids_kernel.cu": "0eb3ede42bec555b0db1947fad9ddf5a86e8129f8c70d80da69b530649638a11",
+    "ae/native/papers/gids_module/gids_nvme.cu": "89dd1f54d0d65e72c3b1eacc155959c6822df9cdb69234d93887a3e1a2ab3e10"
+  }
+}

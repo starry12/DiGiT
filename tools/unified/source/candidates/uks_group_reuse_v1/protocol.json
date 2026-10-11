@@ -1,0 +1,20 @@
+{
+  "scope": "UKS existing-g2 cross-owner adjacency reuse only",
+  "group_size": 2,
+  "new_groups": false,
+  "new_feature_replicas": false,
+  "raw_ssd_writes": false,
+  "preserve_original_group_references": true,
+  "reuse_candidates": "all existing primary and replica groups",
+  "selection": "ascending group ID; consume earliest still-unused raw occurrences of both distinct members; at most one reference to a given group per owner",
+  "retained_unit_order": "original units with consumed raw occurrences removed, then newly added group IDs in ascending order",
+  "validation": "exact per-owner expanded CSC neighbor multiset; original groups retained; no new raw edges; empty supernode rows",
+  "sampler": "unchanged UKS incremental group-aware outer sampler",
+  "native_reads": "unchanged 1KiB single / 2KiB paired backend",
+  "storage_annotation": "unchanged per-logical-node minimum selected group row",
+  "comparison": "old DiGiT versus reuse DiGiT, same frozen BFS roots, Freq hot set, CPU/GPU capacities, seed, model, fanouts and optimizer",
+  "diagnostic": "separate untimed 300-batch audit of group edge occurrences, physical pairs, mapping losses, CPU eligibility and native pair counts",
+  "graph_host_storage": "anonymous CSC copies before CUDA registration for both controls",
+  "accuracy_claim": false,
+  "reviewer_matched_gids_bfs_comparison_included": false
+}

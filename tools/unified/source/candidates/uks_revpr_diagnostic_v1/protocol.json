@@ -1,0 +1,166 @@
+{
+  "schema": "uks-revpr-diagnostic-v1",
+  "systems": [
+    "gids_default",
+    "digit_default",
+    "digit_cpu2"
+  ],
+  "schedule": [
+    {
+      "mode": "gids_default_1",
+      "variant": "gids_default",
+      "repetition": 1,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_default_1",
+      "variant": "digit_default",
+      "repetition": 1,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_cpu2_1",
+      "variant": "digit_cpu2",
+      "repetition": 1,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_default_2",
+      "variant": "digit_default",
+      "repetition": 2,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_cpu2_2",
+      "variant": "digit_cpu2",
+      "repetition": 2,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "gids_default_2",
+      "variant": "gids_default",
+      "repetition": 2,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_cpu2_3",
+      "variant": "digit_cpu2",
+      "repetition": 3,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "gids_default_3",
+      "variant": "gids_default",
+      "repetition": 3,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_default_3",
+      "variant": "digit_default",
+      "repetition": 3,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "gids_default_4",
+      "variant": "gids_default",
+      "repetition": 4,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_default_4",
+      "variant": "digit_default",
+      "repetition": 4,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_cpu2_4",
+      "variant": "digit_cpu2",
+      "repetition": 4,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_default_5",
+      "variant": "digit_default",
+      "repetition": 5,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "digit_cpu2_5",
+      "variant": "digit_cpu2",
+      "repetition": 5,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "gids_default_5",
+      "variant": "gids_default",
+      "repetition": 5,
+      "profile_mode": "off"
+    },
+    {
+      "mode": "gids_default_stages",
+      "variant": "gids_default",
+      "repetition": 1,
+      "profile_mode": "stages"
+    },
+    {
+      "mode": "digit_default_stages",
+      "variant": "digit_default",
+      "repetition": 1,
+      "profile_mode": "stages"
+    },
+    {
+      "mode": "digit_cpu2_stages",
+      "variant": "digit_cpu2",
+      "repetition": 1,
+      "profile_mode": "stages"
+    }
+  ],
+  "model": "sage",
+  "repetitions_per_arm": 5,
+  "gpu": 2,
+  "cpu_binding": {
+    "gids_default": "unchanged",
+    "digit_default": "unchanged",
+    "digit_cpu2": "all threads CPU2 after imports"
+  },
+  "warmup_batches": 20,
+  "measured_batches": 300,
+  "windows": 3,
+  "batches_per_window": 100,
+  "seed": 0,
+  "fresh_process_per_run": true,
+  "timing": "Sum of the three original synchronized 100-batch windows, excluding initialization, warmup and between-window records",
+  "primary_statistic": "Maximum of five same-round ratios: GIDS complete 300-batch time / DiGiT complete 300-batch time. Select on raw precision; earliest round wins an exact tie.",
+  "retain": [
+    "All ten fresh runs",
+    "All five paired ratios",
+    "Selected round and both run identities",
+    "Every timing window",
+    "Per-arm distributions",
+    "Existing host stages and I/O counters"
+  ],
+  "performance_cutoff_seconds": null,
+  "automatic_retries": 0,
+  "reuse_historical_formal_times": false,
+  "perf": false,
+  "cupti": false,
+  "new_native_smokes": 0,
+  "monitoring": "admission and window counters; no continuous GPU polling",
+  "host_admission_gib": 256,
+  "raw_ssd_writes": false,
+  "native_worker_changed": true,
+  "gids_changed": "UKS accepted reconstructed exact-row backend",
+  "ae_changed": false,
+  "limits": [
+    "No full epoch/accuracy claim.",
+    "Two maximum same-round ratios retained separately; no cross-round mixing.",
+    "Stage diagnostics add CUDA synchronizations and cannot be used as original E2E performance times.",
+    "RevPR logical hot set is identical; physical layouts, replacement policies and sampling implementations still differ."
+  ],
+  "paired_rounds": 5,
+  "feature_dim": 256,
+  "full_epoch": false,
+  "accuracy_claim": false,
+  "hot_policy": "same_revpr",
+  "diagnostic_profile": "separate fresh processes; synchronized wall time at stage boundaries; not kernel-only time"
+}

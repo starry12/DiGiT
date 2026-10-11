@@ -1,0 +1,17 @@
+DiGiT ae-20261011-v2
+
+source /srv/digit-ae/activate.sh
+digit-ae unified
+digit-ae performance UKS sage --mode short1
+digit-ae results UKS sage --action performance --mode short1
+
+Datasets: PA IG UKS UKL CL. Modes: short1, short5 (default median of five), full20.
+Only PA/full20 reports validation and final test accuracy.
+GIDS random roots versus DiGiT BFS256 is not a matched-example short window.
+UKL: DiGiT-only accepted; paired validation pending.
+CL: preparation and paired validation pending. Prepared inputs are required before training.
+Opening an entry does not mark it PASS. A fresh result requires normal service completion and accepted paired reports.
+Original digit-ae run PA sage and historical results remain available.
+New entries use GPU 2 and the existing shared locks. This update starts no experiments.
+Source and feature checklist: https://github.com/starry12/DiGiT/tree/ae-20261011-v2/tools/unified
+Local validation states: /srv/digit-ae/releases/ae-20261011-v2/validation-status.json

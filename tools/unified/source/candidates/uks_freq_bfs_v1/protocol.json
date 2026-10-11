@@ -1,0 +1,28 @@
+{
+  "gids": {
+    "hot": "RevPR",
+    "window": "unchanged first 320 batches from original random roots",
+    "gpu_policy": "legacy",
+    "affinity": "default"
+  },
+  "digit": {
+    "hot": "independent 100 batch grouped presampling, seed23; reuse accepted frequency Top-K",
+    "order": "undirected full training-induced BFS; descending degree/smallest-ID component roots; ascending-ID neighbors; shuffle 1024-node blocks seed0 epoch0; first320 blocks",
+    "gpu_policy": "FIFO",
+    "affinity": "CPU2",
+    "sampler": "incremental"
+  },
+  "same_node_set": false,
+  "cache_line_bytes": 1024,
+  "primary_read_bytes": [
+    1024,
+    2048
+  ],
+  "cpu_rows": 13363304,
+  "gpu_cache_bytes": 4294967296,
+  "warmup_batches": 20,
+  "measured_batches": 300,
+  "rounds": 5,
+  "accuracy": false,
+  "raw_ssd_writes": false
+}

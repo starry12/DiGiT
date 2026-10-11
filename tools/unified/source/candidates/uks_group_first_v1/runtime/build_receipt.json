@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source_sha256": "5adb65ebd1d6c72952d59f1c2e47410fdb421341ceb36d3070c3407e8e65a659",
+  "binary_sha256": "3d619ac77f6e87be87d500f3a3c859f40d269cda103870bd4508fc680ff3089f",
+  "command": [
+    "/usr/local/cuda-12.4/bin/nvcc",
+    "-std=c++14",
+    "-O3",
+    "-arch=sm_89",
+    "-shared",
+    "-Xcompiler",
+    "-fPIC",
+    "-I/home/embed/miniconda3/envs/gids/include/python3.8",
+    "-I/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/pybind11/include",
+    "/home/embed/digit/candidates/uks_group_first_v1/native/sampler.cu",
+    "-o",
+    "/home/embed/digit/candidates/uks_group_first_v1/runtime/UKSGroupFirstCUDA.partial.so"
+  ],
+  "native_training_accepted": false
+}

@@ -1,0 +1,33 @@
+{
+  "native_source_sha256": "362aa9de695c4a0951c443242650fa18342b7db90592c72bafdd7d3d6fec9bd7",
+  "binary_sha256": "ce4cb41e8fab88f0fb5d3f05194566b692caee07fc1d0d32c18444724353f627",
+  "command": [
+    "/usr/local/cuda-12.4/bin/nvcc",
+    "-std=c++11",
+    "-O3",
+    "-arch=sm_89",
+    "--default-stream",
+    "per-thread",
+    "-shared",
+    "-Xcompiler",
+    "-fPIC",
+    "-I/home/embed/miniconda3/envs/gids/include/python3.8",
+    "-I/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/pybind11/include",
+    "-I/home/embed/digit/candidates/pa_sage_512b_pair_v1/native/gids_module/include",
+    "-I/home/embed/digit/candidates/pa_sage_512b_pair_v1/native/bam/include",
+    "-I/home/embed/digit/candidates/io_accounting_v1/native/bam/include",
+    "-I/home/embed/digit/candidates/io_accounting_v1/native/bam/include/freestanding/include",
+    "/home/embed/digit/candidates/pa_sage_512b_pair_v1/native/gids_module/gids_nvme.cu",
+    "/home/embed/digit/bam/build/lib/libnvm.so",
+    "-Xlinker",
+    "-rpath",
+    "-Xlinker",
+    "/home/embed/digit/bam/build/lib",
+    "-Xcompiler",
+    "-pthread",
+    "-o",
+    "/home/embed/digit/candidates/pa_sage_512b_pair_v1/runtime/BAM_Feature_Store/BAM_Feature_Store.partial.so"
+  ],
+  "started_unix": 1790399027.7504222,
+  "finished_unix": 1790399071.363842
+}

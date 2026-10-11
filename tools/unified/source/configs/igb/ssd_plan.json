@@ -1,0 +1,22 @@
+{
+  "gids": {
+    "bytes": 1103241928704,
+    "end": 1515558789120,
+    "file": "${IGB_SOURCE}/node_feat.npy",
+    "file_sha256": "934e718f98c708a8c6db91be9271ae17e0dab707fa73b10d1e5d56c6ab38af18",
+    "header_bytes": 0,
+    "offset": 412316860416,
+    "rows": 269346174,
+    "slot_bytes": 4096
+  },
+  "full": {
+    "bytes": 1323890311168,
+    "end": 2840013766656,
+    "file": "${PROJECT_ROOT}/data/igb/full/reordered_features.npy",
+    "file_sha256": "72cf3fe590ec58b4458298ae557dde13bd3a9296647aff1294a0fb201951f89b",
+    "header_bytes": 128,
+    "offset": 1516123455488,
+    "rows": 323215408,
+    "slot_bytes": 8192
+  }
+}

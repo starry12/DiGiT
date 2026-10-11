@@ -1,0 +1,234 @@
+{
+  "passed": true,
+  "complete": true,
+  "dataset": "UKS",
+  "mode": "short1",
+  "config_sha256": "d321774a50e769f53a8798b68bf21bfbf5b2f95d125302ff3bda63af52dc6e9c",
+  "paired_rounds": [
+    {
+      "round": 1,
+      "gids_seconds": 15.541219425038435,
+      "digit_seconds": 6.529317509033717,
+      "speedup": 2.380221118598719,
+      "per_epoch_speedups": [
+        2.380221118598719
+      ]
+    }
+  ],
+  "speedup": 2.380221118598719,
+  "aggregation": "single_pair_ratio_of_total_training_time",
+  "migration_acceptance_passed": true,
+  "evidence_scope": "native",
+  "stable_speedup_established": false,
+  "full_epoch_training": false,
+  "matched_root_order": false,
+  "matched_short_window_examples": false,
+  "matched_full_training_set": true,
+  "root_order_by_arm": {
+    "gids": {
+      "policy": "random",
+      "block_nodes": 1,
+      "seed": 0,
+      "base": "verified_canonical_roots",
+      "tail": "retain"
+    },
+    "digit": {
+      "policy": "bfs_chunk_shuffle",
+      "block_nodes": 256,
+      "seed": 0,
+      "base": "verified_canonical_roots",
+      "tail": "retain"
+    }
+  },
+  "accuracy_evaluated": false,
+  "schema": "digit-unified-results-v2",
+  "row_bytes": 1024,
+  "root_order_comparison": "GIDS_random_DiGiT_BFS256",
+  "feature_kind": "synthetic",
+  "label_kind": "synthetic",
+  "profile_order": {
+    "policy": "bfs_block_shuffle",
+    "block_nodes": 1024,
+    "seed": 0
+  },
+  "arms": {
+    "gids": {
+      "per_round_seconds": [
+        15.541219425038435
+      ],
+      "training_seconds": 15.541219425038435,
+      "mean_training_epoch_seconds": 15.541219425038435,
+      "measured_counters": {
+        "logical_rows": 12682800,
+        "cpu_rows": 4956159,
+        "gpu_rows": 710265,
+        "ssd_rows": 7016376,
+        "primary_single_commands": 7016376,
+        "primary_pair_commands": 0,
+        "primary_bytes": 7184769024,
+        "replay_commands": 11880,
+        "replay_bytes": 6082560,
+        "completed_commands": 7028256,
+        "completed_bytes": 7190851584,
+        "sampled_group_edges": 0,
+        "sampled_outer_edges": 22771341
+      },
+      "including_warmup_counters": {
+        "logical_rows": 13523823,
+        "cpu_rows": 5282375,
+        "gpu_rows": 713386,
+        "ssd_rows": 7528062,
+        "primary_single_commands": 7528062,
+        "primary_pair_commands": 0,
+        "primary_bytes": 7708735488,
+        "replay_commands": 12719,
+        "replay_bytes": 6512128,
+        "completed_commands": 7540781,
+        "completed_bytes": 7715247616,
+        "sampled_group_edges": 0,
+        "sampled_outer_edges": 24280923
+      },
+      "weighted_metrics": {
+        "cpu_service_fraction": 0.3907779827798278,
+        "gpu_service_fraction": 0.056002223483773296,
+        "ssd_service_fraction": 0.553219793736399,
+        "pair_command_fraction": 0.0,
+        "sampled_group_edge_fraction": 0.0
+      },
+      "cpu_feature_bytes": 13684023296,
+      "gpu_feature_bytes": 4294967296
+    },
+    "digit": {
+      "per_round_seconds": [
+        6.529317509033717
+      ],
+      "training_seconds": 6.529317509033717,
+      "mean_training_epoch_seconds": 6.529317509033717,
+      "measured_counters": {
+        "logical_rows": 4178308,
+        "cpu_rows": 1908159,
+        "gpu_rows": 31547,
+        "ssd_rows": 2238602,
+        "primary_single_commands": 1954662,
+        "primary_pair_commands": 141970,
+        "primary_bytes": 2292328448,
+        "replay_commands": 5876,
+        "replay_bytes": 3008512,
+        "completed_commands": 2102508,
+        "completed_bytes": 2295336960,
+        "sampled_group_edges": 1062202,
+        "sampled_outer_edges": 11487132
+      },
+      "including_warmup_counters": {
+        "logical_rows": 4424466,
+        "cpu_rows": 2015769,
+        "gpu_rows": 31552,
+        "ssd_rows": 2377145,
+        "primary_single_commands": 2077107,
+        "primary_pair_commands": 150019,
+        "primary_bytes": 2434196480,
+        "replay_commands": 6246,
+        "replay_bytes": 3197952,
+        "completed_commands": 2233372,
+        "completed_bytes": 2437394432,
+        "sampled_group_edges": 1148878,
+        "sampled_outer_edges": 12204535
+      },
+      "weighted_metrics": {
+        "cpu_service_fraction": 0.45668222639403316,
+        "gpu_service_fraction": 0.007550185386046218,
+        "ssd_service_fraction": 0.5357675882199207,
+        "pair_command_fraction": 0.06771336123840521,
+        "sampled_group_edge_fraction": 0.09246885993823349
+      },
+      "cpu_feature_bytes": 13684023296,
+      "gpu_feature_bytes": 4294967296
+    }
+  },
+  "epochs": [
+    {
+      "arm": "gids",
+      "round": 1,
+      "epoch": 1,
+      "seconds": 15.541219425038435,
+      "training_wall_seconds": 160.27729874802753,
+      "warmup_seconds": 4.29088074201718,
+      "measured_batches": 300,
+      "measured_roots": 307200,
+      "counters": {
+        "logical_rows": 12682800,
+        "cpu_rows": 4956159,
+        "gpu_rows": 710265,
+        "ssd_rows": 7016376,
+        "primary_single_commands": 7016376,
+        "primary_pair_commands": 0,
+        "primary_bytes": 7184769024,
+        "replay_commands": 11880,
+        "replay_bytes": 6082560,
+        "completed_commands": 7028256,
+        "completed_bytes": 7190851584,
+        "sampled_group_edges": 0,
+        "sampled_outer_edges": 22771341
+      },
+      "metrics": {
+        "cpu_service_fraction": 0.3907779827798278,
+        "gpu_service_fraction": 0.056002223483773296,
+        "ssd_service_fraction": 0.553219793736399,
+        "pair_command_fraction": 0.0,
+        "sampled_group_edge_fraction": 0.0
+      },
+      "auxiliary": {
+        "evaluated": false,
+        "checkpoint": "[server-local path omitted]",
+        "scope": "synthetic_labels_no_accuracy_claim"
+      }
+    },
+    {
+      "arm": "digit",
+      "round": 1,
+      "epoch": 1,
+      "seconds": 6.529317509033717,
+      "training_wall_seconds": 123.39274911291432,
+      "warmup_seconds": 0.7592220288934186,
+      "measured_batches": 300,
+      "measured_roots": 307200,
+      "counters": {
+        "logical_rows": 4178308,
+        "cpu_rows": 1908159,
+        "gpu_rows": 31547,
+        "ssd_rows": 2238602,
+        "primary_single_commands": 1954662,
+        "primary_pair_commands": 141970,
+        "primary_bytes": 2292328448,
+        "replay_commands": 5876,
+        "replay_bytes": 3008512,
+        "completed_commands": 2102508,
+        "completed_bytes": 2295336960,
+        "sampled_group_edges": 1062202,
+        "sampled_outer_edges": 11487132
+      },
+      "metrics": {
+        "cpu_service_fraction": 0.45668222639403316,
+        "gpu_service_fraction": 0.007550185386046218,
+        "ssd_service_fraction": 0.5357675882199207,
+        "pair_command_fraction": 0.06771336123840521,
+        "sampled_group_edge_fraction": 0.09246885993823349
+      },
+      "auxiliary": {
+        "evaluated": false,
+        "checkpoint": "[server-local path omitted]",
+        "scope": "synthetic_labels_no_accuracy_claim"
+      }
+    }
+  ],
+  "source_sha256": "1abc5a9f2a92224a696755749d2db56b1a3245c4feaf9a58dfb907873171b40c",
+  "ssd_primary_bytes_reduction_fraction": 0.6809461180529663,
+  "notes": [
+    "All requested rounds retained; five-round speedup is median of paired ratios, not ratio of medians.",
+    "Service fractions use sums of requests, not averages of percentages. Warmup counters are separate.",
+    "Sampled group edges, primary pair-command fraction and physical bytes are distinct metrics.",
+    "Training times exclude preparation and evaluation; overlapped stage times are not added.",
+    "One full20 pair uses ratio of 20-epoch time totals, not median epoch ratio."
+  ],
+  "archive_projection": "Selected reference summary; server-local paths and runtime identities omitted."
+}

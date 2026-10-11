@@ -1,0 +1,34 @@
+{
+  "schema": "digit-pa-sage-execution-v4",
+  "execution_id": "pa_sage_formal_20260921_v4",
+  "input_protocol": "configs/paper/pa_sage_random_v2.json",
+  "epochs": 20,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "repeats": [
+    0,
+    1
+  ],
+  "evaluation": {
+    "implementation": "verified_cpu_trace_templates",
+    "validation_calls_per_epoch": 1,
+    "final_test_calls": 1,
+    "diagnostic_replays": 0,
+    "cpu_diagnostic_monitor": false,
+    "prepare_before_training": true,
+    "preparation_time_reported": true
+  },
+  "monitoring": {
+    "mode": "external_small_process",
+    "gpu": "2",
+    "host_limit_bytes": 67108864
+  },
+  "host_trace_and_monitor_reserve_bytes": 1073741824,
+  "run_order": "seed-major; repeat0 gids then digit_full, repeat1 digit_full then gids",
+  "native_smoke_before_full_training": true,
+  "snapshot": "frozen/pa_sage_formal_20260921_v4",
+  "scope": "Reconstructed PA/GraphSAGE GIDS-DiGiT comparison, BFS off; not the full paper matrix."
+}

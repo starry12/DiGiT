@@ -1,0 +1,15 @@
+{
+  "schema": "digit-ig-window-revision-v1",
+  "previous_candidate": "candidates/ig_perf_v3",
+  "previous_candidate_sha256": "6a0aca97929dfc2d1ca0ce3f77fa7c98ef4184bf374d69df27166ebf452c9dbe",
+  "previous_output": "results/ig_sage_perf_20260922_v2",
+  "previous_disposition": "user stopped incomplete full epoch; evidence retained",
+  "training_protocol_preserved": false,
+  "native_binary_preserved": true,
+  "monitor": "candidates/ig_monitor_v1",
+  "preflight_output": "results/ig_perf_preflight_20260922_v5/check",
+  "raw_ssd_writes": false,
+  "superseded_candidate": "candidates/ig_perf_v4",
+  "superseded_candidate_sha256": "c5217f7c73320552af257477152b45059aca89ddb73ccf352c4a6049fb837792",
+  "change_from_v4": "Per-window export preserves counter deltas but computes useful throughput only for complete measured region, allowing companion consumption across window boundaries. No native v4 jobs were started."
+}

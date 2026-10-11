@@ -1,0 +1,118 @@
+{
+  "schema": "digit-pa-sage-ablation-revpr-v3",
+  "selected_config": "candidates/pa_sage_selected_v1/config.json",
+  "seed": 0,
+  "epochs": 1,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "batch_size": 1024,
+  "optimizer": {
+    "name": "Adam",
+    "kwargs": {
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    }
+  },
+  "hidden": 128,
+  "classes": 172,
+  "layers": 3,
+  "dropout": 0.2,
+  "graph": {
+    "nodes": 111059956,
+    "edges": 3342431700,
+    "policy": "Preserve original nonself multiedges; bidirectional appends reversed edges without dedup; exactly one self loop per node in both arms.",
+    "arm": "bidirectional",
+    "csc_sha256": {
+      "indptr": "7d5e673666a047d439ffdbded926d637634f133fbc83d29af74bb7bac20b3b63",
+      "indices": "1276664d1cca1d5aa81924c39fb9f203f36519d1611753fc0b4df2cca7768c90",
+      "eids": "6bda924d3fb58aa9d40e97f8166ddfa2a6c20c24ad3201de1e21871deedd5ece"
+    }
+  },
+  "gpu_cache_bytes": 4294967296,
+  "cpu_cache_rows": 11105992,
+  "base_layout": "data/papers_g2_random_v2",
+  "data": "data/pa_sage_bidir_native_v1",
+  "metadata_mode": "gpu_i32_uva_eid64",
+  "bfs_enabled": false,
+  "layout_policy": "Retain frozen frequency-informed g2 groups and feature storage; first three runtime CPU caches use main RevPR logical IDs; append reverse edges as raw neighbors and verify expanded bidirectional multigraph.",
+  "model_policy": "Fresh seed0 model and Adam per arm; training correctness only, no accuracy or convergence claim",
+  "measurement": "Fresh process per arm; one complete first training epoch; no validation/test; setup and order time separate",
+  "smoke_epochs": 2,
+  "smoke_batches": 2,
+  "baseline_policy": "Same RevPR logical hot IDs, CPU row budget, original layout and legacy GPU policy as main GIDS",
+  "ablation_order": [
+    "gids",
+    "gr",
+    "ns",
+    "digit_full"
+  ],
+  "arms": {
+    "gids": {
+      "label": "GIDS (main RevPR CPU cache)",
+      "layout": false,
+      "group_sampling": false,
+      "mixed_io": false,
+      "gpu_policy": "legacy",
+      "cpu_cache_rows": 11105992,
+      "cpu_hot_set": "main_gids_revpr",
+      "cpu_mapping": "original_page_aligned"
+    },
+    "gr": {
+      "label": "+GR",
+      "layout": true,
+      "group_sampling": false,
+      "mixed_io": false,
+      "gpu_policy": "legacy",
+      "cpu_cache_rows": 11105992,
+      "cpu_hot_set": "main_gids_revpr",
+      "cpu_mapping": "row_exact"
+    },
+    "ns": {
+      "label": "++NS",
+      "layout": true,
+      "group_sampling": true,
+      "mixed_io": true,
+      "gpu_policy": "legacy",
+      "cpu_cache_rows": 11105992,
+      "cpu_hot_set": "main_gids_revpr",
+      "cpu_mapping": "row_exact"
+    },
+    "digit_full": {
+      "label": "DiGiT",
+      "layout": true,
+      "group_sampling": true,
+      "mixed_io": true,
+      "gpu_policy": "fifo",
+      "cpu_cache_rows": 11105992,
+      "cpu_hot_set": "digit_frequency",
+      "cpu_mapping": "original_page_aligned"
+    }
+  },
+  "evaluation": "disabled",
+  "warmup_batches": 0,
+  "cache_contract": "First three arms reuse exact main GIDS RevPR logical IDs; all replicas map to the same cached logical feature. Final DiGiT retains main frequency hot set + FIFO.",
+  "cache_inputs": {
+    "main_gids_revpr": {
+      "file": "gids_cpu_rows.npy",
+      "sha256": "3c19bab13b2255b89b01b0fa39acc10cf400401ded907859c5dd02f75a810a90"
+    },
+    "digit_frequency": {
+      "file": "hot_nodes.npy",
+      "sha256": "9b6fbef9512ed0822040e07c1bb89cf5422f6c4a031a1bdea1968ff15ed6b16f"
+    }
+  }
+}

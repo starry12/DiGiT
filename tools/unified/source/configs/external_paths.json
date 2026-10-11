@@ -1,0 +1,9 @@
+{
+  "storage_root": "/mnt/n3/gids_all",
+  "papers_source": "/mnt/n3/ogb_npy",
+  "papers_splits": "/mnt/n3/papers100M/ogbn_papers100M/split/time",
+  "papers_csc": "/mnt/n3/gids_all/phase9d_results/papers128d_g16_normalized_v1",
+  "papers_test_trace": "/mnt/n3/gids_all/phase9d_results/papers128d_eval_trace_s0_f16-5-5_b1024_v1",
+  "papers_baseline": "/mnt/n3/gids_all/phase9d_results/papers128d_baseline_aligned_v1",
+  "igb_source": "/mnt/n3/IGBH/full/processed/paper"
+}

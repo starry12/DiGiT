@@ -1,0 +1,30 @@
+{
+  "schema": "digit-ig-window300-candidate-v1",
+  "parent_candidate_sha256": "99d29f94b8724f2dc95f1e22c394e8c3dd6e2b65d0547f6473a103234b81f5ee",
+  "files": {
+    "README.md": "8ca3d82fe9c63eff27ef1cd18c701a67a70092eef7afb5a5d5873031145b69a4",
+    "admission.py": "3f63142844b05280e69b57d6e43889b2b438b401232e4920e27f21e9080e6860",
+    "common.py": "ca97e2a090a969da1f87838fc7f5e2fb2a3d1940eaddcd03469e685ed5d3a0ff",
+    "controller.py": "5b366f92848eb8b2742b6f6502d452f4eba7d6a3d9fc0a19c9e7e0b91ba00c4b",
+    "extent_checks.py": "c149619e44cc1801c720e05fb37dab76755d91748cd558ee66913b974815c847",
+    "features.py": "8fb17839f2cba4f701397ed096d822ff6ebe4ca7182bcf0f65583f64265c108a",
+    "freeze.py": "4c4b55143b315d1e8c530c979ef4253f1bb67aefd39886d36b720773778d8c6c",
+    "inputs.py": "9b37d3e94ae15cedab248a6a8d3456519839a5a2afab35190b94a2434a5adb8f",
+    "launcher_checks.py": "f0dfd0bbffc01e106ef0540cbfa041160e78c16539471fb69d6cf77c2e9bd9c6",
+    "model.py": "7f87808b2fb6fa5cc0dae43b7cd050d366c94352f14279e5a434ef3791f07c46",
+    "protocol.json": "81e99d69c6a4755d40cd2c812d932baff5d11edc7546d1c54dbe9a98a245f5b1",
+    "review.py": "b2faca8548074844533ac622b8eb2d5ed53ab1e5431b4f00c9071e7db6c00636",
+    "runtime/IGPerfNative.so": "6a9a708b9456908bf6e6f1412f42cce2d7d608869da08c49ac5c4e44e569db9d",
+    "start.py": "197d498c5b86ad42bc05866e0b9d4aa0693c8295ef868d27a09552acf165bada",
+    "summarize.py": "65522edd8ee23f7726f2d0adc92c6672d59c42d6104d4a8e6062756e186024c4",
+    "tests.py": "6854b17279f650c5637136b0755c63276934c02000a429f051941076c6751e16",
+    "validation.py": "6d8814035d0cfbf9e058cb3495138becc081ac9d8fa068cf22f786b9824fba5c",
+    "windows.py": "683537d69ed22b17e73b99591b34847f56d3605588b8b53fbf91654a74b984e6",
+    "worker.py": "e66033605eee5798350b24de017b1218ecd7edbcaba3c2c834416d9e7e403b2a"
+  },
+  "protocol_sha256": "81e99d69c6a4755d40cd2c812d932baff5d11edc7546d1c54dbe9a98a245f5b1",
+  "cpu_checks_sha256": "8d1901fe40dfd5e1427d4dc7bd177cd53cb8812239455c5cf2f29cfcb620d7af",
+  "scope": "20 warmup plus 3x100 measured batches; no validation/test/accuracy/epoch extrapolation",
+  "native_backend_changed": false,
+  "native_acceptance": "fresh paired smoke and 300-batch comparison pending"
+}

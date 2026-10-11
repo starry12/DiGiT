@@ -1,0 +1,31 @@
+{
+  "schema": "pa-sage-dense-graph-v1",
+  "reference_sha256": "850b38c8c9539e8644dc957dcd0018e09d0e9b365696554be7a3ed8ddcfabda7",
+  "created_unix": 1790415708.9850206,
+  "files": {
+    "candidates/pa_sage_dense_graph_v1/README.md": "9123a7c3c474f2f5f4ed06ab0edf9d53f03b520534afb6cb11d78e7bd22a104e",
+    "candidates/pa_sage_dense_graph_v1/analyze.py": "f23ec637669e5ee746e7f4731d262c0f28a5ac3632ff8940878de93ca9a99bda",
+    "candidates/pa_sage_dense_graph_v1/common.py": "da799298ef029502fb832fdace04e3d40814b143d9575781a4b1132ee3af1a1c",
+    "candidates/pa_sage_dense_graph_v1/control.py": "8260bcc39cf5527d6aa30f8d70a9ce652059a543c540c9859af68b4cc5ec300c",
+    "candidates/pa_sage_dense_graph_v1/equivalence.py": "0ff681bbb155366871effa4e2081da59a1f75004b4f09ebce6283787645e8db9",
+    "candidates/pa_sage_dense_graph_v1/freeze.py": "687a3a019e3aa096a8a0016620ca6b2562e096ca276ec592cb7c6235fd821b6f",
+    "candidates/pa_sage_dense_graph_v1/gpu_tests.py": "83d247dc2ea3613c9697108974bd50a2bb1ab5dba03086a8c2b38d18a9289c26",
+    "candidates/pa_sage_dense_graph_v1/model.py": "90cb2660ae29c43649d76de3b4aca030031abcce93ac42f013efca08244a5464",
+    "candidates/pa_sage_dense_graph_v1/protocol.json": "83c4cd46e1c7aec1dd0d097e3e88cccfaaffe35a3745db695ee59d14e60fd894",
+    "candidates/pa_sage_dense_graph_v1/start.py": "5a053f0a495ba2539a0fb8a5464e1f1c7694fcd8dd485be3e215c99fb3dc4add",
+    "candidates/pa_sage_dense_graph_v1/tests.py": "646650b2d8ca5cff3a29f6140d277c50bfc2dc39e83c8ca21ccb1a47c20664f0",
+    "candidates/pa_sage_dense_graph_v1/trace.py": "ff5b1febe9fc954a02aa0825b3a2973c4eafa9df42b84425d5fc8f3b87ba3530",
+    "candidates/pa_sage_dense_graph_v1/trace_probe.py": "95009464dfe7014bbc901eb1433984080a6321f971216e3b33209e6b50c71be1",
+    "candidates/pa_sage_dense_graph_v1/worker.py": "112abd0a9b04c29f3d139e59ff5b59ff0a2ff6685971b6f1d680724b490c855f"
+  },
+  "binary_sha256": "f2ddd720a2ae602aac2fa983c2a7a6351e4e7a274032a657d7d27b50759dcdc8",
+  "environment_files": {
+    "/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/torch/cuda/graphs.py": "51640f9f0cbef12e74cf08195e403cac8b2564e730b2c0e56b33a6bc839c9952"
+  },
+  "evidence_sha256": {
+    "inputs.json": "117d95c2d70a6e9e33d55ddec0748cbd2ff5aeab349f205daeaab36df730b97c",
+    "cpu_checks.json": "55359ca3e2cfef3813bc9c04ca74384cb123506b7e3add492f7131a0c42b1d15",
+    "gpu_checks.json": "d04748c4985f06d0707bb70581c8c2bf3fe6c7b978ebce664b350322e0e0a56d",
+    "trace_probe.json": "bf915e81bc088eb1b844b73f663daadeb47876ca8d502d8129725eef4765e4ba"
+  }
+}

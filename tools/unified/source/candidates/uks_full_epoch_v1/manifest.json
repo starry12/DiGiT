@@ -1,0 +1,17 @@
+{
+  "parent_source": "cbe95a3d8c72182f585d798899194f32b5382e15a87f1c89e834a07f98075b1e",
+  "files": {
+    "candidates/uks_full_epoch_v1/start.py": "4b5dcb8105f19cfe0aa8d9f263e2d6d35654b7239511abb1ee53ebf2f44375bf",
+    "candidates/uks_full_epoch_v1/freeze.py": "f7cb0fcd97797a8b83f20e17ab0946b529c6e53fff7740bd1a134eb4f1d86c62",
+    "candidates/uks_full_epoch_v1/tests.py": "7caac0d5de3b076be2a1d726f2ada598d614aa89046a3472290342b523a91cde",
+    "candidates/uks_full_epoch_v1/engine.py": "203faf430833a2dd7c8e82b941fc976b5984a9242704d707b1e068fdaa924ddc",
+    "candidates/uks_full_epoch_v1/inputs.json": "0740e4c2a97d1af6a6a020cec9b5795a4dd21db8de2d08782f7738ea8907bedb",
+    "candidates/uks_full_epoch_v1/common.py": "359d39e64aae4cab4d3567375571a889ebea38517205c3af43503a805c0683f8",
+    "candidates/uks_full_epoch_v1/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "candidates/uks_full_epoch_v1/worker.py": "db9bb2168df9b227a41c90dafd03d78787ce3f427d57edacdcd5275caab0d553",
+    "candidates/uks_full_epoch_v1/README.md": "441a0abd9f355e77b4b13be2366644cd779d0930b741b8164ee0e50caedb3799",
+    "results/cache_epoch_20261010_v1/runs/20261010-145329-555883/status.json": "54eafa567e351a2635e0cf4d0b67afbef07b59fd9b1999983c4c8cfbeae8f4d8",
+    "results/cache_epoch_20261010_v1/runs/20261010-145329-555883/uks_digit/report.json": "77fb221b27e5b10b70a2ce768008839ef26be4593bd7533452b4e1544d7c59c0",
+    "results/cache_epoch_20261010_v1/runs/20261010-145329-555883/uks_gids/report.json": "5c1981d4f667d52495dd9e6fd1f73076f357ff6a852e6621b135a9cf896dcc1a"
+  }
+}

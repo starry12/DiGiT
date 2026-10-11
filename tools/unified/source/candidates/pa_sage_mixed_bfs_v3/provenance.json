@@ -1,0 +1,48 @@
+{
+  "canonical_order": {
+    "path": "/home/embed/digit/results/pa_sage_bfs_decay_20261009_v1/runs/20261009-232414-4187589/orders/canonical.npy",
+    "sha256": "ee24e945342cf7285540d97cc1ef94a26195d04a25ee96e3b3371c73dbff591a"
+  },
+  "bfs_source_edges_sha256": "360c510601bae6c5924400bf9ff34e63758d1838a96a46177a313eca72abebd6",
+  "traces": {
+    "valid": {
+      "path": "/home/embed/digit/results/pa_sage_direction_20260921_v2/bidirectional/valid_trace",
+      "sha256": "1e2d9b579a176bf44efa241e8f4c78dcdc837c5f35855249330edf0b5d867426"
+    },
+    "test": {
+      "path": "/home/embed/digit/results/pa_sage_direction_20260921_v2/bidirectional/test_trace",
+      "sha256": "aca2faa1c24012bd2f500593ab060478aa153c690d1b06831940c3e0571f6c2f"
+    }
+  },
+  "gids_reference": {
+    "report": "/home/embed/digit/results/pa_sage_512b_pair_20260926_v4/native/20260926-141410-2926144/full_gids/report.json",
+    "binary": "/home/embed/digit/candidates/pa_sage_512b_pair_v3/runtime/BAM_Feature_Store/BAM_Feature_Store.so",
+    "binary_sha256": "88cd048d65662dae867160be9beaf250eb2efbe40b0f70212c9913066d126bc9",
+    "historical_epoch_seconds": 18.708190465,
+    "path": "original SAGE, standard sampling, synchronous bounded 512B reads, RevPR"
+  },
+  "bfs_scope": "Same canonical PA training-induced BFS; AE bidirectional graph for training and evaluation",
+  "accuracy_scope": "AE bidirectional uniform traces, CPU features; outside training cache",
+  "alignment": {
+    "graph": {
+      "nodes": 111059956,
+      "edges": 3342431700,
+      "policy": "Preserve original nonself multiedges; bidirectional appends reversed edges without dedup; exactly one self loop per node in both arms.",
+      "arm": "bidirectional",
+      "csc_sha256": {
+        "indptr": "7d5e673666a047d439ffdbded926d637634f133fbc83d29af74bb7bac20b3b63",
+        "indices": "1276664d1cca1d5aa81924c39fb9f203f36519d1611753fc0b4df2cca7768c90",
+        "eids": "6bda924d3fb58aa9d40e97f8166ddfa2a6c20c24ad3201de1e21871deedd5ece"
+      }
+    },
+    "optimizer": {
+      "lr": 0.001,
+      "weight_decay": 0.0
+    },
+    "lr_schedule": {
+      "milestones": [],
+      "gamma": 1.0
+    }
+  },
+  "retained_scope": "Same CPU hot sets/capacity, GPU cache, 512B/mixed paths, overlap/dense optimizations and BFS64; not a full replacement of AE I/O configuration"
+}

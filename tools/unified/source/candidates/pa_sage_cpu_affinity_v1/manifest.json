@@ -1,0 +1,20 @@
+{
+  "schema": "pa-sage-cpu-affinity-frozen-v1",
+  "files": {
+    "candidates/pa_sage_cpu_affinity_v1/README.md": "23370d30363c852febf3e1a5b60b01dbea8d0a6f834e3ca43e80ceead546e99f",
+    "candidates/pa_sage_cpu_affinity_v1/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "candidates/pa_sage_cpu_affinity_v1/affinity.py": "a7532c32b3414c216427119b4e52dd9cf4aff54ed75f2b64d2f506624542b44b",
+    "candidates/pa_sage_cpu_affinity_v1/common.py": "38f44f3b39b106dd6bdeb4c002d194c49a64ba6d47e3c3bc538196719755a006",
+    "candidates/pa_sage_cpu_affinity_v1/control.py": "0106c8447ebd590aa0cbc2fe1ef07a255ea0827a16fe1326d81dc6165fcda45f",
+    "candidates/pa_sage_cpu_affinity_v1/freeze.py": "f2406dbd157ef021971940fd742147f8ee754b5a906080f9139df22b588d08a9",
+    "candidates/pa_sage_cpu_affinity_v1/protocol.json": "2c919c4a417d413d50875b1421e3f10d4c026cd395310ec022b0de4c600a57ac",
+    "candidates/pa_sage_cpu_affinity_v1/start.py": "2e4ac2337ec43e9c37b385550cbce7777cc23e95d51ccdeb82c8f36848209b2d",
+    "candidates/pa_sage_cpu_affinity_v1/tests.py": "cadc9b493a1bd696fa257a42d1f733fc34b32b423c59ecba3c09cf8202649ed1",
+    "candidates/pa_sage_cpu_affinity_v1/worker.py": "1f08f84778eb1a1c06a159f38f6a36dbe5cd7e460a8943b2af2ae40980ef44f8"
+  },
+  "parent_manifest_sha256": "50940297a5562a9f5e6f1bb0e57c39c18461877e7c8bcaa070c227de2ec1f166",
+  "binary_sha256": "9db142af199874001a6fcb9496a87c0ba71c2e1c4480d890498e5f897ac85345",
+  "inputs_sha256": "04be15c89bff56c2f30bd3ebbdef253b0c99ae70ca29c4738c978572f87fc6b1",
+  "cpu_checks_sha256": "34bcc5b57aa2e2b4c7780d20275d3c5223368861ff341b79eb45dacba15779f5",
+  "created_unix": 1790396989.4035547
+}

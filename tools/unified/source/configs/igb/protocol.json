@@ -1,0 +1,48 @@
+{
+  "arms": [
+    "gids",
+    "full"
+  ],
+  "batch": 1024,
+  "cpu_cache_bytes_each": 110324191232,
+  "cpu_cache_rows_each": 26934617,
+  "dtype": "float32",
+  "epochs": 1,
+  "evaluation": {
+    "checkpoint": "epoch1 full validation only; no final test",
+    "dgl_rng": "explicit next-epoch reseed; no engine-state restore claim",
+    "order": "ascending complete split",
+    "python_numpy_torch_rng_restored": true,
+    "sampler": "standard DGL UVA without replacement",
+    "test_seed": 7002,
+    "valid_seed": 7001
+  },
+  "fanouts": [
+    16,
+    5,
+    5
+  ],
+  "gpu_cache_bytes_each": 536870912,
+  "model": {
+    "classes": 19,
+    "dropout": 0.2,
+    "hidden": 128,
+    "input": 1024,
+    "layers": 3,
+    "name": "SAGE"
+  },
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "lr": 0.001,
+    "name": "Adam",
+    "weight_decay": 0.001
+  },
+  "scope": "Two NEW fresh workers, GIDS then frozen warp Full, seed0 each one complete train epoch and full validation; no test",
+  "seeds": [
+    0
+  ]
+}

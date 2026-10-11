@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gids.local/schemas/digit-io-geometry-v1.json",
+  "title": "DiGiT mixed-I/O geometry contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_name", "schema_version", "feature", "nvme", "group", "cache", "layout"],
+  "properties": {
+    "schema_name": {"const": "digit-io-geometry"},
+    "schema_version": {"const": 1},
+    "feature": {
+      "type": "object", "additionalProperties": false, "required": ["row_bytes"],
+      "properties": {"row_bytes": {"type": "integer", "minimum": 1}}
+    },
+    "nvme": {
+      "type": "object", "additionalProperties": false,
+      "required": ["minimum_transfer_bytes", "transfer_alignment_bytes"],
+      "properties": {
+        "minimum_transfer_bytes": {"type": "integer", "minimum": 1},
+        "transfer_alignment_bytes": {"type": "integer", "minimum": 1}
+      }
+    },
+    "group": {
+      "type": "object", "additionalProperties": false,
+      "required": ["size", "logical_bytes", "transfer_bytes", "target_request_bytes", "selection"],
+      "properties": {
+        "size": {"type": "integer", "minimum": 1},
+        "logical_bytes": {"type": "integer", "minimum": 1},
+        "transfer_bytes": {"type": "integer", "minimum": 1},
+        "target_request_bytes": {"type": "integer", "minimum": 1},
+        "selection": {"enum": ["auto", "explicit"]}
+      }
+    },
+    "cache": {
+      "type": "object", "additionalProperties": false,
+      "required": ["slot_bytes", "subrow_bytes", "subrow_count", "validity_mask_bits", "full_valid_mask"],
+      "properties": {
+        "slot_bytes": {"type": "integer", "minimum": 1},
+        "subrow_bytes": {"type": "integer", "minimum": 1},
+        "subrow_count": {"type": "integer", "minimum": 1},
+        "validity_mask_bits": {"type": "integer", "minimum": 1},
+        "full_valid_mask": {"type": "integer", "minimum": 1}
+      }
+    },
+    "layout": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rows_per_slot", "padding_bytes", "padding_rows", "payload_offset_bytes", "raw_transfer_bytes"],
+      "properties": {
+        "rows_per_slot": {"type": "integer", "minimum": 1},
+        "padding_bytes": {"type": "integer", "minimum": 0},
+        "padding_rows": {"type": "integer", "minimum": 0},
+        "payload_offset_bytes": {"type": "integer", "minimum": 0},
+        "raw_transfer_bytes": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

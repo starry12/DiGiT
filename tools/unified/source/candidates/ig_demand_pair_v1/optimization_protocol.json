@@ -1,0 +1,49 @@
+{
+  "schema": "digit-ig-demand-pair-v1",
+  "parent_candidate_sha256": "cec77a5bff14382e89f7ee7fd30660f5802f44265ae74a01b4c70e2d7e123160",
+  "schedule": [
+    {
+      "mode": "smoke_gids",
+      "arm": "gids",
+      "smoke": true
+    },
+    {
+      "mode": "smoke_digit_full",
+      "arm": "digit_full",
+      "smoke": true
+    },
+    {
+      "mode": "gids_1",
+      "arm": "gids",
+      "smoke": false
+    },
+    {
+      "mode": "digit_1",
+      "arm": "digit_full",
+      "smoke": false
+    }
+  ],
+  "model": "sage",
+  "gpu": 2,
+  "host_admission_gib": 320,
+  "cpu_policy": {
+    "gids": "CPU2",
+    "digit_full": "CPU2"
+  },
+  "formal_extent": "Each fresh worker: 20 warmup + 3x100 timed batches; batch1024, original frozen roots, model, Adam and seed0.",
+  "profile_mode": "host",
+  "fresh_smoke_gate": "Both independent two-update native source/routing/edge smokes must pass before formal workers.",
+  "raw_ssd_writes": false,
+  "native_backend_changed": true,
+  "graph_or_feature_layout_changed": false,
+  "cpu_cache_or_gpu_cache_changed": true,
+  "model_or_optimizer_changed": false,
+  "ae_changed": false,
+  "separate_sampling_probe": false,
+  "accuracy_or_epoch_claim": false,
+  "continuous_monitor": "unchanged IG persistent NVML",
+  "independent_runs_per_arm": 1,
+  "interpretation": "Only pair two exact physical requests from this feature batch, with neither CPU-mapped. The existing ordered pair locks determine current GPU misses. Requested-row hits do not prefetch a missing sibling. Same graph, sampler, hot sets, capacities and timing extent as accepted optimized IG.",
+  "optimized_parent_sha256": "35b42b5e69b6caf0e4e22cc2589a4ad1fddc472d83378d265bded1694074178e",
+  "demand_scratch_max_bytes": 35651584
+}

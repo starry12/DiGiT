@@ -1,0 +1,54 @@
+{
+  "files": {
+    "/home/embed/digit/data/pa_sage_bidir_native_v1/original_indptr.npy": {
+      "identity": {
+        "device": 66312,
+        "inode": 36246924,
+        "bytes": 888479784,
+        "mtime_ns": 1789997963913929050,
+        "ctime_ns": 1789997963913929050
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/pa_sage_bidir_native_v1/original_indices.npy": {
+      "identity": {
+        "device": 66312,
+        "inode": 36246925,
+        "bytes": 26739453728,
+        "mtime_ns": 1789998014052214958,
+        "ctime_ns": 1789998014052214958
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/pa_sage_bidir_native_v1/reordered_indptr.npy": {
+      "identity": {
+        "device": 66312,
+        "inode": 36246927,
+        "bytes": 1260744176,
+        "mtime_ns": 1789998191103635627,
+        "ctime_ns": 1789998191103635627
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/pa_sage_bidir_native_v1/reordered_indices.npy": {
+      "identity": {
+        "device": 66312,
+        "inode": 36246928,
+        "bytes": 26367189336,
+        "mtime_ns": 1789998259970295681,
+        "ctime_ns": 1789998259970295681
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/pa_sage_bidir_native_v1/prepared.json": {
+      "identity": {
+        "device": 66312,
+        "inode": 36246929,
+        "bytes": 2430,
+        "mtime_ns": 1789998629983117712,
+        "ctime_ns": 1789998629983117712
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "candidates/pa_sage_mean_fused_v1/native/mean_normalize.cu": "71e0b921a529c02ef9b68c586deece0a42edada580fef49aa06019ef10c5d4ca",
+    "candidates/pa_sage_mean_fused_v1/build.py": "a094bc1a4c109600269448c74c871b7ac713b9391492901c1c8143864c8fc92e",
+    "candidates/pa_sage_mean_fused_v1/runtime/__init__.py": "6cf8e528abb671fddf0c3b050d37029533facfd62162979975523df0f19f1ac1"
+  },
+  "binary_sha256": "1bfd5271f772a2474c44630eb06cedbe129e37ba68d8ff4af2447813d895f29d",
+  "command": [
+    "/usr/local/cuda-12.4/bin/nvcc",
+    "-std=c++14",
+    "-O3",
+    "-arch=sm_89",
+    "--default-stream",
+    "per-thread",
+    "--ftz=false",
+    "--prec-div=true",
+    "-shared",
+    "-Xcompiler",
+    "-fPIC",
+    "-Xptxas=-v",
+    "-I/home/embed/miniconda3/envs/gids/include/python3.8",
+    "-I/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/pybind11/include",
+    "/home/embed/digit/candidates/pa_sage_mean_fused_v1/native/mean_normalize.cu",
+    "-o",
+    "/home/embed/digit/candidates/pa_sage_mean_fused_v1/runtime/DiGiTMeanNormalizeCUDA.partial.so"
+  ],
+  "started_unix": 1790421468.9576292,
+  "finished_unix": 1790421478.569174,
+  "gpu_or_ssd_access": false,
+  "fp32_division": "__fdiv_rn, no fast math, no flush-to-zero",
+  "api": 1
+}

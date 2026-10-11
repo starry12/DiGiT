@@ -1,0 +1,33 @@
+{
+  "schema": "ukl-window-native-source-v2",
+  "files": {
+    "README.md": "e9dcf6627b361edf4ed2d6ea5e60fe6d9cc22d09eb9b0f94ea20681be1205669",
+    "__init__.py": "4656130a4e82831e3a27e071bbcffe0bb3de7319a9000a93202b524d4006aefc",
+    "build.py": "56c575daab037ccd97d6a54697506a8db05b8866ca68a148609dfcf9a1dc4241",
+    "cli.py": "94a940a92eefb1fb8f92e9796bdb0e4402c47775dcd220942b77cb99eca7ca25",
+    "decoder/Fixture.java": "08a75d1e82e8dd123dafd3763128c4170250354a1f939fe8dc1e99b933238bb2",
+    "decoder/Probe.java": "aa1814427e2a17041c1a7ff949df57154be9759f872bab62f28911ef8b1d9c28",
+    "decoder/UKLStream.java": "5edb0b51b73cf810cf3f72c72c27f6d241de32fa2fe604453364e7c7117aa35a",
+    "decoder/dependencies.lock.json": "2a7dfd7cae0bc6be8291a7d1286134b443b8a5f1beaca9029ba10103c5322605",
+    "gpu_check.py": "2ece07530ae928712ddece0c71b85e78b8c23e2ce2ea700237ce8a6a01ebed47",
+    "interop.py": "fafadfd9f9f56e0253938ede03de9b7ec62bc2c13f695a6e5f917136bafb5a33",
+    "native/core.h": "3aca2f3b0af8615ebb6561b89058e8d09f0615e8acf0ea6c7fa2ce2714541a0e",
+    "native/cpu.cpp": "97adfdc91cecec5d8b48906dccb652a9b8201925d9648d75f77be8f43ddf5d21",
+    "native/cuda.cu": "0d670edb3cfce69568dce4a1f7f3a5732323eb6ce0777931b3293e2ddb17b09d",
+    "native.py": "de653b790c60469cb67354321aac52f4b06df7938692dca81c0a8463cbaaaa09",
+    "protocol.py": "d637732e4c21a083854304b94718835b4756805247d9da8ab3e1771f75611529",
+    "reference.py": "cfa10b2f583bfdbeda84cf2a376469f1fa61e00885292c74b000e3ebb7970c6a",
+    "sampler.py": "97a7b51d68e32258906591b00f6d4a2b2ec4a1c2ef4a15f4372e69ff2f9b5440",
+    "tests.py": "3f9776a7232db021aad1d2bd0d7bac8fc4a1bbda1906a7c9bbc2529627534470",
+    "training_check.py": "2881e8e4a27012cdbf50d503f2b6b87aa588e218745c0eaa723503842b92339f"
+  },
+  "dependencies": {
+    "candidates/ukl_sage_compact_v1/stream.py": "dbfc99435d8e66999f895631b10223061f9b5839d248b9c980b0d9710184cd71",
+    "candidates/ukl_sage_compact_v1/compact.py": "2f52860e6c14fa9a90d3ee8ccb50591a8e91e785f7fb69e2f76aa3b0845728b2",
+    "candidates/ukl_sage_compact_v1/common.py": "596c41ab5952afd3903b91e4043b746b388df271e9d5bfe9febf739012294652",
+    "candidates/ukl_sage_compact_v1/sampler.py": "962940734aa908f2abe713a62b8b4970e614b220fee1012889ff05055c81c04b",
+    "candidates/uks_sage_epoch_v1/common.py": "ebe6ebcd2324a52e34b4d6d0b5208a4bfb45c5ece9a7e13ba9ff49091baeb18d",
+    "candidates/pa_sage_cache_policy_v1/common.py": "0d1ea88b0ddb8c408c38a29869ac3d65a2993ad9284e8f194b44e786c461229e"
+  },
+  "prior_candidate_manifest_sha256": "225e8cece45fd81ba180c86a3f0fdd11004718cfa06fbead6a77af42089b753c"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "pa-sage-512b-latency-v1",
+  "baseline_sha256": "30fd306e784908fed75744d23a85787508942c5702acd4c56343f761882d413f",
+  "files": {
+    "candidates/pa_sage_512b_latency_v1/README.md": "fd7d8b69152ad199e22c832e2ff932f82608fee86c9eea68e6208a9e8f58d3ef",
+    "candidates/pa_sage_512b_latency_v1/__init__.py": "2e8d0e704ebc0977f71089cde56fd88c7fef0aa6e01f8bf3510c6e53bd7130b1",
+    "candidates/pa_sage_512b_latency_v1/analyze.py": "16acd41ce3af335fa264be0426456601a12aead60352515fd6d1fd98a1306f91",
+    "candidates/pa_sage_512b_latency_v1/common.py": "416cba5db6826f97db15878d6134f2946b4dca800b77a9a1414c55250ead81a5",
+    "candidates/pa_sage_512b_latency_v1/control.py": "427926e3350e9c6779da1234eebd2f179a0141d3d22cc70888690c6412b73f0f",
+    "candidates/pa_sage_512b_latency_v1/equivalence.py": "ff907333848e77a5af3a3de5f79aa2f59c5ec2d5892bb43e8ad7b41f45964abc",
+    "candidates/pa_sage_512b_latency_v1/freeze.py": "9528e85bb4a0a5d326042cc67ec089d557bccd1c2be5a9ce8d0071634559c8cc",
+    "candidates/pa_sage_512b_latency_v1/frontier.py": "9841f130cb1f554685adeb31ffac2e0e6521f78850f3854dc96ed3a93428616e",
+    "candidates/pa_sage_512b_latency_v1/gpu_tests.py": "7ea74d5b698f75aa28560edb9b46137b30fd46752afd284b10e4e0c513b4262a",
+    "candidates/pa_sage_512b_latency_v1/model.py": "ae138d42d77965c162819ba8a0e99759ac032c02f314701df08c59614cbae254",
+    "candidates/pa_sage_512b_latency_v1/protocol.json": "83c4cd46e1c7aec1dd0d097e3e88cccfaaffe35a3745db695ee59d14e60fd894",
+    "candidates/pa_sage_512b_latency_v1/sampler.py": "a2fb1cf88006c68429f88ffc8c63a0420bfcdf6cc8855cd621fa9e520a065e17",
+    "candidates/pa_sage_512b_latency_v1/start.py": "3e274c4cd0bac28b6fd5c15a67974475ffb818193e29cf5d5c703a268a0667a2",
+    "candidates/pa_sage_512b_latency_v1/tests.py": "fa8631b2578600f38c1697646e586a29e61bca4d06bad412fe04c5f580c99ac6",
+    "candidates/pa_sage_512b_latency_v1/worker.py": "a5aa7438e9bd316c29aedfcc052f1e780e124edc47c37922367e8c84a7fe5e53"
+  },
+  "created_unix": 1790407439.6030777,
+  "runtime_sha256": {
+    "/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/dgl/convert.py": "9add9eaeab65cd8e94aba274ea7e0dfd9428bc70a9ed06733e1fd02473a8041d",
+    "/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/dgl/heterograph.py": "34f1826f9959f7b47da2b03d18f8f3b5cb2cd643c0af438af50c8fb676579b9e",
+    "/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/dgl/ops/spmm.py": "a2a46766c12e5a3c395bb478a2ef4913d0a4218afd07a8506e5441adc92726bf",
+    "/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/dgl/nn/pytorch/conv/sageconv.py": "a8f5272e7bb66f5713266d25f5486d19cf3fdd2107d6b272c5060ce8a57a3f54",
+    "/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/dgl/backend/pytorch/sparse.py": "2d1ef7b7e0c4c28d6553d4f518131fc08da7215227df625409ead807a7e27c7e",
+    "/home/embed/miniconda3/envs/gids/lib/python3.8/site-packages/torch/optim/adam.py": "2a28ca25790a8b9b3921ae5c0b2d9a05926aa8096390be5933608c113e628f76",
+    "/home/embed/digit/evaluation/models.py": "8deaac7daa7d25fd6e0141724797ff26a266a76db76fc70ac421e5d80b0c77ec"
+  },
+  "evidence_sha256": {
+    "inputs.json": "117d95c2d70a6e9e33d55ddec0748cbd2ff5aeab349f205daeaab36df730b97c",
+    "cpu_checks.json": "a2a6d80405f7165cc6a8886f8f3944a3503dbd542e35c13a4f969f07f9f34622",
+    "gpu_checks.json": "ace5f3b9c971ec759bb74f60eefcc69f21dc5b73d77f9d93e31884a5ecc7407d"
+  }
+}

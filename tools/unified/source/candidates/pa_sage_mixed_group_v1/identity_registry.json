@@ -1,0 +1,267 @@
+{
+  "files": {
+    "/mnt/n3/ogb_npy/node_feat.npy": {
+      "identity": {
+        "device": 66312,
+        "inode": 103809031,
+        "bytes": 56862697600,
+        "mtime_ns": 1747906260000000000,
+        "ctime_ns": 1776934391403278060
+      },
+      "filesystem_uuid": "ca547588-a5ba-4f04-b542-d355041a5313"
+    },
+    "/mnt/n3/ogb_npy/node_label.npy": {
+      "identity": {
+        "device": 66312,
+        "inode": 103809030,
+        "bytes": 444239952,
+        "mtime_ns": 1747906276000000000,
+        "ctime_ns": 1776933900425532823
+      },
+      "filesystem_uuid": "ca547588-a5ba-4f04-b542-d355041a5313"
+    },
+    "/mnt/n3/gids_all/phase9d_results/papers128d_g16_normalized_v1/csc/original_indptr.npy": {
+      "identity": {
+        "device": 66312,
+        "inode": 921767,
+        "bytes": 888479784,
+        "mtime_ns": 1788873950137225083,
+        "ctime_ns": 1788873950173225815
+      },
+      "filesystem_uuid": "ca547588-a5ba-4f04-b542-d355041a5313"
+    },
+    "/mnt/n3/gids_all/phase9d_results/papers128d_g16_normalized_v1/csc/original_indices.npy": {
+      "identity": {
+        "device": 66312,
+        "inode": 921765,
+        "bytes": 13813966752,
+        "mtime_ns": 1788873674527482025,
+        "ctime_ns": 1788873674595483484
+      },
+      "filesystem_uuid": "ca547588-a5ba-4f04-b542-d355041a5313"
+    },
+    "/mnt/n3/papers100M/ogbn_papers100M/split/time/train.csv.gz": {
+      "identity": {
+        "device": 66312,
+        "inode": 94896143,
+        "bytes": 3425399,
+        "mtime_ns": 1749116020000000000,
+        "ctime_ns": 1776944635368543690
+      },
+      "filesystem_uuid": "ca547588-a5ba-4f04-b542-d355041a5313"
+    },
+    "/mnt/n3/papers100M-bin/processed/pr_papers100M.pt": {
+      "identity": {
+        "device": 66312,
+        "inode": 158072846,
+        "bytes": 533088954,
+        "mtime_ns": 1749291326000000000,
+        "ctime_ns": 1776935609002447097
+      },
+      "filesystem_uuid": "ca547588-a5ba-4f04-b542-d355041a5313"
+    },
+    "/home/embed/digit/ssd_state/libnvm0.offset137438953472.json": {
+      "identity": {
+        "device": 66308,
+        "inode": 35931058,
+        "bytes": 738,
+        "mtime_ns": 1788944668080634977,
+        "ctime_ns": 1788944668080634977
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/group_members.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246871,
+        "bytes": 744528912,
+        "mtime_ns": 1789837437713351679,
+        "ctime_ns": 1789837437713351679
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/group_owner.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246873,
+        "bytes": 372264520,
+        "mtime_ns": 1789837438237365713,
+        "ctime_ns": 1789837438237365713
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/group_storage_base.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246876,
+        "bytes": 372264520,
+        "mtime_ns": 1789837440601428991,
+        "ctime_ns": 1789837440601428991
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/storage_to_node.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246878,
+        "bytes": 3299762048,
+        "mtime_ns": 1789837443113496162,
+        "ctime_ns": 1789837443113496162
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/node_to_primary_row.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246879,
+        "bytes": 888479776,
+        "mtime_ns": 1789837447245606497,
+        "ctime_ns": 1789837447245606497
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/supernode_to_group.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246877,
+        "bytes": 372264520,
+        "mtime_ns": 1789837440981439157,
+        "ctime_ns": 1789837440981439157
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/reordered_indptr.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246881,
+        "bytes": 1260744176,
+        "mtime_ns": 1789837450065681692,
+        "ctime_ns": 1789837450065681692
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/reordered_indices.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246882,
+        "bytes": 13441702360,
+        "mtime_ns": 1789837480922498850,
+        "ctime_ns": 1789837480922498850
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/reordered_features.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246867,
+        "bytes": 211184763008,
+        "mtime_ns": 1789838340674783743,
+        "ctime_ns": 1789838340674783743
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/bundle/manifest.json": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246892,
+        "bytes": 5826,
+        "mtime_ns": 1789838781312343456,
+        "ctime_ns": 1789838781312343456
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/prepared.json": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246896,
+        "bytes": 1662,
+        "mtime_ns": 1789839079194703468,
+        "ctime_ns": 1789839079194703468
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/descriptor.json": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246872,
+        "bytes": 5762,
+        "mtime_ns": 1789837505223135432,
+        "ctime_ns": 1789837505223135432
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/final/validation.json": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246870,
+        "bytes": 279,
+        "mtime_ns": 1789837564728670224,
+        "ctime_ns": 1789837564728670224
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/hot_ready.json": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246865,
+        "bytes": 599,
+        "mtime_ns": 1789836373439941985,
+        "ctime_ns": 1789836373439941985
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/ssd_ready.json": {
+      "identity": {
+        "device": 66308,
+        "inode": 36247075,
+        "bytes": 1191,
+        "mtime_ns": 1789889531838842693,
+        "ctime_ns": 1789889535750931387
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/ssd_state/libnvm0.offset3298534883328.json": {
+      "identity": {
+        "device": 66308,
+        "inode": 35928891,
+        "bytes": 712,
+        "mtime_ns": 1789889514386445856,
+        "ctime_ns": 1789889535750931387
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/results/pa_sage_g2_ssd_20260920_v2/ssd_verify_receipt.json": {
+      "identity": {
+        "device": 66308,
+        "inode": 36247072,
+        "bytes": 2290,
+        "mtime_ns": 1789889514386445856,
+        "ctime_ns": 1789889535750931387
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/home/embed/digit/data/papers_g2_random_v2/logical_frequency.npy": {
+      "identity": {
+        "device": 66308,
+        "inode": 36246860,
+        "bytes": 888479776,
+        "mtime_ns": 1789836371987914566,
+        "ctime_ns": 1789836371987914566
+      },
+      "filesystem_uuid": "585fcd89-b835-4147-bd0d-a7d56bffd2d2"
+    },
+    "/mnt/n0/digit/pa_sage_512b_pair_20260926_v1/digit_hot_nodes.npy": {
+      "identity": {
+        "device": 66304,
+        "inode": 215023622,
+        "bytes": 88848088,
+        "mtime_ns": 1790399048212253950,
+        "ctime_ns": 1790399048212253950
+      },
+      "filesystem_uuid": "8d3a6bd3-e697-4b49-a4cf-4d36803c7e98"
+    }
+  },
+  "origin_registry_sha256": "e551309d1a002fecadc22490888d3392ecc36236f76a2bc8e0bdc17dbbcbf47a",
+  "origin_manifest_sha256": "abaf09eb1235bad0adb91b1dee11f2c7b01543ce7381f338b2bbd2b0923374a5",
+  "binding_sha256": "117d95c2d70a6e9e33d55ddec0748cbd2ff5aeab349f205daeaab36df730b97c"
+}

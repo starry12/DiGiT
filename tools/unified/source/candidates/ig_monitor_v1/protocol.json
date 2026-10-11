@@ -1,0 +1,18 @@
+{
+  "schema": "digit-ig-monitor-v1",
+  "backend": "persistent_nvml_ctypes_v1",
+  "period_after_query_seconds": 0.5,
+  "query_timeout_seconds": 5.0,
+  "readiness_timeout_seconds": 15.0,
+  "sampler_terminate_timeout_seconds": 2.0,
+  "sampler_kill_timeout_seconds": 2.0,
+  "monitor_stop_timeout_seconds": 8.0,
+  "combined_host_limit_bytes": 67108864,
+  "error_policy": "Record every error and stop; no retry or recovery converts an errored monitor into a pass.",
+  "process_policy": "Controller owns supervisor; supervisor owns one persistent NVML sampler; neither imports torch, DGL, CUDA Python, or native feature stores.",
+  "device_policy": "Select physical GPU index using NVML, record physical GPU UUID on every sample, and reject an identity change.",
+  "memory_policy": "Record summed supervisor and sampler RSS; enforce a conservative sum of their VmHWM against the existing 64 MiB budget.",
+  "acceptance": "At least one sample, zero errors, bounded sampler shutdown and complete summary; external review retains worker coverage and strict smoke checks.",
+  "memory_api": "nvmlDeviceGetMemoryInfo_v2",
+  "gpu_memory_policy": "NVML v2 used bytes excludes driver/firmware reserved memory, matching nvidia-smi memory.used apart from nvidia-smi whole-MiB display truncation. Record total/free/reserved separately; no v1 fallback."
+}

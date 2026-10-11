@@ -1,0 +1,51 @@
+{
+  "async_hint_and_consumer_event_ordering_exact": true,
+  "binary_sha256": "f2ddd720a2ae602aac2fa983c2a7a6351e4e7a274032a657d7d27b50759dcdc8",
+  "cpu_count_per_request": 8,
+  "cuda_visible_devices": "2",
+  "device": "NVIDIA L40",
+  "feature_rows": 13,
+  "gpu_only": true,
+  "limitations": [
+    "Synthetic gather uses production async scheduling, no BaM cache or SSD",
+    "This proves event/count/lifetime behavior, not real training speedup"
+  ],
+  "merged_batches": 4,
+  "native_source_sha256": "f69d57501dc8c8d743f537a6be3d9bd0c775072d79981064cff2ca8a9cc0017a",
+  "output_elements_exact": true,
+  "passed": true,
+  "pending_destructor_safe": true,
+  "probe_python_sha256": "a95359d387fe0d4c778fdedd37938c4823d99128c117567aa68156e0e172dbc3",
+  "raw_ssd_reads": false,
+  "raw_ssd_writes": false,
+  "rejected_operations": [
+    "default_stream_rejected",
+    "uninitialized_real_store_rejected",
+    "too_many_batches",
+    "empty_batches",
+    "mismatched_vectors",
+    "wrong_io_stream",
+    "reuse_before_collect",
+    "wrong_ticket",
+    "pending_idle_guard",
+    "drain_before_collect",
+    "duplicate_collect",
+    "query_collected_ticket",
+    "wait_collected_ticket",
+    "second_host_owner"
+  ],
+  "request_counts_exact": true,
+  "synthetic_overlap": {
+    "collect_did_not_wait_for_independent_work": true,
+    "enqueue_host_seconds": 6.866827607154846e-05,
+    "model_interval_ms": [
+      0.10569600015878677,
+      120.5956802368164
+    ],
+    "overlap_ms": 12.018368445336819,
+    "read_interval_ms": [
+      0.0,
+      12.124064445495605
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "digit-direction-candidate-v2",
+  "files": {
+    "README.md": "520b061a6ef56e83bdf43ba0c707400756352b59215bfd7aade780a5e5003084",
+    "common.py": "66f5d97a354697b25d6d33e2d1a67f2f141cbcf3c5fc88e74769d98bab408132",
+    "graph.py": "d82558845c662037ad1175ce284eebe7c2a74722265191c51cc82013fdca05dd",
+    "protocol.json": "b8ccc931801c8af1638dfed1f5fecb8a6bdd5edba1511da2361648b39fc87b67",
+    "run.py": "4b257b9f0140cc824341b50e7957165f33ec9a7f091f0c87dcad8345a1865b9e",
+    "tests.py": "f878b0620bd18a1d0f4d4a3cdbb5b0b5b4d945135f75c667734ecbd571c325f6",
+    "worker.py": "00338445b488d3f0fd5762260e4b479103896bb2425429e87ee4ca772d33d0bf"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "models": {
+    "gcn": {
+      "in_feats": 128,
+      "h_feats": 128,
+      "num_classes": 172,
+      "num_layers": 3,
+      "dropout": 0.2
+    },
+    "gat": {
+      "in_feats": 128,
+      "h_feats": 128,
+      "num_classes": 172,
+      "num_layers": 3,
+      "dropout": 0.2,
+      "num_heads": 4
+    }
+  },
+  "optimizer": {
+    "lr": 0.01,
+    "weight_decay": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08
+  },
+  "sampling": {
+    "batch_size": 1024,
+    "fanouts": [
+      16,
+      5,
+      5
+    ],
+    "batching": "random",
+    "fit_new_hot_or_replica": false
+  },
+  "numerics": {
+    "training_dtype": "float32",
+    "tf32": false,
+    "amp": false,
+    "USE_DETERMINISTIC_ALG": "1",
+    "cpu_oracle_rtol": 1e-09,
+    "cpu_oracle_atol": 1e-10,
+    "cuda_oracle_rtol": 0.0002,
+    "cuda_oracle_atol": 2e-05,
+    "same_device_repeat": "bit-exact"
+  }
+}

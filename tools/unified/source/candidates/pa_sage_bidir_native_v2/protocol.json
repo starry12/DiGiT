@@ -1,0 +1,58 @@
+{
+  "schema": "digit-pa-sage-bidir-native-v1",
+  "selected_config": "candidates/pa_sage_selected_v1/config.json",
+  "seed": 0,
+  "epochs": 20,
+  "fanouts": [
+    10,
+    5,
+    5
+  ],
+  "batch_size": 1024,
+  "optimizer": {
+    "name": "Adam",
+    "kwargs": {
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null
+    }
+  },
+  "hidden": 128,
+  "classes": 172,
+  "layers": 3,
+  "dropout": 0.2,
+  "graph": {
+    "nodes": 111059956,
+    "edges": 3342431700,
+    "policy": "Preserve original nonself multiedges; bidirectional appends reversed edges without dedup; exactly one self loop per node in both arms.",
+    "arm": "bidirectional",
+    "csc_sha256": {
+      "indptr": "7d5e673666a047d439ffdbded926d637634f133fbc83d29af74bb7bac20b3b63",
+      "indices": "1276664d1cca1d5aa81924c39fb9f203f36519d1611753fc0b4df2cca7768c90",
+      "eids": "6bda924d3fb58aa9d40e97f8166ddfa2a6c20c24ad3201de1e21871deedd5ece"
+    }
+  },
+  "gpu_cache_bytes": 4294967296,
+  "cpu_cache_rows": 11105992,
+  "base_layout": "data/papers_g2_random_v2",
+  "data": "data/pa_sage_bidir_native_v1",
+  "validation_trace": "results/pa_sage_direction_20260921_v2/bidirectional/valid_trace",
+  "test_trace": "results/pa_sage_direction_20260921_v2/bidirectional/test_trace",
+  "metadata_mode": "gpu_i32_uva_eid64",
+  "bfs_enabled": false,
+  "layout_policy": "Retain frozen g2 groups, feature storage and CPU selection; append all reverse edges as raw neighbors. Verify exact expanded bidirectional multigraph.",
+  "model_policy": "Fresh seed-0 model and Adam for each system. Reuse selected hyperparameters and graph, not selected checkpoint. Test each new epoch20 model exactly once.",
+  "measurement": "Identical useful I/O instrumentation in both arms; train/validation/test counted separately",
+  "smoke_epochs": 2,
+  "smoke_batches": 2
+}

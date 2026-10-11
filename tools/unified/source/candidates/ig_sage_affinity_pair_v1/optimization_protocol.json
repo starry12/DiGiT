@@ -1,0 +1,57 @@
+{
+  "schema": "digit-ig-affinity-pair-protocol-v1",
+  "parent_candidate_sha256": "cec77a5bff14382e89f7ee7fd30660f5802f44265ae74a01b4c70e2d7e123160",
+  "schedule": [
+    {
+      "mode": "smoke_gids",
+      "arm": "gids",
+      "smoke": true
+    },
+    {
+      "mode": "smoke_digit_full",
+      "arm": "digit_full",
+      "smoke": true
+    },
+    {
+      "mode": "gids_1",
+      "arm": "gids",
+      "smoke": false
+    },
+    {
+      "mode": "digit_1",
+      "arm": "digit_full",
+      "smoke": false
+    },
+    {
+      "mode": "digit_2",
+      "arm": "digit_full",
+      "smoke": false
+    },
+    {
+      "mode": "gids_2",
+      "arm": "gids",
+      "smoke": false
+    }
+  ],
+  "model": "sage",
+  "gpu": 2,
+  "host_admission_gib": 320,
+  "cpu_policy": {
+    "gids": "unchanged default scheduling",
+    "digit_full": "all worker threads on logical CPU2"
+  },
+  "formal_extent": "Each fresh worker: 20 warmup + 3x100 timed batches; batch1024, original frozen roots, model, Adam and seed0.",
+  "profile_mode": "off",
+  "fresh_smoke_gate": "Both independent two-update native source/routing/edge smokes must pass before formal workers.",
+  "raw_ssd_writes": false,
+  "native_backend_changed": false,
+  "graph_or_feature_layout_changed": false,
+  "cpu_cache_or_gpu_cache_changed": false,
+  "model_or_optimizer_changed": false,
+  "ae_changed": false,
+  "separate_sampling_probe": false,
+  "accuracy_or_epoch_claim": false,
+  "continuous_monitor": "unchanged IG persistent NVML",
+  "independent_runs_per_arm": 2,
+  "interpretation": "System comparison includes different CPU scheduling. Not an isolated sampler gain or a comparison with both systems equally CPU-bound. Setup and warmup separate; preserve every run/window and negative results."
+}

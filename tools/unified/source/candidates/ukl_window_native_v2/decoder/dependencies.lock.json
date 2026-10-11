@@ -1,0 +1,144 @@
+{
+  "webgraph": "3.6.12",
+  "compiler": "ECJ 3.26.0",
+  "jars": [
+    {
+      "file": "activation-1.1.jar",
+      "url": "https://repo.maven.apache.org/maven2/javax/activation/activation/1.1/activation-1.1.jar",
+      "sha256": "2881c79c9d6ef01c58e62beea13e9d1ac8b8baa16f2fc198ad6e6776defdcdd3",
+      "bytes": 62983
+    },
+    {
+      "file": "checker-qual-3.43.0.jar",
+      "url": "https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.43.0/checker-qual-3.43.0.jar",
+      "sha256": "3fbc2e98f05854c3df16df9abaa955b91b15b3ecac33623208ed6424640ef0f6",
+      "bytes": 231525
+    },
+    {
+      "file": "commons-lang3-3.12.0.jar",
+      "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar",
+      "sha256": "d919d904486c037f8d193412da0c92e22a9fa24230b9d67a57855c5c31c7e94e",
+      "bytes": 587402
+    },
+    {
+      "file": "commons-math3-3.6.1.jar",
+      "url": "https://repo.maven.apache.org/maven2/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar",
+      "sha256": "1e56d7b058d28b65abd256b8458e3885b674c1d588fa43cd7d1cbb9c7ef2b308",
+      "bytes": 2213560
+    },
+    {
+      "file": "dsiutils-2.7.4.jar",
+      "url": "https://repo.maven.apache.org/maven2/it/unimi/dsi/dsiutils/2.7.4/dsiutils-2.7.4.jar",
+      "sha256": "65fd7c9957563b83c0b20485f466cf6f2cc49a3fe295718ef03ec365ca896b5f",
+      "bytes": 534380
+    },
+    {
+      "file": "ecj-3.26.0.jar",
+      "url": "https://repo.maven.apache.org/maven2/org/eclipse/jdt/ecj/3.26.0/ecj-3.26.0.jar",
+      "sha256": "ac0ba5876eaf7ebb47749a0d1be179c51f194b9dd0b875d1c09e1b530f5a2db5",
+      "bytes": 3133846
+    },
+    {
+      "file": "error_prone_annotations-2.36.0.jar",
+      "url": "https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar",
+      "sha256": "77440e270b0bc9a249903c5a076c36a722c4886ca4f42675f2903a1c53ed61a5",
+      "bytes": 19401
+    },
+    {
+      "file": "failureaccess-1.0.2.jar",
+      "url": "https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar",
+      "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064",
+      "bytes": 4740
+    },
+    {
+      "file": "fastutil-8.5.16.jar",
+      "url": "https://repo.maven.apache.org/maven2/it/unimi/dsi/fastutil/8.5.16/fastutil-8.5.16.jar",
+      "sha256": "317a1c26252da2c6f5cb32454e2995f6b93940f09c6642969a330c6b9ff67342",
+      "bytes": 23841388
+    },
+    {
+      "file": "guava-33.4.0-jre.jar",
+      "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava/33.4.0-jre/guava-33.4.0-jre.jar",
+      "sha256": "b918c98a7e44dbe94ebd9fe3e40cddaadb5a93e6a78eb6008b42df237241e538",
+      "bytes": 3080298
+    },
+    {
+      "file": "j2objc-annotations-3.0.0.jar",
+      "url": "https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar",
+      "sha256": "88241573467ddca44ffd4d74aa04c2bbfd11bf7c17e0c342c94c9de7a70a7c64",
+      "bytes": 12467
+    },
+    {
+      "file": "javax.mail-1.6.2.jar",
+      "url": "https://repo.maven.apache.org/maven2/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar",
+      "sha256": "45b515e7104944c09e45b9c7bb1ce5dff640486374852dd2b2e80cc3752dfa11",
+      "bytes": 659031
+    },
+    {
+      "file": "jsap-20210129.jar",
+      "url": "https://repo.maven.apache.org/maven2/it/unimi/di/jsap/20210129/jsap-20210129.jar",
+      "sha256": "211c7b820f702b851bbe702381d4d98eb839e7f253460e26bde02d98d7653535",
+      "bytes": 90009
+    },
+    {
+      "file": "jsr305-3.0.2.jar",
+      "url": "https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar",
+      "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7",
+      "bytes": 19936
+    },
+    {
+      "file": "jung-algorithms-2.1.1.jar",
+      "url": "https://repo.maven.apache.org/maven2/net/sf/jung/jung-algorithms/2.1.1/jung-algorithms-2.1.1.jar",
+      "sha256": "ed138e2f6b2b2f13af61a13f1788bce6f1de8858c42ee70a7d41e6283937a30a",
+      "bytes": 230204
+    },
+    {
+      "file": "jung-api-2.1.1.jar",
+      "url": "https://repo.maven.apache.org/maven2/net/sf/jung/jung-api/2.1.1/jung-api-2.1.1.jar",
+      "sha256": "6cb735963c36d5155d0de5f19a03485b9a26e67550e160b3dd89009a6f51694e",
+      "bytes": 42221
+    },
+    {
+      "file": "jung-io-2.1.1.jar",
+      "url": "https://repo.maven.apache.org/maven2/net/sf/jung/jung-io/2.1.1/jung-io-2.1.1.jar",
+      "sha256": "05033ca56dd6fe2fb2fdc7ca7844d554484a3adf833f7a17cfc371263c31fa4d",
+      "bytes": 79779
+    },
+    {
+      "file": "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+      "url": "https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+      "sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99",
+      "bytes": 2199
+    },
+    {
+      "file": "logback-classic-1.3.4.jar",
+      "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.3.4/logback-classic-1.3.4.jar",
+      "sha256": "b866a5da6c8b78e155c67fccd7562860d0b5fc776b89cd968c2f3f2e37fc3a02",
+      "bytes": 260451
+    },
+    {
+      "file": "logback-core-1.3.4.jar",
+      "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.3.4/logback-core-1.3.4.jar",
+      "sha256": "4740a098bb443a744554dd3ddf062c682287b294066754e292e1346c8bf5cedd",
+      "bytes": 563976
+    },
+    {
+      "file": "slf4j-api-2.0.3.jar",
+      "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.3/slf4j-api-2.0.3.jar",
+      "sha256": "68ddcda65300ff8097ad1a096d7cd2fb06cef25193887cec3f2690e01bdbf421",
+      "bytes": 61409
+    },
+    {
+      "file": "sux4j-5.4.1.jar",
+      "url": "https://repo.maven.apache.org/maven2/it/unimi/dsi/sux4j/5.4.1/sux4j-5.4.1.jar",
+      "sha256": "f723ed570899e3fce17b1423ff2b56b72cb56f4202573f596ae7109c036f9a00",
+      "bytes": 480589
+    },
+    {
+      "file": "webgraph-3.6.12.jar",
+      "url": "https://repo.maven.apache.org/maven2/it/unimi/dsi/webgraph/3.6.12/webgraph-3.6.12.jar",
+      "sha256": "8daddd3881aecc7095643936c9e16d825cbe0e431df507519e36df68d06444ef",
+      "bytes": 399246
+    }
+  ]
+}

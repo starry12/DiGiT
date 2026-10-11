@@ -1,0 +1,18 @@
+{
+  "parent_sha256": "08590217e213043631efa5a1a2be8983650b0e684d56ed593e1354e8494debd7",
+  "files": {
+    "README.md": "94be75e1c0fe98639ab8006ea9f2241203135b842b9e218d8a7f47203472cf74",
+    "__init__.py": "729b64c0e00bd5cec910c8bbcf181cc991140a8de8eaf5e0e5f5a4f18e148a4b",
+    "common.py": "4faf4eb6b18545eec5a0253b56fb1f373d352101aee92aa6c344aea953c20a6c",
+    "gpu_check.py": "0604a23b860158eebe62981a5ccb30ef302e60964862c2482dee2900554d53cd",
+    "report.py": "c0beb5b1647e9bdc8f49b095359f7aa96793660d58baffbb8b9c411e1af731a4",
+    "sampling.py": "b7c0aad0e0392f25252db519fe183505732f3cdc1bdcf243924b366d3a6eac65",
+    "start.py": "da549fa8dc42459ba7bf17961aa5c6ede9e6118c24e015051baf6911dfc695f5",
+    "tests.py": "eeba8a6d5eb18ccdfc479b3ce7fddfb0dfe2beace131ab948e4a3fc0df6e194d",
+    "worker.py": "de38deb9289c99eadc1b7ab439b53a41dc69a4448ef654ba876e4cf5904fd7d3"
+  },
+  "dependencies": {
+    "candidates/pa_sage_mixed_group_v1/queue.py": "4c98e64a7a24da592f643c233ef86fe405d8ef8bccda0f96ae15fb4e2ba516e5",
+    "candidates/ig_sage_affinity_pair_v1/affinity.py": "e9880327531e818ca34e3ec9c30754e5da936aad2f97e6125b78042cf0fc6d7c"
+  }
+}

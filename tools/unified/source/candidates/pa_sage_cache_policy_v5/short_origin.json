@@ -1,0 +1,20 @@
+{
+  "schema": "digit-cache-accepted-short-origin-v5",
+  "source_sha256": "104bc4c5d26b2a1a61f79b7ca04b6723a7a181f5858c14caa7a675b1e2b19b68",
+  "status": {
+    "path": "/home/embed/digit/results/pa_sage_cache_policy_20260926_v4/native/status.json",
+    "sha256": "096d08c0a68d13217b9fc2a67d86c96d0efce20015a44de27c9905e0e7ec9eea"
+  },
+  "protocol": {
+    "path": "/home/embed/digit/results/pa_sage_cache_policy_20260926_v4/plan/protocol.json",
+    "sha256": "28e4c789b10bb823343176a11bf9744ed4d11fdc5c399186ae55aac41246c726"
+  },
+  "short_matrix": {
+    "path": "/home/embed/digit/results/pa_sage_cache_policy_20260926_v4/native/short_matrix.json",
+    "sha256": "cdf82743b1a1c3c342755f58165d840c6a030675ff0df9aa388dd782bc8b0033"
+  },
+  "prepared": {
+    "path": "/home/embed/digit/results/pa_sage_cache_policy_20260926_v4/native/stages/reuse_preparation/attempt_00/prepared.json",
+    "sha256": "163d8e6ea9a3c1260bf33e8c78e05f83f4f72e368d06ee45e94cd7b357cf4a33"
+  }
+}

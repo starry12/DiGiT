@@ -1,0 +1,23 @@
+{
+  "schema": "digit-layout-native-performance-freeze-v3",
+  "parent_candidate_sha256": "a6049d5c8a7580a923cc156400edcee58686196de83e325e6b1ea533102fefe2",
+  "files": {
+    "README.md": "7a99d395412a8a1dc93e35b4296c041f2bf8e921f631af10c641b84ee9ee8c36",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "admission.py": "430ba72ca3f0e8b1b36f2c5b6c620bc31d77e55853e6df58f3dc3433e87845b0",
+    "aggregate.py": "02096b5d2238f8da384b2a9f1ecbc8adbb06f4c9b03c0edab3b72694697eee64",
+    "binding.py": "5f9b6b8b64ed0c3e7a7ab8b0986accc4bfc5d9270f32835d50067642208d3128",
+    "cli.py": "007ad7c6db6a6cb324efb9a9127d1585a194dfb203bc556f8f9ad4a5db2fa823",
+    "common.py": "30d3d18a80e9aae7ea01d496c173d76c996a13c249f067150dced92c02dba7e5",
+    "protocol.py": "8d8dff8ecafb99ceeb9522434af112f437163b362952acfe36585a1ac3f91fb5",
+    "reference_protocol.json": "617c7900c5a76ab2893dabb152294f8e795160daf709591fe144780fbe4f0611",
+    "run.py": "716fc1b624886f5720c9ea45b83b79b250981df17fcf69f90568cfd3140a9358",
+    "settings.py": "230a3cffeae74333514991bb4b91472932f145f07b8c8bec6d1a11e74ff0d048",
+    "start.py": "460cbbc90c75c93f0e312a4e2a896dee6bcabf8f2c9433a06cbd375b4e498692",
+    "tests.py": "454b823dec270c5e0de40127ed618b913a2322fbc524dcb9a55e03c60e70a8b5",
+    "training_loop.py": "13b799c4a359e4a2f62b819664a109715a2a2ceb69d07ffd9ae5ab63079e1571",
+    "validation.py": "b8f27bce2c33eb205730861b143420506deb9c0954d484ffc25c0ecc8c2d533d",
+    "worker.py": "89cd67a04ba2bbd1b20e2b91e8e7dab3ea1c27f649ef727d62f6acd194b0f08b"
+  },
+  "external_files": {}
+}

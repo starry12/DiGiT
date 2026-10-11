@@ -1,0 +1,31 @@
+{
+  "files": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend.py": "5a1de86220c5e11e33a834633e4917b5f3180bb708d97c3025d5d416e72a0018",
+    "build.py": "4b542c617fea0bf4b59c14af9b02a9023bd2f91136fee75b53953bda8ba73496",
+    "common.py": "10ff50f68baca77b4364ec930348435264274e4efe0ad021d595b16c81688973",
+    "controller.py": "5e75e044160ea60ff03d067796970f70a6cbd2660f2c7e730c15311c15f306ef",
+    "counters.py": "76361f50cb59be0c41eba3ea991f533f94dab0c419ef19e8c8a7b9fa8e9f430b",
+    "gpu_check.py": "02b58c9d1e5a874d1e44675025327181e43de8259978f837884ad75018ea582c",
+    "native/bam/include/legacy_geometry.h": "9a2fc31e3d50085695010dcbecf4e92fa0e2f3c0b9faeedbfad49992dcc0e12b",
+    "native/bam/include/page_cache.h": "2e1b02e4d430363c820e2a3da96f2007106405ae399f3dbca39994a133c168d3",
+    "native/gids_module/cache_policy_host.cuh": "c1fe1041831acd32e9a53d448270c843a196a31e752f289cbf2a28b1977b3c5a",
+    "native/gids_module/cache_policy_kernel.cuh": "54430c4cdf818bc95bb8d1195c4508927b1001a8ec8dd9b73a9d06d256bb86d3",
+    "native/gids_module/gids_kernel.cu": "250e577af7f4871fc27d935774a7cad8ba08c7430db7e6c29857818f17494756",
+    "native/gids_module/gids_nvme.cu": "85a1145396a6ca0eb5cf1524add79206b22a66fd942ff69bf049aac9750c332e",
+    "native/gids_module/include/bam_nvme.h": "813bdc1255409a42c45d13ed1b02a2757f6e50d69d4203e9d03c72a7841d0b2f",
+    "native/gids_module/include/policy_math.h": "ff22a1ad011b99ceb5f8425d5d2e4724dd2561f1b929c3bdc635c642295f2b6d",
+    "native/policy_math_test.cpp": "4006922eb6d2c5dece1d8987f09470c21324a153a965e7849e11329ca96bde08",
+    "protocol.json": "db49a7853137e36eca81b42b5d1a912e5dee655633c32c519f01894450368b4c",
+    "runtime.py": "db7344e53096d34929f413b5bbce320db434768e4643477fdb831278fd374d4c",
+    "smoke.py": "d308b904ef564fee334dcdf2746232311ba82c74c28a6023453a2bed8e5519e1",
+    "start.py": "88c2ca39d143bcbd3666b750f238a783c917694760e29b89e0995db5f2516618",
+    "tests.py": "83b00d45734fefc86afccbeb988fc201eb816ba7619f559f4cc20de7b4c14855",
+    "worker.py": "5e78a1a58043d469277b2ec5af2b9d6d15608dd7ed3001bd713dc64c8ca7242c"
+  },
+  "dependencies": {
+    "results/uks_mixed_1k2k_20260930_v1/start.py": "661ee1a64453f33f8c36768fd311438991010032ed53e708ccf3e244baeb6620",
+    "candidates/uks_1kb_pair_v1/manifest.json": "6700f0c7ef4f6eb44c42ff1542755e094e9a4a1792908b07eaea696c0c5a9688"
+  },
+  "sampler_parent_sha256": "e7500be3f3470d81f6fca24cff3a414d06ffe8d8e7c17b7d367e795240c678d5"
+}

@@ -1,0 +1,25 @@
+{
+  "parent_source": "64be49eaae33c13388aa66207ad882e002d6efb96faa542cd4c9d5fba47800bb",
+  "files": {
+    "affinity.py": "024f35d10f99c12fc7e2876ee6e3eb1c25df4b843d24757ea29be45fa91c828f",
+    "start.py": "e39ec73cc0921523aef0f4d909ba1d96443769bca67c2a77950e737b79f834c1",
+    "freeze.py": "3b3a0807466614970c0b351d8ad791b4ecdca292ab401f6c8f8533c1aad2f5e2",
+    "gpu_check.py": "314be7d59388dcb981bd5e602ec9024e7e6fd777ccff9bbb03cf98bbca91ac37",
+    "tests.py": "e56ddcebffbc10cb6135e4f453a82c7f99373436bca769e623aec332e61e8936",
+    "checks.py": "06f6a4924c411f30a2df14d61f35d0f557e08a822115ade32a78da0c5256bb9a",
+    "resources.py": "b410dabb50dac5f5e00e9f30a8fd93fe592caa85dd804c51e3d8d0c9f5badd5c",
+    "common.py": "a1550c0a8b1abb368829ec96c6eeda19cd94e55928222b4130e9a2a09330fb4d",
+    "tests_affinity.py": "dcab4769d04df5dbe5bbc9a88258d8cbec8745155a97c0e8dddacb8479e57a8a",
+    "tests_extra.py": "528cb5811c284b19c5b289769d6f6931f509a084c0cafa79c5a40f6e97bef3b0",
+    "sampling.py": "97f45fdc28c7c4717372edd26ff6e6b34ee21c548b775936aecba522c1c5fab4",
+    "report.py": "16451c131402e4c6af5dcfed9a27c1d713841dd6b8eee4cbd8978db67afb69ee",
+    "worker.py": "bb8706dbf2d43f6a1f723939389d80c4ddda5ba9de8750b7a79d61423567a6ab",
+    "README.md": "76fe6414bf0c644ca635466ade2082e84800344855dc38293320a73bedc73b0e"
+  },
+  "dependencies": {
+    "candidates/pa_sage_mixed_group_v1/queue.py": "4c98e64a7a24da592f643c233ef86fe405d8ef8bccda0f96ae15fb4e2ba516e5",
+    "candidates/ig_sage_affinity_pair_v1/affinity.py": "e9880327531e818ca34e3ec9c30754e5da936aad2f97e6125b78042cf0fc6d7c",
+    "candidates/ig_sage_host_opt_v1/affinity.py": "aaef27fc402d402a0c1c7fe8e1276bb9ebdd2037dc5185bab14c0cc082b7f500",
+    "results/uks_group_first_compare_20261010_v1/summary.json": "615455e143850e048ec7b10ae7581cd44a0bd8782f9566b964f0c2bf934ed879"
+  }
+}

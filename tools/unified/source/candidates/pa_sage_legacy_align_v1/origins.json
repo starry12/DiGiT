@@ -1,0 +1,18 @@
+{
+  "GIDS_Setup/GIDS/GIDS.py": "cf4c9cb287010afd813c60c7f949e5fceb2d2b24ea86f728ff3ff71666994f26",
+  "GIDS_Setup/GIDS/breakdown.py": "4181b70224bfc81be46ef044bcf88e76352a83fe831a577ab13e6bf162ad8b7d",
+  "GIDS_Setup/GIDS/cache_policy.py": "67576fb3165764f120e296bf1514c8a68ba2f33d97fd47ae63a23634b201752d",
+  "GIDS_Setup/GIDS/feature_rows.py": "50e9fc26024cdb2e90a75141d1a4a305bac4eabd2210a282d806013118e79d2e",
+  "GIDS_Setup/GIDS/__init__.py": "1db29dd4e06b72cfcea7b6319bc8f8e3a07606283c0db44516a20ac720bb8931",
+  "GIDS_Setup/GIDS/test.py": "11beed4eda461aedffde2c3c5f18a382d04729dd9dbccc9dcd57daded79958f2",
+  "GIDS_Setup/GIDS/tests/__init__.py": "b2962706c9ee68dc8dd7e0a59de07a369d76c297bfd8ba0dbf1358940e74e3a2",
+  "GIDS_Setup/GIDS/tests/test_feature_rows.py": "787ecc990f96a788f23a0a2121d732adec94fa233b62e369dc6496e1dcac0d9c",
+  "candidates/io_accounting_v1/native/gids_module/gids_kernel.cu": "60fb8b22068336fbbb8b547b0247b9e25e18691cb7c6946a6f36fb416d5dfb87",
+  "candidates/io_accounting_v1/native/gids_module/gids_nvme.cu": "9d10260151e863b6c303d1677179a9801ee3d0e7f8929d0113ba96389e173363",
+  "candidates/io_accounting_v1/native/gids_module/include/bam_nvme.h": "184530f71ddafae8eb5148b34e04b539e76dd81ad9cca998d690c90b5d3a8615",
+  "candidates/io_accounting_v1/native/gids_module/include/page_cache_backup.h": "f05b36039f937c0e4df0ada1049dbd0588254439827bf6ecf6effad409db2dce",
+  "candidates/io_accounting_v1/native/gids_module/include/example.h": "d8306ab48ce5935cb5f4a404f2e6d63f68a810804356084c0d08b8f4616846ab",
+  "candidates/io_accounting_v1/native/gids_module/BAM_Feature_Store/setup.py": "bedacb7068c6f386f1ef8a53d4cf79f635f1e83048668dfe71f892bac7b70928",
+  "candidates/io_accounting_v1/native/gids_module/BAM_Feature_Store/__init__.py": "831ee581e467aa7d8849f5c82dca36a974f13c6e9b7c8ee11557005949e84e5b",
+  "candidates/io_accounting_v1/native/bam/include/page_cache.h": "1b747f96f0847b03e38109256e335f77d1324b27ea375a632ef24f9a3014b764"
+}

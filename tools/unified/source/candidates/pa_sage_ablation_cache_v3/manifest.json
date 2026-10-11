@@ -1,0 +1,31 @@
+{
+  "schema": "digit-pa-sage-exact-revpr-cache-candidate-v3",
+  "parent_candidate_sha256": "a6049d5c8a7580a923cc156400edcee58686196de83e325e6b1ea533102fefe2",
+  "files": {
+    "README.md": "5ef2413131d87552afd0b493a7d7d6735c1bd6a8b90837a1aa8476ce10e1f095",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "admission.py": "8ee68078ac2b6e2ea19b638d640d2c6d18b8608ea0be02a3a1a1f7058b23dba8",
+    "build.sh": "663045611c467b23fb6a031686eb2f85f183a192f49ff3633f0592beb94a1f8c",
+    "cache.py": "ebb80cbf8fdd4c901271b71a7c8f502fa9f25a31e0e641d97929d724b9f43f4c",
+    "common.py": "c509ffbbc656a04971f9f158e8f287c71b5bf72d185039739a2844d071b66317",
+    "gpu_tests.py": "9582f282568acb772f42ab9ca92e5a21ec6e379418de767450addf7b6e155aa0",
+    "native/gids_module/gids_kernel.cu": "66f09ab9fc3959f97766178da2b231a70075da3ceb48ff377eb2b389cfc70044",
+    "native/gids_module/gids_nvme.cu": "f8e72784a93b37a03888202547f893a8d649ce388799566a1f36eb6acca2773c",
+    "native/gids_module/include/bam_nvme.h": "ccdfbabcf4c461e47b7bf92b49013d7607ca4c1ca80fc9093e17e6c7c8852076",
+    "native/gids_module/include/example.h": "d8306ab48ce5935cb5f4a404f2e6d63f68a810804356084c0d08b8f4616846ab",
+    "native/gids_module/include/page_cache_backup.h": "f05b36039f937c0e4df0ada1049dbd0588254439827bf6ecf6effad409db2dce",
+    "protocol.json": "a096bfe87b89c5c75d1c9870bd4376df0964dc8a1b455df14287d52acbc7b7ad",
+    "run.py": "0257c5d9c83cefa611280fe69fbdf425b4dc8b7be07cac9aa83fd9e3cc2ef929",
+    "runtime/BAM_Feature_Store/BAM_Feature_Store.so": "8e171024011e8623027361440a0a4537feca8079226012c06251a452e2b8c7cd",
+    "runtime/BAM_Feature_Store/__init__.py": "dccb84be89bf73362a278cc4464ea10fd034a2300644b96cfd366ad0d085f1ea",
+    "sampling.py": "ccf654e7d8699e207aaeecf46b95519669285ecdc89703a3098c8b07b33e48aa",
+    "tests.py": "500aa3bcc64d3a19214c5e03b957d7f6bc8d613b05c072b99c6c73be49815e7f",
+    "training_loop.py": "9569106dbd862af9cedc84b96c6a552d0c17b063ae9bdabd98e6bc476c5cc8bd",
+    "validation.py": "655f9d0ef7f1086e6f48ad41923e714205236a0c26d4dbbc2bbf4342fce8d504",
+    "worker.py": "18751635d105535b21849393987224627a72540a8b22a0f694ed05ba0c734f9e"
+  },
+  "external_files": {
+    "results/pa_sage_ablation_cache_20260924_v3/start.py": "d1921ef47026f5a1d33f67c8ab0e73c17c0906182a49495608eace07a9457a57",
+    "bam/build/lib/libnvm.so": "6fa17bd4c92d6e4dc4631564da0e9d52b6e03aa432e2101bf04356aa3d752744"
+  }
+}

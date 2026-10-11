@@ -1,0 +1,22 @@
+{
+  "v1_source": "08590217e213043631efa5a1a2be8983650b0e684d56ed593e1354e8494debd7",
+  "v2_source": "2b46d5e9cb99ae459cc860d2db22118b0388a8a9e1eb7fb10282c03998c29afa",
+  "files": {
+    "start.py": "35c21b0cb2320616be1790599b7266eea6589f590df17b2281bd0453573a5434",
+    "freeze.py": "8236f05c2cad3d64bc43111fb527d67599169eae55f382445fd54eaf495abd29",
+    "gpu_check.py": "d9503c75d7e7154411a38d043be76150561a2d8d715d208f700ad86eba91a107",
+    "tests.py": "178c9e0b2e0a42ba79d5e90ea0c7145045eedcc2e34a0d4d869c105d511e1430",
+    "overlay_gpu_check.py": "597a19bc6e7496ed0d8e892adc9b45d174e6f215059f1c1a87014156dc51dd1d",
+    "resources.py": "fbd0b8c07b6899989c3ca90742dee167a273ff50503a643c005f7427f16821e8",
+    "common.py": "cde3e7c3ba2149d142a758171b6b5d72fa002a25749defcf5e26a8279f4c0181",
+    "__init__.py": "729b64c0e00bd5cec910c8bbcf181cc991140a8de8eaf5e0e5f5a4f18e148a4b",
+    "sampling.py": "30b26f197fc4cf787c209e2021277c6b886189057fc062a1af30c97760c7102b",
+    "report.py": "1b084949530be73f71cff321eff68f248af9b911c8ed31fe527a6fe3403eb6e8",
+    "worker.py": "33f2898c3e196bb83df2326b69dd966f1fd3d01afb4eb11c6e7b0700c739ad9b",
+    "README.md": "f53c1fa009d5e44e01a8a295c309241e25dffe1645a635ce6411045b81d70f50"
+  },
+  "dependencies": {
+    "candidates/pa_sage_mixed_group_v1/queue.py": "4c98e64a7a24da592f643c233ef86fe405d8ef8bccda0f96ae15fb4e2ba516e5",
+    "candidates/ig_sage_affinity_pair_v1/affinity.py": "e9880327531e818ca34e3ec9c30754e5da936aad2f97e6125b78042cf0fc6d7c"
+  }
+}
